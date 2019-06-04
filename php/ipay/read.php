@@ -62,16 +62,11 @@ if ($state != '') $where.=" AND trans.state = '$state' ";
 if ($transfer_type != '') $where.=" AND trans.transfer_type = '$transfer_type' ";
 
 
-//$query = " SELECT  * FROM vs_pay_pink_aik $where order by id OFFSET $offset LIMIT $limit";
 
 $query = "SELECT trans.id, trans.user_id, trans.amount, emony.purpose_of_transaction, trans.currency, trans.state, trans.transfer_type, tp.type, trans.response_transfer_id, trans.start_datetime, emony.debit_account, emony.core_transactionid, vauch.state_description from vs_ipaywallet_transfers trans LEFT JOIN vs_ipaywallet_transfers_create_emony emony on trans.id = emony.transfer_id  LEFT JOIN vs_ipaywallet_transfers_emony_voucher vauch on vauch.emony_id = emony.id left join  vs_ipaywallet_transfers_type tp on trans.transfer_type = tp.id  $where order by trans.start_datetime OFFSET $offset LIMIT $limit ";
 
 $total = $DB->sfetch("SELECT count(*) FROM vs_ipaywallet_transfers trans $where  ");
 
-/*if ($sort!="") $query .= " ORDER BY $sort ";
-
-$query .= " LIMIT $start, $limit ";
-*/
 $DB->query($query);
 
 $arr = array();

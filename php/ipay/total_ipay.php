@@ -30,14 +30,6 @@ if (isset($_REQUEST['filter']) && $_REQUEST['filter'] != '')
 $where .= " AND stat_date >= '$startday' AND stat_date <= '$endday'  ";
 
 
-/*$query = "  SELECT 	DATE_FORMAT(day,'%m-%d') day,
-					SUM(CASE WHEN disposition = 'ANSWERED' THEN counter ELSE 0 END) ANSWERED,
-					SUM(CASE WHEN disposition = 'BUSY' THEN counter ELSE 0 END) BUSY,
-					SUM(CASE WHEN disposition = 'NO ANSWER' THEN counter ELSE 0 END) 'NO ANSWER',
-					SUM(CASE WHEN disposition = 'FAILED' THEN counter ELSE 0 END) 'FAILED'
-            FROM stat
-            WHERE day >= '$startday' AND day <= '$endday' GROUP BY `day`";*/
-
 $query = "SELECT
 	SUM (CASE
 	WHEN state = 'AKTIVACIJA' THEN counter
