@@ -1,60 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/autorenew/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/autorenew/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/activate_subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/activate_subscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/activationTV.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/activationTV.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/add_number.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/add_number.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/addcredit.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/addcredit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/cdr_inbound.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/cdr_inbound.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/cdrlog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/cdrlog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/chargelog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/chargelog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/chargelogtrans.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/chargelogtrans.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/check_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/check_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/datalog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/datalog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/devices.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/devices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/numbers.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/numbers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/numbers_sim.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/numbers_sim.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/package.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/package.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/payment.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/payment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/total.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/total.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/transaction_wallet.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/transaction_wallet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/transactiondetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/transactiondetail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/triallogdetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/triallogdetail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/billing/wallet_balance.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/billing/wallet_balance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/brand/createText.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/brand/createText.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/brand/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/brand/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/brand/updateText.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/brand/updateText.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/card/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/card/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrlog/cdrLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrlog/cdrLog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrlog/disposition.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrlog/disposition.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrlog/distinctfield.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrlog/distinctfield.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrlog/storeCdr.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrlog/storeCdr.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrlog/storeCdrDetail.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrlog/storeCdrDetail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrstat/cdrstat.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrstat/cdrstat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/cdrstat/stat.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/cdrstat/stat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/biling_distinct.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/biling_distinct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/brandNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/brandNumber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/distinctfield.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/distinctfield.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/distinctfield_display.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/distinctfield_display.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/provider_distinct.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/provider_distinct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/common/regions_distinct.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/common/regions_distinct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/dailystat/stat.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/dailystat/stat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/hourly_total.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/hourly_total.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/read.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/read.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/stat_daily.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/stat_daily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/total_average.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/total_average.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/total_ipay.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/total_ipay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/total_transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/total_transactions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/transaction_average.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/transaction_average.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/ipay/transactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/ipay/transactions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/paymentstat/readgrid.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/paymentstat/readgrid.php" afterDir="false" />
-    </list>
+    <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +20,47 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="465">
               <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/login/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/php/common.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="142" column="16" lean-forward="true" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/login/checklogin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/login/logout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -143,10 +126,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="387" />
-    <option name="y" value="1105" />
-    <option name="width" value="1533" />
-    <option name="height" value="875" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -166,6 +148,28 @@
               <item name="new-gui-test" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="new-gui-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-gui-test" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-gui-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-gui-test" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-gui-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-gui-test" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new-gui-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new-gui-test" type="462c0819:PsiDirectoryNode" />
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -179,6 +183,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/php" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -206,17 +216,17 @@
       <workItem from="1559743123143" duration="597000" />
       <workItem from="1559917873582" duration="595000" />
       <workItem from="1560154565444" duration="593000" />
-      <workItem from="1567680918790" duration="242000" />
+      <workItem from="1567680918790" duration="3618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4784000" />
+    <option name="totallyTimeSpent" value="8160000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="387" y="1105" width="1533" height="875" extended-state="6" />
+    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2669805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21184632" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -229,7 +239,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.521511" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -241,30 +251,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/billing/numbers_sim.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/billing/orderlog.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/billing/orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/billing/package.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/billing/payment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
@@ -551,8 +537,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="465">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/login/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/login/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/login/checklogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/php/common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="142" column="16" lean-forward="true" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="16" />
         </state>
       </provider>
     </entry>
