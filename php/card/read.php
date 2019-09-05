@@ -64,7 +64,10 @@ $total = $DB->sfetch("SELECT count(*) FROM vs_pay_pink_aik $where  ");
 
 $query = " SELECT  * FROM vs_pay_pink_aik $where order by id OFFSET $offset LIMIT $limit";
 
+/*if ($sort!="") $query .= " ORDER BY $sort ";
 
+$query .= " LIMIT $start, $limit ";
+*/
 $DB->query($query);
 
 $arr = array();

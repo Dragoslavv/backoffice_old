@@ -5,6 +5,7 @@ require_once("../../lib/php/common.php");
 $record = json_decode($_POST['record']);
 
 $set = array();
+//$set_version = array();
 
 foreach ($record as $key => $value)
 {
@@ -26,6 +27,11 @@ foreach ($record as $key => $value)
 }
 
 $set = implode (', ', $set);
+
+
+//$id = json_decode($_POST['id']);
+
+//$modified_by = $_SESSION['USERDATA']["firstname"]. ' '.$_SESSION['USERDATA']["lastname"].' id: '.$_SESSION['USER_ID'];
 
 
 $response = array();

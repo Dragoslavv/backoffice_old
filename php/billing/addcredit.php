@@ -36,6 +36,8 @@ $req["dedicated_accounts"] = $dedicated_accounts;
 $req["brand"] = $brand;
 $req["meta_data"] = "GUI user: {$_SESSION['USERDATA']["username"]}\n$info ";
 
+/*print_r(json_encode($req));
+exit;*/
 
 if (!$ammount || !$password || !$billing_id || $password_hash != $_SESSION['USERDATA']["password"])
 {
@@ -45,18 +47,23 @@ if (!$ammount || !$password || !$billing_id || $password_hash != $_SESSION['USER
 }
 
 $req_str = "http://$BILLING_IP:9090/?jsonData=".urlencode(json_encode($req));
+/*print_r($req_str);
+exit;*/
 
 
 $res = json_decode(file_get_contents($req_str));
 
 $result = $res->results;
-
+/*print_r($result);
+exit;
+*/
 if (is_int($result[0]) && $result[0] == 1)
 {
 	$response['success'] = true;
 }
 else
 {
+	// $response['getIPs'] = getIPs();
     $response['req_str'] = $req_str;
     $response['res'] = $res;
 	$response['success'] = false;

@@ -5,6 +5,14 @@ date_default_timezone_set('Europe/Belgrade');
 
 $user_id = $DB->escape($_REQUEST['user_id']);
 
+/*
+foreach ($_POST as $key => $value)
+{
+	${$DB->escape($key)} = $DB->escape($value);
+}
+
+print_r($user_id);*/
+
 if ( !$user_id || $_SESSION['USERDATA']["role"]=='USER')
 {
 	$response['failure'] = false;
@@ -25,6 +33,7 @@ $DB->query($sql);
 $arr = $DB->afetch($sql);
 
 
+//print_r($arr);
 if (!$arr) {
    // echo "An error occurred.\n";
 	$response['failure'] = false;
@@ -34,5 +43,13 @@ if (!$arr) {
 }
 
 
+//foreach($arr as $value){
+	//print_r($arr[0]);
+	//exit;
+
+
+
 $response['success'] = true;
+//print_r($req_str);
+//$response['message'] = 'User with user_id: '.$user_id.' is prepaid year subscriber.';
 echo json_encode($response);

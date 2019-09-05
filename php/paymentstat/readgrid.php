@@ -75,7 +75,7 @@ $query = "SELECT totalsum, name from (SELECT  ROUND(sum(payment_sum)/-100000.00)
 union
 SELECT  ROUND(sum(payment_sum)/-100000.00) as totalsum, 'Total' from b_transaction_stat $where  and transaction_type_id in ('6','7','8','9', '23','37', '32')
 union
-SELECT  (ROUND(sum(payment_sum)/-100000.00) - (SELECT  ROUND(sum(payment_sum)/100000.00)  from b_transaction_stat $where  and transaction_type_id =36)) as totalsum, 'Telekom' from b_transaction_stat $where  and transaction_type_id in ('6','7','8','9', '23','37', '32')  ) tmp order by totalsum  ";
+SELECT  (ROUND(sum(payment_sum)/-100000.00) - (SELECT  SUM (CASE WHEN transaction_type_id = '36'  THEN ROUND(payment_sum/100000.00) ELSE 0 END)  from b_transaction_stat $where )) as totalsum, 'Telekom' from b_transaction_stat $where  and transaction_type_id in ('6','7','8','9', '23','37', '32')  ) tmp order by totalsum  ";
 
 $DB->query($query);
 

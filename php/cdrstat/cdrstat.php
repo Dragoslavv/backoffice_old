@@ -18,5 +18,6 @@ while($obj = $DB->fetch_object())
 }
 
 $response = array('data' => $arr, 'total' => $total);
+//$response['sql'] = $query;
 
 echo json_encode($response);

@@ -23,12 +23,16 @@ if ( $key == '' or $script == '' or $value == '' or $lang == '')
 }
 else
 {
+	
+
+	   //	$modified_by = $_SESSION['USERDATA']["firstname"]. ' '.$_SESSION['USERDATA']["lastname"];
 
 		$sql = "INSERT INTO vs_texts (key, value, lang, brand, script ) VALUES ('$key_gui', '$value_gui', '$lang', '$brand', '$script')";
  
 
 		$DB->query($sql);
 
+		//$brand_id = $DB->insert_id();
 
 		$affected_rows = $DB->affected_rows();
 

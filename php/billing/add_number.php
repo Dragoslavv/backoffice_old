@@ -46,6 +46,25 @@ if(!$active_sim){
 }
 
 
+/*if ($msisdn_old != $msisdn_old_check)
+{
+    $response['success'] = true;
+    $response['message'] = 'Error! Number '.$msisdn.' is not sim.';
+    echo json_encode($response);
+    exit;
+}*/
+
+
+/*if(substr($msisdn_old, 0, 6) !== '381677' ){
+
+    $response['success'] = true;
+    $response['message'] = 'Error! Number '.$msisdn_old.' is not globaltel.';
+    echo json_encode($response);
+    exit;
+}*/
+
+
+
 //ukoliko postoji user sa istim brojem koji hoce da se prebaci u nasu mrezu brise se iz users tabele i numbers tabele 
 function check_when_transfer($number, $action){
      global $DB;
@@ -84,6 +103,7 @@ function update($id, $number, $active_sim, $action, $msisdn_old ){
     $user_update = "UPDATE vs_users set email = '$email' where id = $id ";
     $DB->query($user_update);
     $affected_rows = $DB->affected_rows();
+    //exit;
 
     if ($affected_rows > 0)
             {
@@ -133,6 +153,11 @@ function update($id, $number, $active_sim, $action, $msisdn_old ){
                         }
                     if($affected_rows > 0 &&  $active_sim == 0){
 
+                       /* $sql_insert = "INSERT INTO vs_callcentar_log (operator, user_id, action, package_id) values ('$operator_name', $id, '$action',$number) ";
+
+                        $DB->query($sql_insert);*/
+                        
+
                         $response['success'] = true;
                         $response['number_history'] = $number_history;
                         $response['message'] = 'Success! Number: '.$msisdn.' is succesfully '.$action.'ed .';
@@ -141,6 +166,17 @@ function update($id, $number, $active_sim, $action, $msisdn_old ){
                    
 
                     } 
+
+                    /*    
+                    }
+                    else
+                    {
+                        $response['success'] = false;
+                        $response['sql'] = $number_update;
+                        echo json_encode($response);
+                        exit;
+                    }
+                */
             }
             else
             {
@@ -155,12 +191,16 @@ function add_number($id, $number, $action){
     global $DB;
 
     $number_add = "INSERT INTO vs_numbers (user_id, number, status, type, expiration_date, auto_renew, provider, price_input, price_output, brand, color, sms_support, port_type) values ($id, '$number', 1, 'real', '20138-01-19 00:00:00',TRUE, 'procescom', 0.0, 0.0, 'globaltel', 5, FALSE, 1) ";
-
+    /*print_r($number_add);
+    exit;*/
     $DB->query($number_add);
     $affected_rows = $DB->affected_rows();
 
     if ($affected_rows > 0)
         {
+           /*$sql_insert = "INSERT INTO vs_callcentar_log (operator, user_id, action, package_id) values ('$operator_name', $id, '$action',$number) ";
+
+            $DB->query($sql_insert);*/
 
             $specialnumber_update = "UPDATE vs_special_offer_numbers set reserved = 1 where number = $number ";
             $DB->query($specialnumber_update);
@@ -201,6 +241,16 @@ function device_registered($id){
 
     $device = "UPDATE vs_device SET registered = FALSE where id = $id ";
     $DB->query($device);
+    /*$affected_rows = $DB->affected_rows();
+    if ($affected_rows <= 0)
+        { 
+            $response['success'] = false;
+            $response['sql'] = $sql;
+            echo json_encode($response);
+            exit;
+            
+        }*/
+
 }
 
 function mb_hvr_cancel($id, $number, $action, $BILLING_IP){

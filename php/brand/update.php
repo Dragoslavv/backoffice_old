@@ -21,6 +21,7 @@ foreach ($record as $key => $value)
 $set = implode (', ', $set);
 
 
+//$id = json_decode($_POST['id']);
 
 $modified_by = $_SESSION['USERDATA']["firstname"]. ' '.$_SESSION['USERDATA']["lastname"].' id: '.$_SESSION['USER_ID'];
 

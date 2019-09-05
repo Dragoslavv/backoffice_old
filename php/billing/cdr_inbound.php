@@ -77,7 +77,7 @@ while($obj = $DB->fetch_object())
 }
 
 $response = array();
-$response['query'] = $query;
+//$response['query'] = $query;
 $response['data'] = $arr;
 $response['total'] = $total;
 //$response['billsec'] = $billsec;

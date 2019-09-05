@@ -16,8 +16,15 @@ if ( !$user_id || $_SESSION['USERDATA']["role"]=='USER')
 
 $position = strpos ($email,'@');
 $msisdn = substr($email,0,$position);
+/*print_r($msisdn);
+exit;*/
 
+/*$user_id = '384844598';
+$promotion_id = 5;
+*/
 $response = array();
+
+//$request = `curl -H "Content-Type: application/json" -X POST http://globaltel-api.developers.pink/users/$user_id/activate`;
 
 if($checked == 'true'){
 
@@ -51,13 +58,17 @@ if($checked == 'true'){
 		if ( !$msisdn )
 		{
 			$response['success'] = false;
+			//$response['message'] = "MSISDN is mandatory!";
 			echo json_encode($response);
 			exit;
 		}
 
 
-		$id = $DB->sfetch("SELECT count(*) from subscriber_whitelist where msisdn = $msisdn and packet_id = $package_id ");
 
+		//$sql = "SELECT count(*) from subscriber_whitelist where msisdn = $msisdn and packet_id = $package_id ";
+		
+		$id = $DB->sfetch("SELECT count(*) from subscriber_whitelist where msisdn = $msisdn and packet_id = $package_id ");
+		//print_r($sql);
 		if($id == 1){
 			$response['success'] = false;
 			$response['message'] = "Success! MSISDN with that package is already in subscriber whitelist.";
@@ -79,10 +90,13 @@ if($checked == 'true'){
 				$response['message'] = 'Success! User with msisdn: '.$msisdn.' is in subscribers whitelist.';
 				echo json_encode($response);
 				exit;
-
+				//$response['sql'] = $sql;
+				//$response['id'] = $id;
+				
 			}
 			else
 			{
+				//$response['message'] = 'Error!';
 				$response['success'] = false;
 				$response['sql'] = $sql;
 				echo json_encode($response);

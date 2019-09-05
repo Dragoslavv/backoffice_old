@@ -23,6 +23,13 @@ else
 	$sort = '';
 }
 
+/*$account_id = $DB->escape($_REQUEST['account_id']);
+
+if (!$account_id)
+{
+	$response = array('data' => array());
+	echo json_encode($response);
+}*/
 
 
 $log_start = date('Y-m-d 00:00:00');

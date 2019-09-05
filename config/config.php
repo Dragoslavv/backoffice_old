@@ -14,8 +14,8 @@ $PGSQL_PORT	= "9999";
 $BILLING_IP = '10.245.208.11';
 //home
 /*$PGSQL_HOST = "localhost";
-$PGSQL_PORT	= "5434";
-*/
+$PGSQL_PORT	= "5434";*/
+
 
 
 

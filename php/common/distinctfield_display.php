@@ -2,6 +2,8 @@
 
 require_once("../../lib/php/common2.php");
 
+/*$database = $DB->escape($_REQUEST["database"]);
+if ($database != '') $DB->select($database);*/
 
 $table = $DB->escape($_REQUEST["table"]);
 $valueField = $DB->escape($_REQUEST["valueField"]);

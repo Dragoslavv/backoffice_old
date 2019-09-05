@@ -91,6 +91,6 @@ while($obj = $DB2->fetch_object()) {
 
 }
 
-//echo $query;
+echo $query;
 echo '{"total":"'.$total.'","data":'.json_encode($arr).'}';
 

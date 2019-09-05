@@ -27,6 +27,9 @@ while($obj = $DB->fetch_object())
     $arr[] = $obj;
 }
 
+//$total = $DB->sfetch(" SELECT count(*) FROM vs_numbers $where ");
+//$response = array('data' => $arr, 'total' => $total);
+
 $response = array('data' => $arr);
 //$response['sql'] = $sql;
 $DB->close();

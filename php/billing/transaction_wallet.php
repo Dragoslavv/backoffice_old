@@ -5,6 +5,13 @@ date_default_timezone_set('Europe/Belgrade');
 
 $user_id = $DB->escape($_REQUEST['user_id']);
 
+/*
+foreach ($_POST as $key => $value)
+{
+	${$DB->escape($key)} = $DB->escape($value);
+}
+
+print_r($user_id);*/
 
 if ( !$user_id || $_SESSION['USERDATA']["role"]=='USER')
 {
@@ -21,9 +28,12 @@ $sql = "SELECT u.user_id as user_id, external_device_id_hash as device_id, platf
 
 $DB->query($sql);
 
+//print_r($sql);
+
 $arr = $DB->afetch($sql);
 
 
+//print_r($arr);
 if (!$arr) {
    // echo "An error occurred.\n";
 	$response['failure'] = false;
@@ -31,6 +41,11 @@ if (!$arr) {
 	echo json_encode($response);
     exit;
 }
+
+
+//foreach($arr as $value){
+	//print_r($arr[0]);
+	//exit;
 
 	$req["app_id"] = $arr[2];
 	$req["platform"] = $arr[3];
@@ -53,14 +68,23 @@ if (!$arr) {
 	$req_str = "http://api.globaltel.rs/api6/iPayWallet/getTransactions.php?".$query;
 	$res = json_decode(file_get_contents($req_str));
 	$res = $res->transactions;
+	//print_r($res[0]);
 
+//}
 
 foreach($res as $key=>$value){
+	//foreach($value as $k){
 	if($value->direction=='d'){
 		$value->amount = -($value->amount);
 		$value->{'amount-local'} = -($value->{'amount-local'});
+		//print_r($value->{'amount-local'});
 	}
+	//}
 }
+//exit;
+//$response['success'] = true;
 $response['data'] = $res;
 
+//print_r($req_str);
+//$response['message'] = 'User with user_id: '.$user_id.' is prepaid year subscriber.';
 echo json_encode($response);

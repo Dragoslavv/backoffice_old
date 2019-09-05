@@ -77,6 +77,9 @@ if ($disposition != '' && $disposition != 'ALL') $where.=" AND disposition LIKE 
 
 $query = " SELECT c.id, c.start, c.end, c.answer, c.duration, c.billsec, c.disposition, c.src, c.dst, c.dcontext,c.clid, c.call_type, c.brand, c.user_id, c.payed_per_min, c.billed_per_min, r.route, r.name, c.user_id_b, c.reply_status, c.cdr_id, c.sip_reason, c.sip_code, c.cdr_id, c.userfield FROM vs_cdr c join vs_routes r on c.route = r.route $where $sort OFFSET $offset LIMIT $limit";
 
+//$query = " SELECT * FROM vs_cdr $where $sort OFFSET $offset LIMIT $limit";
+
+//$query = " SELECT *, \"count\" (*) OVER () AS total FROM vs_cdr $where ";
 
 $total = $DB->sfetch(" SELECT count(*) FROM vs_cdr c join vs_routes r on c.route = r.route $where ");
 
@@ -84,14 +87,19 @@ $total = $DB->sfetch(" SELECT count(*) FROM vs_cdr c join vs_routes r on c.route
 $billsec = $DB->sfetch("  SELECT sum(billsec) as billsec from (SELECT MAX(billsec) as billsec FROM vs_cdr c join vs_routes r on c.route = r.route $where group by cdr_id) as t");
 
 $total_bill = " SELECT sum(billsec) from (SELECT MAX(billsec) as billsec FROM vs_cdr c join vs_routes r on c.route = r.route $where group by cdr_id) as t ";
+/*if ($sort!="") $query .= " ORDER BY `$sort` $dir ";
+
+$query .= " LIMIT $start, $limit ";*/
 
 $DB->query($query);
 
 $arr = array();
 while($obj = $DB->fetch_object())
 {
-
+	//$total = $obj->total;
+	//$obj->record = "record/roll.mp4";
 	$obj->billsectotal= (int)($billsec/60);
+	///$obj->income= (int)($billsec/60)*((int)($billed_per_min)-(int)($payed_per_min));
 	$arr[] = $obj;
 }
 $response = array();

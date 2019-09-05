@@ -24,6 +24,7 @@ if (isset($_REQUEST['filter']) && $_REQUEST['filter'] != '')
 	}
 }
 
+//$call_type = $DB->escape($_REQUEST['call_type']);
 
 $where .= "  AND day = '$day'";
 
@@ -68,7 +69,55 @@ if ($in_type != ''&& $in_type != 'ALL') {
     }
 }
 if ($route) $where .= " AND route = '$route' ";
+/* {display: 'app2tel', value:"('13','15','17')\"},
+                    {display: 'tel2app', value:"('5','7','9')"},
+                    {display: 'sim2tel', value:"('14','16','18')"},
+                    {display: 'tel2sim', value:"('6','8','10')"}*/
 
+/*$query = "SELECT
+	hour,
+	sum(billsec) billsec,
+	sum(answered) \"ANSWERED\",
+	sum(busy) \"BUSY\",
+	sum(no_answer) \"NO ANSWER\",
+	sum(failed) \"FAILED\",
+	sum(congestion) \"CONGESTION\"
+FROM
+(SELECT
+	hour,
+	CASE
+	WHEN disposition = 'answered' THEN billsec
+	ELSE 0
+	END
+	AS billsec,
+	CASE
+	WHEN disposition = 'answered' THEN counter
+	ELSE 0
+	END
+	AS answered,
+	CASE
+	WHEN disposition = 'busy' THEN counter
+	ELSE 0
+	END
+	AS busy,
+	CASE
+	WHEN disposition = 'NO ANSWER' THEN counter
+	ELSE 0
+	END
+	AS no_answer,
+	CASE
+	WHEN disposition = 'FAILED' THEN counter
+	ELSE 0
+	END
+	AS failed,
+	CASE
+	WHEN disposition = 'CONGESTION' THEN counter
+	ELSE 0
+	END
+	AS congestion
+FROM vs_stat
+	$where) AS tmp
+GROUP BY hour";*/
 $query = "SELECT
 	hour,
 	SUM (CASE

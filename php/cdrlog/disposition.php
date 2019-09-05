@@ -21,12 +21,18 @@ if ($DB->escape($_REQUEST["all"]))
 	$arr[] = array('value'=>'', 'display' => 'ALL');
 }
 
+/*$arr[] = array('value'=>'ANSWERED', 'display' => 'ANSWERED');
+$arr[] = array('value'=>'BUSY', 'display' => 'BUSY');
+$arr[] = array('value'=>'FAILED', 'display' => 'FAILED');
+$arr[] = array('value'=>'NO ANSWER', 'display' => 'NO ANSWER');
+*/
 while($obj = $DB->fetch_object())
 {
     $arr[] = $obj;
 }
 
 $response = array('data' => $arr);
+//$response['sql'] = $query;
 
 echo json_encode($response);
 

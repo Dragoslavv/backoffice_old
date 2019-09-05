@@ -14,8 +14,12 @@ if ( !$user_id || !$user_type || $_SESSION['USERDATA']["role"]=='USER')
 	exit;
 }
 
+/*$user_id = '384844598';
+$promotion_id = 5;
+*/
 $response = array();
 
+//$request = `curl -H "Content-Type: application/json" -X POST http://globaltel-api.developers.pink/users/$user_id/activate`;
 if($user_type == 200){
 
 	if ( !$users_plan )
@@ -56,16 +60,17 @@ if($user_type == 200){
 					$response['message'] = 'User with user_id: '.$user_id.' is postpaid.';
 					echo json_encode($response);
 					exit;
-
+					//$response['sql'] = $sql;
+					//$response['id'] = $id;
 				}else{
-
+				//$response['message'] = 'Error!';
 					$response['success'] = false;
 					$response['sql'] = $sql;
 					echo json_encode($response);
 					exit;
 				}
 			}else{
-
+				//$response['message'] = 'Error!';
 				$response['success'] = false;
 				$response['sql'] = $sql;
 				echo json_encode($response);
@@ -75,7 +80,7 @@ if($user_type == 200){
 		}
 		else
 		{
-
+			//$response['message'] = 'Error!';
 			$response['success'] = false;
 			$response['sql'] = $sql;
 			echo json_encode($response);
@@ -113,7 +118,7 @@ if($user_type == 200){
 		}
 		else
 		{
-
+		//$response['message'] = 'Error!';
 			$response['success'] = false;
 			$response['sql'] = $sql;
 			echo json_encode($response);

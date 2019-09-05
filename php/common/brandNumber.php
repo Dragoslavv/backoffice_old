@@ -2,6 +2,8 @@
 
 require_once("../../lib/php/common2.php");
 
+/*$database = $DB->escape($_REQUEST["database"]);
+if ($database != '') $DB->select($database);*/
 
 $number = $DB->escape($_REQUEST["number"]);
 $email = $DB->escape($_REQUEST["email"]);
