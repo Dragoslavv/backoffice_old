@@ -11,19 +11,19 @@
             <div class="col-lg-3">
                 <div class="content-panel">
                         <form role="form" class="form-horizontal style-form">
-                            <div class="form-group has-success">
+                            <div class="form-group">
                                 <label class="col-lg-3 control-label">Start: </label>
                                 <div class="col-lg-9">
                                     <input type="text" placeholder="" id="f-name" class="form-control">
                                 </div>
                             </div>
-                            <div class="form-group has-error">
+                            <div class="form-group">
                                 <label class="col-lg-3 control-label">End : </label>
                                 <div class="col-lg-9">
                                     <input type="text" placeholder="" id="l-name" class="form-control">
                                 </div>
                             </div>
-                            <div class="form-group has-error">
+                            <div class="form-group">
                                 <label class="col-lg-3 control-label">Type : </label>
                                 <div class="col-lg-9">
                                     <input type="text" placeholder="" id="l-name" class="form-control">
