@@ -5,7 +5,7 @@
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Customer Payment</h3>
+        <h3><i class="fa fa-angle-right"></i> Charge Log</h3>
         <div class="row mb">
             <!-- page start-->
             <div class="col-lg-3">

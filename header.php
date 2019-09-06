@@ -64,13 +64,13 @@
                         <li><a href="customer-billing.php">Customer Billing</a></li>
                         <li><a href="customer-pyment.php">Customer Payment</a></li>
                         <li><a href="charge-log.php">Charge Log</a></li>
-                        <li><a href="font_awesome.html">Charge Data Log</a></li>
-                        <li><a href="font_awesome.html">Phone Numbers</a></li>
-                        <li><a href="font_awesome.html">Devices</a></li>
-                        <li><a href="font_awesome.html">Cdr Outbound</a></li>
-                        <li><a href="font_awesome.html">Cdr Inbound</a></li>
-                        <li><a href="font_awesome.html">Package</a></li>
-                        <li><a href="font_awesome.html">Sim details</a></li>
+                        <li><a href="charge-data-log.php">Charge Data Log</a></li>
+                        <li><a href="phone-numbers.php">Phone Numbers</a></li>
+                        <li><a href="devices.php">Devices</a></li>
+                        <li><a href="cdr-outbound.php">Cdr Outbound</a></li>
+                        <li><a href="cdr-inbound.php">Cdr Inbound</a></li>
+                        <li><a href="package.php">Package</a></li>
+                        <li><a href="sim-details.php">Sim details</a></li>
 
                     </ul>
                 </li>
