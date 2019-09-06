@@ -7,37 +7,33 @@
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Customer Billing</h3>
         <!-- BASIC FORM VALIDATION -->
-        <div class=" d-flex row mt">
+        <div class="row mt">
             <div class="col-lg-6 p-2">
                 <h4><i class="fa fa-angle-right"></i> Customer Search</h4>
                 <div class="form-panel">
                     <form role="form" class="form-horizontal style-form">
-                        <div class="form-group has-success">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">Number : </label>
                             <div class="col-lg-10">
                                 <input type="text" placeholder="" id="f-name" class="form-control">
-                                <p class="help-block">Successfully done</p>
                             </div>
                         </div>
-                        <div class="form-group has-error">
+                        <div class="form-group ">
                             <label class="col-lg-2 control-label">Email : </label>
                             <div class="col-lg-10">
                                 <input type="text" placeholder="" id="l-name" class="form-control">
-                                <p class="help-block">Aha you gave a wrong info</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">User ID : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">Billing ID : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
                         <div class="form-group">
@@ -55,46 +51,40 @@
                 <h4><i class="fa fa-angle-right"></i> Customer Data</h4>
                 <div class="form-panel">
                     <form role="form" class="form-horizontal style-form">
-                        <div class="form-group has-success">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">User ID : </label>
                             <div class="col-lg-10">
                                 <input type="text" placeholder="" id="f-name" class="form-control">
-                                <p class="help-block">Successfully done</p>
                             </div>
                         </div>
-                        <div class="form-group has-error">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">Email : </label>
                             <div class="col-lg-10">
                                 <input type="text" placeholder="" id="l-name" class="form-control">
-                                <p class="help-block">Aha you gave a wrong info</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">Name : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group ">
                             <label class="col-lg-2 control-label">Subscription : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">Wallet ID : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
-                        <div class="form-group has-warning">
+                        <div class="form-group">
                             <label class="col-lg-2 control-label">App Force : </label>
                             <div class="col-lg-10">
                                 <input type="email" placeholder="" id="email2" class="form-control">
-                                <p class="help-block">Something went wrong</p>
                             </div>
                         </div>
 
@@ -318,7 +308,7 @@
 
                             </div>
                             <div class="form-group">
-                                <div class="col-lg-offset-2 col-lg-10">
+                                <div class="col-lg-offset-5 col-lg-10">
                                     <button class="btn btn-theme" type="submit">Transaction</button>
                                 </div>
                             </div>

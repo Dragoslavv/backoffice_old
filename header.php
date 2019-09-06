@@ -63,7 +63,7 @@
                     <ul class="sub">
                         <li><a href="customer-billing.php">Customer Billing</a></li>
                         <li><a href="customer-pyment.php">Customer Payment</a></li>
-                        <li><a href="panels.html">Charge Log</a></li>
+                        <li><a href="charge-log.php">Charge Log</a></li>
                         <li><a href="font_awesome.html">Charge Data Log</a></li>
                         <li><a href="font_awesome.html">Phone Numbers</a></li>
                         <li><a href="font_awesome.html">Devices</a></li>
