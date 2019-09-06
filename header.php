@@ -10,7 +10,7 @@
     <title>Globaltel | GUI</title>
 
     <!-- Favicons -->
-    <link href="images/icons/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Bootstrap core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
