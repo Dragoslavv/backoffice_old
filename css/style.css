@@ -1216,7 +1216,9 @@ PANELS CONFIGURATIONS
 .message-p .form-inline .form-control {
 	width: 100%
 }
-
+.form-group {
+    padding: 15px;
+}
 /*Twitter Panel*/
 .twitter-panel {
 	background: #4fc1e9;
