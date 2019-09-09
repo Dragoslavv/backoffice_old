@@ -50,7 +50,7 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
                 <p class="centered">
-                    <a class="dropdown-toggle" href="profile.html">
+                    <a class="dropdown-toggle" href="profile.php">
                         <i class="fa fa-user"></i>
                     </a>
                 </p>
@@ -82,20 +82,20 @@
                     <ul class="sub">
                         <li><a href="transaction.php">Transaction</a></li>
                         <li><a href="statistic.php">Statistic</a></li>
-                        <li><a href="panels.html">Payment Transaction</a></li>
-                        <li><a href="font_awesome.html">Topup Transaction</a></li>
-                        <li><a href="font_awesome.html">Card Transaction</a></li>
-                        <li><a href="font_awesome.html">iPay Transaction</a></li>
+                        <li><a href="payment-transaction.php">Payment Transaction</a></li>
+                        <li><a href="topup-transaction.php">Topup Transaction</a></li>
+                        <li><a href="card-transaction.php">Card Transaction</a></li>
+                        <li><a href="ipay-transaction.php">iPay Transaction</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="cdr-log.php">
                         <i class="fa fa-cogs"></i>
                         <span>Cdr Log</span>
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="message-log.php">
                         <i class="fa fa-book"></i>
                         <span>Message Log</span>
                     </a>
@@ -106,8 +106,8 @@
                         <span>Cdr</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="form_component.html">Hourly Statistic</a></li>
-                        <li><a href="advanced_form_components.html">Daily Statistic</a></li>
+                        <li><a href="cdr-hourly-statistic.php">Hourly Statistic</a></li>
+                        <li><a href="cdr-daily-statistic.php">Daily Statistic</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -116,8 +116,8 @@
                         <span>Messaging</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="basic_table.html">Hourly</a></li>
-                        <li><a href="responsive_table.html">Daily</a></li>
+                        <li><a href="messaging-daily.php">Daily</a></li>
+                        <li><a href="messaging-hourly.php">Hourly</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
