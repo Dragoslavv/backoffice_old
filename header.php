@@ -126,19 +126,19 @@
                         <span>Numbers</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="morris.html">Numbers</a></li>
-                        <li><a href="chartjs.html">Statistic</a></li>
+                        <li><a href="numbers.php">Numbers</a></li>
+                        <li><a href="numb-statistic.php">Statistic</a></li>
                         <li><a href="flot_chart.html">Special Offer Numbers</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="routes.php">
                         <i class="fa fa-comments-o"></i>
                         <span>Routes</span>
                     </a>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="rates.php">
                         <i class="fa fa-comments-o"></i>
                         <span>Rates</span>
                     </a>
@@ -170,25 +170,25 @@
                         <span>Sim, Data & Active users</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="morris.html">Sim</a></li>
+                        <li><a href="sim.php">Sim</a></li>
                         <li>
                             <a href="javascript:;">
                                 <i class=" fa fa-bar-chart-o"></i>
                                 <span>Sim</span>
                             </a>
                             <ul class="sub">
-                                <li><a href="morris.html">Sim Daily</a></li>
-                                <li><a href="chartjs.html">Sim Hourly</a></li>
+                                <li><a href="sim-daily.php">Sim Daily</a></li>
+                                <li><a href="sim-hourly.php">Sim Hourly</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="chartjs.html">
+                            <a href="activate-users.php">
                                 <i class=" fa fa-bar-chart-o"></i>
                                 <span>Activate</span>
                             </a>
                         </li>
                         <li>
-                            <a href="chartjs.html">
+                            <a href="data.php">
                                 <i class=" fa fa-bar-chart-o"></i>
                                 <span>Data</span>
                             </a>
@@ -201,12 +201,12 @@
                         <span>Mastercard</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="morris.html">Daily Activation Statistic</a></li>
-                        <li><a href="chartjs.html">Hourly Activation Statistic</a></li>
+                        <li><a href="mastercard-daily-activation-s.php">Daily Activation Statistic</a></li>
+                        <li><a href="mastercard-hourly-activation-s.php">Hourly Activation Statistic</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="system-message.php">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>System Message</span>
                     </a>
