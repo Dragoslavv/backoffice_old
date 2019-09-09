@@ -69,7 +69,7 @@
                         <li><a href="devices.php">Devices</a></li>
                         <li><a href="cdr-outbound.php">Cdr Outbound</a></li>
                         <li><a href="cdr-inbound.php">Cdr Inbound</a></li>
-                        <li><a href="package.php">Package</a></li>
+                        <li><a href="billing-package.php">Package</a></li>
                         <li><a href="sim-details.php">Sim details</a></li>
 
                     </ul>
@@ -149,8 +149,8 @@
                         <span>Parking</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="morris.html">Parking Service</a></li>
-                        <li><a href="chartjs.html">Parking Stat</a></li>
+                        <li><a href="parking-service.php">Parking Service</a></li>
+                        <li><a href="parking-stat.php">Parking Stat</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">
@@ -159,9 +159,9 @@
                         <span>Package</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="morris.html">Package</a></li>
-                        <li><a href="chartjs.html">Package Group</a></li>
-                        <li><a href="chartjs.html">Package Stat</a></li>
+                        <li><a href="package.php">Package</a></li>
+                        <li><a href="package-group.php">Package Group</a></li>
+                        <li><a href="package-stat.php">Package Stat</a></li>
                     </ul>
                 </li>
                 <li class="sub-menu">

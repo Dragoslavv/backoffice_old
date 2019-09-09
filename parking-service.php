@@ -5,23 +5,35 @@
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Package </h3>
+        <h3><i class="fa fa-angle-right"></i> Parking Service </h3>
         <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-3 p-2">
-                <h4><i class="fa fa-angle-right"></i> Package Search</h4>
+                <h4><i class="fa fa-angle-right"></i> Parking Search</h4>
                 <div class="form-panel">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">Promo ID : </label>
+                            <label class="col-lg-4 control-label">Start : </label>
                             <div class="col-lg-8">
                                 <input type="text" placeholder="" id="f-name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group ">
-                            <label class="col-lg-4 control-label">Package Group : </label>
+                            <label class="col-lg-4 control-label">End : </label>
                             <div class="col-lg-8">
                                 <input type="text" placeholder="" id="l-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">Zone : </label>
+                            <div class="col-lg-8">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-4 control-label">User number : </label>
+                            <div class="col-lg-8">
+                                <input type="email" placeholder="" id="email2" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -30,20 +42,13 @@
                                 <button class="btn btn-theme04" type="button">Search</button>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <p class="text-center">Add New Package : </p>
-
-                            <div class="col-lg-offset-4 col-lg-8">
-                                <button class="btn btn-theme04" type="button">Add</button>
-                            </div>
-                        </div>
                     </form>
                 </div>
                 <!-- /form-panel -->
             </div>
 
             <div class="col-lg-9 p-2">
-                <h4><i class="fa fa-angle-right"></i></h4>
+                <h4><i class="fa fa-angle-right"></i> Total</h4>
                 <div class="content-panel">
                     <div class="adv-table">
                         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
@@ -75,10 +80,10 @@
                     <div class="panel-heading">
                         <ul class="nav nav-tabs nav-justified">
                             <li class="active">
-                                <a data-toggle="tab" href="#search">Add Package Lang</a>
+                                <a data-toggle="tab" href="#search">Parking Request</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#message-create" class="contact-map">Copy Lang Package</a>
+                                <a data-toggle="tab" href="#message-create" class="contact-map">Parking Response</a>
                             </li>
                         </ul>
                     </div>

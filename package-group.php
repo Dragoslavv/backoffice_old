@@ -5,21 +5,21 @@
 <!--main content start-->
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Package </h3>
+        <h3><i class="fa fa-angle-right"></i> Package Group </h3>
         <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-3 p-2">
-                <h4><i class="fa fa-angle-right"></i> Package Search</h4>
+                <h4><i class="fa fa-angle-right"></i> Package Group Search</h4>
                 <div class="form-panel">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">Promo ID : </label>
+                            <label class="col-lg-4 control-label">Group Name : </label>
                             <div class="col-lg-8">
                                 <input type="text" placeholder="" id="f-name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group ">
-                            <label class="col-lg-4 control-label">Package Group : </label>
+                            <label class="col-lg-4 control-label">Group ID : </label>
                             <div class="col-lg-8">
                                 <input type="text" placeholder="" id="l-name" class="form-control">
                             </div>
