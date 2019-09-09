@@ -80,8 +80,8 @@
                         <span>Payment</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="customer-billing.php">Transaction</a></li>
-                        <li><a href="buttons.html">Statistic</a></li>
+                        <li><a href="transaction.php">Transaction</a></li>
+                        <li><a href="statistic.php">Statistic</a></li>
                         <li><a href="panels.html">Payment Transaction</a></li>
                         <li><a href="font_awesome.html">Topup Transaction</a></li>
                         <li><a href="font_awesome.html">Card Transaction</a></li>

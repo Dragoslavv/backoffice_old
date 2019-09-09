@@ -29,6 +29,12 @@
                                     <input type="text" placeholder="" id="l-name" class="form-control">
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-3 col-lg-9">
+                                    <button class="btn btn-theme" type="submit">Reset</button>
+                                    <button class="btn btn-theme04" type="button">Search</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
