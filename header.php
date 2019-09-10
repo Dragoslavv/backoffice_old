@@ -16,6 +16,7 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--external css-->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
     <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
     <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
     <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css" />
@@ -29,7 +30,7 @@
     <!--header start-->
     <header class="header black-bg">
         <div class="sidebar-toggle-box">
-            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            <div class="fa fa-bars tooltips" data-placement="right" ></div>
         </div>
         <!--logo start-->
         <a href="index.php" class="logo"><b>Globaltel<span>Gui</span></b></a>

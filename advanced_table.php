@@ -317,7 +317,7 @@
             <ul class="sub">
               <li><a href="basic_table.html">Basic Table</a></li>
               <li><a href="responsive_table.html">Responsive Table</a></li>
-              <li class="active"><a href="advanced_table.html">Advanced Table</a></li>
+              <li class="active"><a href="advanced_table.php">Advanced Table</a></li>
             </ul>
           </li>
           <li>
@@ -808,7 +808,7 @@
           -->
           Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
         </div>
-        <a href="advanced_table.html#" class="go-top">
+        <a href="advanced_table.php#" class="go-top">
           <i class="fa fa-angle-up"></i>
           </a>
       </div>

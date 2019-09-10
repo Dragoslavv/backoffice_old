@@ -1079,9 +1079,7 @@ PANELS CONFIGURATIONS
 
 /*Content Panel*/
 .content-panel {
-	background: #dddcdc;
 	box-shadow: 0px 3px 2px #aab2bd;
-	padding-top: 15px;
 	padding-bottom: 5px;
 }
 .content-panel h4 {
@@ -1216,9 +1214,7 @@ PANELS CONFIGURATIONS
 .message-p .form-inline .form-control {
 	width: 100%
 }
-.form-group {
-    padding: 7px;
-}
+
 /*Twitter Panel*/
 .twitter-panel {
 	background: #4fc1e9;
@@ -1733,8 +1729,6 @@ background: #fffbcc !important;
 
 /* FORMS CONFIGURATION */
 .form-panel {
-	background: #dddcdc;
-	margin: 10px;
 	padding: 10px;
 	box-shadow: 0px 3px 2px #aab2bd;
 	text-align: left;
@@ -1746,7 +1740,7 @@ label {
 
 .form-horizontal.style-form .form-group {
 	border-bottom: 1px solid #eff2f7;
-	padding-bottom: 15px;
+	padding-bottom: 2px;
 	margin-bottom: 15px;
 }
 
