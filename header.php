@@ -41,11 +41,7 @@
             </ul>
         </div>
     </header>
-    <!--header end-->
-    <!-- **********************************************************************************************************************************************************
-        MAIN SIDEBAR MENU
-        *********************************************************************************************************************************************************** -->
-    <!--sidebar start-->
+
     <aside>
         <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
@@ -58,7 +54,7 @@
                 <h5 class="centered">Dragoslav Predojevic</h5>
                 <li class="mt sub-menu">
                     <a href="javascript:;">
-                        <i class="fa fa-dashboard"></i>
+                        <i class="fa fa-database"></i>
                         <span>Billing</span>
                     </a>
                     <ul class="sub">

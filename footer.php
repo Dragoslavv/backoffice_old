@@ -12,7 +12,18 @@
 <script type="text/javascript" src="lib/advanced-datatable/js/DT_bootstrap.js"></script>
 <!--common script for all pages-->
 <script src="lib/common-scripts.js"></script>
-
+<!--script for this page-->
+<script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+<!--custom switch-->
+<script src="lib/bootstrap-switch.js"></script>
+<!--custom tagsinput-->
+<script src="lib/jquery.tagsinput.js"></script>
+<!--custom checkbox & radio-->
+<script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="lib/bootstrap-daterangepicker/date.js"></script>
+<script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+<script src="lib/form-component.js"></script>
 
 </body>
 

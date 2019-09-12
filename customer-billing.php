@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Customer Search</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
                             <label class="col-lg-5 control-label">Number : </label>
@@ -46,7 +46,7 @@
             <!-- /col-lg-6 -->
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Customer Data</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
                             <label class="col-lg-5 control-label">User ID : </label>
@@ -92,7 +92,7 @@
 
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Billing Details</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
                     <div class=" form">
                         <form class="cmxform form-horizontal style-form" id="commentForm" method="get" action="">
                             <div class="form-group ">
@@ -121,7 +121,7 @@
 
             <div class="col-lg-3 ">
                 <h5><i class="fa fa-angle-right"></i> Add / Remove Credit</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">
@@ -165,13 +165,13 @@
         <div class="row mt">
             <div class="col-lg-2">
                 <h5><i class="fa fa-angle-right"></i> Deactivation/Activation</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">
                                 <label for="agree" class="control-label col-lg-5 col-sm-3">Active :</label>
                                 <div class="col-lg-7 col-sm-9">
-                                    <input type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                    <input type="checkbox" checked="" data-toggle="switch" />
                                 </div>
                             </div>
                             <div class="form-group ">
@@ -192,7 +192,7 @@
             </div>
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Subscription</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">
@@ -219,7 +219,7 @@
             </div>
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Package Activation</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">
@@ -237,7 +237,7 @@
                             <div class="form-group ">
                                 <label for="agree" class="control-label col-lg-5 col-sm-3">Active sim :</label>
                                 <div class="col-lg-7 col-sm-9">
-                                    <input type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
+                                    <input type="checkbox" checked="" data-toggle="switch" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -252,7 +252,7 @@
             </div>
             <div class="col-lg-2">
                 <h6><i class="fa fa-angle-right"></i> Add/Replace/Transfer Number </h6>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">
@@ -280,7 +280,7 @@
 
             <div class="col-lg-2">
                 <h5><i class="fa fa-angle-right"></i> Wallet Transactions</h5>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
                     <div class="form">
                         <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
                             <div class="form-group ">

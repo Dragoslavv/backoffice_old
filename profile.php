@@ -1,17 +1,17 @@
 <?php require "header.php"; ?>
-<!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Profile </h3>
-        <!-- BASIC FORM VALIDATION -->
         <div class="row">
             <div class="col-lg-3 p-2">
                 <h4><i class="fa fa-angle-right"></i> Operator</h4>
                 <div class="form-panel">
                     <form role="form" class="form-horizontal style-form">
+                        <div class="form-group">
+                            <div class="col-lg-offset-4 col-lg-8">
+                                <button class="btn btn-success btn-block" type="submit"><i class="fa fa-user-plus"></i> Add</button>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="col-lg-4 control-label">ID : </label>
                             <div class="col-lg-8">
@@ -56,7 +56,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-9 p-2">
@@ -66,11 +65,14 @@
                         <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="profile-table">
                             <thead>
                             <tr>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th class="hidden-phone">Platform(s)</th>
-                                <th class="hidden-phone">Engine version</th>
-                                <th class="hidden-phone">CSS grade</th>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th class="hidden-phone">First Name</th>
+                                <th class="hidden-phone">Last Name</th>
+                                <th class="hidden-phone">Role</th>
+                                <th class="hidden-phone">Email</th>
+                                <th class="hidden-phone">Phone</th>
+                                <th class="hidden-phone">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -80,13 +82,25 @@
                                 <td class="hidden-phone">Win 95+</td>
                                 <td class="center hidden-phone">4</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>Trident</td>
-                                <td>Internet Explorer 5.0</td>
+                                <td>Internet Explorer 4.0</td>
                                 <td class="hidden-phone">Win 95+</td>
-                                <td class="center hidden-phone">5</td>
-                                <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Trident</td>
@@ -94,6 +108,12 @@
                                 <td class="hidden-phone">Win 95+</td>
                                 <td class="center hidden-phone">5.5</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Trident</td>
@@ -101,6 +121,12 @@
                                 <td class="hidden-phone">Win 98+</td>
                                 <td class="center hidden-phone">6</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Trident</td>
@@ -108,6 +134,12 @@
                                 <td class="hidden-phone">Win XP SP2+</td>
                                 <td class="center hidden-phone">7</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Trident</td>
@@ -115,6 +147,12 @@
                                 <td class="hidden-phone">Win XP</td>
                                 <td class="center hidden-phone">6</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -122,6 +160,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.2+</td>
                                 <td class="center hidden-phone">1.7</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -129,6 +173,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.2+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -136,6 +186,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.2+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -143,6 +199,12 @@
                                 <td class="hidden-phone">Win 2k+ / OSX.3+</td>
                                 <td class="center hidden-phone">1.9</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -150,6 +212,12 @@
                                 <td class="hidden-phone">OSX.2+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -157,6 +225,12 @@
                                 <td class="hidden-phone">OSX.3+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -164,6 +238,12 @@
                                 <td class="hidden-phone">Win 95+ / Mac OS 8.6-9.2</td>
                                 <td class="center hidden-phone">1.7</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -171,6 +251,12 @@
                                 <td class="hidden-phone">Win 98SE+</td>
                                 <td class="center hidden-phone">1.7</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -178,6 +264,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.2+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -185,6 +277,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -192,6 +290,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.1</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -199,6 +303,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.2</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -206,6 +316,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.3</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -213,6 +329,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.4</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -220,6 +342,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.5</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -227,6 +355,13 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.6</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
+
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -234,6 +369,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.7</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -241,6 +382,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.1+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -248,6 +395,12 @@
                                 <td class="hidden-phone">Win 98+ / OSX.2+</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Gecko</td>
@@ -255,6 +408,12 @@
                                 <td class="hidden-phone">Gnome</td>
                                 <td class="center hidden-phone">1.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -262,6 +421,12 @@
                                 <td class="hidden-phone">OSX.3</td>
                                 <td class="center hidden-phone">125.5</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -269,6 +434,12 @@
                                 <td class="hidden-phone">OSX.3</td>
                                 <td class="center hidden-phone">312.8</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -276,6 +447,12 @@
                                 <td class="hidden-phone">OSX.4+</td>
                                 <td class="center hidden-phone">419.3</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -283,6 +460,12 @@
                                 <td class="hidden-phone">OSX.4+</td>
                                 <td class="center hidden-phone">522.1</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -290,6 +473,12 @@
                                 <td class="hidden-phone">OSX.4+</td>
                                 <td class="center hidden-phone">420</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -297,6 +486,12 @@
                                 <td class="hidden-phone">iPod</td>
                                 <td class="center hidden-phone">420.1</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Webkit</td>
@@ -304,6 +499,12 @@
                                 <td class="hidden-phone">S60</td>
                                 <td class="center hidden-phone">413</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -311,6 +512,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.1+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -318,6 +525,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.2+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -325,6 +538,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.2+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -332,6 +551,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.2+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -339,6 +564,12 @@
                                 <td class="hidden-phone">Win 95+ / OSX.3+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -346,6 +577,13 @@
                                 <td class="hidden-phone">Win 88+ / OSX.3+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
+
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -353,6 +591,12 @@
                                 <td class="hidden-phone">Win 88+ / OSX.3+</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -360,6 +604,12 @@
                                 <td class="hidden-phone">Wii</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -367,6 +617,12 @@
                                 <td class="hidden-phone">N800</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Presto</td>
@@ -374,6 +630,12 @@
                                 <td class="hidden-phone">Nintendo DS</td>
                                 <td class="center hidden-phone">8.5</td>
                                 <td class="center hidden-phone">C/A<sup>1</sup></td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>KHTML</td>
@@ -381,6 +643,12 @@
                                 <td class="hidden-phone">KDE 3.1</td>
                                 <td class="center hidden-phone">3.1</td>
                                 <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>KHTML</td>
@@ -388,6 +656,12 @@
                                 <td class="hidden-phone">KDE 3.3</td>
                                 <td class="center hidden-phone">3.3</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>KHTML</td>
@@ -395,6 +669,12 @@
                                 <td class="hidden-phone">KDE 3.5</td>
                                 <td class="center hidden-phone">3.5</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeX">
                                 <td>Tasman</td>
@@ -402,6 +682,12 @@
                                 <td class="hidden-phone">Mac OS 8-9</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>Tasman</td>
@@ -409,6 +695,12 @@
                                 <td class="hidden-phone">Mac OS 7.6-9</td>
                                 <td class="center hidden-phone">1</td>
                                 <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>Tasman</td>
@@ -416,6 +708,12 @@
                                 <td class="hidden-phone">Mac OS 8-X</td>
                                 <td class="center hidden-phone">1</td>
                                 <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Misc</td>
@@ -423,6 +721,12 @@
                                 <td>Embedded devices</td>
                                 <td class="center">-</td>
                                 <td class="center">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeA">
                                 <td>Misc</td>
@@ -430,6 +734,12 @@
                                 <td class="hidden-phone">Embedded devices</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">A</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeX">
                                 <td>Misc</td>
@@ -437,6 +747,12 @@
                                 <td class="hidden-phone">Embedded devices</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeX">
                                 <td>Misc</td>
@@ -444,6 +760,12 @@
                                 <td class="hidden-phone">Text only</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeX">
                                 <td>Misc</td>
@@ -451,6 +773,12 @@
                                 <td class="hidden-phone">Text only</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>Misc</td>
@@ -458,6 +786,12 @@
                                 <td class="hidden-phone">Windows Mobile 6</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeC">
                                 <td>Misc</td>
@@ -465,6 +799,12 @@
                                 <td class="hidden-phone">PSP</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">C</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             <tr class="gradeU">
                                 <td>Other browsers</td>
@@ -472,19 +812,20 @@
                                 <td class="hidden-phone">-</td>
                                 <td class="center hidden-phone">-</td>
                                 <td class="center hidden-phone">U</td>
+                                <td class="center hidden-phone">4</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-edit"></i></button>
+                                    <button class="btn btn-theme" type="submit"><i class="fa fa-remove"></i></button>
+                                </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- page end-->
             </div>
         </div>
-
-        </div>
-        <!-- /row -->
     </section>
-    <!-- /wrapper -->
 </section>
 
 
