@@ -1,12 +1,7 @@
 <?php require "header.php"; ?>
-<!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Statistic </h3>
-        <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-3 p-2">
                 <h4><i class="fa fa-angle-right"></i> Statistic</h4>
@@ -32,7 +27,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
             <div class="col-lg-9 p-2">
                 <h4><i class="fa fa-angle-right"></i> </h4>
@@ -41,58 +35,46 @@
                     <div class="panel-heading">
                         <ul class="nav nav-tabs nav-justified">
                             <li class="active">
-                                <a data-toggle="tab" href="#overview">Daily</a>
+                                <a data-toggle="tab" href="#daily">Daily</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#contact" class="contact-map">Hourly</a>
+                                <a data-toggle="tab" href="#hourly">Hourly</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" href="#edit">Total</a>
+                                <a data-toggle="tab" href="#total">Total</a>
                             </li>
                         </ul>
                     </div>
-                    <!-- /panel-heading -->
                     <div class="panel-body">
                         <div class="tab-content">
-                            <div id="overview" class="tab-pane active">
+                            <div id="daily" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="hourly" class="tab-pane">
                                 <div class="row">
                                     <div class="col-md-6">
 
 
                                     </div>
-                                    <!-- /col-md-6 -->
                                 </div>
-                                <!-- /OVERVIEW -->
                             </div>
-                            <!-- /tab-pane -->
-                            <div id="contact" class="tab-pane">
+                            <div id="total" class="tab-pane">
                                 <div class="row">
                                     <div class="col-md-6">
 
 
                                     </div>
-                                    <!-- /col-md-6 -->
                                 </div>
-                                <!-- /row -->
                             </div>
-                            <!-- /tab-pane -->
-                            <div id="edit" class="tab-pane">
-                                <div class="row">
-                                    <div class="col-md-6">
-
-
-                                    </div>
-                                    <!-- /col-md-6 -->
-                                </div>
-                                <!-- /row -->
-                            </div>
-                            <!-- /tab-pane -->
                         </div>
-                        <!-- /tab-content -->
                     </div>
-                    <!-- /panel-body -->
                 </div>
-                <!-- /form-panel -->
             </div>
         </div>
         <div class="row ">
@@ -101,7 +83,7 @@
                 <div class="form-panel">
                     <div class="content-panel">
                         <div class="adv-table">
-                            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered">
                                 <thead>
                                 <tr>
                                     <th>Payment</th>
@@ -118,11 +100,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
         </div>
-        <!-- /row -->
     </section>
-    <!-- /wrapper -->
 </section>
 <?php require "footer.php"; ?>

@@ -1,16 +1,11 @@
 <?php require "header.php"; ?>
-<!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Cdr Log </h3>
-        <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-4 p-2">
                 <h4><i class="fa fa-angle-right"></i>Cdr Log Search</h4>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 280px">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
                             <label class="col-lg-4 control-label">Start : </label>
@@ -31,19 +26,18 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-lg-4 control-label">Total Minutes : </label>
+                            <label class="col-lg-4 control-label"><b>Total Minutes :</b> </label>
                             <div class="col-lg-8">
                                 <input type="email" placeholder="" id="email2" class="form-control">
                             </div>
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-4 p-2">
                 <h4><i class="fa fa-angle-right"></i> </h4>
-                <div class="form-panel">
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 280px">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
                             <label class="col-lg-5 control-label">Disposition : </label>
@@ -65,12 +59,11 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-4 p-2">
                 <h4><i class="fa fa-angle-right"></i> </h4>
-                <div class="form-panel">
+                <div class="form-panel  d-flex align-content-stretch flex-wrap" style="min-height: 280px">
                     <form role="form" class="form-horizontal style-form">
                         <div class="form-group">
                             <label class="col-lg-5 control-label">User ID : </label>
@@ -104,25 +97,28 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
         </div>
         <div class="row mt">
             <div class="col-lg-12">
                 <div class="content-panel">
                     <div class="adv-table">
-                        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="cdr-log-table">
                             <thead>
                             <tr>
-                                <th>Created</th>
-                                <th>Expires</th>
-                                <th class="hidden-phone">ID</th>
-                                <th class="hidden-phone">Transaction</th>
-                                <th class="hidden-phone">Billing Type</th>
-                                <th class="hidden-phone">All</th>
-                                <th class="hidden-phone">Committed</th>
-                                <th class="hidden-phone">Result</th>
-                                <th class="hidden-phone">Meta Data</th>
+                                <th>ID</th>
+                                <th>Start</th>
+                                <th class="hidden-phone">Billsec</th>
+                                <th class="hidden-phone">Source</th>
+                                <th class="hidden-phone">Destination</th>
+                                <th class="hidden-phone">User ID</th>
+                                <th class="hidden-phone">User ID B</th>
+                                <th class="hidden-phone">Disposition</th>
+                                <th class="hidden-phone">Status</th>
+                                <th class="hidden-phone">CDR</th>
+                                <th class="hidden-phone">Cdr ID</th>
+                                <th class="hidden-phone">Call Type</th>
+                                <th class="hidden-phone">Route Name</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -136,17 +132,29 @@
                                 <td class="center hidden-phone">X</td>
                                 <td class="center hidden-phone">X</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">X</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- page end-->
             </div>
         </div>
-        </div>
-        <!-- /row -->
     </section>
-    <!-- /wrapper -->
 </section>
 <?php require "footer.php"; ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#cdr-log-table').dataTable({
+            "bFilter": false,
+            "bInfo": false,
+            "bSort": true,
+            "bProcessing": true,
+            "bLengthChange": false
+        });
+    });
+</script>

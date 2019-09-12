@@ -1,12 +1,7 @@
 <?php require "header.php"; ?>
-<!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Numbers </h3>
-        <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-6 p-2">
                 <h4><i class="fa fa-angle-right"></i>Number Type Search</h4>
@@ -38,7 +33,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-6 p-2">
@@ -71,25 +65,25 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
         </div>
         <div class="row mt">
             <div class="col-lg-12">
                 <div class="content-panel">
                     <div class="adv-table">
-                        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+                        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="numbers-table">
                             <thead>
                             <tr>
-                                <th>Created</th>
-                                <th>Expires</th>
-                                <th class="hidden-phone">ID</th>
-                                <th class="hidden-phone">Transaction</th>
-                                <th class="hidden-phone">Billing Type</th>
-                                <th class="hidden-phone">All</th>
-                                <th class="hidden-phone">Committed</th>
-                                <th class="hidden-phone">Result</th>
-                                <th class="hidden-phone">Meta Data</th>
+                                <th>Expiration Date</th>
+                                <th>Number</th>
+                                <th class="hidden-phone">User ID</th>
+                                <th class="hidden-phone">Created Date</th>
+                                <th class="hidden-phone">Type</th>
+                                <th class="hidden-phone">Brand</th>
+                                <th class="hidden-phone">Provider</th>
+                                <th class="hidden-phone">Price</th>
+                                <th class="hidden-phone">Our Price</th>
+                                <th class="hidden-phone">Auto Renewal</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -103,17 +97,26 @@
                                 <td class="center hidden-phone">X</td>
                                 <td class="center hidden-phone">X</td>
                                 <td class="center hidden-phone">X</td>
+                                <td class="center hidden-phone">X</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <!-- page end-->
             </div>
         </div>
-        </div>
-        <!-- /row -->
     </section>
-    <!-- /wrapper -->
 </section>
 <?php require "footer.php"; ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#numbers-table').dataTable({
+            "bFilter": false,
+            "bInfo": false,
+            "bSort": true,
+            "bProcessing": true,
+            "bLengthChange": false
+        });
+    });
+</script>

@@ -1,323 +1,305 @@
-    <?php require "header.php"; ?>
-    <!-- **********************************************************************************************************************************************************
-        MAIN CONTENT
-        *********************************************************************************************************************************************************** -->
-    <!--main content start-->
-    <section id="main-content">
-      <section class="wrapper">
-        <!-- page start-->
-        <div class="row mt">
-          <div class="col-sm-3">
-            <section class="panel">
-              <div class="panel-body">
-                <a href="mail_compose.html" class="btn btn-compose">
-                  <i class="fa fa-pencil"></i>  Compose Mail
-                  </a>
-                <ul class="nav nav-pills nav-stacked mail-nav">
-                  <li class="active"><a href="inbox.php"> <i class="fa fa-inbox"></i> Inbox  <span class="label label-theme pull-right inbox-notification">3</span></a></li>
-                  <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
-                  <li><a href="#"> <i class="fa fa-exclamation-circle"></i> Important</a></li>
-                  <li><a href="#"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-info pull-right inbox-notification">8</span></a></a>
-                  </li>
-                  <li><a href="#"> <i class="fa fa-trash-o"></i> Trash</a></li>
-                </ul>
-              </div>
-            </section>
-            <section class="panel">
-              <div class="panel-body">
-                <ul class="nav nav-pills nav-stacked labels-info ">
-                  <li>
-                    <h4>Friends Online</h4>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-10.jpg" class="img-circle" width="20">Laura
-                        <p><span class="label label-success">Available</span></p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-05.jpg" class="img-circle" width="20">David
-                        <p><span class="label label-danger"> Busy</span></p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-01.jpg" class="img-circle" width="20">Mark
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-03.jpg" class="img-circle" width="20">Phillip
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                        <img src="img/friends/fr-02.jpg" class="img-circle" width="20">Joshua
-                        <p>Offline</p>
-                      </a>
-                  </li>
-                </ul>
-                <a href="#"> + Add More</a>
-                <div class="inbox-body text-center inbox-action">
-                  <div class="btn-group">
-                    <a class="btn mini btn-default" href="javascript:;">
-                      <i class="fa fa-power-off"></i>
-                      </a>
-                  </div>
-                  <div class="btn-group">
-                    <a class="btn mini btn-default" href="javascript:;">
-                      <i class="fa fa-cog"></i>
-                      </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="col-sm-9">
-            <section class="panel">
-              <header class="panel-heading wht-bg">
-                <h4 class="gen-case">
-                    Inbox (3)
-                    <form action="#" class="pull-right mail-src-position">
-                      <div class="input-append">
-                        <input type="text" class="form-control " placeholder="Search Mail">
-                      </div>
+<?php require "header.php"; ?>
+
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i> Customer Billing</h3>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <h5><i class="fa fa-angle-right"></i> Customer Search</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
+                    <form role="form" class="form-horizontal style-form">
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">Number : </label>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="" id="f-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="col-lg-5 control-label">Email : </label>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="" id="l-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">User ID : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">Billing ID : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-5 col-lg-7">
+                                <button class="btn btn-theme" type="submit">Save</button>
+                                <button class="btn btn-theme04" type="button">Cancel</button>
+                            </div>
+                        </div>
                     </form>
-                  </h4>
-              </header>
-              <div class="panel-body minimal">
-                <div class="mail-option">
-                  <div class="chk-all">
-                    <div class="pull-left mail-checkbox">
-                      <input type="checkbox" class="">
-                    </div>
-                    <div class="btn-group">
-                      <a data-toggle="dropdown" href="#" class="btn mini all">
-                        All
-                        <i class="fa fa-angle-down "></i>
-                        </a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#"> None</a></li>
-                        <li><a href="#"> Read</a></li>
-                        <li><a href="#"> Unread</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="btn-group">
-                    <a data-original-title="Refresh" data-placement="top" data-toggle="dropdown" href="#" class="btn mini tooltips">
-                      <i class=" fa fa-refresh"></i>
-                      </a>
-                  </div>
-                  <div class="btn-group hidden-phone">
-                    <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      More
-                      <i class="fa fa-angle-down "></i>
-                      </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                    </ul>
-                  </div>
-                  <div class="btn-group">
-                    <a data-toggle="dropdown" href="#" class="btn mini blue">
-                      Move to
-                      <i class="fa fa-angle-down "></i>
-                      </a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#"><i class="fa fa-pencil"></i> Mark as Read</a></li>
-                      <li><a href="#"><i class="fa fa-ban"></i> Spam</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
-                    </ul>
-                  </div>
-                  <ul class="unstyled inbox-pagination">
-                    <li><span>1-50 of 99</span></li>
-                    <li>
-                      <a class="np-btn" href="#"><i class="fa fa-angle-left  pagination-left"></i></a>
-                    </li>
-                    <li>
-                      <a class="np-btn" href="#"><i class="fa fa-angle-right pagination-right"></i></a>
-                    </li>
-                  </ul>
                 </div>
-                <div class="table-inbox-wrap ">
-                  <table class="table table-inbox table-hover">
-                    <tbody>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message  dont-show"><a href="mail_view.html">Google Inc.</a></td>
-                        <td class="view-message "><a href="mail_view.html">Your new account is ready.</a></td>
-                        <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message  text-right">08:10 AM</td>
-                      </tr>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Mark Thompson</a></td>
-                        <td class="view-message"><a href="mail_view.html">Last project updates</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 15</td>
-                      </tr>
-                      <tr class="unread">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Wonder Corp.</a></td>
-                        <td class="view-message"><a href="mail_view.html">Thanks for your registration</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 15</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Facebook</a></td>
-                        <td class="view-message"><a href="mail_view.html">New Friendship Request</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 13</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Mark Webber <span class="label label-danger pull-right">urgent</span></a></td>
-                        <td class="view-message"><a href="mail_view.html">The server is down</a></td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 09</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show"><a href="mail_view.html">Facebook</a></td>
-                        <td class="view-message"><a href="mail_view.html">New message from Patrick S.</a></td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">March 08</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show">Paypal inc.</td>
-                        <td class="view-message">New payment received</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">March 04</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Andrea <span class="label label-success pull-right">girlfriend</span></td>
-                        <td class="view-message view-message">Weekend plans</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">March 04</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">David Green</td>
-                        <td class="view-message view-message">Soccer tickets</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 22</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Evelyn <span class="label label-info pull-right">family</span></td>
-                        <td class="view-message view-message">Surprise party</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 19</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="view-message dont-show">Martin Moore</td>
-                        <td class="view-message">Hey mate!</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">February 17</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star inbox-started"></i></td>
-                        <td class="dont-show">Facebook</td>
-                        <td class="view-message">Paul published on your wall</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">February 14</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Steve Stoll</td>
-                        <td class="view-message">Update developed</td>
-                        <td class="view-message inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                        <td class="view-message text-right">February 11</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="dont-show">Laura Anton</td>
-                        <td class="view-message view-message">New subscription</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 14</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Ryanair</td>
-                        <td class="view-message">Your flight tickets</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 07</td>
-                      </tr>
-                      <tr class="">
-                        <td class="inbox-small-cells">
-                          <input type="checkbox" class="mail-checkbox">
-                        </td>
-                        <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                        <td class="view-message dont-show">Twitter</td>
-                        <td class="view-message">Password reset</td>
-                        <td class="view-message inbox-small-cells"></td>
-                        <td class="view-message text-right">January 04</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <!-- /form-panel -->
+            </div>
+            <!-- /col-lg-6 -->
+            <div class="col-lg-3">
+                <h5><i class="fa fa-angle-right"></i> Customer Data</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
+                    <form role="form" class="form-horizontal style-form">
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">User ID : </label>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="" id="f-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">Email : </label>
+                            <div class="col-lg-7">
+                                <input type="text" placeholder="" id="l-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">Name : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <label class="col-lg-5 control-label">Subscription : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">Wallet ID : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-5 control-label">App Force : </label>
+                            <div class="col-lg-7">
+                                <input type="email" placeholder="" id="email2" class="form-control">
+                            </div>
+                        </div>
+
+                    </form>
                 </div>
-              </div>
-            </section>
-          </div>
+                <!-- /form-panel -->
+            </div>
+
+            <div class="col-lg-3">
+                <h5><i class="fa fa-angle-right"></i> Billing Details</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
+                    <div class=" form">
+                        <form class="cmxform form-horizontal style-form" id="commentForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="cname" class="control-label col-lg-5">Billing ID : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="cname" name="name" minlength="2" type="text" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="cemail" class="control-label col-lg-5">Balances : </label>
+                                <div class="col-lg-7">
+                                    <input class="form-control " id="cemail" type="email" name="email" required />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="curl" class="control-label col-lg-5"> Reservations : </label>
+                                <div class="col-lg-7">
+                                    <input class="form-control " id="curl" type="url" name="url" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+
+            <div class="col-lg-3 ">
+                <h5><i class="fa fa-angle-right"></i> Add / Remove Credit</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="firstname" class="control-label col-lg-5">Amount : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="lastname" class="control-label col-lg-5">Account : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="username" class="control-label col-lg-5">Password : </label>
+                                <div class="col-lg-7">
+                                    <input class="form-control " id="username" name="username" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="password" class="control-label col-lg-5">Info :</label>
+                                <div class="col-lg-7">
+                                    <input class="form-control " id="password" name="password" type="password" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-7">
+                                    <button class="btn btn-theme" type="submit">Proceed</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+            <!-- /form-panel -->
         </div>
-      </section>
-      <!-- /wrapper -->
+
+        <!-- /row -->
+        <div class="row mt">
+            <div class="col-lg-2">
+                <h5><i class="fa fa-angle-right"></i> Deactivation/Activation</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="agree" class="control-label col-lg-5 col-sm-3">Active :</label>
+                                <div class="col-lg-7 col-sm-9">
+                                    <input type="checkbox" checked="" data-toggle="switch" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="password" class="control-label col-lg-5">Info :</label>
+                                <div class="col-lg-7">
+                                    <input class="form-control " id="password" name="password" type="password" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-7">
+                                    <button class="btn btn-theme" type="submit">Proceed</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+            <div class="col-lg-3">
+                <h5><i class="fa fa-angle-right"></i> Subscription</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="firstname" class="control-label col-lg-5">Subscription : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="lastname" class="control-label col-lg-5">Plan : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-7">
+                                    <button class="btn btn-theme" type="submit">Proceed</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+            <div class="col-lg-3">
+                <h5><i class="fa fa-angle-right"></i> Package Activation</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="firstname" class="control-label col-lg-5">Package : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="lastname" class="control-label col-lg-5">Duration : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="agree" class="control-label col-lg-5 col-sm-3">Active sim :</label>
+                                <div class="col-lg-7 col-sm-9">
+                                    <input type="checkbox" checked="" data-toggle="switch" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-7">
+                                    <button class="btn btn-theme" type="submit">Active</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+            <div class="col-lg-2">
+                <h6><i class="fa fa-angle-right"></i> Add/Replace/Transfer Number </h6>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+                                <label for="firstname" class="control-label col-lg-5">Action : </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="firstname" name="firstname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label for="lastname" class="control-label col-lg-5">Number </label>
+                                <div class="col-lg-7">
+                                    <input class=" form-control" id="lastname" name="lastname" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-5 col-lg-5">
+                                    <button class="btn btn-theme" type="submit">Add/Re...</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+
+            <div class="col-lg-2">
+                <h5><i class="fa fa-angle-right"></i> Wallet Transactions</h5>
+                <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 240px">
+                    <div class="form">
+                        <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="">
+                            <div class="form-group ">
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-offset-2 col-lg-10">
+                                    <button class="btn btn-theme" type="submit">Transaction</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /form-panel -->
+            </div>
+            <!-- /col-lg-12 -->
+        </div>
+
     </section>
-    <!-- /MAIN CONTENT -->
-    <!--main content end-->
-    <?php require "footer.php"; ?>
+    <!-- /wrapper -->
+</section>
+<?php require "footer.php"; ?>

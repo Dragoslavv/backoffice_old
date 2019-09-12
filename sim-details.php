@@ -1,7 +1,7 @@
 <?php require "header.php"; ?>
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Package </h3>
+        <h3><i class="fa fa-angle-right"></i> Sim Detail </h3>
         <div class="col-lg-12">
             <div class="content-panel">
                 <div class="adv-table">
