@@ -91,8 +91,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-offset-5 col-lg-7">
-                                <button class="btn btn-theme" type="submit">Reset</button>
-                                <button class="btn btn-theme04" type="button">Search</button>
+                                <button class="btn btn-theme" type="submit"><i class="fa fa-refresh"></i> Reset</button>
+                                <button class="btn btn-theme04" type="button"><i class="fa fa-search"></i> Search</button>
                             </div>
                         </div>
                     </form>

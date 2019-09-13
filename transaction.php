@@ -139,7 +139,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-offset-5 col-lg-7">
-                                <button class="btn btn-theme" type="submit">Export Payment</button>
+                                <button class="btn btn-theme" type="submit"><i class="fa fa-exchange"></i> Export Payment</button>
                             </div>
                         </div>
                     </form>

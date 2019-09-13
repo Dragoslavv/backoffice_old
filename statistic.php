@@ -21,8 +21,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-offset-4 col-lg-8">
-                                <button class="btn btn-theme" type="submit">Reset</button>
-                                <button class="btn btn-theme04" type="button">Search</button>
+                                <button class="btn btn-theme" type="submit"><i class="fa fa-refresh"></i> Reset</button>
+                                <button class="btn btn-theme04" type="button"><i class="fa fa-search"></i> Search</button>
                             </div>
                         </div>
                     </form>
@@ -49,17 +49,18 @@
                         <div class="tab-content">
                             <div id="daily" class="tab-pane active">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
 
-
+                                        <div id="myfirstchart" ></div>
 
                                     </div>
                                 </div>
                             </div>
                             <div id="hourly" class="tab-pane">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
 
+                                        <div id="myfirstchart1" ></div>
 
                                     </div>
                                 </div>
@@ -68,6 +69,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
 
+                                        <div id="myfirstchart2" ></div>
 
                                     </div>
                                 </div>
@@ -78,7 +80,7 @@
             </div>
         </div>
         <div class="row ">
-            <div class="col-lg-3 p-2">
+            <div class="col-lg-3 p-2 topup">
                 <h4><i class="fa fa-angle-right"></i> </h4>
                 <div class="form-panel">
                     <div class="content-panel">

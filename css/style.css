@@ -227,7 +227,11 @@ ul.top-menu > li > .logout {
 	margin-top: 15px;
 }
 
-
+@media (min-width: 1200px) {
+    .topup{
+        margin-top: -280px;
+    }
+}
 /*sidebar navigation*/
 
 #sidebar {
