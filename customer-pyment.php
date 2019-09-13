@@ -20,7 +20,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="gradeX">
+                                <tr class="gradeA">
                                     <td>Trident</td>
                                     <td>Internet Explorer 4.0</td>
                                     <td class="hidden-phone">Win 95+</td>
@@ -32,7 +32,7 @@
                                     <td class="center hidden-phone">X</td>
 
                                 </tr>
-                                <tr class="gradeC">
+                                <tr class="gradeA">
                                     <td>Trident</td>
                                     <td>Internet Explorer 4.0</td>
                                     <td class="hidden-phone">Win 95+</td>

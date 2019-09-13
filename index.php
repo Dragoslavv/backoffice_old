@@ -1,5 +1,4 @@
 <?php require "header.php"; ?>
-
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> Customer Billing</h3>
@@ -41,9 +40,7 @@
                         </div>
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
-            <!-- /col-lg-6 -->
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Customer Data</h5>
                 <div class="form-panel d-flex align-content-stretch flex-wrap" style="min-height: 333px">
@@ -87,7 +84,6 @@
 
                     </form>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-3">
@@ -116,7 +112,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-3 ">
@@ -156,12 +151,9 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
-            <!-- /form-panel -->
         </div>
 
-        <!-- /row -->
         <div class="row mt">
             <div class="col-lg-2">
                 <h5><i class="fa fa-angle-right"></i> Deactivation/Activation</h5>
@@ -188,7 +180,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Subscription</h5>
@@ -215,7 +206,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
             <div class="col-lg-3">
                 <h5><i class="fa fa-angle-right"></i> Package Activation</h5>
@@ -248,7 +238,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
             <div class="col-lg-2">
                 <h6><i class="fa fa-angle-right"></i> Add/Replace/Transfer Number </h6>
@@ -275,7 +264,6 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
 
             <div class="col-lg-2">
@@ -294,12 +282,9 @@
                         </form>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
-            <!-- /col-lg-12 -->
         </div>
 
     </section>
-    <!-- /wrapper -->
 </section>
 <?php require "footer.php"; ?>
