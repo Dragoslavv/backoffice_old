@@ -1,12 +1,7 @@
 <?php require "header.php"; ?>
-<!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
-<!--main content start-->
 <section id="main-content">
     <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> System Message </h3>
-        <!-- BASIC FORM VALIDATION -->
         <div class="row mt">
             <div class="col-lg-4 p-2">
                 <h4><i class="fa fa-angle-right"></i> Brand</h4>
@@ -56,11 +51,8 @@
                                         </div>
 
                                     </div>
-                                    <!-- /col-md-6 -->
                                 </div>
-                                <!-- /OVERVIEW -->
                             </div>
-                            <!-- /tab-pane -->
                             <div id="message-create" class="tab-pane">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -100,14 +92,11 @@
                                         </div>
 
                                     </div>
-                                    <!-- /col-md-6 -->
                                 </div>
-                                <!-- /row -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /form-panel -->
             </div>
             <div class="col-lg-8 p-2">
                 <h4><i class="fa fa-angle-right"></i>Data </h4>
@@ -146,6 +135,5 @@
             </div>
         </div>
     </section>
-    <!-- /wrapper -->
 </section>
 <?php require "footer.php"; ?>
