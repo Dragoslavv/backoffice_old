@@ -1,4 +1,4 @@
-<?php //session_start();(isset($_SESSION['tokenSession'])) ? header("Location: index.php") : die(); ?>
+<?php session_name("GLOBALTEL"); session_start(); if(isset($_SESSION['tokenSession'])) { header("Location: index.php"); } ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

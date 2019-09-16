@@ -1,4 +1,6 @@
 <?php
+session_name("GLOBALTEL");
+
 session_start();
 
 header("Access-Control-Allow-Origin: *");

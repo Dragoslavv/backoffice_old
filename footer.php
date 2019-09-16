@@ -24,11 +24,7 @@
 <!--===============================================================================================-->
 <!--script for this page-->
 <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
-<!--===============================================================================================-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-<!--===============================================================================================-->
-<script src="lib/morris-conf.js"></script>
+
 <!--===============================================================================================-->
 <!--custom switch-->
 <script src="lib/bootstrap-switch.js"></script>
@@ -42,6 +38,7 @@
 <script type="text/javascript" src="lib/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script type="text/javascript" src="lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
 <script src="lib/form-component.js"></script>
+<script src="js/main.js"></script>
 <!--===============================================================================================-->
 </body>
 

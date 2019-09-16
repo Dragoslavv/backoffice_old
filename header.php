@@ -1,6 +1,8 @@
-<?php session_start();
+<?php
+session_name("GLOBALTEL");
+session_start();
 
-//if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
+if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +52,7 @@
         <!--logo end-->
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.php">Logout</a></li>
+                <li><a class="logout" href="" id="logout">Logout</a></li>
             </ul>
         </div>
     </header>
@@ -64,7 +66,8 @@
                         <i class="fa fa-user"></i>
                     </a>
                 </p>
-                <h5 class="centered">Dragoslav Predojevic</h5>
+                <h5 class="centered"><?php echo $_SESSION['firstName'][0] . ' ' . $_SESSION['lastName'][0]; ?></h5>
+                <h6 class="centered"><?php echo $_SESSION['role'][0] ; ?></h6>
                 <li class="mt sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-database"></i>

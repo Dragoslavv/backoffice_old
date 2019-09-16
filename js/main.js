@@ -17,7 +17,6 @@ $(document).ready(function () {
                 var result = $.parseJSON(result);
 
                 if(result.success == true){
-                    console.log(result);
                     window.location = 'index.php';
 
                 }
@@ -27,28 +26,28 @@ $(document).ready(function () {
 
     });
 
-    $('.logout').on('click', function (e) {
+    $('#logout').on('click', function (e) {
         e.preventDefault();
+
         $.ajax({
             headers : {
-                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+                'Content-Type' : 'application/json; charset=UTF-8'
             },
             url: 'functionality/logout.php',
             cache: false,
             contentType: 'json',
             processData: false,
+            async: false,
             type:'POST',
+            crossDomain: true,
             success: function(result) {
                 var result = $.parseJSON(result);
 
                 if(result.success == true){
-                    console.log(result);
-                    window.location = 'login.php';
-
+                    window.location = "login.php";
                 }
-
             }
         });
-    })
+    });
 
 });

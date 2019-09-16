@@ -1,6 +1,11 @@
 <?php
+session_name("GLOBALTEL");
 session_start();
 $_SESSION['tokenSession'] = array();
+$_SESSION['firstName'] = array();
+$_SESSION['lastName'] = array();
+$_SESSION['role'] = array();
+$_SESSION['USER_ID'] = array();
 
 $url = 'http://new-gui.com/php/login/login.php';
 
@@ -38,9 +43,14 @@ if (curl_errno($ch)) {
 curl_close($ch);
 echo $retVal;
 
-if(isset($_SESSION['tokenSession'])){
+if(isset($_SESSION['tokenSession']) && isset($_SESSION['firstName']) && isset($_SESSION['lastName']) && isset($_SESSION['role']) && isset($_SESSION['USER_ID'])){
     $token = json_decode($retVal, true);
     array_push($_SESSION['tokenSession'],$token["data"]["session"]);
+    array_push($_SESSION['firstName'],$token["data"]["firstname"]);
+    array_push($_SESSION['lastName'],$token["data"]["lastname"]);
+    array_push($_SESSION['role'],$token["data"]["role"]);
+    array_push($_SESSION['USER_ID'],$token["data"]["USER_ID"]);
+
 }
 exit();
 
