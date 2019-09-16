@@ -1,87 +1,54 @@
+$(document).ready(function () {
 
-(function ($) {
-    "use strict";
+    $('#login-button').on('click', function(e){
+        e.preventDefault();
 
+        $.ajax({
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            url: 'functionality/login.php',
+            data: $('#login-form').serialize(),
+            cache: false,
+            contentType: 'json',
+            processData: false,
+            type:'POST',
+            success: function(result) {
+                var result = $.parseJSON(result);
 
-    /*==================================================================
-    [ Focus input ]*/
-    $('.input100').each(function(){
-        $(this).on('blur', function(){
-            if($(this).val().trim() != "") {
-                $(this).addClass('has-val');
+                if(result.success == true){
+                    console.log(result);
+                    window.location = 'index.php';
+
+                }
+
             }
-            else {
-                $(this).removeClass('has-val');
-            }
-        })    
-    })
-  
-  
-    /*==================================================================
-    [ Validate ]*/
-    var input = $('.validate-input .input100');
-
-    $('.validate-form').on('submit',function(){
-        var check = true;
-
-        for(var i=0; i<input.length; i++) {
-            if(validate(input[i]) == false){
-                showValidate(input[i]);
-                check=false;
-            }
-        }
-
-        return check;
-    });
-
-
-    $('.validate-form .input100').each(function(){
-        $(this).focus(function(){
-           hideValidate(this);
         });
+
     });
 
-    function validate (input) {
-        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-                return false;
+    $('.logout').on('click', function (e) {
+        e.preventDefault();
+        $.ajax({
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            url: 'functionality/logout.php',
+            cache: false,
+            contentType: 'json',
+            processData: false,
+            type:'POST',
+            success: function(result) {
+                var result = $.parseJSON(result);
+
+                if(result.success == true){
+                    console.log(result);
+                    window.location = 'login.php';
+
+                }
+
             }
-        }
-        else {
-            if($(input).val().trim() == ''){
-                return false;
-            }
-        }
-    }
+        });
+    })
 
-    function showValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).addClass('alert-validate');
-    }
-
-    function hideValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).removeClass('alert-validate');
-    }
-    
-    /*==================================================================
-    [ Show pass ]*/
-    var showPass = 0;
-    $('.btn-show-pass').on('click', function(){
-        if(showPass == 0) {
-            $(this).next('input').attr('type','text');
-            $(this).addClass('active');
-            showPass = 1;
-        }
-        else {
-            $(this).next('input').attr('type','password');
-            $(this).removeClass('active');
-            showPass = 0;
-        }
-        
-    });
-
-
-})(jQuery);
+});
