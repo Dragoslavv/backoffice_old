@@ -71,6 +71,7 @@
             $json = file_get_contents($url);
             $data = json_decode($json, TRUE);
             var_dump($json);
+            var_dump($_SESSION['tokenSession']);
             ?>
             <div class="col-lg-9 p-2">
                 <h4><i class="fa fa-angle-right"></i> Data</h4>

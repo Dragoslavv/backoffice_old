@@ -50,4 +50,19 @@ $(document).ready(function () {
         });
     });
 
+    $.ajax({
+        headers : {
+            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        url: 'functionality/operator.php',
+        cache: false,
+        contentType: 'json',
+        processData: false,
+        type:'GET',
+        success: function(result) {
+            var result = $.parseJSON(result);
+            console.log(result);
+
+        }
+    });
 });

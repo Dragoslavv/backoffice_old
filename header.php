@@ -1,5 +1,4 @@
 <?php
-session_name("GLOBALTEL");
 session_start();
 
 if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
