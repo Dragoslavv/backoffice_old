@@ -48,6 +48,7 @@ if(isset($_SESSION['tokenSession']) && isset($_SESSION['firstName']) && isset($_
     array_push($_SESSION['lastName'],$token["data"]["lastname"]);
     array_push($_SESSION['role'],$token["data"]["role"]);
 }
+
 exit();
 
 ?>

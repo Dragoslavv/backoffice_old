@@ -1,5 +1,6 @@
 <?php
 session_start();
+setcookie("GLOBALTEL", $_SESSION['tokenSession'][0], time()+ 60 * 60,'/');
 
 if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
 ?>
@@ -25,7 +26,7 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
     <!--===============================================================================================-->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!--===============================================================================================-->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">-->
     <!--===============================================================================================-->
     <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
     <!--===============================================================================================-->
