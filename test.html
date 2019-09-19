@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<button onclick="test()">POST REQUEST</button>
+<button onclick="test1()">GET REQUEST</button>
+<div id="demo">???</div>
+<div id="demo1">???</div>
+</body>
+</html>
+<script type="text/javascript">
+    var createdSession = "";
+    function test() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                var obj = this.responseText;
+                var myJSON = JSON.parse(obj);
+                createdSession = myJSON.data.session;
+            }
+        };
+        xhttp.open("POST", "https://api.globaltel.rs/api-gui/php/login/login.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("username=nikola&password=nikola");
+    }
+    function test1() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+            }
+        };
+        xhttp.open("GET", "https://api.globaltel.rs/api-gui/php/operator/read.php", true);
+        xhttp.setRequestHeader("Set-Cookie","GLOBALTEL=" + createdSession);
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send();
+    }
+</script>

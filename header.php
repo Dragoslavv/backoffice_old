@@ -1,7 +1,8 @@
 <?php
 session_start();
-setcookie("GLOBALTEL", $_SESSION['tokenSession'][0], time()+ 60 * 60,'/');
-
+$lifetime = 60 * 60;
+session_set_cookie_params ($lifetime);
+setcookie("GLOBALTEL",$_SESSION['tokenSession'][0],time() + $lifetime,'/');
 if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
 ?>
 <!DOCTYPE html>

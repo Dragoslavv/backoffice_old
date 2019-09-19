@@ -31,15 +31,13 @@ $(document).ready(function () {
 
         $.ajax({
             headers : {
-                'Content-Type' : 'application/json; charset=UTF-8'
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
             },
             url: 'functionality/logout.php',
             cache: false,
             contentType: 'json',
             processData: false,
-            async: false,
             type:'POST',
-            crossDomain: true,
             success: function(result) {
                 var result = $.parseJSON(result);
 
@@ -51,16 +49,16 @@ $(document).ready(function () {
     });
 
     $.ajax({
-        headers : {
-            'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-        },
+        // headers : {
+        //     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        // },
         url: 'functionality/operator.php',
         cache: false,
         contentType: 'json',
         processData: false,
         type:'GET',
         success: function(result) {
-            var result = $.parseJSON(result);
+            // var result = $.parseJSON(result);
             console.log(result);
 
         }

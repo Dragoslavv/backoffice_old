@@ -50,9 +50,8 @@
                                         ALL <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#">Big River</a></li>
-                                        <li><a href="#">Easy</a></li>
-                                        <li><a href="#">globaltel</a></li>
+                                        <li><a href="#">Admin</a></li>
+                                        <li><a href="#">User</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -67,11 +66,14 @@
                 </div>
             </div>
             <?php
-            $url = 'http://new-gui.com/php/operator/read.php';
-            $json = file_get_contents($url);
-            $data = json_decode($json, TRUE);
-            var_dump($json);
-            var_dump($_SESSION['tokenSession']);
+            var_dump($_COOKIE);
+            var_dump($_SESSION['tokenSession'][0]);
+//            $url = 'http://new-gui.com/php/operator/read.php';
+//            $json = file_get_contents($url);
+//            $data = json_decode($json, TRUE);
+//            var_dump($json);
+//            var_dump($_SESSION['tokenSession'][0]);
+
             ?>
             <div class="col-lg-9 p-2">
                 <h4><i class="fa fa-angle-right"></i> Data</h4>

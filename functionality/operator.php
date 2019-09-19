@@ -1,13 +1,26 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-
 session_start();
+error_reporting(E_ALL);
+date_default_timezone_set('Europe/Belgrade');
+
+// SEND HEADERS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+
+header("Expires: Tue, 19 Nov 1981 08:52:00 GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", true);
+header("Pragma: no-cache");
+header("Set-Cookie","GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/");
+
 
 if(isset($_SESSION['tokenSession'][0])){
-    $url = 'http://new-gui.com/php/operator/read.php';
+    $url = 'https://api.globaltel.rs/api-gui/php/operator/read.php';
 
     $headers = array();
-    $headers[] = 'Content-Type: application/json; charset=UTF-8';
+    $headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
+    $headers[] = "Set-Cookie: GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/";
 
     $post_data = '';
     foreach ($_REQUEST as $key => $value) {
@@ -20,7 +33,10 @@ if(isset($_SESSION['tokenSession'][0])){
     }
     $post_data = str_replace(" ","+",$post_data);
 
-    $ch = curl_init();
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_COOKIEFILE, $_SESSION['tokenSession'][0]); // Cookie aware
+    curl_setopt($ch, CURLOPT_COOKIEJAR, $_SESSION['tokenSession'][0]); // Cookie aware
+    curl_setopt($ch, CURLOPT_VERBOSE, true);
     curl_setopt($ch, CURLOPT_URL, $url . $post_data);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -35,7 +51,8 @@ if(isset($_SESSION['tokenSession'][0])){
     }
     curl_close($ch);
 
-    echo json_encode($retVal);
+    echo $retVal;
+
     exit();
 }else {
     $retVal = array("result"=>false);
