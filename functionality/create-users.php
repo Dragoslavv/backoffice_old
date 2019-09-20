@@ -19,14 +19,23 @@ header("Set-Cookie","GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/");
 if(isset($_SESSION['tokenSession'][0])){
     $_SESSION['operator'] = array();
 
-    $url = 'https://api.globaltel.rs/api-gui/php/operator/read.php';
+    $url = 'https://api.globaltel.rs/api-gui/php/operator/create.php';
 
     $headers = array();
     $headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
 
+    $post_data = '';
+
+    foreach ($_REQUEST as $key => $value) {
+        if ($post_data == '') {
+            $post_data = $key . '=' . $value;
+        } else {
+            $post_data = $post_data . '&' . $key . '=' .$value;
+        }
+    }
 
     $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_URL, $url . $post_data);
     curl_setopt($ch, CURLOPT_COOKIE,	"GLOBALTEL=".$_SESSION['tokenSession'][0]);
     curl_setopt($ch, CURLOPT_AUTOREFERER, true);
     curl_setopt($ch, CURLOPT_COOKIESESSION, true);
@@ -50,9 +59,9 @@ if(isset($_SESSION['tokenSession'][0])){
 
     echo $retVal;
 
-if(isset($_SESSION['operator']) ) {
-    array_push($_SESSION['operator'], $retVal);
-}
+    if(isset($_SESSION['operator']) ) {
+        array_push($_SESSION['operator'], $retVal);
+    }
 
     exit();
 }else {

@@ -160,7 +160,6 @@
             </div>
             <!-- /form-panel -->
         </div>
-
         <!-- /row -->
         <div class="row mt">
             <div class="col-lg-2">
