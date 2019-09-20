@@ -85,21 +85,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <?php $profile = json_decode($profile);  foreach ($profile->data as $key=>$val):  ?>
-                                <tr class='gradeA' id="<?php echo $val->id; ?>">
-                                    <td><?php echo $val->id; ?></td>
-                                    <td><?php echo $val->username; ?></td>
-                                    <td class='hidden-phone'><?php echo $val->firstname; ?></td>
-                                    <td class='center hidden-phone'><?php echo $val->lastname; ?></td>
-                                    <td class='center hidden-phone'><?php echo $val->role; ?></td>
-                                    <td class='center hidden-phone'><?php echo $val->email; ?></td>
-                                    <td class='center hidden-phone'><?php echo $val->phone; ?></td>
-                                    <td class='center hidden-phone'>
-                                        <button class='btn btn-theme' type='submit'><i class='fa fa-edit'></i></button>
-                                        <button class='btn btn-theme' type='submit'><i class='fa fa-remove'></i></button>
-                                    </td>
-                                <tr>
-                                <?php endforeach; ?>
+<!--                            --><?php //$profile = json_decode($profile);  foreach ($profile->data as $key=>$val):  ?>
+<!--                                <tr class='gradeA' id="--><?php //echo $val->id; ?><!--">-->
+<!--                                    <td>--><?php //echo $val->id; ?><!--</td>-->
+<!--                                    <td>--><?php //echo $val->username; ?><!--</td>-->
+<!--                                    <td class='hidden-phone'>--><?php //echo $val->firstname; ?><!--</td>-->
+<!--                                    <td class='center hidden-phone'>--><?php //echo $val->lastname; ?><!--</td>-->
+<!--                                    <td class='center hidden-phone'>--><?php //echo $val->role; ?><!--</td>-->
+<!--                                    <td class='center hidden-phone'>--><?php //echo $val->email; ?><!--</td>-->
+<!--                                    <td class='center hidden-phone'>--><?php //echo $val->phone; ?><!--</td>-->
+<!--                                    <td class='center hidden-phone'>-->
+<!--                                        <button class='btn btn-theme' type='submit'><i class='fa fa-edit'></i></button>-->
+<!--                                        <button class='btn btn-theme' type='submit'><i class='fa fa-remove'></i></button>-->
+<!--                                    </td>-->
+<!--                                <tr>-->
+<!--                                --><?php //endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -113,7 +113,38 @@
 <?php require "footer.php"; ?>
 <script type="text/javascript">
     $(document).ready(function() {
+        $.ajax({
+            headers : {
+                'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+            },
+            url: 'functionality/operator.php',
+            cache: false,
+            contentType: 'json',
+            processData: false,
+            type:'GET',
+            success: function(result) {
 
+                for(var i = 0 ; i < result.data.length; i++) {
+                    console.log(result.data[i]);
+
+                    $('#profile-table tbody').append(
+                        "<tr class='gradeA' id="+ result.data[i].id +">" +
+                        "<td>"+ result.data[i].id +"</td>" +
+                        "<td>"+ result.data[i].username +"</td>" +
+                        "<td class='hidden-phone'>"+ result.data[i].firstname +"</td>" +
+                        "<td class='center hidden-phone'>"+ result.data[i].lastname +"</td>" +
+                        "<td class='center hidden-phone'>"+ result.data[i].role +"</td>" +
+                        "<td class='center hidden-phone'>"+ result.data[i].email +"</td>" +
+                        "<td class='center hidden-phone'>"+ result.data[i].phone +"</td>" +
+                        "<td class='center hidden-phone'>" +
+                        "<button class='btn btn-theme' type='submit'><i class='fa fa-edit'></i></button>" +
+                        "<button class='btn btn-theme' type='submit'><i class='fa fa-remove'></i></button>" +
+                        "</td>" +
+                        "<tr>"
+                    );
+                }
+            }
+        });
         $('#profile-table').dataTable({
             "bFilter": false,
             "bInfo": false,
@@ -121,5 +152,6 @@
             "bProcessing": true,
             "bLengthChange": false
         });
+
     });
 </script>
