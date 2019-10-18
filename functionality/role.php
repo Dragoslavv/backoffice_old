@@ -17,7 +17,6 @@ header("Set-Cookie","GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/");
 
 
 if(isset($_SESSION['tokenSession'][0])){
-    $_SESSION['operator'] = array();
 
     $url = 'https://api.globaltel.rs/api-gui/php/operator/role.php';
 
