@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 session_start();
 $lifetime = 60 * 60;
 session_set_cookie_params ($lifetime);
@@ -27,13 +28,9 @@ if(!isset($_SESSION['tokenSession'][0])){ header('location: login.php'); }
     <!--===============================================================================================-->
     <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <!--===============================================================================================-->
-<!--    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
     <!--===============================================================================================-->
-    <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-    <!--===============================================================================================-->
-    <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css" />
+    <link rel="stylesheet" href="node_modules/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <!--===============================================================================================-->
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">

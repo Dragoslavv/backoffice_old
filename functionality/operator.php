@@ -17,7 +17,6 @@ header("Set-Cookie","GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/");
 
 
 if(isset($_SESSION['tokenSession'][0])){
-    $_SESSION['operator'] = array();
 
     $url = 'https://api.globaltel.rs/api-gui/php/operator/read.php';
 
@@ -48,11 +47,8 @@ if(isset($_SESSION['tokenSession'][0])){
     }
     curl_close($ch);
 
-    echo $retVal;
 
-if(isset($_SESSION['operator']) ) {
-    array_push($_SESSION['operator'], $retVal);
-}
+    echo $retVal;
 
     exit();
 }else {

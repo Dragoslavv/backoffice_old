@@ -133,7 +133,18 @@
                 <h4><i class="fa fa-angle-right"></i> Data</h4>
                 <div class="content-panel">
                     <div class="adv-table" >
-                        <table cellpadding="0" cellspacing="0" border="0" class="display table-bordered" id="profile-table">
+                        <table id="example" class="table table-striped table-bordered table-responsive" style="width:100%">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Username</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Role</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                            </thead>
                             <!--- ToDo --->
                         </table>
                     </div>
@@ -145,62 +156,28 @@
 
 
 <?php require "footer.php"; ?>
-<script type="text/javascript">
+<script>
     $(document).ready(function() {
-        $('#profile-table').dataTable({
-            "bServerSide": true,
-            "aoColumns": [
-                { "sTitle": "ID" },
-                { "sTitle": "Username" },
-                { "sTitle": "First Name" },
-                { "sTitle": "Last Name"},
-                { "sTitle": "Role"},
-                { "sTitle": "Email"},
-                { "sTitle": "Phone"},
-                { "sTitle": "Edit"},
-                { "sTitle": "Delete"}
+
+        $("#example").DataTable({
+            "info":false,
+            "responsive": true,
+            "columns": [
+                { "data": "id" },
+                { "data": "username" },
+                { "data": "firstname" },
+                { "data": "lastname" },
+                { "data": "role" },
+                { "data": "email" },
+                { "data": "phone" }
             ],
-            "sAjaxSource": 'https://api.globaltel.rs/api-gui/php/operator/read.php',
-            "fnServerData": function ( sSource, aoData ) {
-
-                var token = $('#session-token').val();
-
-                $.ajax( {
-                    "dataType": 'json',
-                    "cache": false,
-                    "type": "POST",
-                    "url": sSource,
-                    "data": aoData,
-                    "header":{
-                        'Authorization':'Basic '+token,
-                        'Set-Cookie':"GLOBALTEL=" + token + 'Path=/; HttpOnly'
-                    },
-                    "success": function (result) {
-                        console.log(result);
-
-                        // for(var i = 0 ; i < result.data.length; i++) {
-                        //     $('#profile-table tbody').append(
-                        //         "<tr class='gradeA' id="+ result.data[i].id +">" +
-                        //         "<td>"+ result.data[i].id +"</td>" +
-                        //         "<td>"+ result.data[i].username +"</td>" +
-                        //         "<td class='hidden-phone'>"+ result.data[i].firstname +"</td>" +
-                        //         "<td class='center hidden-phone'>"+ result.data[i].lastname +"</td>" +
-                        //         "<td class='center hidden-phone'>"+ result.data[i].role +"</td>" +
-                        //         "<td class='center hidden-phone'>"+ result.data[i].email +"</td>" +
-                        //         "<td class='center hidden-phone'>"+ result.data[i].phone +"</td>" +
-                        //         "<td class='center hidden-phone'>" +
-                        //         "<button class='btn btn-theme' type='submit'><i class='fa fa-edit'></i></button>" +
-                        //         "</td>" +
-                        //         "<td class='center hidden-phone'>" +
-                        //         "<button class='btn btn-theme' type='submit'><i class='fa fa-remove'></i></button>" +
-                        //         "</td>" +
-                        //         "<tr>"
-                        //     );
-                        // }
-                    }
-                } );
+            "ajax": {
+                "url": "functionality/operator.php",
+                "type": "POST"
             }
+
         });
 
     });
+
 </script>
