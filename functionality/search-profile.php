@@ -18,7 +18,8 @@ header("Set-Cookie","GLOBALTEL=".$_SESSION['tokenSession'][0]."; Path=/");
 
 if(isset($_SESSION['tokenSession'][0])){
 
-    $url = 'https://api.globaltel.rs/api-gui/php/operator/read.php?filter=[{"property":"id","value":"35"}]';
+
+    $url = 'https://api.globaltel.rs/api-gui/php/operator/read.php?filter='.$_REQUEST['search'];
 
     $headers = array();
     $headers[] = 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8';
