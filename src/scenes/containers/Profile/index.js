@@ -333,10 +333,10 @@ class Profile extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleUpdate} type="submit">Update</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleUpdate} type="submit">Update</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleCancel} type="submit">Cancel</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleCancel} type="submit">Cancel</button>
                                             </div>
                                         </div>
                                     </div>
@@ -381,10 +381,10 @@ class Profile extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleClear} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClear} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleCreateUsers}  type="submit">Create</button>
+                                                <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleCreateUsers}  type="submit">Create</button>
                                             </div>
                                         </div>
                                     </div>

@@ -324,10 +324,10 @@ class Transaction extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleReset}  type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.onClickTransaction} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.onClickTransaction} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

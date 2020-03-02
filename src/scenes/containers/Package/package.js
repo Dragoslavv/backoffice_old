@@ -548,10 +548,10 @@ class PackageDefault extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -585,10 +585,10 @@ class PackageDefault extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' disabled={this.state.checkCopy} className="btn btn-block btn-light">Add Package Lang</button>
+                            <button type='submit' disabled={this.state.checkCopy} className="btn btn-block btn-outline-light">Add Package Lang</button>
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' disabled={this.state.checkTrue} className="btn btn-block btn-light">Copy Lang Package</button>
+                            <button type='submit' disabled={this.state.checkTrue} className="btn btn-block btn-outline-light">Copy Lang Package</button>
                         </div>
                     </div>
                     <div className="row">
@@ -646,10 +646,10 @@ class PackageDefault extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-light"
                                             data-dismiss="modal" onClick={this.handleAddPackageModal} >Add
                                     </button>
-                                    <button type="button" className="btn btn-secondary" onClick={this.handleClosePackage}
+                                    <button type="button" className="btn btn-outline-light" onClick={this.handleClosePackage}
                                             data-dismiss="modal" >Close
                                     </button>
                                 </div>

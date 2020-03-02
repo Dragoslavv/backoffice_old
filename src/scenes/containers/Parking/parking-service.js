@@ -563,10 +563,10 @@ class ParkingService extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -588,11 +588,11 @@ class ParkingService extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-light">Parking Request</button>
+                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-outline-light">Parking Request</button>
                             {this.state.request ?<hr className="hr-border-color "/> : ''}
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-light">Parking Response</button>
+                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-outline-light">Parking Response</button>
                             {this.state.response ?<hr className="hr-border-color "/> : ''}
                         </div>
                     </div>

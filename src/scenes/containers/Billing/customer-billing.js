@@ -610,7 +610,6 @@ class CustomerBilling extends Component {
     };
 
     render() {
-
         // function checkFirstVisit() {
         //
         //     // localForages.setItem('user_id_for_phone_numbers', '');
@@ -659,7 +658,7 @@ class CustomerBilling extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
                                                     <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>

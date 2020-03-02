@@ -11,9 +11,8 @@ class DailyActivationStatistic extends Component {
 
         let dt = new Date();
         let dd1 = String(dt.getDate()).padStart(2, '0');
-        dt.setDate( dt.getMonth() - 1 );
+        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
 
-        let mm1 = String(dt.getMonth() + 1).padStart(2, '0');
         let yyyy1 = dt.getFullYear();
 
 
@@ -76,9 +75,8 @@ class DailyActivationStatistic extends Component {
 
         let dt = new Date();
         let dd1 = String(dt.getDate()).padStart(2, '0');
-        dt.setDate( dt.getMonth() - 1 );
+        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
 
-        let mm1 = String(dt.getMonth() + 1).padStart(2, '0');
         let yyyy1 = dt.getFullYear();
 
 
@@ -317,10 +315,10 @@ class DailyActivationStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleResetFilter} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleResetFilter} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleDailyFilter} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleDailyFilter} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>

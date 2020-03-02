@@ -356,10 +356,10 @@ class SystemMessage extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleClear} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClear} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
+                                                <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
                                             </div>
                                         </div>
                                     </div>
@@ -400,7 +400,7 @@ class SystemMessage extends Component {
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handlleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

@@ -243,10 +243,10 @@ class CdrLog extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-dark" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success" id="cdrLogSearch" onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-light" id="cdrLogSearch" onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>

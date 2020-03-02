@@ -195,7 +195,7 @@ class Rates extends Component {
                                 <div className="form-group">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <button className="btn btn-block btn-outline-dark" onClick={this.handleRest} type="submit">Reset</button>
+                                            <button className="btn btn-block btn-outline-light" onClick={this.handleRest} type="submit">Reset</button>
                                         </div>
                                     </div>
                                 </div>
@@ -235,10 +235,10 @@ class Rates extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary" onClick={this.handleUpdate}
+                                    <button type="button" className="btn btn-outline-light" onClick={this.handleUpdate}
                                             data-dismiss="modal" >Update
                                     </button>
-                                    <button type="button" className="btn btn-secondary" onClick={this.handleClose}
+                                    <button type="button" className="btn btn-outline-light" onClick={this.handleClose}
                                             data-dismiss="modal" >Close
                                     </button>
                                 </div>

@@ -74,10 +74,10 @@ class PackageGroup extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@ class PackageGroup extends Component {
                                         <div className="col-lg-12">
                                             <h6>Add New Package</h6>
                                             <hr/>
-                                            <button className="btn btn-block btn-outline-dark" type="submit">Add</button>
+                                            <button className="btn btn-block btn-outline-light" type="submit">Add</button>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ class PackageGroup extends Component {
                         </div>
                         <div className="col-lg-9">
                             <div className='wrap-border'>
-                                <button className="btn btn-block btn-outline-dark" type="submit">Copy Group</button>
+                                <button className="btn btn-block btn-outline-light" type="submit">Copy Group</button>
 
                                 <PackageGroupFirstTable data=''>
                                 </PackageGroupFirstTable>
@@ -106,10 +106,10 @@ class PackageGroup extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' disabled={true} className="btn btn-block btn-light">Add Package Group Lang</button>
+                            <button type='submit' disabled={true} className="btn btn-block btn-outline-light">Add Package Group Lang</button>
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' disabled={true} className="btn btn-block btn-light">Copy Lang Package Group</button>
+                            <button type='submit' disabled={true} className="btn btn-block btn-outline-light">Copy Lang Package Group</button>
                         </div>
                     </div>
                     <div className="row">

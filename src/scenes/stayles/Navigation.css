@@ -87,8 +87,8 @@ a:focus {
     text-decoration: none;
 }
 ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 3px;
 }
 
 /* Track */
@@ -98,12 +98,12 @@ a:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: red;
+    background: #fff;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+    background: rgba(122, 122, 122,0.5);
 }
 .centered {
     text-align: center;

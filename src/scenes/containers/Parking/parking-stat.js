@@ -18,9 +18,8 @@ class ParkingStat extends Component {
 
         let dt = new Date();
         let dd1 = String(dt.getDate()).padStart(2, '0');
-        dt.setDate( dt.getMonth() - 1 );
+        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
 
-        let mm1 = String(dt.getMonth() + 1).padStart(2, '0');
         let yyyy1 = dt.getFullYear();
 
         dt = yyyy1 + '-' + mm1 + '-' + dd1;
@@ -101,9 +100,8 @@ class ParkingStat extends Component {
 
                 let dt = new Date();
                 let dd1 = String(dt.getDate()).padStart(2, '0');
-                dt.setDate( dt.getMonth() - 1 );
+                let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
 
-                let mm1 = String(dt.getMonth() + 1).padStart(2, '0');
                 let yyyy1 = dt.getFullYear();
 
                 dt = yyyy1 + '-' + mm1 + '-' + dd1;
@@ -709,10 +707,10 @@ class ParkingStat extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleReset}  type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

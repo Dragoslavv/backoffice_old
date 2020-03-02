@@ -274,10 +274,10 @@ class Routes extends Component {
                         <div className="col-lg-3">
                             <div className="row mb-4">
                                 <div className="col-lg-6">
-                                    <button className="btn btn-block btn-outline-secondary" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
+                                    <button className="btn btn-block btn-outline-light" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
                                 </div>
                                 <div className="col-lg-6">
-                                    <button className="btn btn-block btn-outline-secondary" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
+                                    <button className="btn btn-block btn-outline-light" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
                                 </div>
                             </div>
                             <div className={this.state.search?'wrap-border': 'hidden-ul'} >
@@ -304,10 +304,10 @@ class Routes extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" id='search_routes' onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" id='search_routes' onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -366,10 +366,10 @@ class Routes extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-dark" onClick={this.handleClearRoute} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClearRoute} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleAddRoutes} type="submit">Add</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleAddRoutes} type="submit">Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -463,10 +463,10 @@ class Routes extends Component {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary"
+                                <button type="button" className="btn btn-outline-light"
                                         data-dismiss="modal" onClick={this.handleCancel} >Cancel
                                 </button>
-                                <button type="button" className="btn btn-secondary"
+                                <button type="button" className="btn btn-outline-light"
                                         data-dismiss="modal" onClick={this.handleSave} >Save
                                 </button>
                             </div>
