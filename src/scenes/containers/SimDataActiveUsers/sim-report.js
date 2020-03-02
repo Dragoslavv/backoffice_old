@@ -1,0 +1,206 @@
+import React, { Component } from 'react';
+import {Link, withRouter} from 'react-router-dom';
+import {SimReportTable} from "../../components/Table/sim-report-table";
+import {Redirect} from "react-router-dom";
+import localForages from "localforage";
+import PubSub from "pubsub-js";
+
+class SimReport extends Component {
+    constructor(props){
+        super(props);
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.state = {
+            redirect: false,
+            start: today + 'T00:00',
+            end: today + 'T23:59',
+            data_type: '',
+            cash_type: '',
+            msisdn: '',
+            search:'',
+            id_from_sim_report:''
+        };
+
+        this.handleChanges = this.handleChanges.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        this.sessionGet = this.sessionGet.bind(this);
+        this.mySubscriberReport = this.mySubscriberReport.bind(this);
+    }
+
+    sessionGet = (key) => {
+        let stringValue = window.sessionStorage.getItem(key);
+        if (stringValue !== null) {
+            let value = JSON.parse(stringValue);
+            let expirationDate = new Date(value.expirationDate);
+            if (expirationDate > new Date()) {
+                return value.value
+            } else {
+                window.sessionStorage.removeItem(key)
+            }
+        }
+        return null
+    };
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.setState({
+            start: today + 'T00:00',
+            end: today + 'T23:59',
+            data_type: '',
+            cash_type: '',
+            msisdn: '',
+            search:''
+        });
+    };
+
+    handleClick = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            search: 'click'
+        });
+    };
+
+    handleChanges = (e) => {
+        e.preventDefault();
+
+        this.setState({
+           [e.target.name] : e.target.value
+        });
+    };
+
+    mySubscriberReport(msg,dataSet) {
+
+        this.setState({
+            id_from_sim_report: dataSet
+        })
+    };
+
+    componentDidMount() {
+        PubSub.subscribe('id_from_sim_report', this.mySubscriberReport);
+    }
+
+    componentWillMount() {
+
+        if(this.sessionGet('token')){
+            console.log('Call User Feed');
+        } else {
+            this.setState({
+                redirect:true
+            });
+        }
+    }
+
+    render() {
+
+        if(this.state.id_from_sim_report){
+            return <Redirect to={'/customer-billing'} />
+
+        }
+
+        if(this.state.redirect){
+            return <Redirect to={'/'} />
+        }
+
+        return (
+            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+                <section id="content-wrapper" >
+                    <nav aria-label="breadcrumb">
+                        <ol className="breadcrumb head-pages">
+                            <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
+                            <li className="breadcrumb-item active" aria-current="page">Sim Report</li>
+                        </ol>
+                    </nav>
+                    <div className="row mb-4">
+                        <div className="col-lg-12">
+                            <div className='wrap-border'>
+                                <h6 className="content-title">Sim Search</h6>
+                                <hr/>
+                                <div className='row mb-4'>
+                                    <div className='col-lg-6'>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='datetime-local' name='start' value={this.state.start} onChange={this.handleChanges} autoComplete='off' placeholder='Start:'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='datetime-local' name='end' value={this.state.end} onChange={this.handleChanges} autoComplete='off' placeholder='End:'/>
+                                            </div>
+                                            <div className="form-group billing-input">
+                                                <div className="row">
+                                                    <div className="col-lg-6">
+                                                        <button className="btn btn-block btn-outline-dark" type="submit">Reset</button>
+                                                    </div>
+                                                    <div className="col-lg-6">
+                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div className='col-lg-6'>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <select className="input" name="data_type" value={this.state.data_type} onChange={this.handleChanges}>
+                                                    <option value="">ALL</option>
+                                                    <option value=" = 0">data = 0</option>
+                                                    <option value="<= 4000000000">10 MB - data - 4GB </option>
+                                                    <option value=">= 8000000000">data - 8GB</option>
+                                                </select>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <select className="input" name="cash_type" value={this.state.cash_type} onChange={this.handleChanges}>
+                                                    <option value="">ALL</option>
+                                                    <option value=" = 0">cash = 0</option>
+                                                    <option value=" <= 5000000">0 - cash - 50 </option>
+                                                    <option value="> 5000000">cash - 50</option>
+                                                </select>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='msisdn' value={this.state.msisdn} onChange={this.handleChanges} autoComplete='off' placeholder='MSISDN:'/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='wrap-border'>
+                                <SimReportTable data={
+                                    {
+                                        start_log: this.state.start,
+                                        end_log: this.state.end,
+                                        cash_type: this.state.cash_type,
+                                        data_type: this.state.data_type,
+                                        msisdn: this.state.msisdn,
+                                        search: this.state.search
+                                    }
+                                }>
+                                </SimReportTable>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        )
+    }
+
+}
+
+export default withRouter(SimReport);

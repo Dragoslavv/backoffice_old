@@ -1,0 +1,14 @@
+.link-drop {
+    color:#000000 !important;
+}
+.mod-margin {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.wrap-border-update{
+    border: 1px solid #17a2b8;
+    border-radius: 6px;
+    padding: 10px;
+}
+
