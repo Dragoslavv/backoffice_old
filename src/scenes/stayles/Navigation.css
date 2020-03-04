@@ -148,11 +148,14 @@ a:focus {
     width: 0;
     height: 100%;
     margin-left: -250px;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     background: rgb(47,50,58);
-    background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,0.76234243697479) 72%);
+    /*background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,0.76234243697479) 72%);*/
     transition: all 0.5s ease;
+    background: rgba(47,50,58,0.8);
+    -webkit-overflow-scrolling: touch;
+
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -233,7 +236,8 @@ a:focus {
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 3px;
-    background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,0.76234243697479) 72%);
+    background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,3) 72%);
+    /*background-color: rgba(47,50,58,1) !important;*/
 } 
 .sidebar-nav-second > li > a:hover,
 .sidebar-nav-second > li.active > a {
@@ -257,8 +261,8 @@ a:focus {
 }
 #navbar-wrapper .navbar {
     border-width: 0 0 0 0;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(3,3,3,0.76234243697479) 0%, rgba(47,50,58,1) 72%);
+    /*background: linear-gradient(90deg, rgba(3,3,3,0.76234243697479) 0%, rgba(47,50,58,1) 72%);*/
+    background-color: rgba(47,50,58,0.6);
     font-size: 24px;
     margin-bottom: 0;
     border-radius: 0;
@@ -272,7 +276,7 @@ a:focus {
 
 #content-wrapper {
     margin: 15px;
-    background: rgba(0,0,0,0.4);
+    background-color: rgba(47,50,58,0.6);
     position: absolute;
     padding: 15px;
     top: 100px;
@@ -299,6 +303,9 @@ a:focus {
 
     #sidebar-wrapper {
         width: 250px;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -344,6 +351,9 @@ a:focus {
 
     #sidebar-wrapper {
         width: 60px;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
     }
 
     #wrapper.toggled #navbar-wrapper {
@@ -383,6 +393,9 @@ a:focus {
 
     #sidebar-wrapper {
         width: 0;
+        overflow-y: scroll;
+
+        -webkit-overflow-scrolling: touch;
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -429,7 +442,8 @@ input[type=checkbox] + label {
     margin: 0;
     cursor: pointer;
     padding: 0.4em;
-    background: rgb(255, 255, 255);
+    background: transparent;
+    color: #ffffff;
 }
 
 input[type=checkbox] {
@@ -438,7 +452,7 @@ input[type=checkbox] {
 
 input[type=checkbox] + label:before {
     content: "\2714";
-    border: 0.1em solid #000;
+    border: 0.1em solid #fff;
     border-radius: 0.2em;
     display: inline-block;
     /*width: 1em;*/

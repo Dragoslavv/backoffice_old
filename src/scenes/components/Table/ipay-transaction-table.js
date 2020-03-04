@@ -18,6 +18,8 @@ export class IPayTransactionTable extends Component{
                 bScrollInfinite: true,
                 bScrollCollapse: true,
                 sScrollY: "330px",
+                pagingType: "simple",
+
                 data:this.props.data,
                 columns: [
                     { title: "ID"},

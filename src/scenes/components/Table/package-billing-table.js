@@ -25,6 +25,8 @@ export class PackageBillingTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=package-billing',
                         type: 'POST',

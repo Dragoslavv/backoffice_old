@@ -18,6 +18,8 @@ export class SystemMessageTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 sScrollY: "650px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read_Message',
@@ -135,6 +137,8 @@ export class SystemMessageTable extends Component{
                     bLengthChange: false,
                     bPaginate:true,
                     sScrollY: "650px",
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=read_Message',
                         type: 'POST',

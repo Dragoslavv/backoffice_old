@@ -53,7 +53,13 @@ class StatisticNumbers extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: []
@@ -122,7 +128,13 @@ class StatisticNumbers extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: dan
+                            categories: dan,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series: series
@@ -181,7 +193,13 @@ class StatisticNumbers extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: dan
+                            categories: dan,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series: series

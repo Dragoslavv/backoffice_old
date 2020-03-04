@@ -19,6 +19,7 @@ export class TopUpTransactionTable extends Component{
                 bScrollCollapse: true,
                 sScrollY: "330px",
                 order: [[ 2, "desc" ]],
+                pagingType: "simple",
                 data:this.props.data,
                 columns: [
                     { title: "ID"},

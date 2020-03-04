@@ -17,6 +17,8 @@ export class ParkingResponseTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read_response_parking',
@@ -58,6 +60,8 @@ export class ParkingResponseTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     sScrollY: "300px",
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=read_response_parking',

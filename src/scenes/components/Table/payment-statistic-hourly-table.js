@@ -14,6 +14,8 @@ export class PaymentStatisticHourlyTable extends Component{
                 info:false,
                 bLengthChange: false,
                 searching:false,
+                pagingType: "simple",
+
                 data:this.props.data,
                 columns: [
                     { title: "Payment"},

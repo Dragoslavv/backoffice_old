@@ -17,6 +17,8 @@ export class PackageOtherTable extends Component{
                 info: false,
                 bProcessing: true,
                 bServerSide: true,
+                pagingType: "simple",
+
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
@@ -104,6 +106,8 @@ export class PackageOtherTable extends Component{
                     info: false,
                     bProcessing: true,
                     bServerSide: true,
+                    pagingType: "simple",
+
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,

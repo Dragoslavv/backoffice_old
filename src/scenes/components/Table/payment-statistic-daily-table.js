@@ -15,6 +15,8 @@ export class PaymentStatisticDailyTable extends Component{
                 bLengthChange: false,
                 searching:false,
                 data:this.props.data,
+                pagingType: "simple",
+
                 columns: [
                     { title: "Payment"},
                     { title: "Total"}

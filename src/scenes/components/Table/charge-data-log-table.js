@@ -15,6 +15,8 @@ export class ChargeDataLogTable extends Component{
                 bLengthChange: false,
                 data:this.props.data,
                 processing:true,
+                pagingType: "simple",
+
                 order: [[ 0, "desc" ]],
                 columns: [
                     { title: "Created"},

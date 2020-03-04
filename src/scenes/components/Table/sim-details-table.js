@@ -26,6 +26,8 @@ export class SimDetailsTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=number_sim',
                         type: 'POST',

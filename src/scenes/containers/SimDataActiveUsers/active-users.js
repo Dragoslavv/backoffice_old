@@ -41,6 +41,14 @@ class ActiveUsers extends Component {
                         left: 10
                     },
                 },
+                title: {
+                    style: {
+                        fontSize:  '14px',
+                        fontWeight:  'bold',
+                        fontFamily:  undefined,
+                        color:  '#fff'
+                    },
+                },
                 chart: {
                     id: "basic-bar-active-users-consumption",
                 },
@@ -48,8 +56,21 @@ class ActiveUsers extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
-                }
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+                        }
+                    }
+                },
             },
             series: [],
         };
@@ -111,6 +132,14 @@ class ActiveUsers extends Component {
                             left: 10
                         },
                     },
+                    title: {
+                        style: {
+                            fontSize:  '14px',
+                            fontWeight:  'bold',
+                            fontFamily:  undefined,
+                            color:  '#fff'
+                        },
+                    },
                     chart: {
                         id: "basic-bar-active-users-consumption",
                     },
@@ -118,8 +147,22 @@ class ActiveUsers extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: day
-                    }
+                        categories: day,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
+                    },
                 },
                 series: series,
             });
@@ -155,6 +198,14 @@ class ActiveUsers extends Component {
                             left: 10
                         },
                     },
+                    title: {
+                        style: {
+                            fontSize:  '14px',
+                            fontWeight:  'bold',
+                            fontFamily:  undefined,
+                            color:  '#fff'
+                        },
+                    },
                     chart: {
                         id: "basic-bar-active-users-consumption",
                     },
@@ -162,8 +213,21 @@ class ActiveUsers extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: day
-                    }
+                        categories: day,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
+                    },
+                    yaxis: {
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+                            }
+                        }
+                    },
                 },
                 series: series,
             });

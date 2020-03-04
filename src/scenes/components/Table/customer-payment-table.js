@@ -27,6 +27,8 @@ export class CustomerPaymentTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     // sScrollY: "650px",
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=chargelog',

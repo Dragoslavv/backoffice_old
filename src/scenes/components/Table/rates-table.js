@@ -20,6 +20,8 @@ export class RatesTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 sScrollY: "400px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read_rates',
@@ -46,7 +48,9 @@ export class RatesTable extends Component{
                             }
                         }
                     },
-                    { title: "Id"},
+                    { title: "Id",
+                        className: 'id_rates'
+                    },
                     { title: "Destination",
                         className: 'destination'
                     },
@@ -76,7 +80,7 @@ export class RatesTable extends Component{
 
                 var get_id = {'id' : [] , 'perCost' : [] , 'destination' : [] };
 
-                id.find('td:first-child').each(function( index,item ) {
+                id.find('.id_rates').each(function( index,item ) {
                     get_id['id'].push(item.innerHTML);
                 });
 
@@ -109,6 +113,8 @@ export class RatesTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate: true,
+                pagingType: "simple",
+
                 sScrollY: "400px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read_rates',
@@ -135,7 +141,9 @@ export class RatesTable extends Component{
                             }
                         }
                     },
-                    { title: "Id"},
+                    { title: "Id",
+                        className: 'id_rates'
+                    },
                     { title: "Destination",
                       className: 'destination'
                     },

@@ -18,6 +18,8 @@ export class ProfileTable extends Component{
                 info:false,
                 bLengthChange: false,
                 data:this.props.data,
+                pagingType: "simple",
+
                 responsive: true,
                 columns: [
                     { title: "Id"},

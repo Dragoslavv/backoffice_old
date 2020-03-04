@@ -14,6 +14,7 @@ export class CardTransactionTable extends Component{
                 info:false,
                 bLengthChange: false,
                 data:this.props.data,
+                pagingType: "simple",
                 columns: [
                     { title: "ID"},
                     { title: "Created"},

@@ -18,6 +18,8 @@ export class CdrLogTable extends Component{
                 bProcessing  : true,
                 bServerSide  : true,
                 sProcessing  : true,
+                pagingType: "simple",
+
                 sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=store-cdr',
@@ -86,6 +88,8 @@ export class CdrLogTable extends Component{
                     bServerSide: true,
                     sProcessing: true,
                     sScrollY: "300px",
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=store-cdr',
                         type: 'POST',

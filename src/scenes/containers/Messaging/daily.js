@@ -50,7 +50,13 @@ class Daily extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: []
@@ -110,7 +116,13 @@ class Daily extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: day
+                            categories: day,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series: series
@@ -160,7 +172,13 @@ class Daily extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: day
+                            categories: day,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series: series

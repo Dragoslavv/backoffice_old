@@ -26,11 +26,24 @@ body {
 }
 
 .input {
-    background: #fff;
     width: 100%;
     border-radius: 4px;
-    color: #3E3E3E;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #8e8e8e;
+    padding: 5px !important;
+    font-size: 14px;
 }
+
+.input:focus {
+    box-shadow: none;
+}
+
+.form-control {
+    background: transparent !important;
+    border: 1px solid #8e8e8e !important;
+}
+
 .input-login {
     background: #fff;
     width: 100%;

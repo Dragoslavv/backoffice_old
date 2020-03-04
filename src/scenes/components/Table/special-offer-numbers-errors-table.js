@@ -13,6 +13,8 @@ export class SpecialOfferNumbersErrorsTable extends Component{
             {
                 info:false,
                 bLengthChange: false,
+                pagingType: "simple",
+
                 data:this.props.data,
                 columns: [
                     { title: "Number"},

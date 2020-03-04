@@ -153,7 +153,6 @@ class CustomerBilling extends Component {
             role.then(rolee => {
                 billingId.then(bilId => {
                     activate_subscription(id, this.state.subscription, this.state.plan, rolee, bilId).then(result => {
-                       console.log(result);
                        if(result.status === true){
                            store.addNotification({
                                title: 'Activation Subscription',
@@ -202,6 +201,31 @@ class CustomerBilling extends Component {
 
     componentWillMount() {
 
+        this.setState({
+            number: (sessionStorage.getItem('number'))?sessionStorage.getItem('number'):'',
+            email: (sessionStorage.getItem('email'))?sessionStorage.getItem('email'):'',
+            userId: (sessionStorage.getItem('userId'))?sessionStorage.getItem('userId'):'',
+            billingId: (sessionStorage.getItem('billingId'))?sessionStorage.getItem('billingId'):'',
+        });
+
+
+        this.setState({
+            searchData:[{
+                active: (sessionStorage.getItem('billing_active'))?sessionStorage.getItem('billing_active'):'',
+                balances: (sessionStorage.getItem('billing_balances'))?sessionStorage.getItem('billing_balances'):'',
+                billing_id: (sessionStorage.getItem('billing_id'))?sessionStorage.getItem('billing_id'):'',
+                brand: (sessionStorage.getItem('billing_brand'))?sessionStorage.getItem('billing_brand'):'',
+                created: (sessionStorage.getItem('billing_created'))?sessionStorage.getItem('billing_created'):'',
+                email: (sessionStorage.getItem('billing_email'))?sessionStorage.getItem('billing_email'):'',
+                force_app: (sessionStorage.getItem('billing_force_app'))?sessionStorage.getItem('billing_force_app'):'',
+                name: (sessionStorage.getItem('billing_name'))?sessionStorage.getItem('billing_name'):'',
+                reservations: (sessionStorage.getItem('billing_reservations'))?sessionStorage.getItem('billing_reservations'):'',
+                user_id: (sessionStorage.getItem('billing_user_id'))?sessionStorage.getItem('billing_user_id'):'',
+                user_type: (sessionStorage.getItem('billing_user_type'))?sessionStorage.getItem('billing_user_type'):'',
+                wallet_id: (sessionStorage.getItem('billing_wallet_id'))?sessionStorage.getItem('billing_wallet_id'):'',
+            }],
+        });
+
         const sim_report = localForages.getItem('id_from_sim_report', function (err, value) {
             return value;
         });
@@ -228,22 +252,36 @@ class CustomerBilling extends Component {
 
                         if(filter.data[0] !== undefined){
 
+                            sessionStorage.setItem('billing_active',filter.data[0].active);
+                            sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                            sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                            sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                            sessionStorage.setItem('billing_created',filter.data[0].created);
+                            sessionStorage.setItem('billing_email',filter.data[0].email);
+                            sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                            sessionStorage.setItem('billing_name',filter.data[0].name);
+                            sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                            sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                            sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                            sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
                             this.setState({
                                 searchData:[{
-                                    active: (filter.data[0].active)?filter.data[0].active:'',
-                                    balances: (filter.data[0].balances)?filter.data[0].balances:'',
-                                    billing_id: (filter.data[0].billing_id)?filter.data[0].billing_id:'',
-                                    brand: (filter.data[0].brand)?filter.data[0].brand:'',
-                                    created: (filter.data[0].created)?filter.data[0].created:'',
-                                    email: (filter.data[0].email)?filter.data[0].email:'',
-                                    force_app: (filter.data[0].force_app)?filter.data[0].force_app:'',
-                                    name: (filter.data[0].name)?filter.data[0].name:'',
-                                    reservations: (filter.data[0].reservations)?filter.data[0].reservations:'',
-                                    user_id: (filter.data[0].user_id)?filter.data[0].user_id:'',
-                                    user_type: (filter.data[0].user_type)?filter.data[0].user_type:'',
-                                    wallet_id: (filter.data[0].wallet_id)?filter.data[0].wallet_id:'',
+                                    active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                                    balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                                    billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                                    brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                                    created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                                    email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                                    force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                                    name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                                    reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                                    user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                                    user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                                    wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
                                 }],
                             });
+
 
                             localForages.setItem('user_id_for_phone_numbers', this.state.searchData[0].user_id);
                             localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
@@ -352,20 +390,58 @@ class CustomerBilling extends Component {
 
     handleReset = (e) => {
         e.preventDefault();
+
+        sessionStorage.setItem('billing_active','');
+        sessionStorage.setItem('billing_balances','');
+        sessionStorage.setItem('billing_id','');
+        sessionStorage.setItem('billing_brand','');
+        sessionStorage.setItem('billing_created','');
+        sessionStorage.setItem('billing_email','');
+        sessionStorage.setItem('billing_force_app','');
+        sessionStorage.setItem('billing_name','');
+        sessionStorage.setItem('billing_reservations','');
+        sessionStorage.setItem('billing_user_id','');
+        sessionStorage.setItem('billing_user_type','');
+        sessionStorage.setItem('billing_wallet_id','');
+
+        sessionStorage.setItem('number','');
+        sessionStorage.setItem('email','');
+        sessionStorage.setItem('userId','');
+        sessionStorage.setItem('billingId','');
+
+        sessionStorage.removeItem('number');
+        sessionStorage.removeItem('email');
+        sessionStorage.removeItem('userId');
+        sessionStorage.removeItem('billingId');
+
+        sessionStorage.removeItem('billing_active');
+        sessionStorage.removeItem('billing_balances');
+        sessionStorage.removeItem('billing_id');
+        sessionStorage.removeItem('billing_brand');
+        sessionStorage.removeItem('billing_created');
+        sessionStorage.removeItem('billing_email');
+        sessionStorage.removeItem('billing_force_app');
+        sessionStorage.removeItem('billing_name');
+        sessionStorage.removeItem('billing_reservations');
+        sessionStorage.removeItem('billing_user_id');
+        sessionStorage.removeItem('billing_user_type');
+        sessionStorage.removeItem('billing_wallet_id');
+
+
         this.setState({
             searchData:[{
-                active:'',
-                balances:'',
-                billing_id:'',
-                brand:'',
-                created:'',
-                email:'',
-                force_app:'',
-                name:'',
-                reservations:'',
-                user_id:'',
-                user_type:'',
-                wallet_id:'',
+                active: '',
+                balances: '',
+                billing_id: '',
+                brand: '',
+                created: '',
+                email: '',
+                force_app: '',
+                name: '',
+                reservations: '',
+                user_id: '',
+                user_type: '',
+                wallet_id: '',
             }],
             number: '',
             email: '',
@@ -546,6 +622,20 @@ class CustomerBilling extends Component {
 
         const data = [];
 
+        sessionStorage.setItem('number',this.state.number);
+        sessionStorage.setItem('email',this.state.email);
+        sessionStorage.setItem('userId',this.state.userId);
+        sessionStorage.setItem('billingId',this.state.billingId);
+
+
+        this.setState({
+            number: sessionStorage.getItem('number'),
+            email: sessionStorage.getItem('email'),
+            userId: sessionStorage.getItem('userId'),
+            billingId: sessionStorage.getItem('billingId'),
+        });
+
+
         if( this.state.number !== '' ){
             data.push('{"property":"number","value":"'+this.state.number+'"}')
         }
@@ -567,20 +657,33 @@ class CustomerBilling extends Component {
 
                 if(filter.data[0] !== undefined){
 
+                    sessionStorage.setItem('billing_active',filter.data[0].active);
+                    sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                    sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                    sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                    sessionStorage.setItem('billing_created',filter.data[0].created);
+                    sessionStorage.setItem('billing_email',filter.data[0].email);
+                    sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                    sessionStorage.setItem('billing_name',filter.data[0].name);
+                    sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                    sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                    sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                    sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
                     this.setState({
                         searchData:[{
-                            active: (filter.data[0].active)?filter.data[0].active:'',
-                            balances: (filter.data[0].balances)?filter.data[0].balances:'',
-                            billing_id: (filter.data[0].billing_id)?filter.data[0].billing_id:'',
-                            brand: (filter.data[0].brand)?filter.data[0].brand:'',
-                            created: (filter.data[0].created)?filter.data[0].created:'',
-                            email: (filter.data[0].email)?filter.data[0].email:'',
-                            force_app: (filter.data[0].force_app)?filter.data[0].force_app:'',
-                            name: (filter.data[0].name)?filter.data[0].name:'',
-                            reservations: (filter.data[0].reservations)?filter.data[0].reservations:'',
-                            user_id: (filter.data[0].user_id)?filter.data[0].user_id:'',
-                            user_type: (filter.data[0].user_type)?filter.data[0].user_type:'',
-                            wallet_id: (filter.data[0].wallet_id)?filter.data[0].wallet_id:'',
+                            active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                            balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                            billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                            brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                            created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                            email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                            force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                            name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                            reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                            user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                            user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                            wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
                         }],
                     });
 
@@ -704,7 +807,7 @@ class CustomerBilling extends Component {
                                         <input className='input' type='text' name='billingId' readOnly={true} value={this.state.searchData[0].billing_id} onChange={this.handleChangeData} autoComplete='off' placeholder='Billing ID:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <textarea className='input' autoComplete='off' onChange={this.handleChangeData} readOnly={true} name='balances' value={this.state.searchData[0].balances} placeholder='Balances:'/>
+                                        <textarea className='input' autoComplete='off' rows="4" cols="50" onChange={this.handleChangeData} readOnly={true} name='balances' value={this.state.searchData[0].balances} placeholder='Balances:'/>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <textarea className='input' autoComplete='off' onChange={this.handleChangeData} readOnly={true} name='reservations' value={this.state.searchData[0].reservations} placeholder='Reservations:'/>
@@ -940,7 +1043,7 @@ class CustomerBilling extends Component {
                     {this.state.loading ?   <LoadingSpinner />  :
                     <div className="modal" id="sessionTimeOut" ref={modal => this.modal = modal} tabIndex="-1" role="dialog"
                          aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div className={this.state.modalForWallet?"modal-dialog-true":"modal-dialog"} role="document">
+                        <div id='wall-true' className={this.state.modalForWallet?"modal-dialog-true":"modal-dialog"} role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
                                 </div>

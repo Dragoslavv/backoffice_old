@@ -29,6 +29,8 @@ export class RoutesTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 // sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read-routes',
@@ -134,6 +136,8 @@ export class RoutesTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     // sScrollY: "300px",
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=read-routes',

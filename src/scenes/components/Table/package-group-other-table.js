@@ -14,6 +14,8 @@ export class PackageGroupOtherTable extends Component{
                 info:false,
                 bLengthChange: false,
                 data:this.props.data,
+                pagingType: "simple",
+
                 columns: [
                     { title: "Id"},
                     { title: "GroupID"},

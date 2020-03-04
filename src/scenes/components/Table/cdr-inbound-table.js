@@ -25,6 +25,8 @@ export class CdrInboundTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=cdr_inbound',
                         type: 'POST',

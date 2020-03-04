@@ -42,7 +42,20 @@ class DailyStatistic extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: ['#fff'],
+                        }
+                    }
                 }
             },
             series: []
@@ -126,7 +139,20 @@ class DailyStatistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: hour
+                            categories: hour,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                style: {
+                                    colors: ['#fff'],
+                                }
+                            }
                         }
                     },
                     series: series
@@ -186,7 +212,20 @@ class DailyStatistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: hour
+                            categories: hour,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                style: {
+                                    colors: ['#fff'],
+                                }
+                            }
                         }
                     },
                     series: series
@@ -238,7 +277,20 @@ class DailyStatistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: hour
+                            categories: hour,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        },
+                        yaxis: {
+                            labels: {
+                                style: {
+                                    colors: ['#fff'],
+                                }
+                            }
                         }
                     },
                     series: series

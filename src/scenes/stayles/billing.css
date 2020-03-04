@@ -1,5 +1,5 @@
 .billing-input{
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.3rem !important;
 }
 .billing-wrap{
     min-height: 358px;
@@ -80,6 +80,10 @@
     box-shadow: 0 3px 3px -3px #0E1119;
 }
 
+.wallet td {
+    word-break: break-word;
+}
+
 .wallet td:hover {
     background-color: forestgreen;
     color: #fff3cd;
@@ -92,6 +96,14 @@
     transition-duration: 0.4s;
     transition-property: all;
     transition-timing-function: line;
+}
+
+.apexcharts-legend-text{
+    color: #fff !important;
+}
+
+div.dataTables_wrapper div.dataTables_filter input{
+    border: 1px solid !important;
 }
 
 @media (max-width: 800px) {
@@ -108,6 +120,9 @@
     /*overflow-y: auto;*/
 /*}*/
 
+input[type=checkbox]+label:before{
+    padding: 0.2rem;
+}
 
 .unstyled {
     margin: 0 5px;
@@ -129,4 +144,34 @@ hr{
 
 .content-title{
     color: #fff !important;
+    font-size: 14px;
+}
+
+.btn-block{
+    padding: 2px !important;
+}
+
+option{
+    color: #000;
+}
+
+h6{
+    color: #fff !important;
+}
+
+@media (max-width: 992px) {
+    .input{
+        padding: 5px !important;
+        font-size: 14px;
+    }
+    .content-title{
+        font-size: 14px;
+    }
+    .btn-block{
+        padding: 2px;
+    }
+    .modal-dialog-true{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }

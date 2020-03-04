@@ -38,7 +38,13 @@ class HourlyActivationStatistic extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: [],
@@ -109,7 +115,13 @@ class HourlyActivationStatistic extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: hour
+                        categories: hour,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series,
@@ -162,7 +174,13 @@ class HourlyActivationStatistic extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: hour
+                        categories: hour,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series,
@@ -223,7 +241,13 @@ class HourlyActivationStatistic extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: hour
+                        categories: hour,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series,

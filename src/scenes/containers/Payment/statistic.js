@@ -71,7 +71,13 @@ class Statistic extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             optionsHourly: {
@@ -93,7 +99,13 @@ class Statistic extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             optionsTotal: {
@@ -115,7 +127,13 @@ class Statistic extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: [],
@@ -189,7 +207,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: dan
+                            categories: dan,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     seriesTotal: series
@@ -247,7 +271,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: sat
+                            categories: sat,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     seriesHourly:series
@@ -317,7 +347,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: categories
+                            categories: categories,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series:series
@@ -374,7 +410,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: dan
+                            categories: dan,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     seriesTotal: series
@@ -422,7 +464,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: sat
+                            categories: sat,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     seriesHourly:series
@@ -481,7 +529,13 @@ class Statistic extends Component {
                             enabled: false,
                         },
                         xaxis: {
-                            categories: categories
+                            categories: categories,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
                         }
                     },
                     series:series

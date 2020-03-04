@@ -38,7 +38,13 @@ class SimHourly extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: [],
@@ -90,7 +96,13 @@ class SimHourly extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: counter
+                        categories: counter,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series
@@ -133,7 +145,13 @@ class SimHourly extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: counter
+                        categories: counter,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series

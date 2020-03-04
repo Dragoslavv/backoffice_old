@@ -17,6 +17,8 @@ export class MessageLogTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read-message-log',
@@ -57,6 +59,8 @@ export class MessageLogTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    pagingType: "simple",
+
                     sScrollY: "300px",
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=read-message-log',

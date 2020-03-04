@@ -28,6 +28,8 @@ export class PackageFirstTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                pagingType: "simple",
+
                 sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=promotion',
@@ -220,6 +222,8 @@ export class PackageFirstTable extends Component{
                     bLengthChange: false,
                     bPaginate:true,
                     sScrollY: "300px",
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=promotion',
                         type: 'POST',

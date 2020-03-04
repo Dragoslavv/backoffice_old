@@ -18,6 +18,8 @@ export class ChargeLogTable extends Component{
                 bScrollInfinite: true,
                 bScrollCollapse: true,
                 sScrollY: "700px",
+                pagingType: "simple",
+
                 data:this.props.data,
                 order: [[ 0, "desc" ]],
                 columns: [

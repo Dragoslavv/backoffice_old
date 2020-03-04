@@ -18,6 +18,8 @@ export class SpecialOfferNumbersTable extends Component{
                 bLengthChange: false,
                 bPaginate:true,
                 sScrollY: "300px",
+                pagingType: "simple",
+
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=numbers-spof',
                     type: 'POST',
@@ -64,6 +66,8 @@ export class SpecialOfferNumbersTable extends Component{
                     bLengthChange: false,
                     bPaginate:true,
                     sScrollY: "300px",
+                    pagingType: "simple",
+
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=numbers-spof',
                         type: 'POST',

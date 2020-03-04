@@ -19,6 +19,7 @@ export class TransactionPaymentTable extends Component{
                 bScrollCollapse: true,
                 order: [[ 5, "desc" ]],
                 sScrollY: "270px",
+                pagingType: "simple",
                 data:this.props.data,
                 columns: [
                     { title: "Id"},

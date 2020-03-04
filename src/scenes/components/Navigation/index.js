@@ -224,6 +224,34 @@ class Navigation extends Component {
                 sessionStorage.removeItem('firstName');
                 sessionStorage.removeItem('role');
 
+
+                sessionStorage.setItem('billing_active','');
+                sessionStorage.setItem('billing_balances','');
+                sessionStorage.setItem('billing_id','');
+                sessionStorage.setItem('billing_brand','');
+                sessionStorage.setItem('billing_created','');
+                sessionStorage.setItem('billing_email','');
+                sessionStorage.setItem('billing_force_app','');
+                sessionStorage.setItem('billing_name','');
+                sessionStorage.setItem('billing_reservations','');
+                sessionStorage.setItem('billing_user_id','');
+                sessionStorage.setItem('billing_user_type','');
+                sessionStorage.setItem('billing_wallet_id','');
+
+                sessionStorage.removeItem('billing_active');
+                sessionStorage.removeItem('billing_balances');
+                sessionStorage.removeItem('billing_id');
+                sessionStorage.removeItem('billing_brand');
+                sessionStorage.removeItem('billing_created');
+                sessionStorage.removeItem('billing_email');
+                sessionStorage.removeItem('billing_force_app');
+                sessionStorage.removeItem('billing_name');
+                sessionStorage.removeItem('billing_reservations');
+                sessionStorage.removeItem('billing_user_id');
+                sessionStorage.removeItem('billing_user_type');
+                sessionStorage.removeItem('billing_wallet_id');
+
+
                 localForages.setItem('username', '');
                 localForages.clear();
                 sessionStorage.clear();

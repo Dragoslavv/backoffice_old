@@ -49,7 +49,13 @@ class DataConsumption extends Component {
                     enabled: false,
                 },
                 xaxis: {
-                    categories: []
+                    categories: [],
+                    labels: {
+                        style: {
+                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                        }
+                    }
                 }
             },
             series: [],
@@ -104,7 +110,13 @@ class DataConsumption extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: day
+                        categories: day,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series,
@@ -146,7 +158,13 @@ class DataConsumption extends Component {
                         enabled: false,
                     },
                     xaxis: {
-                        categories: day
+                        categories: day,
+                        labels: {
+                            style: {
+                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                            }
+                        }
                     }
                 },
                 series: series,

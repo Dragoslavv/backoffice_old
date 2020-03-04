@@ -24,6 +24,8 @@ export class PhoneNumbersTable extends Component{
                     bServerSide: true,
                     sProcessing: true,
                     bLengthChange: false,
+                    pagingType: "simple",
+
                     bPaginate:true,
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=phone_numbers',

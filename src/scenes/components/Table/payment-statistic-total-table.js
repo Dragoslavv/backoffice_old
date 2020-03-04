@@ -13,6 +13,8 @@ export class PaymentStatisticTotalTable extends Component{
             {
                 info:false,
                 bLengthChange: false,
+                pagingType: "simple",
+
                 searching:false,
                 data:this.props.data,
                 columns: [

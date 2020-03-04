@@ -14,6 +14,8 @@ export class PackageStatTotalTable extends Component{
                 info:false,
                 bLengthChange: false,
                 searching: false,
+                pagingType: "simple",
+
                 sScrollY: "300px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=grid_store',
@@ -45,6 +47,8 @@ export class PackageStatTotalTable extends Component{
             this.$ele.DataTable(
                 {
                     info:false,
+                    pagingType: "simple",
+
                     bLengthChange: false,
                     searching: false,
                     sScrollY: "300px",
