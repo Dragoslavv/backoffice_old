@@ -3,66 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.57eb7e0f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.57eb7e0f.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.17651c21.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.17651c21.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/card-transaction-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/card-transaction-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-inbound-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-inbound-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-log-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-log-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/charge-data-log-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/charge-data-log-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/charge-log-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/charge-log-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/devices-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/devices-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ipay-transaction-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ipay-transaction-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/message-log-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/message-log-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/number-type-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/number-type-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-billing-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-billing-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-first-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-first-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-group-first-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-group-first-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-group-other-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-group-other-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-other-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-other-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-stat-total-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-stat-total-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/parking-request-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/parking-request-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/parking-response-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/parking-response-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/parking-service-total-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/parking-service-total-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-daily-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-daily-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-hourly-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-hourly-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-total-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/payment-statistic-total-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/payment-transaction-two.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/payment-transaction-two.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/profile-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/profile-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/rates-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/rates-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/routes-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/routes-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-details-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-details-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/special-offer-numbers-errors-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/special-offer-numbers-errors-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/special-offer-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/special-offer-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/top-up-transaction-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/top-up-transaction-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/transaction-payment-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/transaction-payment-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/billing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/billing.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,65 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Rates/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="411" column="44" lean-forward="true" selection-start-line="411" selection-start-column="44" selection-end-line="411" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/rates-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="145" column="22" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+            <state relative-caret-position="139">
+              <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -229,11 +116,11 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/rates-table.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/billing.css" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
   </component>
@@ -249,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,7 +183,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Cdr" type="462c0819:PsiDirectoryNode" />
+              <item name="Billing" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
@@ -316,13 +204,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../racun-pdf" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -371,18 +258,19 @@
       <workItem from="1571307532127" duration="16682000" />
       <workItem from="1571393242339" duration="14269000" />
       <workItem from="1583146772422" duration="19087000" />
-      <workItem from="1583231558433" duration="15364000" />
+      <workItem from="1583231558433" duration="16298000" />
+      <workItem from="1583326966209" duration="4783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="256025000" />
+    <option name="totallyTimeSpent" value="261742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="387" y="1105" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28581035" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20107599" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +283,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.14075068" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.46380696" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -850,20 +738,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Rates/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1045" column="82" selection-start-line="1045" selection-start-column="82" selection-end-line="1045" selection-end-column="99" />
+        <state relative-caret-position="285">
+          <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Rates/index.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="205" column="40" selection-start-line="205" selection-start-column="40" selection-end-line="205" selection-end-column="40" />
+        <state relative-caret-position="105">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="411" column="44" lean-forward="true" selection-start-line="411" selection-start-column="44" selection-end-line="411" selection-end-column="44" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -880,20 +775,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="411" column="44" lean-forward="true" selection-start-line="411" selection-start-column="44" selection-end-line="411" selection-end-column="44" />
+        <state relative-caret-position="139">
+          <caret line="269" lean-forward="true" selection-start-line="269" selection-end-line="269" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/system-message-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
