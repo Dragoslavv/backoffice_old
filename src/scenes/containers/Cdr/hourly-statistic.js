@@ -286,7 +286,42 @@ class HourlyStatistic extends Component {
             if (expirationDate > new Date()) {
                 return value.value
             } else {
-                window.sessionStorage.removeItem(key)
+                window.sessionStorage.removeItem(key);
+                sessionStorage.setItem('billing_active','');
+                sessionStorage.setItem('billing_balances','');
+                sessionStorage.setItem('billing_id','');
+                sessionStorage.setItem('billing_brand','');
+                sessionStorage.setItem('billing_created','');
+                sessionStorage.setItem('billing_email','');
+                sessionStorage.setItem('billing_force_app','');
+                sessionStorage.setItem('billing_name','');
+                sessionStorage.setItem('billing_reservations','');
+                sessionStorage.setItem('billing_user_id','');
+                sessionStorage.setItem('billing_user_type','');
+                sessionStorage.setItem('billing_wallet_id','');
+
+                sessionStorage.setItem('number','');
+                sessionStorage.setItem('email','');
+                sessionStorage.setItem('userId','');
+                sessionStorage.setItem('billingId','');
+
+                sessionStorage.removeItem('number');
+                sessionStorage.removeItem('email');
+                sessionStorage.removeItem('userId');
+                sessionStorage.removeItem('billingId');
+
+                sessionStorage.removeItem('billing_active');
+                sessionStorage.removeItem('billing_balances');
+                sessionStorage.removeItem('billing_id');
+                sessionStorage.removeItem('billing_brand');
+                sessionStorage.removeItem('billing_created');
+                sessionStorage.removeItem('billing_email');
+                sessionStorage.removeItem('billing_force_app');
+                sessionStorage.removeItem('billing_name');
+                sessionStorage.removeItem('billing_reservations');
+                sessionStorage.removeItem('billing_user_id');
+                sessionStorage.removeItem('billing_user_type');
+                sessionStorage.removeItem('billing_wallet_id');
             }
         }
         return null
