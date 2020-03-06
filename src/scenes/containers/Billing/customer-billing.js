@@ -4,7 +4,7 @@ import './../../stayles/billing.css';
 import {
     activate_subscription,
     activationAndDeactivation,
-    addCredit,
+    addCredit, addReplaceTransfer,
     billingCustomerSearch, distDuration, distPack,
     transactionWallet
 } from "../../components/UserFunctions";
@@ -67,6 +67,8 @@ class CustomerBilling extends Component {
             duration_active:false,
             duration_select:'',
             active_sim_pack:false,
+            action_add: '',
+            new_number: ''
         };
 
 
@@ -82,7 +84,7 @@ class CustomerBilling extends Component {
         this.handleShowModalActive = this.handleShowModalActive.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
         this.handleSubscription = this.handleSubscription.bind(this);
-
+        this.handleAddReplaceTransfer = this.handleAddReplaceTransfer.bind(this);
     };
 
 
@@ -747,6 +749,39 @@ class CustomerBilling extends Component {
 
     };
 
+    handleAddReplaceTransfer = (e) => {
+        e.preventDefault();
+
+        addReplaceTransfer(sessionStorage.getItem('billing_user_id'), this.state.new_number, this.state.action_add, sessionStorage.getItem('role')).then(result => {
+           console.log(result);
+           if(result.success === true) {
+               store.addNotification({
+                   title: 'Add/Replace/Transfer Number',
+                   message: result.message,
+                   type: 'success',                         // 'default', 'success', 'info', 'warning'
+                   container: 'bottom-right',                // where to position the notifications
+                   animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                   animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                   dismiss: {
+                       duration: 3000
+                   }
+               });
+           } else {
+               store.addNotification({
+                   title: 'Add/Replace/Transfer Number',
+                   message: result.message,
+                   type: 'info',                         // 'default', 'success', 'info', 'warning'
+                   container: 'bottom-right',                // where to position the notifications
+                   animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                   animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                   dismiss: {
+                       duration: 3000
+                   }
+               });
+           }
+        });
+    };
+
     render() {
         // function checkFirstVisit() {
         //
@@ -1035,20 +1070,21 @@ class CustomerBilling extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" name="action" onChange={this.handleChange}>
-                                            <option value="">Add number</option>
-                                            <option value="6">Replace number</option>
-                                            <option value="12">Transfer number</option>
+                                        <select className="input input-update form-control" value={this.state.action_add} name="action_add" onChange={this.handleChange}>
+                                            <option value="">Select Actions</option>
+                                            <option value="add">Add number</option>
+                                            <option value="replace">Replace number</option>
+                                            <option value="transfer">Transfer number</option>
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' autoComplete='off' name='number'  placeholder='Number:'/>
+                                        <input className='input' type='text' autoComplete='off' value={this.state.new_number} name='new_number' onChange={this.handleChange}  placeholder='Number:'/>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} type="submit">Add/Replace...</button>
+                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleAddReplaceTransfer} type="submit">Add/Replace...</button>
                                                 </div>
                                             </div>
                                         </div>

@@ -259,6 +259,27 @@ export const addCredit = (billing_id, amount, account, password, info, username)
     });
 };
 
+export const addReplaceTransfer = (user_id, number, action, role) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=add_number",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user_id="+ user_id + "&number="+ number + "&action="+ action + "&role="+ role,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
 export const activationAndDeactivation = (active, user_id, password) => {
 
     return fetch("https://api.globaltel.rs/new-gui/?url=deactivation",{
