@@ -37,7 +37,9 @@ export class DevicesTable extends Component{
                     columns: [
                         { title: "User ID"},
                         { title: "Platform"},
-                        { title: "Platform Data"},
+                        { title: "Platform Data",
+                          className:'platform_data'
+                        },
                         { title: "App Version"},
                         { title: "Device ID"},
                         { title: "Caller ID"},

@@ -80,12 +80,14 @@
     box-shadow: 0 3px 3px -3px #0E1119;
 }
 
-.wallet td {
+.wallet td .message {
     word-break: break-word;
 }
-
+.platform_data {
+    word-break: break-word;
+}
 .wallet td:hover {
-    background-color: forestgreen;
+    background-color: #a69055;
     color: #fff3cd;
     font-weight: bold;
 
@@ -152,7 +154,10 @@ hr{
 }
 
 option{
-    color: #000;
+    color: #000 !important;
+}
+select{
+    color: #c4c4c4 !important;
 }
 
 h6{

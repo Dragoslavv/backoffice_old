@@ -8,6 +8,16 @@ $.DataTable = require( 'datatables.net' );
 $.DataTable = require( 'datatables.net-bs4' );
 
 export class SystemMessageTable extends Component{
+    constructor(props) {
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange() {
+        this.props.onOpen();
+    }
+
     componentDidMount() {
         this.$el = $(this.el);
         this.$el.DataTable(
@@ -121,7 +131,7 @@ export class SystemMessageTable extends Component{
 
     componentDidUpdate() {
 
-        if(this.props.data.search_button === 'click') {
+        if(this.props.search === true) {
 
 
             let table = $('#system_message-table').DataTable();
@@ -163,6 +173,8 @@ export class SystemMessageTable extends Component{
                     ]
                 }
             );
+            this.handleChange();
+
         }
     }
 

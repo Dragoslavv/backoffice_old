@@ -1401,3 +1401,27 @@ export const promo_view = (id) => {
         return err;
     });
 };
+
+
+/***  Most common cases **/
+
+export const read_shopping_cart_id = (cart_id) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=read_shopping_cart_id",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "cart_id=" + cart_id ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

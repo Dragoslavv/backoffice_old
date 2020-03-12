@@ -23,6 +23,7 @@ class SystemMessage extends Component {
             search: true,
             modal:false,
             modalRemove: false,
+            search_sys:false,
             key: '',
             brand: '',
             script: '',
@@ -56,6 +57,13 @@ class SystemMessage extends Component {
         this.handleClear = this.handleClear.bind(this);
         this.handleCreateMessage = this.handleCreateMessage.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+        this.handleOpen = this.handleOpen.bind(this);
+    }
+
+    handleOpen (){
+        this.setState({
+            search_sys: false
+        });
     }
 
     sessionGet = (key) => {
@@ -266,6 +274,7 @@ class SystemMessage extends Component {
             key: '',
             brand: '',
             script: '',
+            search_sys:true
         });
 
     };
@@ -296,9 +305,13 @@ class SystemMessage extends Component {
     handleClick = (e) => {
         e.preventDefault();
 
-        this.setState({
-            search_button: 'click'
-        });
+        if(e.target.id === 'search_sys'){
+
+            this.setState({
+                search_sys:true
+            });
+
+        }
     };
 
     componentDidMount() {
@@ -435,7 +448,7 @@ class SystemMessage extends Component {
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handlleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} id="search_sys" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -444,7 +457,7 @@ class SystemMessage extends Component {
                         </div>
                         <div className="col-lg-9">
                             <div className='wrap-border'>
-                                <SystemMessageTable data={
+                                <SystemMessageTable search={this.state.search_sys}  onOpen={this.handleOpen} data={
                                     {
                                         key: this.state.key,
                                         brand: this.state.brand,

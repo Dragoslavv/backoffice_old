@@ -4,7 +4,7 @@ import {logout} from "../UserFunctions";
 import './../../stayles/Navigation.css';
 import localForages from "localforage";
 import logo from "../../images/logo-white.png";
-import {Redirect} from "react-router-dom";
+// import {Redirect} from "react-router-dom";
 
 class Navigation extends Component {
 
@@ -22,6 +22,7 @@ class Navigation extends Component {
             package:false,
             simDataActive:false,
             mastercard:false,
+            mostcommoncases:false,
             role:''
         };
 
@@ -36,7 +37,7 @@ class Navigation extends Component {
         this.Package = this.Package.bind(this);
         this.SimDataActive = this.SimDataActive.bind(this);
         this.Mastercard = this.Mastercard.bind(this);
-
+        this.Mostcommoncases = this.Mostcommoncases.bind(this);
     }
 
     componentDidMount() {
@@ -59,8 +60,19 @@ class Navigation extends Component {
 
     Collapsible = (e) =>{
         e.preventDefault();
+
         this.setState( {
-            isActive : !this.state.isActive
+            isActive : !this.state.isActive,
+            payment: false,
+            cdr: false,
+            messaging: false,
+            numbers: false,
+            parking: false,
+            package: false,
+            simDataActive: false,
+            mastercard: false,
+            mostcommoncases: false,
+            billing: false
         });
         localStorage.setItem("active", this.state.isActive);
     };
@@ -77,7 +89,8 @@ class Navigation extends Component {
             parking: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -93,7 +106,8 @@ class Navigation extends Component {
             parking: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -109,7 +123,8 @@ class Navigation extends Component {
             parking: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -125,7 +140,8 @@ class Navigation extends Component {
             parking: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -141,7 +157,8 @@ class Navigation extends Component {
             parking: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -157,7 +174,8 @@ class Navigation extends Component {
             numbers: false,
             package: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -173,7 +191,8 @@ class Navigation extends Component {
             parking:false,
             numbers: false,
             simDataActive: false,
-            mastercard: false
+            mastercard: false,
+            mostcommoncases: false
 
         });
     };
@@ -189,7 +208,9 @@ class Navigation extends Component {
             numbers: false,
             package:false,
             mastercard: false,
-            parking: false
+            parking: false,
+            mostcommoncases: false
+
         });
     };
     Mastercard = (e) =>{
@@ -204,8 +225,25 @@ class Navigation extends Component {
             numbers: false,
             package:false,
             simDataActive: false,
-            parking:false
+            parking:false,
+            mostcommoncases: false
         });
+    };
+    Mostcommoncases = (e) => {
+      e.preventDefault();
+
+      this.setState({
+          mostcommoncases: !this.state.mostcommoncases,
+          billing: false,
+          payment: false,
+          cdr: false,
+          messaging: false,
+          numbers: false,
+          package:false,
+          simDataActive: false,
+          parking:false,
+          mastercard:false
+      });
     };
 
     logOut = (e) => {
@@ -372,6 +410,12 @@ class Navigation extends Component {
                                 <ul className={ this.state.mastercard  ? "sidebar-nav-second" :"hidden-ul" }>
                                     <li className='shadow'><Link to="/daily-activation-statistic" >Daily Activation Statistic</Link></li>
                                     <li className='shadow'><Link to="/hourly-activation-statistic" >Hourly Activation Statistic</Link></li>
+                                </ul>
+                            </li>
+                            <li className={ this.state.mostcommoncases  ? "active shadow" :"shadow" }>
+                                <Link to="#" title="Most common cases" onClick={this.Mostcommoncases} ><i className="fa fa-angle-right" ></i>Most common cases</Link>
+                                <ul className={ this.state.mostcommoncases  ? "sidebar-nav-second" :"hidden-ul" }>
+                                    <li className='shadow'><Link to="/most-common-cases" >Cases</Link></li>
                                 </ul>
                             </li>
                             <li className='shadow'>

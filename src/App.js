@@ -44,6 +44,7 @@ import SimDaily from "./scenes/containers/SimDataActiveUsers/sim-daily";
 import SimHourly from "./scenes/containers/SimDataActiveUsers/sim-hourly";
 import ActiveUsers from "./scenes/containers/SimDataActiveUsers/active-users";
 import DataConsumption from "./scenes/containers/SimDataActiveUsers/data-consumption";
+import MostCommonCases from "./scenes/containers/MostCommonCases";
 import Profile from "./scenes/containers/Profile";
 import ReactNotifications from 'react-notifications-component';
 
@@ -187,6 +188,10 @@ class App extends Component {
                       </Route>
                       <Route exact path="/hourly-activation-statistic">
                           <HourlyActivationStatistic />
+                      </Route>
+                      //most common cases
+                      <Route exact path="/most-common-cases">
+                          <MostCommonCases/>
                       </Route>
                       //system message
                       <Route exact path="/system-message">
