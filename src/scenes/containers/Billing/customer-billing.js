@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import './../../stayles/billing.css';
 import {
+    activate_package,
     activate_subscription,
     activationAndDeactivation,
     addCredit, addReplaceTransfer,
@@ -85,14 +86,11 @@ class CustomerBilling extends Component {
         this.sessionGet = this.sessionGet.bind(this);
         this.handleSubscription = this.handleSubscription.bind(this);
         this.handleAddReplaceTransfer = this.handleAddReplaceTransfer.bind(this);
+        this.handleActivatePackage = this.handleActivatePackage.bind(this);
     };
 
 
     componentDidMount() {
-
-        const role = localForages.getItem('role', function (err, value) {
-            return value;
-        });
 
         const username = localForages.getItem('username', function (err, value) {
             return value;
@@ -101,12 +99,6 @@ class CustomerBilling extends Component {
         username.then(value => {
             this.setState({
                 UsersLogin: value
-            });
-        });
-
-        role.then(value => {
-            this.setState({
-                roleUser: value
             });
         });
 
@@ -352,6 +344,7 @@ class CustomerBilling extends Component {
                redirect:true
             });
         }
+
     }
 
     componentWillUnmount() {
@@ -389,11 +382,14 @@ class CustomerBilling extends Component {
 
         }
 
+        if( e.target.name === "duration_active" ){
 
-        this.setState({
-            duration_active: !this.state.duration_active,
-            active_sim_pack: !this.state.active_sim_pack
-        });
+            this.setState({
+                duration_active : !this.state.duration_active,
+            });
+
+        }
+
     };
 
     handleChangeData = (e) => {
@@ -413,6 +409,62 @@ class CustomerBilling extends Component {
             store.addNotification({
                 title: 'Deactivation / Activation',
                 message: 'Parameter is empty',
+                type: 'warning',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+
+    };
+
+    handleActivatePackage = (e) => {
+        e.preventDefault();
+
+        if(this.state.searchData[0].user_id !== '' && sessionStorage.getItem('role') !== 'USER' && sessionStorage.getItem('role') !== ''
+            && this.state.duration_active !== '' && this.state.package_du_active !== '' && sessionStorage.getItem('billing_email') !== '' && sessionStorage.getItem('billing_email') !== null ) {
+
+
+            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email')).then(result => {
+
+                if(result['success'] === true) {
+
+                    store.addNotification({
+                        title: 'Package Activation',
+                        message: result['message'] + '(' + result['text'] + ')' ,
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+
+                } else {
+
+                    store.addNotification({
+                        title: 'Package Activation',
+                        message: result['message'] + '(' + result['text'] + ')' ,
+                        type: 'warning',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Package Activation',
+                message: 'Parameter missing or invalid',
                 type: 'warning',                         // 'default', 'success', 'info', 'warning'
                 container: 'bottom-right',                // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
@@ -496,7 +548,7 @@ class CustomerBilling extends Component {
         e.preventDefault();
 
         this.setState({ loading: true });
-        transactionWallet(this.state.searchData[0].user_id, this.state.roleUser).then(wallet => {
+        transactionWallet(this.state.searchData[0].user_id, sessionStorage.getItem('role')).then(wallet => {
 
            if(wallet.status === true){
                this.setState({ loading: false });
@@ -1023,9 +1075,9 @@ class CustomerBilling extends Component {
                                             <div className="col-lg-7">
                                                 <ul className="unstyled centered">
                                                     <li>
-                                                        <input className="styled-checkbox input" name='duration_active' value={this.state.duration_active} onChange={this.handleChange} id="styled-checkbox-2"
+                                                        <input className="styled-checkbox input" name='duration_active' value={this.state.duration_active} onChange={this.handleChange} id="duration_active"
                                                                type="checkbox" />
-                                                        <label htmlFor="styled-checkbox-2"> Duration</label>
+                                                        <label htmlFor="duration_active"> Duration</label>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -1042,20 +1094,20 @@ class CustomerBilling extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className='form-group billing-input'>
-                                        <ul className="unstyled centered">
-                                            <li>
-                                                <input className="styled-checkbox input" name='active_sim_pack' value={this.state.active_sim_pack} disabled={this.state.duration_active?false:true} onChange={this.handleChange} id="activeSim"
-                                                       type="checkbox" />
-                                                <label htmlFor="activeSim"> Active Sim</label>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    {/*<div className='form-group billing-input'>*/}
+                                        {/*<ul className="unstyled centered">*/}
+                                            {/*<li>*/}
+                                                {/*<input className="styled-checkbox input" name='active_sim_pack' value={this.state.active_sim_pack} disabled={this.state.duration_active?false:true} onChange={this.handleChange} id="activeSim"*/}
+                                                       {/*type="checkbox" />*/}
+                                                {/*<label htmlFor="activeSim"> Active Sim</label>*/}
+                                            {/*</li>*/}
+                                        {/*</ul>*/}
+                                    {/*</div>*/}
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} type="submit">Activate</button>
+                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleActivatePackage} type="submit">Activate</button>
                                                 </div>
                                             </div>
                                         </div>
