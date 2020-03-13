@@ -10,6 +10,16 @@ $.DataTable = require( 'datatables.net' );
 $.DataTable = require( 'datatables.net-bs4' );
 
 export class SimReportTable extends Component{
+    constructor(props) {
+        super(props);
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange() {
+        this.props.onOpen();
+    }
+
     componentDidMount() {
         this.$el = $(this.el);
 
@@ -76,7 +86,7 @@ export class SimReportTable extends Component{
 
     componentDidUpdate() {
 
-        if(this.props.data.search === 'click') {
+        if(this.props.search === true) {
 
             let table = $('#sim_report').DataTable();
             table.destroy();
@@ -123,6 +133,8 @@ export class SimReportTable extends Component{
                     ]
                 }
             );
+            this.handleChange();
+
         }
     }
 

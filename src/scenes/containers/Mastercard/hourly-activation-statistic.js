@@ -76,9 +76,9 @@ class HourlyActivationStatistic extends Component {
         total_hourly_mastercard(this.state.date).then(result => {
 
             this.setState({
-                total_activ: (result.data[0].AKTIVACIJA !== null)?result.data[0].AKTIVACIJA:'',
-                total_regis: (result.data[0].REGISTRACIJA !== null)?result.data[0].REGISTRACIJA:'',
-                total_inter: (result.data[0].INTERESOVANJE !== null)?result.data[0].INTERESOVANJE:''
+                total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+                total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+                total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
             });
         });
 
@@ -135,9 +135,9 @@ class HourlyActivationStatistic extends Component {
 
         total_hourly_mastercard(this.state.date).then(result => {
             this.setState({
-                total_activ: (result.data[0].AKTIVACIJA !== null)?result.data[0].AKTIVACIJA:'',
-                total_regis: (result.data[0].REGISTRACIJA !== null)?result.data[0].REGISTRACIJA:'',
-                total_inter: (result.data[0].INTERESOVANJE !== null)?result.data[0].INTERESOVANJE:''
+                total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+                total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+                total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
             });
         });
 
@@ -202,9 +202,9 @@ class HourlyActivationStatistic extends Component {
 
         total_hourly_mastercard(this.state.date).then(result => {
             this.setState({
-                total_activ: (result.data[0].AKTIVACIJA !== null)?result.data[0].AKTIVACIJA:'',
-                total_regis: (result.data[0].REGISTRACIJA !== null)?result.data[0].REGISTRACIJA:'',
-                total_inter: (result.data[0].INTERESOVANJE !== null)?result.data[0].INTERESOVANJE:''
+                total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+                total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+                total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
             });
         });
 

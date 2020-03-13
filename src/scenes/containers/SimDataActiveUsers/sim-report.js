@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {SimReportTable} from "../../components/Table/sim-report-table";
 import {Redirect} from "react-router-dom";
-import localForages from "localforage";
 import PubSub from "pubsub-js";
+import {RoutesTable} from "../../components/Table/routes-table";
 
 class SimReport extends Component {
     constructor(props){
@@ -24,7 +24,8 @@ class SimReport extends Component {
             cash_type: '',
             msisdn: '',
             search:'',
-            id_from_sim_report:''
+            id_from_sim_report:'',
+            search_report:false,
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -32,6 +33,13 @@ class SimReport extends Component {
         this.handleReset = this.handleReset.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
         this.mySubscriberReport = this.mySubscriberReport.bind(this);
+        this.handleOpen = this.handleOpen.bind(this);
+    }
+
+    handleOpen (){
+        this.setState({
+            search_report: false
+        });
     }
 
     sessionGet = (key) => {
@@ -99,7 +107,8 @@ class SimReport extends Component {
             data_type: '',
             cash_type: '',
             msisdn: '',
-            search:''
+            search:'',
+            search_report: true,
         });
     };
 
@@ -107,7 +116,7 @@ class SimReport extends Component {
         e.preventDefault();
 
         this.setState({
-            search: 'click'
+            search_report: true,
         });
     };
 
@@ -178,7 +187,7 @@ class SimReport extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
@@ -217,7 +226,7 @@ class SimReport extends Component {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='wrap-border'>
-                                <SimReportTable data={
+                                <SimReportTable search={this.state.search_report} onOpen={this.handleOpen} data={
                                     {
                                         start_log: this.state.start,
                                         end_log: this.state.end,

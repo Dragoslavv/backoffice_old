@@ -102,9 +102,9 @@ class DailyActivationStatistic extends Component {
         total_daily_mastercard(this.state.start, this.state.end).then(result => {
 
             this.setState({
-                total_activ: result.data[0].AKTIVACIJA,
-                total_regis: result.data[0].REGISTRACIJA,
-                total_inter: result.data[0].INTERESOVANJE
+                total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+                total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+                total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
             });
         });
 
@@ -164,9 +164,9 @@ class DailyActivationStatistic extends Component {
         total_daily_mastercard(this.state.start, this.state.end).then(result => {
 
             this.setState({
-                total_activ: result.data[0].AKTIVACIJA,
-                total_regis: result.data[0].REGISTRACIJA,
-                total_inter: result.data[0].INTERESOVANJE
+                total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+                total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+                total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
             });
         });
 
@@ -226,9 +226,9 @@ class DailyActivationStatistic extends Component {
         total_daily_mastercard(this.state.start, this.state.end).then(result => {
 
            this.setState({
-               total_activ: result.data[0].AKTIVACIJA,
-               total_regis: result.data[0].REGISTRACIJA,
-               total_inter: result.data[0].INTERESOVANJE
+               total_activ: (result.data[0].AKTIVACIJA !== null)?'ACTIVATED: '+result.data[0].AKTIVACIJA:'',
+               total_regis: (result.data[0].REGISTRACIJA !== null)?'REGISTERED: '+result.data[0].REGISTRACIJA:'',
+               total_inter: (result.data[0].INTERESOVANJE !== null)?'INTERESTED IN: '+result.data[0].INTERESOVANJE:''
            });
         });
 
