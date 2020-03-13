@@ -1425,3 +1425,129 @@ export const read_shopping_cart_id = (cart_id) => {
         return err;
     });
 };
+
+export const sending_email_eSim = (number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=send_email_esim",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const changing_email_eSim = (email, number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=change_mail_esim",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "email=" + email + "&number=" + number ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const transfer_number = (number, transfer_number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=transfer_number",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number + "&transfer_number=" + transfer_number ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const changing_email_mastercard = (userId, email) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=change_email_mastercard",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user_id=" + userId + "&email=" + email ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const resend_email_mastercard = (number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=resend_mastercard_email",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const reset_mastercard = (number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=reset_mastercard",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number ,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

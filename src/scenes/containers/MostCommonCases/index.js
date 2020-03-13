@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
-import {read_shopping_cart_id} from "../../components/UserFunctions";
+import {
+    changing_email_eSim, changing_email_mastercard,
+    read_shopping_cart_id, resend_email_mastercard, reset_mastercard,
+    sending_email_eSim,
+    transfer_number
+} from "../../components/UserFunctions";
 import {store} from "react-notifications-component";
 
 class MostCommonCases extends Component {
@@ -12,11 +17,27 @@ class MostCommonCases extends Component {
             redirect: false,
             cart_id : '',
             special_number: '',
-            sim_type: ''
+            sim_type: '',
+            send_email_esim:'',
+            changing_email_esim:'',
+            changing_number_esim:'',
+            transfer_number:'',
+            transfer_number_to:'',
+            changing_userId_mastercard:'',
+            changing_email_mastercard:'',
+            resend_number:'',
+            reset_mastercard:''
         };
 
         this.sessionGet = this.sessionGet.bind(this);
         this.handleSearchCartId = this.handleSearchCartId.bind(this);
+        this.handleSendEsim = this.handleSendEsim.bind(this);
+        this.handleChangingEmaileSim = this.handleChangingEmaileSim.bind(this);
+        this.handleTransferNumber = this.handleTransferNumber.bind(this);
+        this.handleChangingMastercard = this.handleChangingMastercard.bind(this);
+        this.handleResend = this.handleResend.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+
     }
 
     handleChanges =( e ) => {
@@ -80,6 +101,301 @@ class MostCommonCases extends Component {
     componentDidUpdate() {
         // console.log(localStorage.getItem('active'));
     }
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        if(this.state.reset_mastercard !== '') {
+
+            reset_mastercard(this.state.reset_mastercard).then(result => {
+                if(result['success'] === true) {
+                    store.addNotification({
+                        title: 'Reset Mastercard',
+                        message: 'You have successfully reset mastercard',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                } else {
+                    store.addNotification({
+                        title: 'Reset Mastercard',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
+            })
+
+        } else {
+            store.addNotification({
+                title: 'Reset Mastercard',
+                message: 'Please enter your number!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+    };
+
+    handleResend = (e) => {
+      e.preventDefault();
+
+        if(this.state.resend_number !== '') {
+
+            resend_email_mastercard(this.state.resend_number).then(result => {
+                if(result['success'] === true) {
+                    store.addNotification({
+                        title: 'Resend email on Mastercard',
+                        message: 'You have successfully changing the email',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                } else {
+                    store.addNotification({
+                        title: 'Resend email on Mastercard',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Resend email on Mastercard',
+                message: 'Please enter your number!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+
+    };
+
+    handleChangingMastercard = (e) => {
+      e.preventDefault();
+
+      if(this.state.changing_email_mastercard !== '' && this.state.changing_userId_mastercard !== '' ) {
+
+          changing_email_mastercard(this.state.changing_userId_mastercard, this.state.changing_email_mastercard).then(result => {
+              if(result['success'] === true) {
+                  store.addNotification({
+                      title: 'Changing emails on Mastercard',
+                      message: 'You have successfully changing the email',
+                      type: 'success',                         // 'default', 'success', 'info', 'warning'
+                      container: 'bottom-right',                // where to position the notifications
+                      animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                      animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                      dismiss: {
+                          duration: 3000
+                      }
+                  });
+              } else {
+                  store.addNotification({
+                      title: 'Changing emails on Mastercard',
+                      message: result['message'],
+                      type: 'info',                         // 'default', 'success', 'info', 'warning'
+                      container: 'bottom-right',                // where to position the notifications
+                      animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                      animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                      dismiss: {
+                          duration: 3000
+                      }
+                  });
+              }
+          });
+
+      } else {
+          store.addNotification({
+              title: 'Changing emails on Mastercard',
+              message: 'Please enter your userID and email!',
+              type: 'info',                         // 'default', 'success', 'info', 'warning'
+              container: 'bottom-right',                // where to position the notifications
+              animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+              animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+              dismiss: {
+                  duration: 3000
+              }
+          });
+      }
+
+    };
+
+    handleTransferNumber = (e) => {
+        e.preventDefault();
+
+        if(this.state.transfer_number !== '' && this.state.transfer_number_to !== '' ) {
+
+            transfer_number(this.state.transfer_number, this.state.transfer_number_to).then(result => {
+
+                if(result['success'] === true) {
+                    store.addNotification({
+                        title: 'Transfer number',
+                        message: 'You have successfully transfer number',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                } else {
+                    store.addNotification({
+                        title: 'Transfer number',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Transfer number',
+                message: 'Please enter your number and transfer number!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+
+    };
+
+    handleChangingEmaileSim = (e) => {
+        e.preventDefault();
+
+        if(this.state.changing_email_esim !== '' && this.state.changing_number_esim !== '') {
+
+            changing_email_eSim(this.state.changing_email_esim, this.state.changing_number_esim).then(result => {
+
+                if(result['success'] === true) {
+                    store.addNotification({
+                        title: 'Changing emails on eSim',
+                        message: 'You have successfully changing the email',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                } else {
+                    store.addNotification({
+                        title: 'Changing emails on eSim',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Changing emails on eSim',
+                message: 'Please enter your number and email!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+
+    };
+
+    handleSendEsim = (e) => {
+        e.preventDefault();
+
+        if(this.state.send_email_esim !== '') {
+
+            sending_email_eSim(this.state.send_email_esim).then(result => {
+
+                if(result['success'] === true){
+                    store.addNotification({
+                        title: 'Sending an email to eSim',
+                        message: 'You have successfully sent the email',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                } else {
+                    store.addNotification({
+                        title: 'Sending an email to eSim',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'bottom-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Sending an email to eSim',
+                message: 'Please enter your number!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        }
+    };
 
     handleSearchCartId = (e) => {
         e.preventDefault();
@@ -182,16 +498,16 @@ class MostCommonCases extends Component {
 
                         <div className="col-lg-4 mb-3">
                             <div className='wrap-border'>
-                                <h6 className="content-title">Send email for eSim</h6>
+                                <h6 className="content-title">Sending an email to eSim</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='send_number' autoComplete='off' placeholder='Number'/>
+                                        <input className='input' type='number' name='send_email_esim' value={this.state.send_email_esim} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Send</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSendEsim} type="submit">Send</button>
                                             </div>
                                         </div>
                                     </div>
@@ -201,19 +517,19 @@ class MostCommonCases extends Component {
 
                         <div className="col-lg-4 mb-3">
                             <div className='wrap-border'>
-                                <h6 className="content-title">Changes email for eSim</h6>
+                                <h6 className="content-title">Changing emails on eSim</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='change_email' autoComplete='off' placeholder='Email'/>
+                                        <input className='input' type='text' name='changing_email_esim' value={this.state.changing_email_esim} onChange={this.handleChanges} autoComplete='off' placeholder='Email'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='change_number' autoComplete='off' placeholder='Number'/>
+                                        <input className='input' type='number' name='changing_number_esim' value={this.state.changing_number_esim} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Changes</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleChangingEmaileSim} type="submit">Changes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -227,15 +543,15 @@ class MostCommonCases extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='Number'/>
+                                        <input className='input' type='number' name='transfer_number' value={this.state.transfer_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='Transfer number'/>
+                                        <input className='input' type='number' name='transfer_number_to' value={this.state.transfer_number_to} onChange={this.handleChanges} autoComplete='off' placeholder='Transfer number'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Transfer</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleTransferNumber} type="submit">Transfer</button>
                                             </div>
                                         </div>
                                     </div>
@@ -245,19 +561,19 @@ class MostCommonCases extends Component {
 
                         <div className="col-lg-4 mb-3">
                             <div className='wrap-border'>
-                                <h6 className="content-title">Changes email for Mastercard</h6>
+                                <h6 className="content-title">Changing emails on Mastercard</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='User id'/>
+                                        <input className='input' type='number' name='changing_userId_mastercard' value={this.state.changing_userId_mastercard} onChange={this.handleChanges} autoComplete='off' placeholder='User id'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='Email'/>
+                                        <input className='input' type='text' name='changing_email_mastercard' value={this.state.changing_email_mastercard} onChange={this.handleChanges} autoComplete='off' placeholder='Email'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Changes</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleChangingMastercard} type="submit">Changes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -267,16 +583,16 @@ class MostCommonCases extends Component {
 
                         <div className="col-lg-6 mb-3">
                             <div className='wrap-border'>
-                                <h6 className="content-title">Resend email for Mastercard</h6>
+                                <h6 className="content-title">Resend email on Mastercard</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='Number'/>
+                                        <input className='input' type='text' name='resend_number' value={this.state.resend_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Resend</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleResend} type="submit">Resend</button>
                                             </div>
                                         </div>
                                     </div>
@@ -290,12 +606,12 @@ class MostCommonCases extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='start' autoComplete='off' placeholder='Number'/>
+                                        <input className='input' type='text' name='reset_mastercard' value={this.state.reset_mastercard} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>
