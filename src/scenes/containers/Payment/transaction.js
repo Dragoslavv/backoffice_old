@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {TransactionPaymentTable} from "../../components/Table/transaction-payment-table";
-// import localForages from "localforage";
 import { PaymentTransactionsTable, PaymentTransactionsTotal} from "../../components/UserFunctions";
 import {store} from "react-notifications-component";
 import CsvDownload from 'react-json-to-csv';
@@ -426,7 +425,7 @@ class Transaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <CsvDownload data={this.state.totalTransactions} filename={"export-payment.csv"}  className="btn btn-block btn-outline-dark" > Export Payment </CsvDownload>
+                                                        <CsvDownload data={this.state.totalTransactions} target="_parent" filename={"export-payment.csv"}  className="btn btn-block btn-outline-dark" > Export Payment </CsvDownload>
                                                     </div>
                                                 </div>
                                             </div>

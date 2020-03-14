@@ -3,6 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {PaymentTransactionTwoTable} from "../../components/Table/payment-transaction-two";
 import {paymentOrders} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import PubSub from "pubsub-js";
 
 class PaymentTransaction extends Component {
     constructor(props){
@@ -25,12 +26,15 @@ class PaymentTransaction extends Component {
             paymentType:'',
             paymentData:'',
             billingId:'',
-            ordersTransactions:[]
+            ordersTransactions:[],
+            ud_transactions:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+        this.mySubscriberTransactions = this.mySubscriberTransactions.bind(this);
+        this.handleReset = this.handleReset.bind(this);
     }
 
     handleChanges = (e) => {
@@ -38,6 +42,36 @@ class PaymentTransaction extends Component {
 
         this.setState({
             [e.target.name] : e.target.value
+        });
+    };
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.setState( {
+            redirect: false,
+            startDayT: today+'T00:00',
+            endDayT: today+'T23:59',
+            userId:'',
+            paymentStatus:'',
+            paymentType:'',
+            paymentData:'',
+            billingId:'',
+            ordersTransactions:[],
+            ud_transactions:''
+        });
+
+        paymentOrders(this.state.startDayT, this.state.endDayT, '', '', '', '', '').then(result => {
+            this.setState({
+                ordersTransactions: result.data
+            });
         });
     };
 
@@ -51,7 +85,17 @@ class PaymentTransaction extends Component {
         });
     };
 
+    mySubscriberTransactions(msg,dataSet) {
+
+        this.setState({
+            ud_transactions: dataSet
+        })
+    };
+
     componentDidMount() {
+
+        PubSub.subscribe('paymentTransactions', this.mySubscriberTransactions);
+
 
         paymentOrders(this.state.startDayT, this.state.endDayT, this.state.userId, this.state.paymentStatus, this.state.paymentType, this.state.paymentData, this.state.billingId).then(result => {
             this.setState({
@@ -125,6 +169,11 @@ class PaymentTransaction extends Component {
 
     render() {
 
+        if(this.state.ud_transactions){
+            return <Redirect to={'/customer-billing'} />
+
+        }
+
         if(this.state.redirect){
             return <Redirect to={'/'} />
         }
@@ -172,7 +221,7 @@ class PaymentTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>

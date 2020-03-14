@@ -86,6 +86,10 @@
 .platform_data {
     word-break: break-word;
 }
+.payment_data{
+    word-break: break-word;
+}
+
 .wallet td:hover {
     background-color: #a69055;
     color: #fff3cd;

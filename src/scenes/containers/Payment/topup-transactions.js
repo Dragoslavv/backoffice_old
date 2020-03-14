@@ -29,6 +29,8 @@ class TopupTransaction extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+
     }
 
     handleChange = (e) => {
@@ -36,6 +38,33 @@ class TopupTransaction extends Component {
 
         this.setState({
             [e.target.name] : e.target.value
+        });
+    };
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.setState( {
+            redirect:false,
+            startLog: today+'T00:00',
+            endLog: today+'T23:59',
+            msisdn:'',
+            toPupStatus:'',
+            transactionId:'',
+            TopUpTranactionsDetails:[]
+        });
+
+        TopUpTransactions(this.state.startLog, this.state.endLog, '', '', '').then(result => {
+            this.setState({
+                TopUpTranactionsDetails: result.data
+            });
         });
     };
 
@@ -187,7 +216,7 @@ class TopupTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>

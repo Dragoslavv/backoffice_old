@@ -3,6 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {CardTransactionTable} from "../../components/Table/card-transaction-table";
 import {CardTransactionsCall} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import PubSub from "pubsub-js";
 
 class CardTransaction extends Component {
     constructor(props){
@@ -21,19 +22,57 @@ class CardTransaction extends Component {
             endLog: today+'T23:59',
             cardStatus:'',
             userId:'',
-            cardTrans:[]
+            cardTrans:[],
+            td_transactions:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        this.mySubscriberTransactions = this.mySubscriberTransactions.bind(this);
+
     }
+
+    mySubscriberTransactions(msg,dataSet) {
+
+        this.setState({
+            td_transactions: dataSet
+        })
+    };
 
     handleChanges = (e) => {
         e.preventDefault();
 
         this.setState({
             [e.target.name] : e.target.value
+        });
+    };
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.state = {
+            redirect: false,
+            startLog: today+'T00:00',
+            endLog: today+'T23:59',
+            cardStatus:'',
+            userId:'',
+            cardTrans:[]
+        };
+
+
+        CardTransactionsCall(this.state.startLog, this.state.endLog, '', '').then(result => {
+            this.setState({
+                cardTrans:result.data
+            });
         });
     };
 
@@ -50,6 +89,10 @@ class CardTransaction extends Component {
     };
 
     componentDidMount() {
+
+        PubSub.subscribe('cardTransactions', this.mySubscriberTransactions);
+
+
         CardTransactionsCall(this.state.startLog, this.state.endLog, this.state.cardStatus, this.state.userId).then(result => {
             this.setState({
                 cardTrans:result.data
@@ -124,6 +167,11 @@ class CardTransaction extends Component {
 
     render() {
 
+        if(this.state.td_transactions){
+            return <Redirect to={'/customer-billing'} />
+
+        }
+
         if(this.state.redirect){
             return <Redirect to={'/'} />
         }
@@ -185,7 +233,7 @@ class CardTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>

@@ -259,6 +259,247 @@ class CustomerBilling extends Component {
             return value;
         });
 
+        const ud_transactions = localForages.getItem('paymentTransactions', function (err, value) {
+            return value;
+        });
+
+        const ud_card_transactions = localForages.getItem('cardTransactions', function (err, value) {
+            return value;
+        });
+
+        const ud_iPay_transactions = localForages.getItem('iPayTransactions', function (err, value) {
+            return value;
+        });
+
+        ud_iPay_transactions.then(value => {
+            if( value !== ''  &&  value !== null){
+                const data = [];
+
+                this.setState({
+                    userId: value
+                });
+
+                if( value !== ''  ){
+                    data.push('{"property":"userId","value":"'+value+'"}')
+                }
+
+                const param = "[" + data.toString() + "]";
+
+                if(data.toString() !== '') {
+
+                    billingCustomerSearch(param).then(filter => {
+
+                        if(filter.data[0] !== undefined){
+
+                            sessionStorage.setItem('billing_active',filter.data[0].active);
+                            sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                            sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                            sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                            sessionStorage.setItem('billing_created',filter.data[0].created);
+                            sessionStorage.setItem('billing_email',filter.data[0].email);
+                            sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                            sessionStorage.setItem('billing_name',filter.data[0].name);
+                            sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                            sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                            sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                            sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
+                            this.setState({
+                                searchData:[{
+                                    active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                                    balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                                    billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                                    brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                                    created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                                    email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                                    force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                                    name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                                    reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                                    user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                                    user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                                    wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                }],
+                            });
+
+
+                            localForages.setItem('user_id_for_phone_numbers', this.state.searchData[0].user_id);
+                            localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
+
+                        } else {
+                            store.addNotification({
+                                title: 'Customer Search',
+                                message: 'Data from input field does not exits!',
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'bottom-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                            window.scrollTo({
+                                top: 0
+                            });
+                        }
+
+                    });
+                }
+            }
+        });
+
+        ud_card_transactions.then(value => {
+            if( value !== ''  &&  value !== null){
+                const data = [];
+
+                this.setState({
+                    userId: value
+                });
+
+                if( value !== ''  ){
+                    data.push('{"property":"userId","value":"'+value+'"}')
+                }
+
+                const param = "[" + data.toString() + "]";
+
+                if(data.toString() !== '') {
+
+                    billingCustomerSearch(param).then(filter => {
+
+                        if(filter.data[0] !== undefined){
+
+                            sessionStorage.setItem('billing_active',filter.data[0].active);
+                            sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                            sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                            sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                            sessionStorage.setItem('billing_created',filter.data[0].created);
+                            sessionStorage.setItem('billing_email',filter.data[0].email);
+                            sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                            sessionStorage.setItem('billing_name',filter.data[0].name);
+                            sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                            sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                            sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                            sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
+                            this.setState({
+                                searchData:[{
+                                    active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                                    balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                                    billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                                    brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                                    created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                                    email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                                    force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                                    name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                                    reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                                    user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                                    user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                                    wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                }],
+                            });
+
+
+                            localForages.setItem('user_id_for_phone_numbers', this.state.searchData[0].user_id);
+                            localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
+
+                        } else {
+                            store.addNotification({
+                                title: 'Customer Search',
+                                message: 'Data from input field does not exits!',
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'bottom-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                            window.scrollTo({
+                                top: 0
+                            });
+                        }
+
+                    });
+                }
+            }
+        });
+
+        ud_transactions.then(value => {
+            if( value !== ''  &&  value !== null){
+                const data = [];
+
+                this.setState({
+                    userId: value
+                });
+
+                if( value !== ''  ){
+                    data.push('{"property":"userId","value":"'+value+'"}')
+                }
+
+                const param = "[" + data.toString() + "]";
+
+                if(data.toString() !== '') {
+
+                    billingCustomerSearch(param).then(filter => {
+
+                        if(filter.data[0] !== undefined){
+
+                            sessionStorage.setItem('billing_active',filter.data[0].active);
+                            sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                            sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                            sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                            sessionStorage.setItem('billing_created',filter.data[0].created);
+                            sessionStorage.setItem('billing_email',filter.data[0].email);
+                            sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                            sessionStorage.setItem('billing_name',filter.data[0].name);
+                            sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                            sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                            sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                            sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
+                            this.setState({
+                                searchData:[{
+                                    active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                                    balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                                    billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                                    brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                                    created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                                    email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                                    force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                                    name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                                    reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                                    user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                                    user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                                    wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                }],
+                            });
+
+
+                            localForages.setItem('user_id_for_phone_numbers', this.state.searchData[0].user_id);
+                            localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
+
+                        } else {
+                            store.addNotification({
+                                title: 'Customer Search',
+                                message: 'Data from input field does not exits!',
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'bottom-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                            window.scrollTo({
+                                top: 0
+                            });
+                        }
+
+                    });
+                }
+
+            }
+        });
+
         sim_report.then(value => {
 
             if( value !== ''  &&  value !== null){
@@ -462,6 +703,7 @@ class CustomerBilling extends Component {
             });
 
         } else {
+
             store.addNotification({
                 title: 'Package Activation',
                 message: 'Parameter missing or invalid',
@@ -542,6 +784,10 @@ class CustomerBilling extends Component {
         localForages.setItem('user_id_for_phone_numbers', '');
         localForages.setItem('billing_id_api', '');
         localForages.setItem('id_from_sim_report','');
+        localForages.setItem('paymentTransactions','');
+        localForages.setItem('cardTransactions','');
+        localForages.setItem('iPayTransactions','');
+
     };
 
     handleWalletTransaction = (e) => {
@@ -883,10 +1129,10 @@ class CustomerBilling extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                    <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>

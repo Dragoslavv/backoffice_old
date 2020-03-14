@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {IPayTransactionTable} from "../../components/Table/ipay-transaction-table";
 import {iPayTransaction} from "../../components/UserFunctions";
-import {CardTransactionTable} from "../../components/Table/card-transaction-table";
 import {Redirect} from "react-router-dom";
+import PubSub from "pubsub-js";
 
 class IpayTransaction extends Component {
     constructor(props){
@@ -24,12 +24,16 @@ class IpayTransaction extends Component {
             iPayStatus:'',
             userId:'',
             transferType:'',
-            iPayTrans:[]
+            iPayTrans:[],
+            iPay_transactions:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        this.handleReset = this.handleReset.bind(this);
+        this.mySubscriberTransactions = this.mySubscriberTransactions.bind(this);
     }
 
     handleChanges = (e) => {
@@ -37,6 +41,40 @@ class IpayTransaction extends Component {
 
         this.setState({
             [e.target.name] : e.target.value
+        });
+    };
+
+    mySubscriberTransactions(msg,dataSet) {
+
+        this.setState({
+            iPay_transactions: dataSet
+        })
+    };
+
+    handleReset = (e) => {
+        e.preventDefault();
+
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        this.setState( {
+            redirect: false,
+            startLog: today+'T00:00',
+            endLog: today+'T23:59',
+            iPayStatus:'',
+            userId:'',
+            transferType:'',
+            iPayTrans:[]
+        });
+
+        iPayTransaction(this.state.startLog, this.state.endLog, '', '', '').then(result => {
+            this.setState({
+                iPayTrans: result.data
+            });
         });
     };
 
@@ -52,6 +90,8 @@ class IpayTransaction extends Component {
     };
 
     componentDidMount() {
+        PubSub.subscribe('iPayTransactions', this.mySubscriberTransactions);
+
 
         iPayTransaction(this.state.startLog, this.state.endLog, this.state.iPayStatus, this.state.userId, this.state.transferType).then(result => {
             this.setState({
@@ -127,6 +167,11 @@ class IpayTransaction extends Component {
 
     render() {
 
+        if(this.state.iPay_transactions){
+            return <Redirect to={'/customer-billing'} />
+
+        }
+
         if(this.state.redirect){
             return <Redirect to={'/'} />
         }
@@ -197,7 +242,7 @@ class IpayTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>

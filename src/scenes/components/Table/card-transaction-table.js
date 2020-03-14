@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+import localForages from "localforage";
+import PubSub from "pubsub-js";
 
 // require Table
 const $  = require( 'jquery' );
@@ -18,10 +20,12 @@ export class CardTransactionTable extends Component{
                 columns: [
                     { title: "ID"},
                     { title: "Created"},
-                    { title: "User Id"},
+                    { title: "User Id",
+                      className: 'car_user_id'
+                    },
                     { title: "User",
                         data: null,
-                        defaultContent:`<button type="button" class="btn btn-info" id="edit" ><i class="fa fa-info"></i></button>`
+                        defaultContent:`<button type="button" class="btn btn-info" id="card_transactions_table" ><i class="fa fa-info-circle"></i></button>`
                     },
                     { title: "Transaction Id"},
                     { title: "Amount"},
@@ -35,6 +39,26 @@ export class CardTransactionTable extends Component{
                 ]
             }
         );
+
+        $(document).ready(() => {
+            const table = $('#test_transactions');
+
+            table.on('click', '#card_transactions_table', function () {
+
+                const id = $(this).parent().parent();
+
+                var get_id = { 'td' : [] };
+
+                id.find('.car_user_id').each(function( index,item ) {
+                    localForages.setItem('cardTransactions', item.innerHTML);
+
+                    get_id['td'].push(item.innerHTML);
+                });
+
+                PubSub.publish('cardTransactions', get_id);
+
+            });
+        });
     }
 
     componentWillUnmount() {
@@ -43,7 +67,7 @@ export class CardTransactionTable extends Component{
 
     render() {
         return <div>
-            <table className="table table-striped table-bordered table-responsive-lg wallet" width="100%" ref={el => this.el = el}>
+            <table className="table table-striped table-bordered table-responsive-lg wallet" id='test_transactions' width="100%" ref={el => this.el = el}>
             </table>
         </div>
     }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+import localForages from "localforage";
+import PubSub from "pubsub-js";
 
 // require Table
 const $  = require( 'jquery' );
@@ -24,10 +26,12 @@ export class IPayTransactionTable extends Component{
                 columns: [
                     { title: "ID"},
                     { title: "Created"},
-                    { title: "User ID"},
+                    { title: "User ID",
+                      className: 'user_id_ipay'
+                    },
                     { title: "User",
                         data: null,
-                        defaultContent:`<button type="button" class="btn btn-info" id="edit" ><i class="fa fa-info"></i></button>`
+                        defaultContent:`<button type="button" class="btn btn-info" id="ipay_user_id_button" ><i class="fa fa-info"></i></button>`
                     },
                     { title: "Amount"},
                     { title: "Currency"},
@@ -39,6 +43,27 @@ export class IPayTransactionTable extends Component{
                 ]
             }
         );
+
+
+        $(document).ready(() => {
+            const table = $('#ipay_Table');
+
+            table.on('click', '#ipay_user_id_button', function () {
+
+                const id = $(this).parent().parent();
+
+                var get_id = { 'td' : [] };
+
+                id.find('.user_id_ipay').each(function( index,item ) {
+                    localForages.setItem('iPayTransactions', item.innerHTML);
+
+                    get_id['td'].push(item.innerHTML);
+                });
+
+                PubSub.publish('iPayTransactions', get_id);
+
+            });
+        });
     }
 
     componentWillUnmount() {
@@ -47,7 +72,7 @@ export class IPayTransactionTable extends Component{
 
     render() {
         return <div>
-            <table className="table table-striped table-bordered table-responsive-lg wallet" width="100%" ref={el => this.el = el}>
+            <table className="table table-striped table-bordered table-responsive-lg wallet" id='ipay_Table' width="100%" ref={el => this.el = el}>
             </table>
         </div>
     }
