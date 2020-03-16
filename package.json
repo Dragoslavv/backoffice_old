@@ -2,7 +2,7 @@
   "name": "senzations",
   "version": "0.1.0",
   "public": true,
-  "homepage": "http://senzations.com/",
+  "homepage": "http://test.gui.globaltel.rs/",
   "dependencies": {
     "apexcharts": "^3.10.1",
     "auth0-js": "^9.11.3",
