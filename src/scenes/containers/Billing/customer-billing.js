@@ -1128,7 +1128,7 @@ class CustomerBilling extends Component {
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
-                                            <div className="col-lg-6">
+                                            <div className="col-lg-6 mb-3">
                                                     <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
                                             </div>
                                             <div className="col-lg-6">
