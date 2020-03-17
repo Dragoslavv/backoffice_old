@@ -847,7 +847,7 @@ class CustomerBilling extends Component {
                        title: 'Add / Remove Credit',
                        message: 'Successfully Add / Remove Credit',
                        type: 'success',                         // 'default', 'success', 'info', 'warning'
-                       container: 'bottom-right',                // where to position the notifications
+                       container: 'top-right',                // where to position the notifications
                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                        dismiss: {
@@ -860,7 +860,7 @@ class CustomerBilling extends Component {
                        title: 'Add / Remove Credit',
                        message: 'UserAccount not found for received id.',
                        type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                       container: 'bottom-right',                // where to position the notifications
+                       container: 'top-right',                // where to position the notifications
                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                        dismiss: {
@@ -874,7 +874,7 @@ class CustomerBilling extends Component {
                 title: 'Add / Remove Credit',
                 message: 'Parameter missing',
                 type: 'info',                         // 'default', 'success', 'info', 'warning'
-                container: 'bottom-right',                // where to position the notifications
+                container: 'top-right',                // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                 dismiss: {
@@ -900,7 +900,7 @@ class CustomerBilling extends Component {
                             title: 'Deactivation / Activation',
                             message: 'true',
                             type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                            container: 'bottom-right',                // where to position the notifications
+                            container: 'top-right',                // where to position the notifications
                             animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                             animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                             dismiss: {
@@ -913,7 +913,7 @@ class CustomerBilling extends Component {
                             title: 'Deactivation / Activation',
                             message: 'false',
                             type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                            container: 'bottom-right',                // where to position the notifications
+                            container: 'top-right',                // where to position the notifications
                             animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                             animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                             dismiss: {
@@ -927,7 +927,7 @@ class CustomerBilling extends Component {
                         title: 'Deactivation / Activation',
                         message: result.message,
                         type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                        container: 'bottom-right',                // where to position the notifications
+                        container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                         animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                         dismiss: {
@@ -942,7 +942,7 @@ class CustomerBilling extends Component {
                 title: 'Deactivation / Activation',
                 message: 'Parameter is empty',
                 type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                container: 'bottom-right',                // where to position the notifications
+                container: 'top-right',                // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                 dismiss: {
@@ -1030,7 +1030,7 @@ class CustomerBilling extends Component {
                         title: 'Customer Search',
                         message: 'Data from input field does not exits!',
                         type: 'info',                         // 'default', 'success', 'info', 'warning'
-                        container: 'bottom-right',                // where to position the notifications
+                        container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                         animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                         dismiss: {
@@ -1057,7 +1057,7 @@ class CustomerBilling extends Component {
                    title: 'Add/Replace/Transfer Number',
                    message: result.message,
                    type: 'success',                         // 'default', 'success', 'info', 'warning'
-                   container: 'bottom-right',                // where to position the notifications
+                   container: 'top-right',                // where to position the notifications
                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                    dismiss: {
@@ -1069,7 +1069,7 @@ class CustomerBilling extends Component {
                    title: 'Add/Replace/Transfer Number',
                    message: result.message,
                    type: 'info',                         // 'default', 'success', 'info', 'warning'
-                   container: 'bottom-right',                // where to position the notifications
+                   container: 'top-right',                // where to position the notifications
                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                    dismiss: {
