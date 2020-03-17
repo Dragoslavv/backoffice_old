@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1853">
-              <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+            <state relative-caret-position="250">
+              <caret line="589" column="32" selection-start-line="589" selection-start-column="32" selection-end-line="589" selection-end-column="32" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -39,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="1586" column="23" selection-start-line="1586" selection-start-column="23" selection-end-line="1586" selection-end-column="23" />
+            <state relative-caret-position="234">
+              <caret line="1600" column="23" lean-forward="true" selection-start-line="1600" selection-start-column="23" selection-end-line="1600" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -100,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input[type=checkbox] + label</find>
       <find>opaci</find>
       <find>opacity</find>
       <find>wall</find>
@@ -130,6 +130,7 @@
       <find>totalTransactions</find>
       <find>dist_pack</find>
       <find>wallet</find>
+      <find>activeAndDeactivation</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -189,8 +190,8 @@
         <option value="$PROJECT_DIR$/src/scenes/components/Table/ipay-transaction-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
@@ -315,12 +316,12 @@
       <workItem from="1584096876123" duration="12231000" />
       <workItem from="1584178893656" duration="4716000" />
       <workItem from="1584361092137" duration="7614000" />
-      <workItem from="1584444366842" duration="6291000" />
+      <workItem from="1584444366842" duration="8404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328748000" />
+    <option name="totallyTimeSpent" value="330861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -822,15 +823,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="1586" column="23" selection-start-line="1586" selection-start-column="23" selection-end-line="1586" selection-end-column="23" />
+        <state relative-caret-position="234">
+          <caret line="1600" column="23" lean-forward="true" selection-start-line="1600" selection-start-column="23" selection-end-line="1600" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="154" column="46" selection-start-line="154" selection-start-column="46" selection-end-line="154" selection-end-column="46" />
+        <state relative-caret-position="250">
+          <caret line="589" column="32" selection-start-line="589" selection-start-column="32" selection-end-line="589" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

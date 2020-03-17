@@ -6,7 +6,7 @@ import {
     activate_subscription,
     activationAndDeactivation,
     addCredit, addReplaceTransfer,
-    billingCustomerSearch, distDuration, distPack,
+    billingCustomerSearch, distDuration, distPack, read_vs_active,
     transactionWallet
 } from "../../components/UserFunctions";
 import  "../Login/index";
@@ -57,7 +57,7 @@ class CustomerBilling extends Component {
             account:'',
             password_credit:'',
             infoCredit:'',
-            activeAndDeactivation: true,
+            activeAndDeactivation: false,
             password_active:'',
             loading:false,
             subscription: '',
@@ -585,6 +585,10 @@ class CustomerBilling extends Component {
                redirect:true
             });
         }
+
+        read_vs_active(sessionStorage.getItem('billing_user_id')).then(result => {
+            console.log(result);
+        });
 
     }
 

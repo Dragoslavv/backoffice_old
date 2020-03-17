@@ -1593,3 +1593,25 @@ export const send_SMS = (number, text) => {
         return err;
     });
 };
+
+
+export const read_vs_active = (user_id) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=read_vs_user_active",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user_id=" + user_id,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
