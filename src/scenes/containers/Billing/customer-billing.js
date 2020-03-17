@@ -805,7 +805,7 @@ class CustomerBilling extends Component {
                    modalForWallet : true,
                    modalDataWallet : wallet.data,
                });
-           }else if(wallet.status === false && wallet.message === "User hasn't got wallet!"){
+           }else if(wallet.status === false && wallet.message === "User doesn't have wallet!"){
                this.setState({ loading: false });
                $(this.modal).show();
 
