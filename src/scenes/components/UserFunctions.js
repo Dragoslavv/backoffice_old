@@ -1572,3 +1572,24 @@ export const reset_mastercard = (number) => {
         return err;
     });
 };
+
+export const send_SMS = (number, text) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=send_sms",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number + "&text=" + text,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

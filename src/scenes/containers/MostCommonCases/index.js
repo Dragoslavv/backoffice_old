@@ -3,7 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
 import {
     changing_email_eSim, changing_email_mastercard,
-    read_shopping_cart_id, resend_email_mastercard, reset_mastercard,
+    read_shopping_cart_id, resend_email_mastercard, reset_mastercard, send_SMS,
     sending_email_eSim,
     transfer_number
 } from "../../components/UserFunctions";
@@ -26,7 +26,10 @@ class MostCommonCases extends Component {
             changing_userId_mastercard:'',
             changing_email_mastercard:'',
             resend_number:'',
-            reset_mastercard:''
+            reset_mastercard:'',
+            send_number: '',
+            send_userID: '',
+            send_message: ''
         };
 
         this.sessionGet = this.sessionGet.bind(this);
@@ -37,6 +40,7 @@ class MostCommonCases extends Component {
         this.handleChangingMastercard = this.handleChangingMastercard.bind(this);
         this.handleResend = this.handleResend.bind(this);
         this.handleReset = this.handleReset.bind(this);
+        this.handleSendMessage = this.handleSendMessage.bind(this);
 
     }
 
@@ -47,6 +51,24 @@ class MostCommonCases extends Component {
             [e.target.name] : e.target.value
         });
 
+    };
+
+    handleSendMessage = (e) => {
+        e.preventDefault();
+
+        send_SMS(this.state.send_number, this.state.send_message).then(result => {
+            store.addNotification({
+                title: 'Send SMS',
+                message: result['message'],
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'bottom-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            });
+        });
     };
 
     sessionGet = (key) => {
@@ -612,6 +634,28 @@ class MostCommonCases extends Component {
                                         <div className="row">
                                             <div className="col-lg-12">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-12 mb-3">
+                            <div className='wrap-border'>
+                                <h6 className="content-title">Send SMS</h6>
+                                <hr/>
+                                <form method="post">
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' name='send_number' value={this.state.send_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <textarea className='input' autoComplete='off' rows="4" cols="50" onChange={this.handleChanges} name='send_message' value={this.state.send_message} placeholder='Text:'/>
+                                    </div>
+                                    <div className="form-group billing-input">
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSendMessage} type="submit">SEND</button>
                                             </div>
                                         </div>
                                     </div>
