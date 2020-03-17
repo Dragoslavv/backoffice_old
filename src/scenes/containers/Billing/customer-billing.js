@@ -231,7 +231,7 @@ class CustomerBilling extends Component {
     componentWillMount() {
 
         this.setState({
-            activeAndDeactivation:(sessionStorage.getItem('vs_active'))?sessionStorage.getItem('vs_active'):false
+            activeAndDeactivation:sessionStorage.getItem('vs_active')
         });
 
         this.setState({
@@ -726,7 +726,7 @@ class CustomerBilling extends Component {
     handleReset = (e) => {
         e.preventDefault();
 
-        sessionStorage.setItem("vs_active",'');
+        sessionStorage.setItem("vs_active",false);
         sessionStorage.setItem('billing_active','');
         sessionStorage.setItem('billing_balances','');
         sessionStorage.setItem('billing_id','');
@@ -749,7 +749,6 @@ class CustomerBilling extends Component {
         sessionStorage.removeItem('email');
         sessionStorage.removeItem('userId');
         sessionStorage.removeItem('billingId');
-        sessionStorage.removeItem("vs_active");
 
         sessionStorage.removeItem('billing_active');
         sessionStorage.removeItem('billing_balances');
@@ -976,9 +975,7 @@ class CustomerBilling extends Component {
 
         const data = [];
 
-        this.setState({
-            activeAndDeactivation:(sessionStorage.getItem('vs_active'))?sessionStorage.getItem('vs_active'):false
-        });
+
 
 
         sessionStorage.setItem('number',this.state.number);
@@ -1032,6 +1029,10 @@ class CustomerBilling extends Component {
                     read_vs_active(filter.data[0].user_id).then(result => {
                         console.log(result['data']);
                         sessionStorage.setItem("vs_active",result['data']);
+
+                        this.setState({
+                            activeAndDeactivation:sessionStorage.getItem('vs_active')
+                        });
                     });
 
                     this.setState({
