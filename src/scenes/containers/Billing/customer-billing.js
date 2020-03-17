@@ -586,13 +586,21 @@ class CustomerBilling extends Component {
             });
         }
 
-        read_vs_active(sessionStorage.getItem('billing_user_id')).then(result => {
-            console.log(result['data']);
-            sessionStorage.setItem("vs_active",result['data']);
+        if(sessionStorage.getItem('billing_user_id') !== ''){
+
+            read_vs_active(sessionStorage.getItem('billing_user_id')).then(result => {
+                console.log(result['data']);
+                sessionStorage.setItem("vs_active",result['data']);
+                this.setState({
+                    activeAndDeactivation: sessionStorage.getItem("vs_active")
+                })
+            });
+
+        }else {
             this.setState({
-                activeAndDeactivation: sessionStorage.getItem("vs_active")
+                activeAndDeactivation: false
             })
-        });
+        }
 
     }
 
