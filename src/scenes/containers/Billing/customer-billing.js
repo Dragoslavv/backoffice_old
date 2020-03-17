@@ -887,6 +887,9 @@ class CustomerBilling extends Component {
 
     handleActiveAndDeactivation = (e) =>{
         e.preventDefault();
+console.log(this.state.password_active);
+        console.log(this.state.searchData[0].user_id);
+        console.log(this.state.activeAndDeactivation);
 
         if(this.state.password_active !== '' && this.state.searchData[0].user_id !== ''){
 
