@@ -1270,7 +1270,7 @@ class CustomerBilling extends Component {
                                     <div className="form-group billing-input">
                                         <ul className="unstyled centered">
                                             <li>
-                                                <input className="styled-checkbox input" value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
+                                                <input className="styled-checkbox input" defaultChecked={this.state.activeAndDeactivation} value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
                                                        type="checkbox" />
                                                     <label htmlFor="activeAndDeactivation">Active</label>
                                             </li>
