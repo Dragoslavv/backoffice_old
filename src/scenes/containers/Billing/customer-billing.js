@@ -152,7 +152,7 @@ class CustomerBilling extends Component {
                                title: 'Activation Subscription',
                                message: result.data,
                                type: 'success',                         // 'default', 'success', 'info', 'warning'
-                               container: 'bottom-right',                // where to position the notifications
+                               container: 'top-right',                // where to position the notifications
                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                dismiss: {
@@ -164,7 +164,7 @@ class CustomerBilling extends Component {
                                title: 'Activation Subscription',
                                message: result.data,
                                type: 'info',                         // 'default', 'success', 'info', 'warning'
-                               container: 'bottom-right',                // where to position the notifications
+                               container: 'top-right',                // where to position the notifications
                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                dismiss: {
@@ -330,7 +330,7 @@ class CustomerBilling extends Component {
                                 title: 'Customer Search',
                                 message: 'Data from input field does not exits!',
                                 type: 'info',                         // 'default', 'success', 'info', 'warning'
-                                container: 'bottom-right',                // where to position the notifications
+                                container: 'top-right',                // where to position the notifications
                                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                 dismiss: {
@@ -406,7 +406,7 @@ class CustomerBilling extends Component {
                                 title: 'Customer Search',
                                 message: 'Data from input field does not exits!',
                                 type: 'info',                         // 'default', 'success', 'info', 'warning'
-                                container: 'bottom-right',                // where to position the notifications
+                                container: 'top-right',                // where to position the notifications
                                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                 dismiss: {
@@ -482,7 +482,7 @@ class CustomerBilling extends Component {
                                 title: 'Customer Search',
                                 message: 'Data from input field does not exits!',
                                 type: 'info',                         // 'default', 'success', 'info', 'warning'
-                                container: 'bottom-right',                // where to position the notifications
+                                container: 'top-right',                // where to position the notifications
                                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                 dismiss: {
@@ -561,7 +561,7 @@ class CustomerBilling extends Component {
                                 title: 'Customer Search',
                                 message: 'Data from input field does not exits!',
                                 type: 'info',                         // 'default', 'success', 'info', 'warning'
-                                container: 'bottom-right',                // where to position the notifications
+                                container: 'top-right',                // where to position the notifications
                                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                                 dismiss: {
@@ -651,7 +651,7 @@ class CustomerBilling extends Component {
                 title: 'Deactivation / Activation',
                 message: 'Parameter is empty',
                 type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                container: 'bottom-right',                // where to position the notifications
+                container: 'top-right',                // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                 dismiss: {
@@ -677,7 +677,7 @@ class CustomerBilling extends Component {
                         title: 'Package Activation',
                         message: result['message'] + '(' + result['text'] + ')' ,
                         type: 'success',                         // 'default', 'success', 'info', 'warning'
-                        container: 'bottom-right',                // where to position the notifications
+                        container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                         animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                         dismiss: {
@@ -691,7 +691,7 @@ class CustomerBilling extends Component {
                         title: 'Package Activation',
                         message: result['message'] + '(' + result['text'] + ')' ,
                         type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                        container: 'bottom-right',                // where to position the notifications
+                        container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                         animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                         dismiss: {
@@ -708,7 +708,7 @@ class CustomerBilling extends Component {
                 title: 'Package Activation',
                 message: 'Parameter missing or invalid',
                 type: 'warning',                         // 'default', 'success', 'info', 'warning'
-                container: 'bottom-right',                // where to position the notifications
+                container: 'top-right',                // where to position the notifications
                 animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                 animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
                 dismiss: {
@@ -887,9 +887,6 @@ class CustomerBilling extends Component {
 
     handleActiveAndDeactivation = (e) =>{
         e.preventDefault();
-console.log(this.state.password_active);
-        console.log(this.state.searchData[0].user_id);
-        console.log(this.state.activeAndDeactivation);
 
         if(this.state.password_active !== '' && this.state.searchData[0].user_id !== ''){
 
