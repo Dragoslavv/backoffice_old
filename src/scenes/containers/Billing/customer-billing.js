@@ -231,6 +231,10 @@ class CustomerBilling extends Component {
     componentWillMount() {
 
         this.setState({
+            activeAndDeactivation:(sessionStorage.getItem('vs_active'))?sessionStorage.getItem('vs_active'):false
+        });
+
+        this.setState({
             number: (sessionStorage.getItem('number'))?sessionStorage.getItem('number'):'',
             email: (sessionStorage.getItem('email'))?sessionStorage.getItem('email'):'',
             userId: (sessionStorage.getItem('userId'))?sessionStorage.getItem('userId'):'',
@@ -586,22 +590,6 @@ class CustomerBilling extends Component {
             });
         }
 
-        if(sessionStorage.getItem('billing_user_id') !== ''){
-
-            read_vs_active(sessionStorage.getItem('billing_user_id')).then(result => {
-                console.log(result['data']);
-                sessionStorage.setItem("vs_active",result['data']);
-                this.setState({
-                    activeAndDeactivation: sessionStorage.getItem("vs_active")
-                })
-            });
-
-        }else {
-            this.setState({
-                activeAndDeactivation: false
-            })
-        }
-
     }
 
     componentWillUnmount() {
@@ -738,6 +726,7 @@ class CustomerBilling extends Component {
     handleReset = (e) => {
         e.preventDefault();
 
+        sessionStorage.setItem("vs_active",'');
         sessionStorage.setItem('billing_active','');
         sessionStorage.setItem('billing_balances','');
         sessionStorage.setItem('billing_id','');
@@ -760,6 +749,7 @@ class CustomerBilling extends Component {
         sessionStorage.removeItem('email');
         sessionStorage.removeItem('userId');
         sessionStorage.removeItem('billingId');
+        sessionStorage.removeItem("vs_active");
 
         sessionStorage.removeItem('billing_active');
         sessionStorage.removeItem('billing_balances');
@@ -904,6 +894,19 @@ class CustomerBilling extends Component {
     handleActiveAndDeactivation = (e) =>{
         e.preventDefault();
 
+        if(this.state.searchData[0].user_id !== ''){
+
+            read_vs_active(this.state.searchData[0].user_id).then(result => {
+                console.log(result['data']);
+                sessionStorage.setItem("vs_active",result['data']);
+            });
+
+        }else {
+            this.setState({
+                activeAndDeactivation: false
+            })
+        }
+
         if(this.state.password_active !== '' && this.state.searchData[0].user_id !== ''){
 
             activationAndDeactivation(this.state.activeAndDeactivation, this.state.searchData[0].user_id, this.state.password_active).then(result => {
@@ -973,6 +976,11 @@ class CustomerBilling extends Component {
 
         const data = [];
 
+        this.setState({
+            activeAndDeactivation:(sessionStorage.getItem('vs_active'))?sessionStorage.getItem('vs_active'):false
+        });
+
+
         sessionStorage.setItem('number',this.state.number);
         sessionStorage.setItem('email',this.state.email);
         sessionStorage.setItem('userId',this.state.userId);
@@ -1020,6 +1028,11 @@ class CustomerBilling extends Component {
                     sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                     sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                     sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
+                    read_vs_active(filter.data[0].user_id).then(result => {
+                        console.log(result['data']);
+                        sessionStorage.setItem("vs_active",result['data']);
+                    });
 
                     this.setState({
                         searchData:[{
