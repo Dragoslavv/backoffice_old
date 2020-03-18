@@ -43,15 +43,6 @@ export class MessageBulkTable extends Component{
 
     }
 
-
-
-    componentDidUpdate() {
-
-    }
-
-    componentWillUnmount() {
-    }
-
     render() {
         return <div>
             <table className="table table-striped table-bordered table-responsive-lg wallet" id='message-bulk-table' width="100%" ref={el => this.el = el}>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
 import {store} from "react-notifications-component";
-import {MessageBulkTable} from "../../components/Table/cdr-log-table";
+import {MessageBulkTable} from "../../components/Table/message-bulk-table";
 
 class MessageBulk extends Component {
     constructor(props){
