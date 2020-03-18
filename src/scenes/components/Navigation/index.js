@@ -23,6 +23,7 @@ class Navigation extends Component {
             simDataActive:false,
             mastercard:false,
             mostcommoncases:false,
+            messagebulk:false,
             role:''
         };
 
@@ -38,6 +39,7 @@ class Navigation extends Component {
         this.SimDataActive = this.SimDataActive.bind(this);
         this.Mastercard = this.Mastercard.bind(this);
         this.Mostcommoncases = this.Mostcommoncases.bind(this);
+        this.messageBulk = this.messageBulk.bind(this);
     }
 
     componentDidMount() {
@@ -72,7 +74,9 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            billing: false
+            billing: false,
+            messagebulk:false
+
         });
         localStorage.setItem("active", this.state.isActive);
     };
@@ -90,7 +94,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -107,7 +113,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -124,7 +132,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -141,7 +151,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -158,7 +170,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -175,7 +189,9 @@ class Navigation extends Component {
             package: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -192,7 +208,9 @@ class Navigation extends Component {
             numbers: false,
             simDataActive: false,
             mastercard: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -209,7 +227,9 @@ class Navigation extends Component {
             package:false,
             mastercard: false,
             parking: false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
 
         });
     };
@@ -226,7 +246,9 @@ class Navigation extends Component {
             package:false,
             simDataActive: false,
             parking:false,
-            mostcommoncases: false
+            mostcommoncases: false,
+            messagebulk:false
+
         });
     };
     Mostcommoncases = (e) => {
@@ -242,8 +264,26 @@ class Navigation extends Component {
           package:false,
           simDataActive: false,
           parking:false,
-          mastercard:false
+          mastercard:false,
+          messagebulk:false
       });
+    };
+
+    messageBulk =(e)=>{
+        e.preventDefault();
+        this.setState({
+            messagebulk: !this.state.messagebulk,
+            mostcommoncases: false,
+            billing: false,
+            payment: false,
+            cdr: false,
+            messaging: false,
+            numbers: false,
+            package:false,
+            simDataActive: false,
+            parking:false,
+            mastercard:false
+        });
     };
 
     logOut = (e) => {
@@ -420,6 +460,12 @@ class Navigation extends Component {
                             </li>
                             <li className='shadow'>
                                 <Link to="/system-message" title="System Message"><i className="fa fa-angle-right" ></i>System Message</Link>
+                            </li>
+                            <li className={ this.state.messagebulk  ? "active shadow" :"shadow" }>
+                                <Link to="#" title="Most common cases" onClick={this.messageBulk} ><i className="fa fa-angle-right" ></i>Message Bulk</Link>
+                                <ul className={ this.state.messagebulk  ? "sidebar-nav-second" :"hidden-ul" }>
+                                    <li className='shadow'><Link to="/message-bulk" >Message Bulk</Link></li>
+                                </ul>
                             </li>
                         </ul>
                     </aside>

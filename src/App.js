@@ -47,6 +47,7 @@ import DataConsumption from "./scenes/containers/SimDataActiveUsers/data-consump
 import MostCommonCases from "./scenes/containers/MostCommonCases";
 import Profile from "./scenes/containers/Profile";
 import ReactNotifications from 'react-notifications-component';
+import MessageBulk from "./scenes/containers/MessageBulk";
 
 class App extends Component {
   render() {
@@ -192,6 +193,10 @@ class App extends Component {
                       //most common cases
                       <Route exact path="/most-common-cases">
                           <MostCommonCases/>
+                      </Route>
+                      //message bulk
+                      <Route exact path="/message-bulk">
+                          <MessageBulk/>
                       </Route>
                       //system message
                       <Route exact path="/system-message">
