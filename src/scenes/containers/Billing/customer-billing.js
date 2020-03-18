@@ -726,6 +726,10 @@ class CustomerBilling extends Component {
     handleReset = (e) => {
         e.preventDefault();
 
+        this.setState({
+            activeAndDeactivation:false
+        });
+
         sessionStorage.setItem("vs_active",false);
         sessionStorage.setItem('billing_active','');
         sessionStorage.setItem('billing_balances','');
@@ -898,6 +902,7 @@ class CustomerBilling extends Component {
             read_vs_active(this.state.searchData[0].user_id).then(result => {
                 console.log(result['data']);
                 sessionStorage.setItem("vs_active",result['data']);
+
             });
 
         }else {
@@ -1030,6 +1035,8 @@ class CustomerBilling extends Component {
                         this.setState({
                             activeAndDeactivation:sessionStorage.getItem('vs_active')
                         });
+
+
                     });
 
                     this.setState({
@@ -1267,7 +1274,7 @@ class CustomerBilling extends Component {
                                     <div className="form-group billing-input">
                                         <ul className="unstyled centered">
                                             <li>
-                                                <input className="styled-checkbox input" value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
+                                                <input className="styled-checkbox input" defaultChecked={this.state.activeAndDeactivation === 'true'?'checked':''}  value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
                                                        type="checkbox" />
                                                     <label htmlFor="activeAndDeactivation">Active</label>
                                             </li>
