@@ -8,6 +8,11 @@ class MessageBulk extends Component {
         super(props);
 
         this.state = {
+            bulk_name:'',
+            provider_name:'',
+            provide_name_create:'',
+            bulk_name_create:'',
+
         };
 
         this.sessionGet = this.sessionGet.bind(this);
@@ -108,18 +113,21 @@ class MessageBulk extends Component {
                         </ol>
                     </nav>
                     <div className="row">
-                        <div className="col-lg-4 mb-3">
+                        <div className="col-lg-6 mb-3">
                             <div className='wrap-border'>
-                                <h6 className="content-title">Search by shopping cart id</h6>
+                                <h6 className="content-title">Search Bulk</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='cart_id' value={this.state.cart_id} onChange={this.handleChanges} autoComplete='off' placeholder='Shopping cart id:'/>
+                                        <input className='input' type='text' name='bulk_name' value={this.state.bulk_name} onChange={this.handleChanges} autoComplete='off' placeholder='Bulk Name:'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' name='provider_name' value={this.state.provider_name} onChange={this.handleChanges} autoComplete='off' placeholder='Provider Name:'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSearchCartId} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-light" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -127,6 +135,27 @@ class MessageBulk extends Component {
                             </div>
                         </div>
 
+                        <div className="col-lg-6 mb-3">
+                            <div className='wrap-border'>
+                                <h6 className="content-title">Add Bulk</h6>
+                                <hr/>
+                                <form method="post">
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' name='provide_name_create' value={this.state.provide_name_create} onChange={this.handleChanges} autoComplete='off' placeholder='Provider Name:'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' name='bulk_name_create' value={this.state.bulk_name_create} onChange={this.handleChanges} autoComplete='off' placeholder='Bulk Name:'/>
+                                    </div>
+                                    <div className="form-group billing-input">
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <button className="btn btn-block btn-outline-light"  type="submit">Add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
