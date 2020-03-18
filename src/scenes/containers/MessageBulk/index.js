@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
 import {store} from "react-notifications-component";
+import {MessageBulkTable} from "../../components/Table/cdr-log-table";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -154,6 +155,14 @@ class MessageBulk extends Component {
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='wrap-border'>
+                                <MessageBulkTable />
                             </div>
                         </div>
                     </div>
