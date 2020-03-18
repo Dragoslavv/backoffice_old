@@ -1197,6 +1197,9 @@ class CustomerBilling extends Component {
                                     <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' readOnly={true} value={this.state.searchData[0].force_app} onChange={this.handleChangeData} name='appForce'  placeholder='App Force:'/>
                                     </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' autoComplete='off' readOnly={true} value={this.state.searchData[0].wallet_id} onChange={this.handleChangeData} name='wallet_id'  placeholder='ID Wallet:'/>
+                                    </div>
                                 </form>
                             </div>
                         </div>
