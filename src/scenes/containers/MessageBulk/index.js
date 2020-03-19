@@ -25,14 +25,11 @@ class MessageBulk extends Component {
 
     handleSearchBulk =(e)=> {
         e.preventDefault();
-console.log(this.state.bulk_name);
-        console.log(this.state.provider_name);
 
-        console.log(e.target.id);
         if(e.target.id === 'search_bulk'){
 
             this.setState({
-                search_routes:true
+                search_bulk:true
             });
 
         }
