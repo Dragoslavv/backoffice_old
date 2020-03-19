@@ -181,7 +181,7 @@ class Login extends Component {
     };
 
     sessionSet = (key, value, expirationInMin = 1000) => {
-        let expirationDate = new Date(new Date().getTime() + (3600 * expirationInMin));
+        let expirationDate = new Date(new Date().getTime() + (4600 * expirationInMin));
 
         let newValue = {
             value: value,

@@ -1615,3 +1615,24 @@ export const read_vs_active = (user_id) => {
         return err;
     });
 };
+
+export const destroy_bulk_message = (id, bulk_name, provider_id, user) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=destroy_bulk",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "id=" + id + "&bulk_name=" + bulk_name + "&provide_id=" + provider_id + "&user=" + user,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

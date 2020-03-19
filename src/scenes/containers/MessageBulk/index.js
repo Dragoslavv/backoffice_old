@@ -25,7 +25,19 @@ class MessageBulk extends Component {
         this.handleClickReset = this.handleClickReset.bind(this);
         this.handleSearchBulk = this.handleSearchBulk.bind(this);
         this.handleMessageBulkRemove = this.handleMessageBulkRemove.bind(this);
+        this.handleSave = this.handleSave.bind(this);
     }
+
+    handleSave = (e) => {
+        e.preventDefault();
+
+        console.log(this.state.data.user);
+        console.log(this.state.data.id);
+        console.log(this.state.data.bulk_name);
+        console.log(this.state.data.provider_id);
+        console.log(this.state.data.provider_name);
+
+    };
 
     handleSearchBulk =(e)=> {
         e.preventDefault();
@@ -241,9 +253,9 @@ class MessageBulk extends Component {
                                 </div>
                                 <div className="modal-body">
                                     <div className="row mb-3">
-                                        <div className="col-lg-4">
+                                        <div className="col-lg-12">
                                             <h6 className="color-white"> Are you sure you want to delete the bulk id
-                                                : {this.state.id}</h6>
+                                                : {this.state.data.id}</h6>
                                         </div>
                                     </div>
                                 </div>
