@@ -255,7 +255,7 @@ class MessageBulk extends Component {
                                     <div className="row mb-3">
                                         <div className="col-lg-12">
                                             <h6 className="color-white"> Are you sure you want to delete the bulk id
-                                                : {this.state.data.id}</h6>
+                                                : {this.state.data.id?this.state.data.id:''}</h6>
                                         </div>
                                     </div>
                                 </div>
