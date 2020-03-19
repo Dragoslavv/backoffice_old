@@ -28,12 +28,11 @@ export class MessageBulkTable extends Component{
                 bPaginate:true,
                 columns: [
                     { title: "ID"},
-                    { title: "bulk_name"},
-                    { title: "provider_id"},
-                    { title: "provider_name"},
-                    { title: "CDR",
+                    { title: "Bulk Name"},
+                    { title: "Provider Name"},
+                    { title: "Remove",
                         data: null,
-                        defaultContent:`<button type="button" class="btn btn-info" id="remove_bulk" ><i class="fa fa-remove-format"></i></button>`
+                        defaultContent:`<button type="button" class="btn btn-info" id="remove_bulk" ><i class="fa fa-remove"></i></button>`
                     }
                 ]
             }
