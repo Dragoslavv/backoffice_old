@@ -47,6 +47,7 @@ class MessageBulk extends Component {
         this.setState({
             bulk_name:'',
             provider_name:'',
+            search_bulk:true
         });
     };
 
