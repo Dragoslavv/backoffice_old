@@ -4,6 +4,8 @@ import {SimReportTable} from "../../components/Table/sim-report-table";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
 import {RoutesTable} from "../../components/Table/routes-table";
+import {store} from "react-notifications-component";
+import {cancel_reservation} from "../../components/UserFunctions";
 
 class SimReport extends Component {
     constructor(props){
@@ -26,6 +28,7 @@ class SimReport extends Component {
             search:'',
             id_from_sim_report:'',
             search_report:false,
+            reservations_number:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -34,7 +37,58 @@ class SimReport extends Component {
         this.sessionGet = this.sessionGet.bind(this);
         this.mySubscriberReport = this.mySubscriberReport.bind(this);
         this.handleOpen = this.handleOpen.bind(this);
+        this.handleCancelSimReservation = this.handleCancelSimReservation.bind(this);
+
     }
+
+    handleCancelSimReservation = (e) => {
+      e.preventDefault();
+
+      if(this.state.reservations_number !== '' && sessionStorage.getItem('role') !== '' && sessionStorage.getItem('role') !== 'USER'){
+
+          cancel_reservation(this.state.reservations_number, sessionStorage.getItem('role')).then(result => {
+
+              if(result['status'] === true){
+                  store.addNotification({
+                      title: 'Cancel sim Reservation',
+                      message: result['message'],
+                      type: 'success',                         // 'default', 'success', 'info', 'warning'
+                      container: 'top-right',                // where to position the notifications
+                      animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                      animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                      dismiss: {
+                          duration: 3000
+                      }
+                  })
+              } else {
+                  store.addNotification({
+                      title: 'Cancel sim Reservation',
+                      message: result['message'],
+                      type: 'info',                         // 'default', 'success', 'info', 'warning'
+                      container: 'top-right',                // where to position the notifications
+                      animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                      animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                      dismiss: {
+                          duration: 3000
+                      }
+                  })
+              }
+          });
+
+      }else{
+          store.addNotification({
+              title: 'Cancel sim Reservation',
+              message: 'Parameter missing!',
+              type: 'info',                         // 'default', 'success', 'info', 'warning'
+              container: 'top-right',                // where to position the notifications
+              animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+              animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+              dismiss: {
+                  duration: 3000
+              }
+          })
+      }
+    };
 
     handleOpen (){
         this.setState({
@@ -176,7 +230,7 @@ class SimReport extends Component {
                                 <h6 className="content-title">Sim Search</h6>
                                 <hr/>
                                 <div className='row mb-4'>
-                                    <div className='col-lg-6'>
+                                    <div className='col-lg-4'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='datetime-local' name='start' value={this.state.start} onChange={this.handleChanges} autoComplete='off' placeholder='Start:'/>
@@ -196,7 +250,7 @@ class SimReport extends Component {
                                             </div>
                                         </form>
                                     </div>
-                                    <div className='col-lg-6'>
+                                    <div className='col-lg-4'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
                                                 <select className="input" name="data_type" value={this.state.data_type} onChange={this.handleChanges}>
@@ -219,6 +273,26 @@ class SimReport extends Component {
                                             </div>
                                         </form>
                                     </div>
+
+                                    <div className='wrap-border'>
+                                        <h6 className="content-title">Cancel sim reservation</h6>
+                                        <hr/>
+                                        <div className='col-lg-4'>
+                                            <form method="post">
+                                                <div className='form-group billing-input'>
+                                                    <input className='input' type='number' name='reservations_number' value={this.state.reservations_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number:'/>
+                                                </div>
+                                                <div className="form-group billing-input">
+                                                    <div className="row">
+                                                        <div className="col-lg-6">
+                                                            <button className="btn btn-block btn-outline-light" onClick={this.handleCancelSimReservation} type="submit">Cancel Reservation</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

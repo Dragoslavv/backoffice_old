@@ -346,10 +346,10 @@ class MessageBulk extends Component {
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
-                                            <div className="col-lg-12">
+                                            <div className="col-lg-6">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleClear}  type="submit">Clear</button>
                                             </div>
-                                            <div className="col-lg-12">
+                                            <div className="col-lg-6">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleAddBulk}  type="submit">Add</button>
                                             </div>
                                         </div>

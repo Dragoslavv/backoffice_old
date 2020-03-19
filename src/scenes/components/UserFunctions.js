@@ -1676,3 +1676,24 @@ export const create_bulk = (bulk_name, provider_id, user, role) => {
         return err;
     });
 };
+
+export const cancel_reservation = (msisdn, role) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=reservation",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "msisdn=" + msisdn + "&role=" + role,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
