@@ -274,8 +274,6 @@ class SimReport extends Component {
                                         </form>
                                     </div>
 
-                                    <h6 className="content-title">Cancel sim reservation</h6>
-                                    <hr/>
                                     <div className='col-lg-4'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
