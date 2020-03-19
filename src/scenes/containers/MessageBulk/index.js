@@ -114,7 +114,7 @@ class MessageBulk extends Component {
     };
 
     handleMessageBulkRemove (msg,dataSet){
-        $(this.modal).show();
+        // $(this.modal).show();
 
         console.log(dataSet);
     }
