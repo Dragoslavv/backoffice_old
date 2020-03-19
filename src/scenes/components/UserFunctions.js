@@ -1655,3 +1655,24 @@ export const select_bulk = () => {
         return err;
     });
 };
+
+export const create_bulk = (bulk_name, provider_id, user, role) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=create_bulk",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "bulk_name=" + bulk_name + "&provider_id=" + provider_id + "&user=" + user + "&role=" + role,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

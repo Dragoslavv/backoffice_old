@@ -5,7 +5,7 @@ import {store} from "react-notifications-component";
 import {MessageBulkTable} from "../../components/Table/message-bulk-table";
 import PubSub from "pubsub-js";
 import $ from "jquery";
-import {destroy_bulk_message_api, select_bulk} from "../../components/UserFunctions";
+import {create_bulk, destroy_bulk_message_api, select_bulk} from "../../components/UserFunctions";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -35,7 +35,57 @@ class MessageBulk extends Component {
         this.handleSearchBulk = this.handleSearchBulk.bind(this);
         this.handleMessageBulkRemove = this.handleMessageBulkRemove.bind(this);
         this.handleSave = this.handleSave.bind(this);
+        this.handleAddBulk = this.handleAddBulk.bind(this);
     }
+
+    handleAddBulk = (e) => {
+        e.preventDefault();
+
+        if(this.state.bulk_name_create !== '' && this.state.provide_name_create !== '' && sessionStorage.getItem('username') !== '' && sessionStorage.getItem('role') !== ''&& sessionStorage.getItem('role') !== 'USER' ){
+
+            create_bulk(this.state.bulk_name_create, this.state.provide_name_create, sessionStorage.getItem('username'), sessionStorage.getItem('role')).then(result => {
+
+                if(result['status'] === true){
+                    store.addNotification({
+                        title: 'Message Bulk',
+                        message: result['message'],
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                }else {
+                    store.addNotification({
+                        title: 'Message Bulk',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Message Bulk',
+                message: 'Parameter missing!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'top-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            })
+        }
+    };
 
     handleSave = (e) => {
         e.preventDefault();
@@ -285,7 +335,7 @@ class MessageBulk extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light"  type="submit">Add</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleAddBulk}  type="submit">Add</button>
                                             </div>
                                         </div>
                                     </div>
