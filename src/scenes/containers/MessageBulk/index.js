@@ -115,10 +115,25 @@ class MessageBulk extends Component {
     };
 
     handleMessageBulkRemove (msg,dataSet){
-        // $(this.modal).show();
+        $(this.modal).show();
 
-        console.log(dataSet);
+        this.setState({
+            data:{
+                user: sessionStorage.getItem('username'),
+                id: dataSet['id_bulk'],
+                bulk_name: dataSet['name_bulk'],
+                provider_id: dataSet['provider_id_bulk'],
+                provider_name: dataSet['provider_name_bulk'],
+            }
+        })
     }
+
+    handleCancel = (e) => {
+        e.preventDefault();
+        $(this.modal).hide();
+    };
+
+
 
     componentDidMount() {
         PubSub.subscribe('message_bulk', this.handleMessageBulkRemove);

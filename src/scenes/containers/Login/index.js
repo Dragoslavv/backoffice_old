@@ -203,6 +203,7 @@ class Login extends Component {
                     sessionStorage.setItem('role', this.state.login_data.role);
                     sessionStorage.setItem('firstName', this.state.login_data.firstName);
                     sessionStorage.setItem('lastName', this.state.login_data.lastName);
+                    sessionStorage.setItem('username', this.state.login_data.username);
                     localForages.setItem('username', this.state.login_data.username);
 
                     this.sessionSet('token', this.state.login_data.token);
