@@ -17,6 +17,13 @@ class MessageBulk extends Component {
             bulk_name_create:'',
             search_bulk:false,
             modal:false,
+            data:{
+                user: '',
+                id: '',
+                bulk_name: '',
+                provider_id: '',
+                provider_name: '',
+            }
         };
 
         this.sessionGet = this.sessionGet.bind(this);
