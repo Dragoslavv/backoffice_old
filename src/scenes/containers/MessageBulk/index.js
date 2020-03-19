@@ -242,7 +242,8 @@ class MessageBulk extends Component {
                                 <div className="modal-body">
                                     <div className="row mb-3">
                                         <div className="col-lg-4">
-                                            <label htmlFor='rote_name_edit' className="content-title">Route Name</label>
+                                            <h6 className="color-white"> Are you sure you want to delete the bulk id
+                                                : {this.state.id}</h6>
                                         </div>
                                     </div>
                                 </div>
