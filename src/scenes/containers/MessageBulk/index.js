@@ -13,12 +13,44 @@ class MessageBulk extends Component {
             provider_name:'',
             provide_name_create:'',
             bulk_name_create:'',
+            search_bulk:false
 
         };
 
         this.sessionGet = this.sessionGet.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
+        this.handleOpen = this.handleOpen.bind(this);
+        this.handleClickReset = this.handleClickReset.bind(this);
+
     }
+
+    handleSearchBulk =(e)=> {
+        e.preventDefault();
+
+        if(e.target.id === 'search_bulk'){
+
+            this.setState({
+                search_routes:true
+            });
+
+        }
+    };
+
+    handleOpen (){
+        this.setState({
+            search_bulk: false
+        });
+    }
+
+    handleClickReset = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            bulk_name:'',
+            provider_name:'',
+        });
+    };
+
 
     handleChanges =( e ) => {
         e.preventDefault();
@@ -127,8 +159,11 @@ class MessageBulk extends Component {
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
-                                            <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Search</button>
+                                            <div className="col-lg-6">
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickReset} type="submit">Reset</button>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <button className="btn btn-block btn-outline-light" id='search_bulk' onClick={this.handleSearchBulk} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -162,7 +197,10 @@ class MessageBulk extends Component {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='wrap-border'>
-                                <MessageBulkTable />
+                                <MessageBulkTable search={this.state.search_bulk} onOpen={this.handleOpen} data={{
+                                    bulk_name: this.state.bulk_name,
+                                    provider_name: this.state.provider_name,
+                                }}/>
                             </div>
                         </div>
                     </div>
