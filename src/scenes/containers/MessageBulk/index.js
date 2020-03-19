@@ -36,6 +36,8 @@ class MessageBulk extends Component {
         this.handleMessageBulkRemove = this.handleMessageBulkRemove.bind(this);
         this.handleSave = this.handleSave.bind(this);
         this.handleAddBulk = this.handleAddBulk.bind(this);
+        this.handleClear = this.handleClear.bind(this);
+
     }
 
     handleAddBulk = (e) => {
@@ -85,6 +87,16 @@ class MessageBulk extends Component {
                 }
             })
         }
+    };
+
+
+    handleClear = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            provide_name_create:'',
+            bulk_name_create:'',
+        });
     };
 
     handleSave = (e) => {
@@ -334,6 +346,9 @@ class MessageBulk extends Component {
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
+                                            <div className="col-lg-12">
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClear}  type="submit">Clear</button>
+                                            </div>
                                             <div className="col-lg-12">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleAddBulk}  type="submit">Add</button>
                                             </div>
