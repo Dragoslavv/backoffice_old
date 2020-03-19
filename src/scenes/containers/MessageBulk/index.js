@@ -39,10 +39,10 @@ class MessageBulk extends Component {
         e.preventDefault();
 
         console.log(this.state.data.user);
-        console.log(this.state.data.id);
-        console.log(this.state.data.bulk_name);
-        console.log(this.state.data.provider_id);
-        console.log(this.state.data.provider_name);
+        console.log(this.state.data.id[0]);
+        console.log(this.state.data.bulk_name[0]);
+        console.log(this.state.data.provider_id[0]);
+        console.log(this.state.data.provider_name[0]);
 
     };
 
