@@ -24,6 +24,7 @@ class MessageBulk extends Component {
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClickReset = this.handleClickReset.bind(this);
         this.handleSearchBulk = this.handleSearchBulk.bind(this);
+        this.handleMessageBulkRemove = this.handleMessageBulkRemove.bind(this);
     }
 
     handleSearchBulk =(e)=> {
