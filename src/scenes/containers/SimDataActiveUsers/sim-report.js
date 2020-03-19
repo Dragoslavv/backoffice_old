@@ -274,23 +274,21 @@ class SimReport extends Component {
                                         </form>
                                     </div>
 
-                                    <div className='wrap-border'>
-                                        <h6 className="content-title">Cancel sim reservation</h6>
-                                        <hr/>
-                                        <div className='col-lg-4'>
-                                            <form method="post">
-                                                <div className='form-group billing-input'>
-                                                    <input className='input' type='number' name='reservations_number' value={this.state.reservations_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number:'/>
-                                                </div>
-                                                <div className="form-group billing-input">
-                                                    <div className="row">
-                                                        <div className="col-lg-6">
-                                                            <button className="btn btn-block btn-outline-light" onClick={this.handleCancelSimReservation} type="submit">Cancel Reservation</button>
-                                                        </div>
+                                    <h6 className="content-title">Cancel sim reservation</h6>
+                                    <hr/>
+                                    <div className='col-lg-4'>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='number' name='reservations_number' value={this.state.reservations_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number:'/>
+                                            </div>
+                                            <div className="form-group billing-input">
+                                                <div className="row">
+                                                    <div className="col-lg-6">
+                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleCancelSimReservation} type="submit">Cancel Reservation</button>
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
+                                            </div>
+                                        </form>
                                     </div>
 
                                 </div>
