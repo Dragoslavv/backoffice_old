@@ -16,8 +16,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+            <state relative-caret-position="257">
+              <caret line="275" column="104" selection-start-line="275" selection-start-column="104" selection-end-line="275" selection-end-column="104" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="433" lean-forward="true" selection-start-line="433" selection-end-line="443" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -40,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="1616" column="2" lean-forward="true" selection-start-line="1616" selection-start-column="2" selection-end-line="1616" selection-end-column="2" />
+            <state relative-caret-position="232">
+              <caret line="1641" column="67" selection-start-line="1641" selection-start-column="67" selection-end-line="1641" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -50,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/package.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="457">
-              <caret line="575" lean-forward="true" selection-start-line="575" selection-end-line="575" />
+              <caret line="575" selection-start-line="575" selection-end-line="575" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -232,14 +244,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Billing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="CdrLog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,6 +269,14 @@
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="senzations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="SystemMessage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,12 +353,12 @@
       <workItem from="1584522615169" duration="5072000" />
       <workItem from="1584561248256" duration="11815000" />
       <workItem from="1584616739523" duration="262000" />
-      <workItem from="1584622009294" duration="3052000" />
+      <workItem from="1584622009294" duration="4001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="357305000" />
+    <option name="totallyTimeSpent" value="358254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -606,16 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="459" column="46" selection-start-line="459" selection-start-column="46" selection-end-line="459" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -829,7 +831,7 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/package.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
-          <caret line="575" lean-forward="true" selection-start-line="575" selection-end-line="575" />
+          <caret line="575" selection-start-line="575" selection-end-line="575" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -848,15 +850,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="1616" column="2" lean-forward="true" selection-start-line="1616" selection-start-column="2" selection-end-line="1616" selection-end-column="2" />
+        <state relative-caret-position="232">
+          <caret line="1641" column="67" selection-start-line="1641" selection-start-column="67" selection-end-line="1641" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="433" lean-forward="true" selection-start-line="433" selection-end-line="443" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+        <state relative-caret-position="257">
+          <caret line="275" column="104" selection-start-line="275" selection-start-column="104" selection-end-line="275" selection-end-column="104" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

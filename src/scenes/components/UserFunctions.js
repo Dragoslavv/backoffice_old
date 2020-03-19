@@ -1636,3 +1636,22 @@ export const destroy_bulk_message_api = (id, bulk_name, provider_id, user) => {
         return err;
     });
 };
+
+export const select_bulk = () => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=select_bulk",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

@@ -5,7 +5,7 @@ import {store} from "react-notifications-component";
 import {MessageBulkTable} from "../../components/Table/message-bulk-table";
 import PubSub from "pubsub-js";
 import $ from "jquery";
-import {destroy_bulk_message_api} from "../../components/UserFunctions";
+import {destroy_bulk_message_api, select_bulk} from "../../components/UserFunctions";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -24,7 +24,8 @@ class MessageBulk extends Component {
                 bulk_name: '',
                 provider_id: '',
                 provider_name: '',
-            }
+            },
+            select_bulk:[]
         };
 
         this.sessionGet = this.sessionGet.bind(this);
@@ -198,6 +199,11 @@ class MessageBulk extends Component {
     componentDidMount() {
         PubSub.subscribe('message_bulk', this.handleMessageBulkRemove);
 
+        select_bulk().then(result => {
+           this.setState({
+              select_bulk: result.data
+           });
+        });
     }
 
     componentWillMount() {
@@ -263,7 +269,15 @@ class MessageBulk extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='provide_name_create' value={this.state.provide_name_create} onChange={this.handleChanges} autoComplete='off' placeholder='Provider Name:'/>
+                                        <select className="input " name="provide_name_create" value={this.state.provide_name_create} onChange={this.handleChanges}>
+                                            <option value="">Provider Name:</option>
+                                            {this.state.select_bulk.map(function (item) {
+
+                                                return <option key={item.id} value={item.id}>{item.name}</option>
+
+                                            })
+                                            }
+                                        </select>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <input className='input' type='text' name='bulk_name_create' value={this.state.bulk_name_create} onChange={this.handleChanges} autoComplete='off' placeholder='Bulk Name:'/>
