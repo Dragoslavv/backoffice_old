@@ -14,19 +14,21 @@ class MessageBulk extends Component {
             provide_name_create:'',
             bulk_name_create:'',
             search_bulk:false
-
         };
 
         this.sessionGet = this.sessionGet.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
         this.handleOpen = this.handleOpen.bind(this);
         this.handleClickReset = this.handleClickReset.bind(this);
-
+        this.handleSearchBulk = this.handleSearchBulk.bind(this);
     }
 
     handleSearchBulk =(e)=> {
         e.preventDefault();
+console.log(this.state.bulk_name);
+        console.log(this.state.provider_name);
 
+        console.log(e.target.id);
         if(e.target.id === 'search_bulk'){
 
             this.setState({
