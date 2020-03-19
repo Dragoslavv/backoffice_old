@@ -3,6 +3,8 @@ import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
 import {store} from "react-notifications-component";
 import {MessageBulkTable} from "../../components/Table/message-bulk-table";
+import PubSub from "pubsub-js";
+import $ from "jquery";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -13,7 +15,8 @@ class MessageBulk extends Component {
             provider_name:'',
             provide_name_create:'',
             bulk_name_create:'',
-            search_bulk:false
+            search_bulk:false,
+            modal:false,
         };
 
         this.sessionGet = this.sessionGet.bind(this);
@@ -110,7 +113,14 @@ class MessageBulk extends Component {
         return null
     };
 
+    handleMessageBulkRemove (msg,dataSet){
+        $(this.modal).show();
+
+        console.log(dataSet);
+    }
+
     componentDidMount() {
+        PubSub.subscribe('message_bulk', this.handleMessageBulkRemove);
 
     }
 
@@ -204,6 +214,36 @@ class MessageBulk extends Component {
                             </div>
                         </div>
                     </div>
+
+
+
+                    <div className="modal" id="modal2" ref={modal => this.modal = modal} tabIndex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                </div>
+                                <div className="modal-body">
+                                    <div className="row mb-3">
+                                        <div className="col-lg-4">
+                                            <label htmlFor='rote_name_edit' className="content-title">Route Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-outline-light"
+                                            data-dismiss="modal" onClick={this.handleCancel} >Cancel
+                                    </button>
+                                    <button type="button" className="btn btn-outline-light"
+                                            data-dismiss="modal" onClick={this.handleSave} >Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </section>
             </div>
         )

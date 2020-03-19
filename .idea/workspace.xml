@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/message-bulk-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/message-bulk-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="228">
+              <caret line="151" column="49" lean-forward="true" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/message-bulk-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+            <state relative-caret-position="262">
+              <caret line="91" column="44" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="44" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -63,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="415" column="39" selection-start-line="415" selection-start-column="39" selection-end-line="415" selection-end-column="39" />
+            <state relative-caret-position="420">
+              <caret line="28" selection-start-line="28" selection-end-line="29" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -75,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/routes-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="180" selection-start-line="180" selection-end-line="181" />
+            <state relative-caret-position="-87">
+              <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -326,12 +327,12 @@
       <workItem from="1584444366842" duration="14577000" />
       <workItem from="1584487673328" duration="70000" />
       <workItem from="1584522615169" duration="5072000" />
-      <workItem from="1584561248256" duration="8187000" />
+      <workItem from="1584561248256" duration="9548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350363000" />
+    <option name="totallyTimeSpent" value="351724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -811,27 +812,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/routes-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="415" column="39" selection-start-line="415" selection-start-column="39" selection-end-line="415" selection-end-column="39" />
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/routes-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="180" selection-start-line="180" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/message-bulk-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        <state relative-caret-position="262">
+          <caret line="91" column="44" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="44" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -840,8 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="228">
+          <caret line="151" column="49" lean-forward="true" selection-start-line="151" selection-start-column="49" selection-end-line="151" selection-end-column="49" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

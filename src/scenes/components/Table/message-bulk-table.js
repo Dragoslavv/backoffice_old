@@ -40,9 +40,18 @@ export class MessageBulkTable extends Component{
                 bLengthChange: false,
                 bPaginate:true,
                 columns: [
-                    { title: "ID"},
-                    { title: "Bulk Name"},
-                    { title: "Provider Name"},
+                    { title: "ID",
+                      className:'id_bulk'
+                    },
+                    { title: "Bulk Name",
+                        className:'name_bulk'
+                    },
+                    { title: "Provider Id",
+                        className:'provider_id_bulk'
+                    },
+                    { title: "Provider Name",
+                        className:'provider_name_bulk'
+                    },
                     { title: "Remove",
                         data: null,
                         defaultContent:`<button type="button" class="btn btn-info" id="remove_bulk" ><i class="fa fa-times-circle-o"></i></button>`
@@ -50,6 +59,43 @@ export class MessageBulkTable extends Component{
                 ]
             }
         );
+
+
+
+
+        $(document).ready(() => {
+
+            const table = $('#message-bulk-table');
+
+            table.on('click', '#remove_bulk', function () {
+
+                const id = $(this).parent().parent();
+
+                const get_id = { 'id_bulk' : [] , 'name_bulk' : [] , 'provider_id_bulk' : [] , 'provider_name_bulk' : [] };
+
+                id.find('.id_bulk').each(function( index,item ) {
+                    get_id['id_bulk'].push(item.innerHTML);
+                });
+
+                id.find('.name_bulk').each(function( index,item ) {
+                    get_id['name_bulk'].push(item.innerHTML);
+                });
+
+                id.find('.provider_id_bulk').each(function( index,item ) {
+                    get_id['provider_id_bulk'].push(item.innerHTML);
+                });
+
+                id.find('.provider_name_bulk').each(function( index,item ) {
+                    get_id['provider_name_bulk'].push(item.innerHTML);
+                });
+
+                PubSub.publish('message_bulk', get_id);
+
+            });
+        });
+
+
+
     }
 
     componentDidUpdate() {
@@ -80,9 +126,18 @@ export class MessageBulkTable extends Component{
                     bLengthChange: false,
                     bPaginate:true,
                     columns: [
-                        { title: "ID"},
-                        { title: "Bulk Name"},
-                        { title: "Provider Name"},
+                        { title: "ID",
+                            className:'id_bulk'
+                        },
+                        { title: "Bulk Name",
+                            className:'name_bulk'
+                        },
+                        { title: "Provider Id",
+                            className:'provider_id_bulk'
+                        },
+                        { title: "Provider Name",
+                            className:'provider_name_bulk'
+                        },
                         { title: "Remove",
                             data: null,
                             defaultContent:`<button type="button" class="btn btn-info" id="remove_bulk" ><i class="fa fa-times-circle-o"></i></button>`
