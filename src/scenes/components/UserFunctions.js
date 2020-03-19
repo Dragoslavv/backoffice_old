@@ -1616,7 +1616,7 @@ export const read_vs_active = (user_id) => {
     });
 };
 
-export const destroy_bulk_message = (id, bulk_name, provider_id, user) => {
+export const destroy_bulk_message_api = (id, bulk_name, provider_id, user) => {
 
     return fetch("https://api.globaltel.rs/new-gui/?url=destroy_bulk",{
         method: 'POST',

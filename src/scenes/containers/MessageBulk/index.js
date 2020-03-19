@@ -5,6 +5,7 @@ import {store} from "react-notifications-component";
 import {MessageBulkTable} from "../../components/Table/message-bulk-table";
 import PubSub from "pubsub-js";
 import $ from "jquery";
+import {destroy_bulk_message_api} from "../../components/UserFunctions";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -38,11 +39,51 @@ class MessageBulk extends Component {
     handleSave = (e) => {
         e.preventDefault();
 
-        console.log(this.state.data.user);
-        console.log(this.state.data.id[0]);
-        console.log(this.state.data.bulk_name[0]);
-        console.log(this.state.data.provider_id[0]);
-        console.log(this.state.data.provider_name[0]);
+        if(this.state.data.user !== '' && this.state.data.id[0] !== '' && this.state.data.bulk_name[0] !== '' && this.state.data.provider_id[0] &&
+            this.state.data.provider_name[0] !== ''
+        ){
+            destroy_bulk_message_api(this.state.data.id[0], this.state.data.bulk_name[0], this.state.data.provider_id[0], this.state.data.user ).then(result =>{
+               if(result['status'] === true){
+                   store.addNotification({
+                       title: 'Message Bulk',
+                       message: 'Deleted',
+                       type: 'success',                         // 'default', 'success', 'info', 'warning'
+                       container: 'top-right',                // where to position the notifications
+                       animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                       animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                       dismiss: {
+                           duration: 3000
+                       }
+                   })
+               } else {
+                   store.addNotification({
+                       title: 'Message Bulk',
+                       message: result['message'],
+                       type: 'info',                         // 'default', 'success', 'info', 'warning'
+                       container: 'top-right',                // where to position the notifications
+                       animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                       animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                       dismiss: {
+                           duration: 3000
+                       }
+                   })
+               }
+
+            });
+
+        }else {
+            store.addNotification({
+                title: 'Message Bulk',
+                message: 'Parameter missing!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'top-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            })
+        }
 
     };
 
