@@ -277,7 +277,8 @@ class SimReport extends Component {
                                     <div className='col-lg-4'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='number' name='reservations_number' value={this.state.reservations_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number:'/>
+                                                <label className='content-title' htmlFor='number_cancel_sim'>Cancel sim reservation</label>
+                                                <input className='input' type='number' id='number_cancel_sim' name='reservations_number' value={this.state.reservations_number} onChange={this.handleChanges} autoComplete='off' placeholder='Number:'/>
                                             </div>
                                             <div className="form-group billing-input">
                                                 <div className="row">
