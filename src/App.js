@@ -48,6 +48,7 @@ import MostCommonCases from "./scenes/containers/MostCommonCases";
 import Profile from "./scenes/containers/Profile";
 import ReactNotifications from 'react-notifications-component';
 import MessageBulk from "./scenes/containers/MessageBulk";
+import PinVerification from "./scenes/containers/Billing/pin-verification";
 
 class App extends Component {
   render() {
@@ -90,6 +91,9 @@ class App extends Component {
                       </Route>
                       <Route exact path="/sim-details">
                           <SimDetails />
+                      </Route>
+                      <Route exact path="/pin-verification">
+                          <PinVerification />
                       </Route>
                       //payment
                       <Route exact path="/card-transaction">

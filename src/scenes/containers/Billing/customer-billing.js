@@ -1592,7 +1592,7 @@ class CustomerBilling extends Component {
                                 <div className="modal-body">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <p>Are you sure?</p>
+                                            <p className="content-title" >Are you sure?</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1617,7 +1617,7 @@ class CustomerBilling extends Component {
                                 <div className="modal-body">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <p>Are you sure?</p>
+                                            <p className="content-title" >Are you sure?</p>
                                         </div>
                                     </div>
                                 </div>

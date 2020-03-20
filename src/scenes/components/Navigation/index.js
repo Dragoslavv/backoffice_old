@@ -373,6 +373,7 @@ class Navigation extends Component {
                                     <li className='shadow'><Link to="/cdr-inbound" >Cdr InBound</Link></li>
                                     <li className='shadow'><Link to="/package" >Package</Link></li>
                                     <li className='shadow'><Link to="/sim-details" >SIM details</Link></li>
+                                    <li className='shadow'><Link to="/pin-verification" >Pin Verification</Link></li>
                                 </ul>
                             </li>
                             <li className={ this.state.payment  ? "active shadow" :"shadow" }>
