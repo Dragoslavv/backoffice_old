@@ -1443,7 +1443,7 @@ class CustomerBilling extends Component {
                                         </div>
                                     </div>
                                 </form>
-
+                                <hr/>
                                 <h6 className="content-title">MasterCard Registration</h6>
                                 <p className="content-title"> Verified user ID data </p>
                                 <hr/>

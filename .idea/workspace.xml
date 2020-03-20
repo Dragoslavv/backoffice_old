@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.e5d0e2b6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.e5d0e2b6.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="1454" column="189" selection-start-line="1454" selection-start-column="134" selection-end-line="1454" selection-end-column="189" />
+            <state relative-caret-position="285">
+              <caret line="1446" selection-start-line="1446" selection-end-line="1446" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -367,12 +372,12 @@
       <workItem from="1584561248256" duration="11815000" />
       <workItem from="1584616739523" duration="262000" />
       <workItem from="1584622009294" duration="7783000" />
-      <workItem from="1584663258367" duration="660000" />
+      <workItem from="1584663258367" duration="1502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362696000" />
+    <option name="totallyTimeSpent" value="363538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -881,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="1454" column="189" selection-start-line="1454" selection-start-column="134" selection-end-line="1454" selection-end-column="189" />
+        <state relative-caret-position="285">
+          <caret line="1446" selection-start-line="1446" selection-end-line="1446" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
