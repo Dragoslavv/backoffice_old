@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
+import {PinTable} from "../../components/Table/pin_table";
+import {pin_verification} from "../../components/UserFunctions";
 
 class PinVerification extends Component {
     constructor(props){
@@ -8,7 +10,8 @@ class PinVerification extends Component {
 
         this.state = {
             redirect: false,
-            pin_number:''
+            pin_number:'',
+            pin_trans:[]
         };
 
         this.sessionGet = this.sessionGet.bind(this);
@@ -26,6 +29,13 @@ class PinVerification extends Component {
 
     handleSearchPin = (e) => {
         e.preventDefault();
+
+        pin_verification(this.state.pin_number).then(result => {
+            this.setState({
+                pin_trans:result.data
+            });
+        });
+
     };
 
     sessionGet = (key) => {
@@ -98,6 +108,20 @@ class PinVerification extends Component {
             return <Redirect to={'/'} />
         }
 
+        const dataTable = this.state.pin_trans.map(function (item) {
+
+            return item;
+
+        });
+
+        function TablePin() {
+            if(dataTable.length > 0){
+                return <PinTable data={dataTable} />;
+            } else {
+                return <PinTable data='' />
+            }
+        }
+
         return (
             <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
@@ -107,7 +131,7 @@ class PinVerification extends Component {
                             <li className="breadcrumb-item active" aria-current="page">Pin Verification</li>
                         </ol>
                     </nav>
-                    <div className="row">
+                    <div className="row mb-3">
                         <div className="col-lg-12">
                             <div className='wrap-border'>
                                 <h6 className="content-title">Number Search</h6>
@@ -126,6 +150,14 @@ class PinVerification extends Component {
                                         </div>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className='row'>
+                        <div className='col-lg-12'>
+                            <div className='wrap-border'>
+                                <TablePin/>
                             </div>
                         </div>
                     </div>

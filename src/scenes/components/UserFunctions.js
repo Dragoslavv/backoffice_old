@@ -1718,3 +1718,24 @@ export const mastercard_registration = (user_id) => {
         return err;
     });
 };
+
+export const pin_verification = (number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=pin",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
