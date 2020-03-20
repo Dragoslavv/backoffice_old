@@ -92,22 +92,22 @@ a:focus {
 }
 
 /* Track */
-#wrapper::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 10px grey;
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 12px grey;
 }
 
 /* Handle */
-#wrapper::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #fff;
 }
 
 /* Handle on hover */
-#wrapper::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: rgba(122, 122, 122,0.5);
 }
 .centered {
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .da{
