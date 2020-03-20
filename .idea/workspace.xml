@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scenes/components/Table/pin_table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="116" column="29" lean-forward="true" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+            <state relative-caret-position="286">
+              <caret line="146" column="155" selection-start-line="146" selection-start-column="155" selection-end-line="146" selection-end-column="155" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -50,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/pin_table.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -66,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -177,8 +174,8 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/pin_table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" />
       </list>
     </option>
   </component>
@@ -374,18 +371,18 @@
       <workItem from="1584561248256" duration="11815000" />
       <workItem from="1584616739523" duration="262000" />
       <workItem from="1584622009294" duration="7783000" />
-      <workItem from="1584663258367" duration="5965000" />
+      <workItem from="1584663258367" duration="6304000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368001000" />
+    <option name="totallyTimeSpent" value="368340000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24277067" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24277067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -398,7 +395,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23726542" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23726542" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -862,7 +859,7 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -876,20 +873,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/pin_table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="116" column="29" lean-forward="true" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+        <state relative-caret-position="187">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/pin_table.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="286">
+          <caret line="146" column="155" selection-start-line="146" selection-start-column="155" selection-end-line="146" selection-end-column="155" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
