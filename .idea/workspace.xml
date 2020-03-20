@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e5d0e2b6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e5d0e2b6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25215">
-              <caret line="1681" column="50" selection-start-line="1681" selection-start-column="50" selection-end-line="1681" selection-end-column="50" />
+            <state relative-caret-position="202">
+              <caret line="1700" column="36" selection-start-line="1700" selection-start-column="13" selection-end-line="1700" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -91,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="1446" selection-start-line="1446" selection-end-line="1446" />
+            <state relative-caret-position="128">
+              <caret line="1625" column="53" lean-forward="true" selection-start-line="1625" selection-start-column="53" selection-end-line="1625" selection-end-column="53" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -104,7 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input[type=checkbox] + label:before</find>
       <find>linear</find>
       <find>.form-control</find>
       <find>.billing-input</find>
@@ -134,6 +129,7 @@
       <find>handleSe</find>
       <find>deleteId</find>
       <find>handleAddBulk</find>
+      <find>handleVerifyMasterCard</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -193,8 +189,8 @@
         <option value="$PROJECT_DIR$/src/scenes/components/Table/message-bulk-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Login/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
@@ -372,12 +368,12 @@
       <workItem from="1584561248256" duration="11815000" />
       <workItem from="1584616739523" duration="262000" />
       <workItem from="1584622009294" duration="7783000" />
-      <workItem from="1584663258367" duration="1502000" />
+      <workItem from="1584663258367" duration="2841000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363538000" />
+    <option name="totallyTimeSpent" value="364877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -396,7 +392,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23726542" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23726542" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -857,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25215">
-          <caret line="1681" column="50" selection-start-line="1681" selection-start-column="50" selection-end-line="1681" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/package.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8415">
@@ -884,10 +873,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="1700" column="36" selection-start-line="1700" selection-start-column="13" selection-end-line="1700" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="1446" selection-start-line="1446" selection-end-line="1446" />
+        <state relative-caret-position="128">
+          <caret line="1625" column="53" lean-forward="true" selection-start-line="1625" selection-start-column="53" selection-end-line="1625" selection-end-column="53" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

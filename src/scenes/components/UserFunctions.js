@@ -1697,3 +1697,24 @@ export const cancel_reservation = (msisdn, role) => {
         return err;
     });
 };
+
+export const mastercard_registration = (user_id) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=confirm_master",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user_id=" + user_id,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

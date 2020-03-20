@@ -6,7 +6,7 @@ import {
     activate_subscription,
     activationAndDeactivation,
     addCredit, addReplaceTransfer,
-    billingCustomerSearch, distDuration, distPack, read_vs_active,
+    billingCustomerSearch, distDuration, distPack, mastercard_registration, read_vs_active,
     transactionWallet
 } from "../../components/UserFunctions";
 import  "../Login/index";
@@ -51,6 +51,7 @@ class CustomerBilling extends Component {
             UsersLogin:'',
             modalForWallet:false,
             modal2:false,
+            modal3:false,
             modalForMessage:'',
             modalDataWallet:'',
             amount:'',
@@ -87,8 +88,65 @@ class CustomerBilling extends Component {
         this.handleSubscription = this.handleSubscription.bind(this);
         this.handleAddReplaceTransfer = this.handleAddReplaceTransfer.bind(this);
         this.handleActivatePackage = this.handleActivatePackage.bind(this);
+        this.handleNortifyUser = this.handleNortifyUser.bind(this);
+        this.handleVerifyMasterCard = this.handleVerifyMasterCard.bind(this);
     };
 
+    handleNortifyUser = (e) => {
+        e.preventDefault();
+        $(this.modal3).show();
+
+    };
+
+    handleVerifyMasterCard = (e) => {
+        e.preventDefault();
+
+        if(this.state.searchData[0].user_id !== '' && sessionStorage.getItem('role') !== 'USER') {
+
+            mastercard_registration(this.state.searchData[0].user_id).then(result =>{
+
+                if(result['status'] === true){
+                    store.addNotification({
+                        title: 'MasterCard Registration',
+                        message: result['message'],
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                } else {
+                    store.addNotification({
+                        title: 'MasterCard Registration',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                }
+
+            });
+
+        } else {
+            store.addNotification({
+                title: 'MasterCard Registration',
+                message: 'Parameter missing!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'top-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            })
+        }
+    };
 
     componentDidMount() {
 
@@ -106,6 +164,8 @@ class CustomerBilling extends Component {
         $(this.modal).on('hidden.bs.modal', this.handleWalletTransaction);
 
         $(this.modal2).hide();
+        $(this.modal3).hide();
+
         $(this.modal2).on('hidden.bs.modal', this.handleShowModalActive);
 
         distPack().then(result => {
@@ -840,6 +900,8 @@ class CustomerBilling extends Component {
         e.preventDefault();
         $(this.modal).hide();
         $(this.modal2).hide();
+        $(this.modal3).hide();
+
     };
 
     handleAddRemoveCredit = (e) => {
@@ -1452,7 +1514,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Nortify user</button>
+                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1540,6 +1602,31 @@ class CustomerBilling extends Component {
                                     </button>
                                     <button type="button" className="btn btn-secondary"
                                             data-dismiss="modal" onClick={this.handleActiveAndDeactivation}>Yes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="modal" id="verifymaster" ref={modal3 => this.modal3 = modal3} tabIndex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                </div>
+                                <div className="modal-body">
+                                    <div className="row">
+                                        <div className="col-lg-12">
+                                            <p>Are you sure?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal" onClick={this.handleCloseModal}>No
+                                    </button>
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal" onClick={this.handleVerifyMasterCard}>Yes
                                     </button>
                                 </div>
                             </div>
