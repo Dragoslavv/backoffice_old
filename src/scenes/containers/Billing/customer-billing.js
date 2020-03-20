@@ -1443,6 +1443,21 @@ class CustomerBilling extends Component {
                                         </div>
                                     </div>
                                 </form>
+
+                                <h6 className="content-title">MasterCard Registration</h6>
+                                <p className="content-title"> Verified user ID data </p>
+                                <hr/>
+                                <form method="post">
+                                    <div className='form-group billing-input'>
+                                        <div className="form-group billing-input">
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Nortify user</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
