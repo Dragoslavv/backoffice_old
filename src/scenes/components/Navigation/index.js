@@ -459,14 +459,14 @@ class Navigation extends Component {
                                     <li className='shadow'><Link to="/most-common-cases" >Cases</Link></li>
                                 </ul>
                             </li>
-                            <li className='shadow'>
-                                <Link to="/system-message" title="System Message"><i className="fa fa-angle-right" ></i>System Message</Link>
-                            </li>
                             <li className={ this.state.messagebulk  ? "active shadow" :"shadow" }>
                                 <Link to="#" title="Most common cases" onClick={this.messageBulk} ><i className="fa fa-angle-right" ></i>Message Bulk</Link>
                                 <ul className={ this.state.messagebulk  ? "sidebar-nav-second" :"hidden-ul" }>
                                     <li className='shadow'><Link to="/message-bulk" >Message Bulk</Link></li>
                                 </ul>
+                            </li>
+                            <li className='shadow'>
+                                <Link to="/system-message" title="System Message"><i className="fa fa-angle-right" ></i>System Message</Link>
                             </li>
                         </ul>
                     </aside>
