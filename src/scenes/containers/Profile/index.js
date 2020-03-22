@@ -341,31 +341,31 @@ class Profile extends Component {
                                 <h6 className='content-title'>Update Users</h6>
                                 <hr/>
                                 <form>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='text' name='usernameUpdate' value={this.state.usernameUpdate} autoComplete='off' onChange={this.handleChangeUpdate} placeholder='Username'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='password' autoComplete='off' value={this.state.passwordUpdate} onChange={this.handleChangeUpdate} name='passwordUpdate' placeholder='Password'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <select className="input input-update " name="roleUpdate" value={this.state.roleUpdate} onChange={this.handleChangeUpdate}>
                                             <option>USER</option>
                                             <option>ADMIN</option>
                                         </select>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='text' autoComplete='off' value={this.state.firstNameUpdate} onChange={this.handleChangeUpdate} name='firstNameUpdate'  placeholder='First Name'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='text' autoComplete='off' value={this.state.lastNameUpdate} onChange={this.handleChangeUpdate} name='lastNameUpdate'  placeholder='Last Name'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='text' autoComplete='off' value={this.state.emailUpdate} onChange={this.handleChangeUpdate} name='emailUpdate'  placeholder='Email'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input input-update' type='text' autoComplete='off' value={this.state.phoneUpdate} onChange={this.handleChangeUpdate} name='phoneUpdate'  placeholder='Phone'/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleUpdate} type="submit">Update</button>
