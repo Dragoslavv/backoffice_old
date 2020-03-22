@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,14 +27,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/statistic.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="466" column="33" selection-start-line="466" selection-start-column="33" selection-end-line="466" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="143" column="16" selection-start-line="143" selection-end-line="143" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Register.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -42,8 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>#sidebar-wrapper</find>
-      <find>#content-wrapper</find>
       <find>word-break</find>
       <find>table</find>
       <find>.mess</find>
@@ -72,6 +82,8 @@
       <find>.centered</find>
       <find>dist_pack</find>
       <find>.unstyled</find>
+      <find>#content-wrapper</find>
+      <find>#sidebar-wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -130,10 +142,10 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
         <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
-        <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/billing.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
+        <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
       </list>
     </option>
   </component>
@@ -182,6 +194,13 @@
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Navigation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="senzations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="stayles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -260,12 +279,12 @@
       <workItem from="1584622009294" duration="7783000" />
       <workItem from="1584663258367" duration="7433000" />
       <workItem from="1584705270510" duration="1905000" />
-      <workItem from="1584883553617" duration="8528000" />
+      <workItem from="1584883553617" duration="9797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="379902000" />
+    <option name="totallyTimeSpent" value="381171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -317,26 +336,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="222" column="63" selection-start-line="222" selection-start-column="63" selection-end-line="222" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Home/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/devices-table.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -702,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="118" column="18" selection-start-line="118" selection-start-column="18" selection-end-line="118" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -777,6 +769,23 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/statistic.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="143" column="16" selection-start-line="143" selection-end-line="143" selection-end-column="16" />
         </state>
       </provider>
     </entry>
