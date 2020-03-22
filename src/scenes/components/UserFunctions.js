@@ -1739,3 +1739,24 @@ export const pin_verification = (number) => {
         return err;
     });
 };
+
+export const issue_masterCard = (user, user_id, msisdn) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=registration_masterCard",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user=" + user + "&user_id=" + user_id + "&msisdn=" + msisdn,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

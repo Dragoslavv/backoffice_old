@@ -55,6 +55,7 @@ body {
 .form-control {
     background: transparent !important;
     border: 1px solid #8e8e8e !important;
+    height: calc(1.5em + .20rem + 2px) !important;
 }
 
 .input-login {

@@ -6,7 +6,7 @@ import {
     activate_subscription,
     activationAndDeactivation,
     addCredit, addReplaceTransfer,
-    billingCustomerSearch, distDuration, distPack, mastercard_registration, read_vs_active,
+    billingCustomerSearch, distDuration, distPack, issue_masterCard, mastercard_registration, read_vs_active,
     transactionWallet
 } from "../../components/UserFunctions";
 import  "../Login/index";
@@ -52,6 +52,7 @@ class CustomerBilling extends Component {
             modalForWallet:false,
             modal2:false,
             modal3:false,
+            modal4:false,
             modalForMessage:'',
             modalDataWallet:'',
             amount:'',
@@ -90,12 +91,67 @@ class CustomerBilling extends Component {
         this.handleActivatePackage = this.handleActivatePackage.bind(this);
         this.handleNortifyUser = this.handleNortifyUser.bind(this);
         this.handleVerifyMasterCard = this.handleVerifyMasterCard.bind(this);
+        this.handleIssue = this.handleIssue.bind(this);
+        this.handleIssueMasterCard = this.handleIssueMasterCard.bind(this);
     };
 
     handleNortifyUser = (e) => {
         e.preventDefault();
         $(this.modal3).show();
+    };
 
+    handleIssue = (e) => {
+        e.preventDefault();
+        $(this.modal4).show();
+    };
+
+    handleIssueMasterCard = (e) => {
+        e.preventDefault();
+
+        if(this.state.searchData[0].user_id !== '' && sessionStorage.getItem('role') !== 'USER' && sessionStorage.getItem('username') !== ''
+            && sessionStorage.getItem('number') !== ''){
+
+            issue_masterCard(sessionStorage.getItem('username'), this.state.searchData[0].user_id, sessionStorage.getItem('number')).then(result => {
+                if(result['status'] === true){
+                    store.addNotification({
+                        title: 'Issue MasterCard',
+                        message: result['message'],
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                } else {
+                    store.addNotification({
+                        title: 'Issue MasterCard',
+                        message: result['message'],
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    })
+                }
+            });
+
+        } else {
+            store.addNotification({
+                title: 'Issue MasterCard',
+                message: 'Parameter missing!',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'top-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            })
+        }
     };
 
     handleVerifyMasterCard = (e) => {
@@ -901,6 +957,7 @@ class CustomerBilling extends Component {
         $(this.modal).hide();
         $(this.modal2).hide();
         $(this.modal3).hide();
+        $(this.modal4).hide();
 
     };
 
@@ -962,7 +1019,6 @@ class CustomerBilling extends Component {
         if(this.state.searchData[0].user_id !== ''){
 
             read_vs_active(this.state.searchData[0].user_id).then(result => {
-                console.log(result['data']);
                 sessionStorage.setItem("vs_active",result['data']);
 
             });
@@ -1337,11 +1393,11 @@ class CustomerBilling extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className="form-group billing-input">
-                                        <ul className="unstyled centered">
+                                        <ul className="unstyled">
                                             <li>
                                                 <input className="styled-checkbox input" defaultChecked={this.state.activeAndDeactivation === 'true'?'checked':''}  value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
                                                        type="checkbox" />
-                                                    <label htmlFor="activeAndDeactivation">Active</label>
+                                                    <label htmlFor="activeAndDeactivation"> Active</label>
                                             </li>
                                         </ul>
                                     </div>
@@ -1418,7 +1474,7 @@ class CustomerBilling extends Component {
                                     <div className='form-group billing-input'>
                                         <div className="row">
                                             <div className="col-lg-7">
-                                                <ul className="unstyled centered">
+                                                <ul className="unstyled ">
                                                     <li>
                                                         <input className="styled-checkbox input" name='duration_active' value={this.state.duration_active} onChange={this.handleChange} id="duration_active"
                                                                type="checkbox" />
@@ -1439,15 +1495,6 @@ class CustomerBilling extends Component {
                                             </div>
                                         </div>
                                     </div>
-                                    {/*<div className='form-group billing-input'>*/}
-                                        {/*<ul className="unstyled centered">*/}
-                                            {/*<li>*/}
-                                                {/*<input className="styled-checkbox input" name='active_sim_pack' value={this.state.active_sim_pack} disabled={this.state.duration_active?false:true} onChange={this.handleChange} id="activeSim"*/}
-                                                       {/*type="checkbox" />*/}
-                                                {/*<label htmlFor="activeSim"> Active Sim</label>*/}
-                                            {/*</li>*/}
-                                        {/*</ul>*/}
-                                    {/*</div>*/}
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
@@ -1488,6 +1535,20 @@ class CustomerBilling extends Component {
                                     </div>
 
                                 </form>
+                                <hr/>
+                                <h6 className="content-title">Scanned identification statament</h6>
+                                <hr/>
+                                <form method="post">
+                                    <div className='form-group billing-input'>
+                                        <div className="form-group billing-input">
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#issuemaster" disabled={wallet_transaction} onClick={this.handleIssue} type="submit">Issue MasterCard</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div className="col-lg-2 mb-3">
@@ -1513,10 +1574,7 @@ class CustomerBilling extends Component {
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
-                                                <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
-                                                </div>
-                                                <div className="col-lg-6">
+                                                <div className="col-lg-12">
                                                     <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
                                                 </div>
                                             </div>
@@ -1630,6 +1688,31 @@ class CustomerBilling extends Component {
                                     </button>
                                     <button type="button" className="btn btn-secondary"
                                             data-dismiss="modal" onClick={this.handleVerifyMasterCard}>Yes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="modal" id="issuemaster" ref={modal4 => this.modal4 = modal4} tabIndex="-1" role="dialog"
+                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header">
+                                </div>
+                                <div className="modal-body">
+                                    <div className="row">
+                                        <div className="col-lg-12">
+                                            <p className="content-title" >Are you sure?</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal" onClick={this.handleCloseModal}>No
+                                    </button>
+                                    <button type="button" className="btn btn-secondary"
+                                            data-dismiss="modal" onClick={this.handleIssueMasterCard}>Yes
                                     </button>
                                 </div>
                             </div>
