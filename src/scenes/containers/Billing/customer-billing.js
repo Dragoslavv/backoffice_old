@@ -1260,7 +1260,7 @@ class CustomerBilling extends Component {
 
                 <section id="content-wrapper" ref={el => (this.container = el)}>
 
-                    <nav aria-label="breadcrumb">
+                    <nav aria-label="breadcrumb" >
                         <ol className="breadcrumb head-pages">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Customer Billing</li>
