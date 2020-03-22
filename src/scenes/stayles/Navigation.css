@@ -246,7 +246,7 @@ a:focus {
 }
 
 #navbar-wrapper {
-    width: 100%;
+    width: calc(100% - 250px);;
     position: absolute;
     z-index: 2;
 }
@@ -321,7 +321,7 @@ a:focus {
     }
 
     #navbar-wrapper {
-        position: relative;
+        position: fixed;
     }
 
     #wrapper.toggled {
