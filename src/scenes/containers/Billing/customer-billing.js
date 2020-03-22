@@ -1513,7 +1513,10 @@ class CustomerBilling extends Component {
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
-                                                <div className="col-lg-12">
+                                                <div className="col-lg-6">
+                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
+                                                </div>
+                                                <div className="col-lg-6">
                                                     <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
                                                 </div>
                                             </div>

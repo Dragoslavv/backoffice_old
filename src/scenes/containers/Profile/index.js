@@ -395,7 +395,7 @@ class Profile extends Component {
                                     <div className='form-group billing-input'>
                                         <input className='input' type='password' autoComplete='off' value={this.state.password} name='password' onChange={this.handleChange} placeholder='Password'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <select className="input form-control" value={this.state.role} onChange={this.handleChange} name="role">
                                             <option>USER</option>
                                             <option>ADMIN</option>
