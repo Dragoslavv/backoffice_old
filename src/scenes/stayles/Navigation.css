@@ -149,12 +149,13 @@ a:focus {
     height: 100%;
     margin-left: -250px;
     overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-x: auto;
     background: rgb(47,50,58);
     /*background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,0.76234243697479) 72%);*/
     transition: all 0.5s ease;
     -webkit-overflow-scrolling: touch;
-
+    -webkit-transition: right 0.2s ease-in;
+    -moz-box-sizing: border-box;
 }
 
 #wrapper.toggled #sidebar-wrapper {
