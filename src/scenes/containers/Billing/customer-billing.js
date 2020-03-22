@@ -1021,6 +1021,10 @@ class CustomerBilling extends Component {
             read_vs_active(this.state.searchData[0].user_id).then(result => {
                 sessionStorage.setItem("vs_active",result['data']);
 
+                this.setState({
+                    activeAndDeactivation: result['data']
+                });
+
             });
 
         }else {
@@ -1147,11 +1151,14 @@ class CustomerBilling extends Component {
                     sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
 
                     read_vs_active(filter.data[0].user_id).then(result => {
-                        console.log(result['data']);
                         sessionStorage.setItem("vs_active",result['data']);
 
                         this.setState({
-                            activeAndDeactivation:sessionStorage.getItem('vs_active')
+                            activeAndDeactivation: result['data']
+                        });
+
+                        this.setState({
+                            activeAndDeactivation: sessionStorage.getItem('vs_active')
                         });
 
 
