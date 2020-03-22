@@ -389,10 +389,10 @@ class Profile extends Component {
                                 <h6 className='content-title'>Add Users</h6>
                                 <hr/>
                                 <form>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='text' name='username' value={this.state.username} onChange={this.handleChange} autoComplete='off' placeholder='Username'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='password' autoComplete='off' value={this.state.password} name='password' onChange={this.handleChange} placeholder='Password'/>
                                     </div>
                                     <div className='form-group'>
@@ -401,19 +401,19 @@ class Profile extends Component {
                                             <option>ADMIN</option>
                                         </select>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' value={this.state.firstName} name='firstName' onChange={this.handleChange}  placeholder='First Name'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' value={this.state.lastName} name='lastName' onChange={this.handleChange}  placeholder='Last Name'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' value={this.state.email} name='email' onChange={this.handleChange}  placeholder='Email'/>
                                     </div>
-                                    <div className='form-group'>
+                                    <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' value={this.state.phone} name='phone' onChange={this.handleChange}  placeholder='Phone'/>
                                     </div>
-                                    <div className="form-group">
+                                    <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
                                                 <button className="btn btn-block btn-outline-light" onClick={this.handleClear} type="submit">Clear</button>
@@ -427,7 +427,7 @@ class Profile extends Component {
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border border-table-smt'>
+                            <div className='wrap-border '>
                                 {dataTable.length > 0  ?
                                     <ProfileTable data={ dataTable } >
                                     </ProfileTable>
