@@ -1274,7 +1274,7 @@ class CustomerBilling extends Component {
                                         <input className='input' type='text' name='billingId' readOnly={true} value={this.state.searchData[0].billing_id} onChange={this.handleChangeData} autoComplete='off' placeholder='Billing ID:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <textarea className='input' autoComplete='off' rows="4" cols="50" onChange={this.handleChangeData} readOnly={true} name='balances' value={this.state.searchData[0].balances} placeholder='Balances:'/>
+                                        <textarea className='input' autoComplete='off' rows="6" cols="70" onChange={this.handleChangeData} readOnly={true} name='balances' value={this.state.searchData[0].balances} placeholder='Balances:'/>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <textarea className='input' autoComplete='off' onChange={this.handleChangeData} readOnly={true} name='reservations' value={this.state.searchData[0].reservations} placeholder='Reservations:'/>
