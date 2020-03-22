@@ -59,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="1465" column="87" lean-forward="true" selection-start-line="1465" selection-start-column="87" selection-end-line="1465" selection-end-column="87" />
+            <state relative-caret-position="282">
+              <caret line="1473" column="78" lean-forward="true" selection-start-line="1473" selection-start-column="78" selection-end-line="1473" selection-end-column="78" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -422,12 +422,12 @@
       <workItem from="1584622009294" duration="7783000" />
       <workItem from="1584663258367" duration="7433000" />
       <workItem from="1584705270510" duration="1905000" />
-      <workItem from="1584883553617" duration="7506000" />
+      <workItem from="1584883553617" duration="7677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="378880000" />
+    <option name="totallyTimeSpent" value="379051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -934,8 +934,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="1465" column="87" lean-forward="true" selection-start-line="1465" selection-start-column="87" selection-end-line="1465" selection-end-column="87" />
+        <state relative-caret-position="282">
+          <caret line="1473" column="78" lean-forward="true" selection-start-line="1473" selection-start-column="78" selection-end-line="1473" selection-end-column="78" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

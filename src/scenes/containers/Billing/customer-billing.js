@@ -1465,7 +1465,7 @@ class CustomerBilling extends Component {
                                             <option value="">Package</option>
                                             {this.state.dist_pack.map(function (item) {
 
-                                                return <option key={item.value} value={item.value}>{(item.value) - item.name}</option>
+                                                return <option key={item.value} value={item.value}>({item.value}) - {item.name}</option>
 
                                             })
                                             }
