@@ -1462,10 +1462,10 @@ class CustomerBilling extends Component {
                                 <form method="post">
                                     <div className='form-group billing-input'>
                                         <select className="input input-update form-control" name="package_du_active" value={this.state.package_du_active} onChange={this.handleChange}>
-                                            <option value=""></option>
+                                            <option value="">Package</option>
                                             {this.state.dist_pack.map(function (item) {
 
-                                                return <option key={item.value} value={item.value}>{item.value}</option>
+                                                return <option key={item.value} value={item.value}>{item.name}</option>
 
                                             })
                                             }
