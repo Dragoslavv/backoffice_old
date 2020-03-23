@@ -51,12 +51,6 @@ class DailyStatistic extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 }
             },
             series: []
@@ -136,12 +130,6 @@ class DailyStatistic extends Component {
                         },
                         xaxis: {
                             categories: day,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series
@@ -204,12 +192,6 @@ class DailyStatistic extends Component {
                         },
                         xaxis: {
                             categories: day,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series
@@ -262,12 +244,6 @@ class DailyStatistic extends Component {
                         },
                         xaxis: {
                             categories: day,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series

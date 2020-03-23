@@ -53,12 +53,6 @@ class PackageStat extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 }
             },
             series: [],
@@ -185,12 +179,6 @@ class PackageStat extends Component {
                         },
                         xaxis: {
                             categories: day,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series
@@ -245,12 +233,6 @@ class PackageStat extends Component {
                         },
                         xaxis: {
                             categories: day,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series

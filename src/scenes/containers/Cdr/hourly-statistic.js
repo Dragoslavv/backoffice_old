@@ -43,20 +43,7 @@ class HourlyStatistic extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 },
-                yaxis: {
-                    labels: {
-                        style: {
-                            colors: ['#fff'],
-                        }
-                    }
-                }
             },
             series: []
         };
@@ -175,20 +162,7 @@ class HourlyStatistic extends Component {
                         },
                         xaxis: {
                             categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
                     },
                     series: series
                 });
@@ -248,20 +222,7 @@ class HourlyStatistic extends Component {
                         },
                         xaxis: {
                             categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
                     },
                     series: series
                 });
@@ -313,20 +274,7 @@ class HourlyStatistic extends Component {
                         },
                         xaxis: {
                             categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
                     },
                     series: series
                 });
