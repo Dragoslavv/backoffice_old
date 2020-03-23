@@ -919,9 +919,7 @@ class CustomerBilling extends Component {
         e.preventDefault();
 
         this.setState({ loading: true });
-        window.scrollTo({
-            bottom: 0
-        });
+        window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
         transactionWallet(this.state.searchData[0].user_id, sessionStorage.getItem('role')).then(wallet => {
 
            if(wallet.status === true){

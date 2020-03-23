@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="151" column="23" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="921" column="24" selection-start-line="921" selection-start-column="24" selection-end-line="921" selection-end-column="24" />
+            <state relative-caret-position="165">
+              <caret line="922" column="52" selection-start-line="922" selection-start-column="52" selection-end-line="922" selection-end-column="52" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -86,13 +96,13 @@
       <find>.centered</find>
       <find>dist_pack</find>
       <find>.unstyled</find>
-      <find>#sidebar-wrapper</find>
       <find>activeAndDeactivation</find>
       <find>#navbar-wrapper .navbar</find>
       <find>head-pages</find>
       <find>#content-wrapper</find>
       <find>#navbar-wrapper</find>
       <find>content-wrapper</find>
+      <find>#sidebar-wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -151,10 +161,10 @@
         <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/billing.css" />
-        <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
+        <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
       </list>
     </option>
   </component>
@@ -303,12 +313,12 @@
       <workItem from="1584663258367" duration="7433000" />
       <workItem from="1584705270510" duration="1905000" />
       <workItem from="1584883553617" duration="15138000" />
-      <workItem from="1584957389157" duration="2046000" />
+      <workItem from="1584957389157" duration="2310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="388558000" />
+    <option name="totallyTimeSpent" value="388822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -749,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="168" column="23" selection-start-line="168" selection-start-column="23" selection-end-line="168" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/stayles/statistic.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -802,11 +805,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="921" column="24" selection-start-line="921" selection-start-column="24" selection-end-line="921" selection-end-column="24" />
+        <state relative-caret-position="165">
+          <caret line="922" column="52" selection-start-line="922" selection-start-column="52" selection-end-line="922" selection-end-column="52" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Navigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="151" column="23" selection-start-line="151" selection-start-column="23" selection-end-line="151" selection-end-column="23" />
         </state>
       </provider>
     </entry>
