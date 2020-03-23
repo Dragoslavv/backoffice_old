@@ -40,38 +40,11 @@ class Navigation extends Component {
         this.Mastercard = this.Mastercard.bind(this);
         this.Mostcommoncases = this.Mostcommoncases.bind(this);
         this.messageBulk = this.messageBulk.bind(this);
-        this.initialHash = this.initialHash.bind(this);
-        this.handleTouch = this.handleTouch.bind(this);
-        this.handleTouchEnd = this.handleTouchEnd.bind(this);
 
-    }
-
-    initialHash() {
-        'use strict';
-        window.location.href = "#";
-    }
-
-    handleTouch(e) {
-        var x = e.changedTouches[0].clientX;
-        var total = this.clientWidth;
-        var position = x - total;
-        if ( position < 0 ) this.style.left = (x-total) + 'px'
-        else if (position >= 0) this.style.left = 0 + 'px'
-    }
-    handleTouchEnd(e) {
-        var x = e.changedTouches[0].clientX;
-        var total = this.clientWidth;
-        var position = x - total;
-        this.style.left = "";
-        if ( position <= -total*0.5 ) this.initialHash();
     }
 
     componentDidMount() {
 
-        document.querySelector('#callapsible-nav').addEventListener('touchstart', this.handleTouch, false)
-        document.querySelector('#callapsible-nav').addEventListener('touchmove', this.handleTouch, false)
-        document.querySelector('#callapsible-nav').addEventListener('touchend', this.handleTouchEnd, false)
-        document.getElementById('#content-wrapper').addEventListener('click', this.initialHash, false);
 
         const role = localForages.getItem('role', function (err, value) {
             return value;
@@ -87,6 +60,7 @@ class Navigation extends Component {
     componentWillUnmount() {
         //ToDo
     }
+
 
     Collapsible = (e) =>{
         e.preventDefault();
