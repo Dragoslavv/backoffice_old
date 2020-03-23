@@ -919,6 +919,9 @@ class CustomerBilling extends Component {
         e.preventDefault();
 
         this.setState({ loading: true });
+        window.scrollTo({
+            bottom: 0
+        });
         transactionWallet(this.state.searchData[0].user_id, sessionStorage.getItem('role')).then(wallet => {
 
            if(wallet.status === true){
