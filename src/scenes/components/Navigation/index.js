@@ -28,6 +28,7 @@ class Navigation extends Component {
         };
 
         this.logOut = this.logOut.bind(this);
+        this.handleMouseDown = this.handleMouseDown.bind(this);
         this.Collapsible = this.Collapsible.bind(this);
         this.Billing = this.Billing.bind(this);
         this.Payment = this.Payment.bind(this);
@@ -59,6 +60,13 @@ class Navigation extends Component {
         //ToDo
     }
 
+    handleMouseDown = (e) => {
+        e.preventDefault();
+
+        this.Collapsible();
+
+        e.stopPropagation();
+    };
 
     Collapsible = (e) =>{
         e.preventDefault();
@@ -475,7 +483,7 @@ class Navigation extends Component {
                         <nav className="navbar navbar-inverse">
                             <div className="container-fluid">
                                 <div className="navbar-header">
-                                    <a href="#" className="navbar-brand" onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>
+                                    <a href="#" className="navbar-brand" onMouseDown={this.handleMouseDown} onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>
                                 </div>
                                 <div className="navbar-header float-lg-right">
                                     <a href="#" className="navbar-brand"  onClick={this.logOut} ><i className="fa fa-power-off"></i></a>
