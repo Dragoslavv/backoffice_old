@@ -33,7 +33,7 @@ export class PackageOtherTable extends Component{
                 columns: [
                     { title: "Actions buttons",
                         data: null,
-                        defaultContent:`<button type="button" class="btn btn-info" id="edit" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-info" id="edit" ><i class="fa fa-times-circle-o"></i></button>`
+                        defaultContent:`<button type="button" class="btn btn-success" id="edit" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-danger" id="edit" ><i class="fa fa-times-circle-o"></i></button>`
                     },
                     { title: "Id",
                         className: 'id_pack'
@@ -42,11 +42,11 @@ export class PackageOtherTable extends Component{
                     { title: "Description"},
                     { title: "Notifications",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="edit" >notif</button></p>`
+                        defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="edit" >notif</button></p>`
                     },
                     { title: "Params Lang",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="edit" >lang</button></p>`
+                        defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="edit" >lang</button></p>`
                     },
                     { title: "Deactivate Msg Time Limit"},
                     { title: "Deactivate Msg Consumed"},
@@ -122,7 +122,7 @@ export class PackageOtherTable extends Component{
                     columns: [
                         { title: "Actions buttons",
                             data: null,
-                            defaultContent:`<button type="button" class="btn btn-info" id="edit" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-info" id="edit" ><i class="fa fa-times-circle-o"></i></button>`
+                            defaultContent:`<button type="button" class="btn btn-success" id="edit" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-danger" id="edit" ><i class="fa fa-times-circle-o"></i></button>`
                         },
                         { title: "Id",
                             className: 'id_pack'
@@ -131,11 +131,11 @@ export class PackageOtherTable extends Component{
                         { title: "Description"},
                         { title: "Notifications",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="edit" >notif</button></p>`
+                            defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="edit" >notif</button></p>`
                         },
                         { title: "Params Lang",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="edit" >lang</button></p>`
+                            defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="edit" >lang</button></p>`
                         },
                         { title: "Deactivate Msg Time Limit"},
                         { title: "Deactivate Msg Consumed"},

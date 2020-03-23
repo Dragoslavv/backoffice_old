@@ -54,12 +54,6 @@ class StatisticNumbers extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 }
             },
             series: []
@@ -129,12 +123,6 @@ class StatisticNumbers extends Component {
                         },
                         xaxis: {
                             categories: dan,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series
@@ -194,12 +182,6 @@ class StatisticNumbers extends Component {
                         },
                         xaxis: {
                             categories: dan,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
                         }
                     },
                     series: series
@@ -311,19 +293,19 @@ class StatisticNumbers extends Component {
                             <div className='wrap-border table-col-gui'>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='total_real' value={this.state.total.total_real} onChange={this.handleChange} autoComplete='off' placeholder='Total Real:'/>
+                                        <input className='input' type='text' name='total_real' value={'Total Real:'+this.state.total.total_real} onChange={this.handleChange} autoComplete='off' placeholder='Total Real:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='total_special' value={this.state.total.total_special} onChange={this.handleChange} autoComplete='off' placeholder='Total Special:'/>
+                                        <input className='input' type='text' name='total_special' value={'Total Special:'+this.state.total.total_special} onChange={this.handleChange} autoComplete='off' placeholder='Total Special:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='total_price' value={this.state.total.total_price} onChange={this.handleChange} autoComplete='off' placeholder='Total Price:'/>
+                                        <input className='input' type='text' name='total_price' value={'Total Price:'+this.state.total.total_price} onChange={this.handleChange} autoComplete='off' placeholder='Total Price:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='total_virtual' value={this.state.total.total_virtual} onChange={this.handleChange} autoComplete='off' placeholder='Total Virtual:'/>
+                                        <input className='input' type='text' name='total_virtual' value={'Total Virtual:'+this.state.total.total_virtual} onChange={this.handleChange} autoComplete='off' placeholder='Total Virtual:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='text' name='total_price_virtual' value={this.state.total.total_price_virtual} onChange={this.handleChange} autoComplete='off' placeholder='Total Price Virtual:'/>
+                                        <input className='input' type='text' name='total_price_virtual' value={'Total Price Virtual:'+this.state.total.total_price_virtual} onChange={this.handleChange} autoComplete='off' placeholder='Total Price Virtual:'/>
                                     </div>
                                 </form>
                             </div>

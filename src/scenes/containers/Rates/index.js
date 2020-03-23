@@ -210,7 +210,7 @@ class Rates extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className='col-lg-12'>
-                            <div className='table-col-gui wrap-border'>
+                            <div className='table-col-gui wrap-border mb-3'>
                                 <form method="post">
                                     <div className='form-group'>
                                         <select className="input " name="destination" value={this.state.destination} onChange={this.handleChange}>

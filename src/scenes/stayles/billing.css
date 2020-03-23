@@ -106,10 +106,6 @@
     transition-timing-function: line;
 }
 
-.apexcharts-legend-text{
-    color: #fff !important;
-}
-
 div.dataTables_wrapper div.dataTables_filter input{
     border: 1px solid !important;
 }

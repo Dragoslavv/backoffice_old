@@ -42,7 +42,7 @@ export class PackageFirstTable extends Component{
                 columns: [
                     { title: "Actions buttons",
                         data: null,
-                        defaultContent:`<button type="button" class="btn btn-info" id="edit_packages" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-info" id="package_delete" ><i class="fa fa-times-circle-o"></i></button>`
+                        defaultContent:`<button type="button" class="btn btn-success" id="edit_packages" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-danger" id="package_delete" ><i class="fa fa-times-circle-o"></i></button>`
                     },
                     { title: "Id",
                         className: 'id_pack'
@@ -52,11 +52,11 @@ export class PackageFirstTable extends Component{
                     },
                     { title: "Params",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="params_pack" >Params</button></p>`
+                        defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="params_pack" >Params</button></p>`
                     },
                     { title: "Notification rules",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="package_rules" >Rules</button></p>`
+                        defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="package_rules" >Rules</button></p>`
                     },
                     { title: "Auto renew",
                         className: 'auto_renew'
@@ -235,7 +235,7 @@ export class PackageFirstTable extends Component{
                     columns: [
                         { title: "Actions buttons",
                             data: null,
-                            defaultContent:`<button type="button" class="btn btn-info" id="edit_packages" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-info" id="package_delete" ><i class="fa fa-times-circle-o"></i></button>`
+                            defaultContent:`<button type="button" class="btn btn-success" id="edit_packages" ><i class="fa fa-edit"></i></button> <button type="button" class="btn btn-danger" id="package_delete" ><i class="fa fa-times-circle-o"></i></button>`
                         },
                         { title: "Id",
                             className: 'id_pack'
@@ -245,11 +245,11 @@ export class PackageFirstTable extends Component{
                         },
                         { title: "Params",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="params_pack" >Params</button></p>`
+                            defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="params_pack" >Params</button></p>`
                         },
                         { title: "Notification rules",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="package_rules" >Rules</button></p>`
+                            defaultContent:`<p><button type="button" class="btn btn-outline-secondary" id="package_rules" >Rules</button></p>`
                         },
                         { title: "Auto renew",
                             className: 'auto_renew'

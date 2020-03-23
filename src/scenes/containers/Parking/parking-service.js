@@ -623,11 +623,11 @@ class ParkingService extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-outline-danger">Parking Request</button>
+                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-danger">Parking Request</button>
                             {this.state.request ?<hr className="hr-border-color "/> : ''}
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-outline-danger">Parking Response</button>
+                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-danger">Parking Response</button>
                             {this.state.response ?<hr className="hr-border-color "/> : ''}
                         </div>
                     </div>
