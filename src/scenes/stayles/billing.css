@@ -3,10 +3,12 @@
 }
 .billing-wrap{
     min-height: 328px;
+    background: #fff;
 
 }
 .billing-two-row-wrap{
     min-height: 290px;
+    background: #fff;
 }
 
 .modal-dialog-true {
@@ -128,6 +130,12 @@ div.dataTables_wrapper div.dataTables_filter input{
 
 input[type=checkbox]+label:before{
     padding: 0.2rem;
+    color: #2f323a !important;
+
+}
+
+input[type=checkbox]+label{
+    color: #2f323a !important;
 }
 
 .unstyled {
@@ -145,11 +153,11 @@ tr>td{
     opacity: 0.9;
 }
 hr{
-    border-top: 1px dashed rgba(255,255,255,0.9023984593837535) !important;
+    border-top: 1px solid rgba(0,0,0,.1) !important;
 }
 
 .content-title{
-    color: #fff !important;
+    color: #2f323a !important;
     font-size: 14px;
 }
 

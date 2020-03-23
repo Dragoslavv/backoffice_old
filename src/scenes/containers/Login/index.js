@@ -252,7 +252,7 @@ class Login extends Component {
                             <img src={logo} alt='globaltel-logo' width='180' />
                         </div>
                         { this.state.verify_login?
-                            <div className='login-box'>
+                            <div className='login-box wrap-border'>
                                 <form noValidate style={this.state.from} className='m-3'>
                                     {this.state.messageShow ?
                                     <div className="form-group row alert alert-warning" role="alert">
@@ -276,7 +276,7 @@ class Login extends Component {
                                 </form>
                             </div>
                         :
-                            <div className='login-box'>
+                            <div className='login-box wrap-border'>
                                 <form noValidate style={this.state.from} className='m-3'>
                                     <div className={this.state.verify_pinError ? 'form-group row error' : 'form-group row'} >
                                         <input className='input-login' type='number' name='verify_pin' autoComplete='off' value={this.state.verify_pin} onChange={this.handleChange} placeholder='Verify pin (*****)'/>

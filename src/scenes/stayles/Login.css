@@ -2,7 +2,7 @@ body {
     padding: 50px;
     /*background-image: url(../../scenes/images/mastercard__header_bg.png) !important;*/
     text-align: center;
-    background-color: #5e5252 !important;
+    background-color: #f6f9fc !important;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -41,7 +41,7 @@ body {
 .input {
     width: 100%;
     border-radius: 4px;
-    color: #ffffff;
+    color: #2f323a;
     background-color: transparent;
     border: 1px solid #8e8e8e;
     padding: 5px !important;

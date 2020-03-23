@@ -1262,7 +1262,7 @@ class CustomerBilling extends Component {
                 <section id="content-wrapper" ref={el => (this.container = el)}>
 
                     <nav aria-label="breadcrumb" >
-                        <ol className="breadcrumb head-pages">
+                        <ol className="breadcrumb head-pages wrap-border">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Customer Billing</li>
                         </ol>
@@ -1289,10 +1289,10 @@ class CustomerBilling extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                    <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
+                                                    <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1384,7 +1384,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleAddRemoveCredit} type="submit">Proceed</button>
+                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleAddRemoveCredit} type="submit">Proceed</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1416,7 +1416,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#modal2" disabled={wallet_transaction} onClick={this.handleShowModalActive} type="submit">Proceed</button>
+                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal2" disabled={wallet_transaction} onClick={this.handleShowModalActive} type="submit">Proceed</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1454,7 +1454,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleSubscription} type="submit">Activate</button>
+                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleSubscription} type="submit">Activate</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1507,7 +1507,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleActivatePackage} type="submit">Activate</button>
+                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleActivatePackage} type="submit">Activate</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1536,7 +1536,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" disabled={wallet_transaction} onClick={this.handleAddReplaceTransfer} type="submit">Add/Replace...</button>
+                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleAddReplaceTransfer} type="submit">Add/Replace...</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1551,7 +1551,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#issuemaster" disabled={wallet_transaction} onClick={this.handleIssue} type="submit">Issue MasterCard</button>
+                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#issuemaster" disabled={wallet_transaction} onClick={this.handleIssue} type="submit">Issue MasterCard</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1568,7 +1568,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#sessionTimeOut" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Transaction</button>
+                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#sessionTimeOut" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Transaction</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1583,7 +1583,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
+                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1643,7 +1643,7 @@ class CustomerBilling extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-secondary"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>Close
                                     </button>
                                 </div>
@@ -1666,10 +1666,10 @@ class CustomerBilling extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-secondary"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-success"
                                             data-dismiss="modal" onClick={this.handleActiveAndDeactivation}>Yes
                                     </button>
                                 </div>
@@ -1691,10 +1691,10 @@ class CustomerBilling extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-secondary"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-success"
                                             data-dismiss="modal" onClick={this.handleVerifyMasterCard}>Yes
                                     </button>
                                 </div>
@@ -1716,10 +1716,10 @@ class CustomerBilling extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-secondary"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-secondary"
+                                    <button type="button" className="btn btn-outline-success"
                                             data-dismiss="modal" onClick={this.handleIssueMasterCard}>Yes
                                     </button>
                                 </div>

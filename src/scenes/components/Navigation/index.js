@@ -474,7 +474,7 @@ class Navigation extends Component {
                     </aside>
 
                     <div id="navbar-wrapper" >
-                        <nav className="navbar navbar-inverse">
+                        <nav className="navbar navbar-inverse wrap-border">
                             <div className="container-fluid">
                                 <div className="navbar-header" ref="_menu">
                                     <a href="#" className="navbar-brand" id="callapsible-nav" onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>

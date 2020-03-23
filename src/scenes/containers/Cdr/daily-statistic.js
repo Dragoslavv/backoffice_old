@@ -351,7 +351,7 @@ class DailyStatistic extends Component {
             <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
-                        <ol className="breadcrumb head-pages">
+                        <ol className="breadcrumb head-pages wrap-border">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Hourly Statistic</li>
                         </ol>
