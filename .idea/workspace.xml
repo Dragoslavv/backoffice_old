@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.2d4fc4f5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.2d4fc4f5.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.4c69c2c2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.4c69c2c2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/slideout/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/slideout/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -320,16 +312,15 @@
       <workItem from="1584663258367" duration="7433000" />
       <workItem from="1584705270510" duration="1905000" />
       <workItem from="1584883553617" duration="15138000" />
-      <workItem from="1584957389157" duration="7626000" />
+      <workItem from="1584957389157" duration="7893000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394138000" />
+    <option name="totallyTimeSpent" value="394405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2528581" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -816,8 +807,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

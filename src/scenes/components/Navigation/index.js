@@ -4,7 +4,6 @@ import {logout} from "../UserFunctions";
 import './../../stayles/Navigation.css';
 import localForages from "localforage";
 import logo from "../../images/logo-white.png";
-import Slideout from 'slideout';
 
 class Navigation extends Component {
 
@@ -44,13 +43,6 @@ class Navigation extends Component {
     }
 
     componentDidMount() {
-
-        this.slideout = new Slideout({
-            'panel': this.refs._panel,
-            'menu': this.refs._menu,
-            'padding': 256,
-            'tolerance': 70
-        });
 
         const role = localForages.getItem('role', function (err, value) {
             return value;
