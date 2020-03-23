@@ -28,11 +28,15 @@ div.dataTables_wrapper div.dataTables_filter input{
     border: 1px dashed !important;
 }
 .wrap-border{
-    border: 1px dashed rgba(0,0,0,0.9023984593837535);
     border-radius: 6px;
     padding: 10px;
     -moz-box-shadow: 0 0 20px #000000;
     -webkit-box-shadow: 0 0 20px #000000;
+}
+
+table {
+    -moz-box-shadow: 0 0 20px #000000 !important;
+    -webkit-box-shadow: 0 0 20px #000000 !important;
 }
 
 .wrap-border-white{
