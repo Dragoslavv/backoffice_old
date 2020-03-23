@@ -2,62 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.2d4fc4f5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.2d4fc4f5.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.531af263.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.531af263.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-payment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/devices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/devices.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/package.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly1-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly1-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageLog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageLog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/special-offer-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/special-offer-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package-group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/payment-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/payment-transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/topup-transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/topup-transactions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Rates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Rates/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/billing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/billing.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,34 +36,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Routes/index.js">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/billing.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="302" column="72" selection-start-line="302" selection-start-column="72" selection-end-line="302" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="295" column="72" selection-start-line="295" selection-start-column="72" selection-end-line="295" selection-end-column="72" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="212">
+              <caret line="163" column="11" lean-forward="true" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/billing.css">
+        <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+            <state relative-caret-position="397">
+              <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -243,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
-        <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" />
@@ -291,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/billing.css" />
+        <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
       </list>
     </option>
   </component>
@@ -344,151 +274,7 @@
               <item name="senzations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Billing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Cdr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="CdrLog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Mastercard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="MessageBulk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="MessageLog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Messaging" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="MostCommonCases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Numbers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Package" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Parking" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Payment" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Rates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="SimDataActiveUsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="SystemMessage" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
@@ -575,12 +361,12 @@
       <workItem from="1584663258367" duration="7433000" />
       <workItem from="1584705270510" duration="1905000" />
       <workItem from="1584883553617" duration="15138000" />
-      <workItem from="1584957389157" duration="11597000" />
+      <workItem from="1584957389157" duration="12289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="398109000" />
+    <option name="totallyTimeSpent" value="398801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -599,7 +385,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.577748" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.35790884" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -632,19 +418,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/ErrorNotFound.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -1111,8 +884,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/stayles/billing.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="155" column="41" selection-start-line="155" selection-start-column="41" selection-end-line="155" selection-end-column="41" />
+        <state relative-caret-position="212">
+          <caret line="163" column="11" lean-forward="true" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/images/globaltel_logo_black.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/images/logo-white.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
         </state>
       </provider>
     </entry>
