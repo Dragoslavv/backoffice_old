@@ -28,7 +28,6 @@ class Navigation extends Component {
         };
 
         this.logOut = this.logOut.bind(this);
-        this.handleMouseDown = this.handleMouseDown.bind(this);
         this.Collapsible = this.Collapsible.bind(this);
         this.Billing = this.Billing.bind(this);
         this.Payment = this.Payment.bind(this);
@@ -41,9 +40,38 @@ class Navigation extends Component {
         this.Mastercard = this.Mastercard.bind(this);
         this.Mostcommoncases = this.Mostcommoncases.bind(this);
         this.messageBulk = this.messageBulk.bind(this);
+        this.initialHash = this.initialHash.bind(this);
+        this.handleTouch = this.handleTouch.bind(this);
+        this.handleTouchEnd = this.handleTouchEnd.bind(this);
+
+    }
+
+    initialHash() {
+        'use strict';
+        window.location.href = "#";
+    }
+
+    handleTouch(e) {
+        var x = e.changedTouches[0].clientX;
+        var total = this.clientWidth;
+        var position = x - total;
+        if ( position < 0 ) this.style.left = (x-total) + 'px'
+        else if (position >= 0) this.style.left = 0 + 'px'
+    }
+    handleTouchEnd(e) {
+        var x = e.changedTouches[0].clientX;
+        var total = this.clientWidth;
+        var position = x - total;
+        this.style.left = "";
+        if ( position <= -total*0.5 ) this.initialHash();
     }
 
     componentDidMount() {
+
+        document.querySelector('#callapsible-nav').addEventListener('touchstart', this.handleTouch, false)
+        document.querySelector('#callapsible-nav').addEventListener('touchmove', this.handleTouch, false)
+        document.querySelector('#callapsible-nav').addEventListener('touchend', this.handleTouchEnd, false)
+        document.getElementById('#content-wrapper').addEventListener('click', this.initialHash, false);
 
         const role = localForages.getItem('role', function (err, value) {
             return value;
@@ -59,14 +87,6 @@ class Navigation extends Component {
     componentWillUnmount() {
         //ToDo
     }
-
-    handleMouseDown = (e) => {
-        e.preventDefault();
-
-        this.Collapsible();
-
-        e.stopPropagation();
-    };
 
     Collapsible = (e) =>{
         e.preventDefault();
@@ -86,6 +106,8 @@ class Navigation extends Component {
             messagebulk:false
 
         });
+
+
         localStorage.setItem("active", this.state.isActive);
     };
 
@@ -483,7 +505,7 @@ class Navigation extends Component {
                         <nav className="navbar navbar-inverse">
                             <div className="container-fluid">
                                 <div className="navbar-header">
-                                    <a href="#" className="navbar-brand" onMouseDown={this.handleMouseDown} onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>
+                                    <a href="#" className="navbar-brand" id="callapsible-nav" onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>
                                 </div>
                                 <div className="navbar-header float-lg-right">
                                     <a href="#" className="navbar-brand"  onClick={this.logOut} ><i className="fa fa-power-off"></i></a>

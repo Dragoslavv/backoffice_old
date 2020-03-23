@@ -26,7 +26,8 @@
     "react-scripts": "0.9.5",
     "reactjs-localstorage": "0.0.8",
     "secure-ls": "^1.2.5",
-    "secure-web-storage": "^1.0.2"
+    "secure-web-storage": "^1.0.2",
+    "slideout": "^1.0.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
