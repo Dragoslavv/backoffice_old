@@ -358,10 +358,10 @@ class Transaction extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset}  type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.onClickTransaction} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.onClickTransaction} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -425,7 +425,7 @@ class Transaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <CsvDownload data={this.state.totalTransactions} target="_parent" filename={"export-payment.csv"}  className="btn btn-block btn-outline-dark" > Export Payment </CsvDownload>
+                                                        <CsvDownload data={this.state.totalTransactions} target="_parent" filename={"export-payment.csv"}  className="btn btn-block btn-outline-success" > Export Payment </CsvDownload>
                                                     </div>
                                                 </div>
                                             </div>
@@ -437,7 +437,7 @@ class Transaction extends Component {
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className='wrap-border border-table-smt'>
+                            <div className='wrap-border table-col-gui border-table-smt'>
                                 <Table/>
                             </div>
                         </div>

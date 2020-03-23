@@ -128,7 +128,7 @@ class Numbers extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Number Type Search</h6>
                                 <hr/>
                                 <div className='row mb-4'>
@@ -170,10 +170,10 @@ class Numbers extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" id='numbers-search' onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success" id='numbers-search' onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,7 +185,7 @@ class Numbers extends Component {
                     </div>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <NumberTypeTable search={this.state.search} data={{
                                     expiration_date: this.state.expiration_date,
                                     start_log: this.state.start_log,

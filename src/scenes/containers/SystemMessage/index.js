@@ -379,13 +379,13 @@ class SystemMessage extends Component {
                         <div className="col-lg-3 mb-3">
                             <div className="row mb-4">
                                 <div className="col-lg-6 mb-3">
-                                    <button className="btn btn-block btn-outline-light" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
+                                    <button className="btn btn-block btn-outline-success" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
                                 </div>
                                 <div className="col-lg-6">
-                                    <button className="btn btn-block btn-outline-light" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
+                                    <button className="btn btn-block btn-outline-info" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
                                 </div>
                             </div>
-                            <div className={this.state.create?'wrap-border': 'hidden-ul'} >
+                            <div className={this.state.create?'wrap-border table-col-gui': 'hidden-ul'} >
                                 <h6 className='content-title'>Create Message</h6>
                                 <hr/>
                                 <form method="post">
@@ -404,16 +404,16 @@ class SystemMessage extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClear} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClear} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
+                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className={this.state.search?'wrap-border':'hidden-ul'} >
+                            <div className={this.state.search?'wrap-border table-col-gui':'hidden-ul'} >
                                 <h6 className='content-title'>Search Message</h6>
                                 <hr/>
                                 <form method="post">
@@ -445,10 +445,10 @@ class SystemMessage extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handlleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handlleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} id="search_sys" type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} id="search_sys" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -456,7 +456,7 @@ class SystemMessage extends Component {
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <SystemMessageTable search={this.state.search_sys}  onOpen={this.handleOpen} data={
                                     {
                                         key: this.state.key,

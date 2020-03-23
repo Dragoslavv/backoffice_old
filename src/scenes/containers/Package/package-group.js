@@ -96,8 +96,8 @@ class PackageGroup extends Component {
                     </nav>
                     <div className="row mb-3">
                         <div className="col-lg-3">
-                            <div className='wrap-border mb-5'>
-                                <h6>Package Group Search</h6>
+                            <div className='wrap-border table-col-gui mb-5'>
+                                <h6 className='content-title'>Package Group Search</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group'>
@@ -109,10 +109,10 @@ class PackageGroup extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -122,17 +122,17 @@ class PackageGroup extends Component {
                                 <div className="form-group">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <h6>Add New Package</h6>
+                                            <h6 className='content-title'>Add New Package</h6>
                                             <hr/>
-                                            <button className="btn btn-block btn-outline-light" type="submit">Add</button>
+                                            <button className="btn btn-block btn-outline-success" type="submit">Add</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
-                                <button className="btn btn-block btn-outline-light" type="submit">Copy Group</button>
+                            <div className='wrap-border table-col-gui'>
+                                <button className="btn btn-block btn-outline-success" type="submit">Copy Group</button>
 
                                 <PackageGroupFirstTable data=''>
                                 </PackageGroupFirstTable>
@@ -141,15 +141,15 @@ class PackageGroup extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' disabled={true} className="btn btn-block btn-outline-light">Add Package Group Lang</button>
+                            <button type='submit' disabled={true} className="btn btn-block btn-outline-success">Add Package Group Lang</button>
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' disabled={true} className="btn btn-block btn-outline-light">Copy Lang Package Group</button>
+                            <button type='submit' disabled={true} className="btn btn-block btn-outline-info">Copy Lang Package Group</button>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <PackageGroupOtherTable data=''>
                                 </PackageGroupOtherTable>
                             </div>

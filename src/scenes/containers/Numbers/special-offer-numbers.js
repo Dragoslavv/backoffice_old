@@ -150,7 +150,7 @@ class SpecialOfferNumbers extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-6">
-                            <div className='wrap-border billing-wrap'>
+                            <div className='wrap-border table-col-gui billing-wrap'>
                                 <h6 className="content-title">Numbers Filter</h6>
                                 <hr/>
                                 <div className='row mb-4'>
@@ -186,7 +186,7 @@ class SpecialOfferNumbers extends Component {
                                         </form>
                                     </div>
                                     <div className='col-lg-6'>
-                                        <div className='wrap-border mb-2'>
+                                        <div className='wrap-border table-col-gui mb-2'>
                                             <h6 className="content-title">Quarantine</h6>
                                             <hr/>
                                             <form method="post">
@@ -205,10 +205,10 @@ class SpecialOfferNumbers extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                    <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                                 </div>
                                                 <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-light" onClick={this.handleClick} id='offer-number' type="submit">Search</button>
+                                                    <button className="btn btn-block btn-outline-success" onClick={this.handleClick} id='offer-number' type="submit">Search</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +217,7 @@ class SpecialOfferNumbers extends Component {
                             </div>
                         </div>
                         <div className='col-lg-6'>
-                            <div className='wrap-border billing-wrap'>
+                            <div className='wrap-border table-col-gui billing-wrap'>
                                 <h6 className="content-title">Numbers Upload</h6>
                                 <hr/>
                                 <div className='row'>
@@ -254,7 +254,7 @@ class SpecialOfferNumbers extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <button className="btn btn-block btn-outline-light" type="submit">Send</button>
+                                                        <button className="btn btn-block btn-outline-success" type="submit">Send</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -266,17 +266,17 @@ class SpecialOfferNumbers extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.numbers} className="btn btn-block btn-light">Numbers</button>
+                            <button type='submit' onClick={this.numbers} className="btn btn-block btn-danger">Numbers</button>
                             {this.state.numbers ?<hr className="hr-border-color "/> : ''}
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.error} className="btn btn-block btn-light">Errors</button>
+                            <button type='submit' onClick={this.error} className="btn btn-block btn-danger">Errors</button>
                             {this.state.error ?<hr className="hr-border-color "/> : ''}
                         </div>
                     </div>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className={this.state.numbers? 'wrap-border' : 'hidden-ul'}>
+                            <div className={this.state.numbers? 'wrap-border table-col-gui' : 'hidden-ul'}>
                                 <SpecialOfferNumbersTable search={this.state.search} data={{
                                     quarantine: this.state.quarantine,
                                     number: this.state.number,
@@ -288,8 +288,8 @@ class SpecialOfferNumbers extends Component {
                                 }}>
                                 </SpecialOfferNumbersTable>
                             </div>
-                            <div className={this.state.error? 'wrap-border' : 'hidden-ul'}>
-                                <button type='submit' className="btn btn-block btn-light" disabled={true}>Clear Old Data</button>
+                            <div className={this.state.error? 'wrap-border table-col-gui' : 'hidden-ul'}>
+                                <button type='submit' className="btn btn-block btn-danger" disabled={true}>Clear Old Data</button>
                                 <SpecialOfferNumbersErrorsTable data=''>
                                 </SpecialOfferNumbersErrorsTable>
                             </div>

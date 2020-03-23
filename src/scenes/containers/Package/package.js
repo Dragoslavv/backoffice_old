@@ -562,8 +562,8 @@ class PackageDefault extends Component {
                     </nav>
                     <div className="row mb-3">
                         <div className="col-lg-3">
-                            <div className='wrap-border mb-5'>
-                                <h6>Package Search</h6>
+                            <div className='wrap-border table-col-gui mb-5'>
+                                <h6 className='content-title'>Package Search</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group'>
@@ -583,10 +583,10 @@ class PackageDefault extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -596,16 +596,16 @@ class PackageDefault extends Component {
                                 <div className="form-group">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <h6>Add New Package</h6>
+                                            <h6 className='content-title'>Add New Package</h6>
                                             <hr/>
-                                            <button className="btn btn-block btn-outline-light" onClick={this.handleAddNewPackage} type="submit">Add</button>
+                                            <button className="btn btn-block btn-success" onClick={this.handleAddNewPackage} type="submit">Add</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <button className="btn btn-block btn-outline-light" id='copy_package_button' disabled={this.state.checkCopy} onClick={this.handleCopyPackageButton} type="submit">Copy Package</button>
 
                                 <PackageFirstTable search={this.state.search} onOpen={this.handleOpen} data={
@@ -620,15 +620,15 @@ class PackageDefault extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' disabled={this.state.checkCopy} className="btn btn-block btn-outline-light">Add Package Lang</button>
+                            <button type='submit' disabled={this.state.checkCopy} className="btn btn-block btn-success">Add Package Lang</button>
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' disabled={this.state.checkTrue} className="btn btn-block btn-outline-light">Copy Lang Package</button>
+                            <button type='submit' disabled={this.state.checkTrue} className="btn btn-block btn-info">Copy Lang Package</button>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <PackageOtherTable search={this.state.checkCopy} onOpen={this.handleOpenTwo} data={{
                                     promo_id: this.state.addCopy
                                 }}>

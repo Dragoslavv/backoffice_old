@@ -337,7 +337,7 @@ class HourlyActivationStatistic extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border mb-5'>
+                            <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Filter</h6>
                                 <hr/>
                                 <form method="post">
@@ -347,16 +347,16 @@ class HourlyActivationStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className='wrap-border mb-5'>
+                            <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Total</h6>
                                 <hr/>
                                 <div className='form-group billing-input'>
@@ -371,7 +371,7 @@ class HourlyActivationStatistic extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

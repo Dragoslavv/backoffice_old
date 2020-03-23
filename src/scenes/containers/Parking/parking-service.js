@@ -169,8 +169,8 @@ class ParkingService extends Component {
                     </nav>
                     <div className="row mb-3">
                         <div className="col-lg-3">
-                            <div className='wrap-border' >
-                                <h6>Parking Search</h6>
+                            <div className='wrap-border table-col-gui' >
+                                <h6 className='content-title'>Parking Search</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group'>
@@ -598,10 +598,10 @@ class ParkingService extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -609,8 +609,8 @@ class ParkingService extends Component {
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
-                                <h6>Total</h6>
+                            <div className='wrap-border table-col-gui'>
+                                <h6 className='content-title'>Total</h6>
                                 <hr/>
                                 <ParkingServiceTotalTable search={this.state.search} data={{
                                     start_log: this.state.start_log,
@@ -623,17 +623,17 @@ class ParkingService extends Component {
                     </div>
                     <div className="row mb-3">
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-outline-light">Parking Request</button>
+                            <button type='submit' onClick={this.parkingRequest} className="btn btn-block btn-outline-danger">Parking Request</button>
                             {this.state.request ?<hr className="hr-border-color "/> : ''}
                         </div>
                         <div className="col-lg-6">
-                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-outline-light">Parking Response</button>
+                            <button type='submit' onClick={this.parkingResponse} className="btn btn-block btn-outline-danger">Parking Response</button>
                             {this.state.response ?<hr className="hr-border-color "/> : ''}
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className={this.state.request ? 'wrap-border':'hidden-ul'}>
+                            <div className={this.state.request ? 'wrap-border table-col-gui':'hidden-ul'}>
                                 <ParkingRequestTable search={this.state.search} data={{
                                     start_log: this.state.start_log,
                                     end_log: this.state.end_log,
@@ -641,7 +641,7 @@ class ParkingService extends Component {
                                     user_number: this.state.user_number
                                 }} />
                             </div>
-                            <div className={this.state.response ? 'wrap-border':'hidden-ul'}>
+                            <div className={this.state.response ? 'wrap-border table-col-gui':'hidden-ul'}>
                                 <ParkingResponseTable search={this.state.search} data={{
                                     start_log: this.state.start_log,
                                     end_log: this.state.end_log,

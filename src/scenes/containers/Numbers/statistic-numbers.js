@@ -286,7 +286,7 @@ class StatisticNumbers extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border mb-5'>
+                            <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Hourly</h6>
                                 <hr/>
                                 <form method="post">
@@ -299,16 +299,16 @@ class StatisticNumbers extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <form method="post">
                                     <div className='form-group billing-input'>
                                         <input className='input' type='text' name='total_real' value={this.state.total.total_real} onChange={this.handleChange} autoComplete='off' placeholder='Total Real:'/>
@@ -329,7 +329,7 @@ class StatisticNumbers extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

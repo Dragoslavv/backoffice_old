@@ -98,7 +98,7 @@ class CustomerPayment extends Component {
                     </nav>
                     <div className="row">
                         <div className="col-lg-12">
-                            <div className='wrap-border border-table-smt'>
+                            <div className='wrap-border table-col-gui border-table-smt'>
                                <CustomerPaymentTable />
                             </div>
                         </div>

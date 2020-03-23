@@ -485,7 +485,7 @@ class MostCommonCases extends Component {
                     </nav>
                     <div className="row">
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search by shopping cart id</h6>
                                 <hr/>
                                 <form method="post">
@@ -495,7 +495,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSearchCartId} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleSearchCartId} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -504,7 +504,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Info shopping cart id</h6>
                                 <hr/>
                                 <form method="post">
@@ -519,7 +519,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Sending an email to eSim</h6>
                                 <hr/>
                                 <form method="post">
@@ -529,7 +529,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSendEsim} type="submit">Send</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleSendEsim} type="submit">Send</button>
                                             </div>
                                         </div>
                                     </div>
@@ -538,7 +538,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Changing emails on eSim</h6>
                                 <hr/>
                                 <form method="post">
@@ -551,7 +551,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleChangingEmaileSim} type="submit">Changes</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleChangingEmaileSim} type="submit">Changes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -560,7 +560,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Transfer Number</h6>
                                 <hr/>
                                 <form method="post">
@@ -573,7 +573,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleTransferNumber} type="submit">Transfer</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleTransferNumber} type="submit">Transfer</button>
                                             </div>
                                         </div>
                                     </div>
@@ -582,7 +582,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-4 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Changing emails on Mastercard</h6>
                                 <hr/>
                                 <form method="post">
@@ -595,7 +595,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleChangingMastercard} type="submit">Changes</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleChangingMastercard} type="submit">Changes</button>
                                             </div>
                                         </div>
                                     </div>
@@ -604,7 +604,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-6 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Resend email on Mastercard</h6>
                                 <hr/>
                                 <form method="post">
@@ -614,7 +614,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleResend} type="submit">Resend</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleResend} type="submit">Resend</button>
                                             </div>
                                         </div>
                                     </div>
@@ -623,7 +623,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-6 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Reset Mastercard</h6>
                                 <hr/>
                                 <form method="post">
@@ -633,7 +633,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>
@@ -642,7 +642,7 @@ class MostCommonCases extends Component {
                         </div>
 
                         <div className="col-lg-12 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Send SMS</h6>
                                 <hr/>
                                 <form method="post">
@@ -655,7 +655,7 @@ class MostCommonCases extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSendMessage} type="submit">SEND</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleSendMessage} type="submit">SEND</button>
                                             </div>
                                         </div>
                                     </div>

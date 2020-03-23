@@ -309,13 +309,13 @@ class Routes extends Component {
                         <div className="col-lg-3">
                             <div className="row mb-4">
                                 <div className="col-lg-6">
-                                    <button className="btn btn-block btn-outline-light" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
+                                    <button className="btn btn-block btn-outline-success" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>
                                 </div>
                                 <div className="col-lg-6">
-                                    <button className="btn btn-block btn-outline-light" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
+                                    <button className="btn btn-block btn-outline-info" onClick={this.search} type="submit"><i className="fa fa-search" ></i></button>
                                 </div>
                             </div>
-                            <div className={this.state.search?'wrap-border': 'hidden-ul'} >
+                            <div className={this.state.search?'wrap-border table-col-gui': 'hidden-ul'} >
                                 <h6 className="content-title">Routes Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -339,16 +339,16 @@ class Routes extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" id='search_routes' onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" id='search_routes' onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className={this.state.create?'wrap-border':'hidden-ul'} >
+                            <div className={this.state.create?'wrap-border table-col-gui':'hidden-ul'} >
                                 <h6 className="content-title">Routes Add</h6>
                                 <hr/>
                                 <form method="post">
@@ -401,10 +401,10 @@ class Routes extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClearRoute} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClearRoute} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleAddRoutes} type="submit">Add</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleAddRoutes} type="submit">Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -412,7 +412,7 @@ class Routes extends Component {
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <RoutesTable search={this.state.search_routes} onOpen={this.handleOpen} data={{
                                     routes_name: this.state.routes_name,
                                     direction: this.state.direction,

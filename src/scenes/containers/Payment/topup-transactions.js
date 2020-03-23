@@ -183,7 +183,7 @@ class TopupTransaction extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">TopUp Payment Search</h6>
                                 <hr/>
                                 <div className='row mb-4'>
@@ -216,10 +216,10 @@ class TopupTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-info" onClick={this.handleReset}  type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -231,7 +231,7 @@ class TopupTransaction extends Component {
                     </div>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <TableTopUp/>
                             </div>
                         </div>

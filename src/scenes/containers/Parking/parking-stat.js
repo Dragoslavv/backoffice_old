@@ -34,7 +34,6 @@ class ParkingStat extends Component {
                 colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                 grid: {
                     show: true,
-                    borderColor: '#90A4AE',
                     padding: {
                         top: 10,
                         right: 10,
@@ -50,12 +49,6 @@ class ParkingStat extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 }
             },
             series: []
@@ -172,7 +165,6 @@ class ParkingStat extends Component {
                             colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                             grid: {
                                 show: true,
-                                borderColor: '#90A4AE',
                                 padding: {
                                     top: 10,
                                     right: 10,
@@ -188,12 +180,6 @@ class ParkingStat extends Component {
                             },
                             xaxis: {
                                 categories: day,
-                                labels: {
-                                    style: {
-                                        colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                    }
-                                }
                             }
                         },
                         series: series
@@ -226,7 +212,6 @@ class ParkingStat extends Component {
                             colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                             grid: {
                                 show: true,
-                                borderColor: '#90A4AE',
                                 padding: {
                                     top: 10,
                                     right: 10,
@@ -242,12 +227,6 @@ class ParkingStat extends Component {
                             },
                             xaxis: {
                                 categories: day,
-                                labels: {
-                                    style: {
-                                        colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                    }
-                                }
                             }
                         },
                         series: series
@@ -278,7 +257,6 @@ class ParkingStat extends Component {
                             colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                             grid: {
                                 show: true,
-                                borderColor: '#90A4AE',
                                 padding: {
                                     top: 10,
                                     right: 10,
@@ -294,12 +272,6 @@ class ParkingStat extends Component {
                             },
                             xaxis: {
                                 categories: day,
-                                labels: {
-                                    style: {
-                                        colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                    }
-                                }
                             }
                         },
                         series: series
@@ -340,7 +312,7 @@ class ParkingStat extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Hourly</h6>
                                 <hr/>
                                 <form method="post">
@@ -766,10 +738,10 @@ class ParkingStat extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleReset}  type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset}  type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -777,7 +749,7 @@ class ParkingStat extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

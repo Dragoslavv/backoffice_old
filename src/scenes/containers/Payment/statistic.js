@@ -686,7 +686,7 @@ class Statistic extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className={this.state.daily?'wrap-border mb-5':'hidden-ul'}>
+                            <div className={this.state.daily?'wrap-border table-col-gui mb-5':'hidden-ul'}>
                                 <h6 className="content-title">Transaction Type Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -699,19 +699,19 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleSearchTotal} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleSearchTotal} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className={this.state.daily?'wrap-border':'hidden-ul'}>
+                            <div className={this.state.daily?'wrap-border table-col-gui':'hidden-ul'}>
                                 <TableReadGrid/>
                             </div>
-                            <div className={this.state.hourly?'wrap-border mb-5':'hidden-ul'}>
+                            <div className={this.state.hourly?'wrap-border table-col-gui mb-5':'hidden-ul'}>
                                 <h6 className="content-title">Transaction Type Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -721,19 +721,19 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light"  onClick={this.handleSearchTotalHourly} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success"  onClick={this.handleSearchTotalHourly} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className={this.state.hourly?'wrap-border':'hidden-ul'}>
+                            <div className={this.state.hourly?'wrap-border table-col-gui':'hidden-ul'}>
                                 <TableReadGridHourly />
                             </div>
-                            <div className={this.state.total?'wrap-border mb-5':'hidden-ul'}>
+                            <div className={this.state.total?'wrap-border table-col-gui mb-5':'hidden-ul'}>
                                 <h6 className="content-title">Transaction Type Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -746,32 +746,32 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light"  onClick={this.handleTotalChart} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success"  onClick={this.handleTotalChart} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className={this.state.total?'wrap-border':'hidden-ul'}>
+                            <div className={this.state.total?'wrap-border table-col-gui':'hidden-ul'}>
                                 <TableTotal />
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border  border-table-smt'>
+                            <div className='wrap-border table-col-gui  border-table-smt'>
                                 <div className="row mb-3">
                                     <div className="col-lg-4">
-                                        <button type='submit' className="btn btn-block btn-light" onClick={this.daily}>Daily</button>
+                                        <button type='submit' className="btn btn-block btn-danger" onClick={this.daily}>Daily</button>
                                         {this.state.daily ?<hr className="hr-border-color "/> : ''}
                                     </div>
                                     <div className="col-lg-4">
-                                        <button type='submit' className="btn btn-block btn-light" onClick={this.hourly} >Hourly</button>
+                                        <button type='submit' className="btn btn-block btn-danger" onClick={this.hourly} >Hourly</button>
                                         {this.state.hourly ?<hr className="hr-border-color "/> : ''}
                                     </div>
                                     <div className="col-lg-4">
-                                        <button type='submit' className="btn btn-block btn-light" onClick={this.total}>Total</button>
+                                        <button type='submit' className="btn btn-block btn-danger" onClick={this.total}>Total</button>
                                         {this.state.total ?<hr className="hr-border-color "/> : ''}
                                     </div>
                                 </div>

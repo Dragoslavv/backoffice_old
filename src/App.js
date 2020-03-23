@@ -25,7 +25,7 @@ import DailyActivationStatistic from "./scenes/containers/Mastercard/daily-activ
 import HourlyActivationStatistic from "./scenes/containers/Mastercard/hourly-activation-statistic";
 import CdrLog from "./scenes/containers/CdrLog";
 import MessageLog from "./scenes/containers/MessageLog";
-import DailyStatistic from "./scenes/containers/Cdr/hourly1-statistic";
+import DailyStatistic from "./scenes/containers/Cdr/hourly-statistic";
 import HourlyStatistic from "./scenes/containers/Cdr/daily-statistic";
 import Daily from "./scenes/containers/Messaging/daily";
 import Hourly from "./scenes/containers/Messaging/hourly";

@@ -133,7 +133,7 @@ class PinVerification extends Component {
                     </nav>
                     <div className="row mb-3">
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Number Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -144,7 +144,7 @@ class PinVerification extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-light" onClick={this.handleSearchPin} type="submit">Search</button>
+                                                    <button className="btn btn-block btn-outline-success" onClick={this.handleSearchPin} type="submit">Search</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -156,7 +156,7 @@ class PinVerification extends Component {
 
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <TablePin/>
                             </div>
                         </div>

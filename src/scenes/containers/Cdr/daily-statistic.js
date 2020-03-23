@@ -358,7 +358,7 @@ class DailyStatistic extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Filter</h6>
                                 <hr/>
                                 <form method="post">
@@ -432,10 +432,10 @@ class DailyStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.onClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.onClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickHourly} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClickHourly} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
@@ -443,7 +443,7 @@ class DailyStatistic extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

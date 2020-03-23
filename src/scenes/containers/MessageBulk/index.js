@@ -301,7 +301,7 @@ class MessageBulk extends Component {
                     </nav>
                     <div className="row">
                         <div className="col-lg-6 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search Bulk</h6>
                                 <hr/>
                                 <form method="post">
@@ -314,10 +314,10 @@ class MessageBulk extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" id='search_bulk' onClick={this.handleSearchBulk} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" id='search_bulk' onClick={this.handleSearchBulk} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -326,7 +326,7 @@ class MessageBulk extends Component {
                         </div>
 
                         <div className="col-lg-6 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Add Bulk</h6>
                                 <hr/>
                                 <form method="post">
@@ -347,10 +347,10 @@ class MessageBulk extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClear}  type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClear}  type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleAddBulk}  type="submit">Add</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleAddBulk}  type="submit">Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -361,7 +361,7 @@ class MessageBulk extends Component {
 
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <MessageBulkTable search={this.state.search_bulk} onOpen={this.handleOpen} data={{
                                     bulk_name: this.state.bulk_name,
                                     provider_name: this.state.provider_name,

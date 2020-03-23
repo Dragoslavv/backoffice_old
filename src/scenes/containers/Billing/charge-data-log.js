@@ -162,7 +162,7 @@ class ChargeDataLog extends Component {
                     </nav>
                     <div className="row">
                         <div className="col-lg-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -204,10 +204,10 @@ class ChargeDataLog extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" disabled={!this.validate()} onClick={this.onClickChargeLog} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.onClickChargeLog} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@ class ChargeDataLog extends Component {
                             </div>
                         </div>
                         <div className="col-lg-9">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Table/>
                             </div>
                         </div>

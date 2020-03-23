@@ -361,7 +361,7 @@ class DailyActivationStatistic extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border mb-5'>
+                            <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Filter</h6>
                                 <hr/>
                                 <form method="post">
@@ -374,16 +374,16 @@ class DailyActivationStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleResetFilter} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleResetFilter} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleDailyFilter} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleDailyFilter} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className='wrap-border mb-5'>
+                            <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Total</h6>
                                 <hr/>
                                 <div className='form-group billing-input'>
@@ -398,7 +398,7 @@ class DailyActivationStatistic extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

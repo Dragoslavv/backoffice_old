@@ -265,7 +265,7 @@ class Hourly extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Hourly</h6>
                                 <hr/>
                                 <form method="post">
@@ -301,7 +301,7 @@ class Hourly extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
@@ -309,7 +309,7 @@ class Hourly extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}

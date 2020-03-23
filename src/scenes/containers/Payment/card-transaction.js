@@ -248,7 +248,7 @@ class CardTransaction extends Component {
                     </div>
                     <div className='row'>
                         <div className='col-lg-12'>
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <TableCard/>
                             </div>
                         </div>

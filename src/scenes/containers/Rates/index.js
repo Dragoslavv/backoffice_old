@@ -210,34 +210,36 @@ class Rates extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className='col-lg-12'>
-                            <form method="post">
-                                <div className='form-group'>
-                                    <select className="input " name="destination" value={this.state.destination} onChange={this.handleChange}>
-                                        {this.state.country.map(function (item) {
-                                            return <option key={item['display']} value={item['display'] === 'ALL'?'':item['display']}>{item['display']}</option>;
-                                        })}
-                                    </select>
-                                </div>
-                                <div className='form-group'>
-                                    <input className='input' type='text' name='prefix' value={this.state.prefix} onChange={this.handleChange} autoComplete='off' placeholder='Prefix'/>
-                                </div>
-                                <div className='form-group'>
-                                    <select className="input " name="brand" value={this.state.brand} onChange={this.handleChange}>
-                                        <option value="">ALL</option>
-                                        <option value="globaltel">globaltel</option>
-                                    </select>
-                                </div>
-                                <div className="form-group">
-                                    <div className="row">
-                                        <div className="col-lg-12">
-                                            <button className="btn btn-block btn-outline-light" onClick={this.handleRest} type="submit">Reset</button>
+                            <div className='table-col-gui wrap-border'>
+                                <form method="post">
+                                    <div className='form-group'>
+                                        <select className="input " name="destination" value={this.state.destination} onChange={this.handleChange}>
+                                            {this.state.country.map(function (item) {
+                                                return <option key={item['display']} value={item['display'] === 'ALL'?'':item['display']}>{item['display']}</option>;
+                                            })}
+                                        </select>
+                                    </div>
+                                    <div className='form-group'>
+                                        <input className='input' type='text' name='prefix' value={this.state.prefix} onChange={this.handleChange} autoComplete='off' placeholder='Prefix'/>
+                                    </div>
+                                    <div className='form-group'>
+                                        <select className="input " name="brand" value={this.state.brand} onChange={this.handleChange}>
+                                            <option value="">ALL</option>
+                                            <option value="globaltel">globaltel</option>
+                                        </select>
+                                    </div>
+                                    <div className="form-group">
+                                        <div className="row">
+                                            <div className="col-lg-12">
+                                                <button className="btn btn-block btn-outline-info" onClick={this.handleRest} type="submit">Reset</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                         <div className="col-lg-12">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <RatesTable data={{
                                     destination: this.state.destination,
                                     prefix: this.state.prefix,

@@ -50,12 +50,6 @@ class DataConsumption extends Component {
                 },
                 xaxis: {
                     categories: [],
-                    labels: {
-                        style: {
-                            colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                        }
-                    }
                 }
             },
             series: [],
@@ -111,12 +105,6 @@ class DataConsumption extends Component {
                     },
                     xaxis: {
                         categories: day,
-                        labels: {
-                            style: {
-                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                            }
-                        }
                     }
                 },
                 series: series,
@@ -159,12 +147,6 @@ class DataConsumption extends Component {
                     },
                     xaxis: {
                         categories: day,
-                        labels: {
-                            style: {
-                                colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                            }
-                        }
                     }
                 },
                 series: series,
@@ -253,7 +235,7 @@ class DataConsumption extends Component {
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2 mb-3">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -266,7 +248,7 @@ class DataConsumption extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClick} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
@@ -274,7 +256,7 @@ class DataConsumption extends Component {
                             </div>
                         </div>
                         <div className="col-lg-10">
-                            <div className='wrap-border'>
+                            <div className='wrap-border table-col-gui'>
                                 <Chart
                                     options={this.state.options}
                                     series={this.state.series}
