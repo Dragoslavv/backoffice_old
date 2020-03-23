@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import Chart from "react-apexcharts";
-import { CdrDailyStatistic } from "../../components/UserFunctions";
+import {CdrHourlyStatistic} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
-
 
 class DailyStatistic extends Component {
     constructor(props){
         super(props);
+
+
+        let dt = new Date();
+        let dd1 = String(dt.getDate()).padStart(2, '0');
+        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
+        let yyyy1 = dt.getFullYear();
 
 
         let today = new Date();
@@ -16,10 +21,13 @@ class DailyStatistic extends Component {
         let yyyy = today.getFullYear();
 
         today = yyyy + '-' + mm + '-' + dd;
+        dt = yyyy1 + '-' + mm1 + '-' + dd1;
+
 
         this.state = {
-            redirect: false,
-            day: today,
+            redirect:false,
+            start: dt,
+            end: today,
             account_code_name: '',
             inType: '',
             type:'',
@@ -36,7 +44,7 @@ class DailyStatistic extends Component {
                     },
                 },
                 chart: {
-                    id: "basic-bar-daily-statistic",
+                    id: "basic-bar-hourly-statistic",
                 },
                 dataLabels: {
                     enabled: false,
@@ -49,23 +57,224 @@ class DailyStatistic extends Component {
 
                         }
                     }
-                },
-                yaxis: {
-                    labels: {
-                        style: {
-                            colors: ['#fff'],
-                        }
-                    }
                 }
             },
             series: []
         };
 
         this.handleChnage = this.handleChnage.bind(this);
-        this.onClickDaily = this.onClickDaily.bind(this);
+        this.handleClickHourly = this.handleClickHourly.bind(this);
         this.onClickReset = this.onClickReset.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
+    }
 
+    onClickReset = (e) => {
+        e.preventDefault();
+
+
+        CdrHourlyStatistic(this.state.start, this.state.end).then(result => {
+
+            if(result.status === true) {
+
+                let dt = new Date();
+                let dd1 = String(dt.getDate()).padStart(2, '0');
+                let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
+                let yyyy1 = dt.getFullYear();
+
+
+                let today = new Date();
+                let dd = String(today.getDate()).padStart(2, '0');
+                let mm = String(today.getMonth() + 1).padStart(2, '0');
+                let yyyy = today.getFullYear();
+
+                today = yyyy + '-' + mm + '-' + dd;
+                dt = yyyy1 + '-' + mm1 + '-' + dd1;
+
+                this.setState({
+                    start: dt,
+                    end: today,
+                    account_code_name: '',
+                    inType: '',
+                    type: '',
+                });
+
+
+                const day = [];
+                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
+
+
+                result.data.map(function (data) {
+                    day.push(data.day);
+
+                    series[0]['data'].push(data.ANSWERED);
+                    series[1]['data'].push(data.BUSY);
+                    series[2]['data'].push(data.NO_ANSWER);
+                    series[3]['data'].push(data.FAILED);
+                    series[4]['data'].push(data.CONGESTION);
+                    series[5]['data'].push(data.billmin);
+
+                });
+
+                this.setState({
+                    options: {
+                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
+                        grid: {
+                            show: true,
+                            borderColor: '#90A4AE',
+                            padding: {
+                                top: 10,
+                                right: 10,
+                                bottom: 10,
+                                left: 10
+                            },
+                        },
+                        chart: {
+                            id: "basic-bar-Total",
+                        },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        xaxis: {
+                            categories: day,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        }
+                    },
+                    series: series
+                });
+
+            }
+        });
+
+    };
+
+    handleChnage = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            [e.target.name] : e.target.value
+        });
+
+    };
+
+    handleClickHourly = (e) => {
+        e.preventDefault();
+
+        CdrHourlyStatistic(this.state.start, this.state.end, this.state.account_code_name, this.state.type, this.state.inType).then(result => {
+
+            if(result.status === true) {
+                const day = [];
+                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
+
+
+                result.data.map(function (data) {
+                    day.push(data.day);
+
+                    series[0]['data'].push(data.ANSWERED);
+                    series[1]['data'].push(data.BUSY);
+                    series[2]['data'].push(data.NO_ANSWER);
+                    series[3]['data'].push(data.FAILED);
+                    series[4]['data'].push(data.CONGESTION);
+                    series[5]['data'].push(data.billmin);
+
+                });
+
+                this.setState({
+                    options: {
+                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
+                        grid: {
+                            show: true,
+                            borderColor: '#90A4AE',
+                            padding: {
+                                top: 10,
+                                right: 10,
+                                bottom: 10,
+                                left: 10
+                            },
+                        },
+                        chart: {
+                            id: "basic-bar-Total",
+                        },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        xaxis: {
+                            categories: day,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        }
+                    },
+                    series: series
+                });
+
+            }
+        });
+
+    };
+
+    componentDidMount() {
+
+        CdrHourlyStatistic(this.state.start, this.state.end, this.state.account_code_name, this.state.type, this.state.inType).then(result => {
+
+            if(result.status === true) {
+                const day = [];
+                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
+
+
+                result.data.map(function (data) {
+                    day.push(data.day);
+
+                    series[0]['data'].push(data.ANSWERED);
+                    series[1]['data'].push(data.BUSY);
+                    series[2]['data'].push(data.NO_ANSWER);
+                    series[3]['data'].push(data.FAILED);
+                    series[4]['data'].push(data.CONGESTION);
+                    series[5]['data'].push(data.billmin);
+
+                });
+
+                this.setState({
+                    options: {
+                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
+                        grid: {
+                            show: true,
+                            borderColor: '#90A4AE',
+                            padding: {
+                                top: 10,
+                                right: 10,
+                                bottom: 10,
+                                left: 10
+                            },
+                        },
+                        chart: {
+                            id: "basic-bar-Total",
+                        },
+                        dataLabels: {
+                            enabled: false,
+                        },
+                        xaxis: {
+                            categories: day,
+                            labels: {
+                                style: {
+                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
+
+                                }
+                            }
+                        }
+                    },
+                    series: series
+                });
+
+            }
+        });
 
     }
 
@@ -118,224 +327,6 @@ class DailyStatistic extends Component {
         return null
     };
 
-    onClickReset = (e) => {
-        e.preventDefault();
-
-        CdrDailyStatistic(this.state.day).then(result => {
-
-            if(result.status === true) {
-
-                let today = new Date();
-                let dd = String(today.getDate()).padStart(2, '0');
-                let mm = String(today.getMonth() + 1).padStart(2, '0');
-                let yyyy = today.getFullYear();
-
-                today = yyyy + '-' + mm + '-' + dd;
-
-                this.setState({
-                    day: today,
-                    account_code_name: '',
-                    inType: '',
-                    type:''
-                });
-
-                const hour = [];
-                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
-
-                result.data.map(function (data) {
-                    hour.push(data.hour);
-
-                    series[0]['data'].push(data.ANSWERED);
-                    series[1]['data'].push(data.BUSY);
-                    series[2]['data'].push(data.NO_ANSWER);
-                    series[3]['data'].push(data.FAILED);
-                    series[4]['data'].push(data.CONGESTION);
-                    series[5]['data'].push(data.billmin);
-
-                });
-
-                this.setState({
-                    optionsTotal: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
-                            },
-                        },
-                        chart: {
-                            id: "basic-bar-Total",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
-                        xaxis: {
-                            categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
-                        },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
-                    },
-                    series: series
-                });
-
-            }
-        });
-    };
-
-    handleChnage = (e) => {
-        e.preventDefault();
-
-        this.setState({
-            [e.target.name] : e.target.value
-        });
-    };
-
-
-    onClickDaily = (e) => {
-        e.preventDefault();
-
-        CdrDailyStatistic(this.state.day, this.state.account_code_name, this.state.type, this.state.inType).then(result => {
-
-            if(result.status === true) {
-                const hour = [];
-                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
-
-                result.data.map(function (data) {
-                    hour.push(data.hour);
-
-                    series[0]['data'].push(data.ANSWERED);
-                    series[1]['data'].push(data.BUSY);
-                    series[2]['data'].push(data.NO_ANSWER);
-                    series[3]['data'].push(data.FAILED);
-                    series[4]['data'].push(data.CONGESTION);
-                    series[5]['data'].push(data.billmin);
-
-                });
-
-                this.setState({
-                    optionsTotal: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
-                            },
-                        },
-                        chart: {
-                            id: "basic-bar-Total",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
-                        xaxis: {
-                            categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
-                        },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
-                    },
-                    series: series
-                });
-
-            }
-        });
-    };
-
-
-
-    componentDidMount() {
-
-        CdrDailyStatistic(this.state.day, this.state.account_code_name, this.state.type, this.state.inType).then(result => {
-
-            if(result.status === true) {
-                const hour = [];
-                const series = [{name: 'ANSWERED',data:[]},{name: 'BUSY',data:[]},{name: 'NO ANSWER',data:[]},{name: 'FAILED',data:[]},{name: 'CONGESTION',data:[]},{name: 'BILLMIN',data:[]}];
-
-                result.data.map(function (data) {
-                    hour.push(data.hour);
-
-                    series[0]['data'].push(data.ANSWERED);
-                    series[1]['data'].push(data.BUSY);
-                    series[2]['data'].push(data.NO_ANSWER);
-                    series[3]['data'].push(data.FAILED);
-                    series[4]['data'].push(data.CONGESTION);
-                    series[5]['data'].push(data.billmin);
-
-                });
-
-                this.setState({
-                    optionsTotal: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
-                            },
-                        },
-                        chart: {
-                            id: "basic-bar-Total",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
-                        xaxis: {
-                            categories: hour,
-                            labels: {
-                                style: {
-                                    colors: ['#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff','#fff']
-
-                                }
-                            }
-                        },
-                        yaxis: {
-                            labels: {
-                                style: {
-                                    colors: ['#fff'],
-                                }
-                            }
-                        }
-                    },
-                    series: series
-                });
-
-            }
-        });
-
-    }
-
     componentWillMount() {
         if(this.sessionGet('token')){
             console.log('Call User Feed');
@@ -362,7 +353,7 @@ class DailyStatistic extends Component {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
-                            <li className="breadcrumb-item active" aria-current="page">Daily Statistic</li>
+                            <li className="breadcrumb-item active" aria-current="page">Hourly Statistic</li>
                         </ol>
                     </nav>
                     <div className="row mb-4">
@@ -372,7 +363,10 @@ class DailyStatistic extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <input className='input' type='date' name='day' value={this.state.day} onChange={this.handleChnage} autoComplete='off' placeholder='Date:'/>
+                                        <input className='input' type='date' name='start' value={this.state.start} onChange={this.handleChnage} autoComplete='off' placeholder='Start:'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='date' name='end' value={this.state.end} onChange={this.handleChnage} autoComplete='off' placeholder='End:'/>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <select className="input input-update" name="account_code_name" value={this.state.account_code_name} onChange={this.handleChnage}>
@@ -441,7 +435,7 @@ class DailyStatistic extends Component {
                                                 <button className="btn btn-block btn-outline-light" onClick={this.onClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-light" onClick={this.onClickDaily} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-light" onClick={this.handleClickHourly} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>
