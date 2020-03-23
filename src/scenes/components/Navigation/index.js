@@ -4,7 +4,7 @@ import {logout} from "../UserFunctions";
 import './../../stayles/Navigation.css';
 import localForages from "localforage";
 import logo from "../../images/logo-white.png";
-// import {Redirect} from "react-router-dom";
+import Slideout from 'slideout';
 
 class Navigation extends Component {
 
@@ -45,6 +45,12 @@ class Navigation extends Component {
 
     componentDidMount() {
 
+        this.slideout = new Slideout({
+            'panel': this.refs._panel,
+            'menu': this.refs._menu,
+            'padding': 256,
+            'tolerance': 70
+        });
 
         const role = localForages.getItem('role', function (err, value) {
             return value;
@@ -350,7 +356,7 @@ class Navigation extends Component {
 
             <div>
                 <div id="wrapper" className={ this.state.isActive ? "toggled" :"" }>
-                    <aside id="sidebar-wrapper">
+                    <aside id="sidebar-wrapper" ref="_panel">
                         <div className="sidebar-brand ">
                             <img src={logo} alt='globaltel-logo'/>
                         </div>
@@ -475,10 +481,10 @@ class Navigation extends Component {
                         </ul>
                     </aside>
 
-                    <div id="navbar-wrapper">
+                    <div id="navbar-wrapper" >
                         <nav className="navbar navbar-inverse">
                             <div className="container-fluid">
-                                <div className="navbar-header">
+                                <div className="navbar-header" ref="_menu">
                                     <a href="#" className="navbar-brand" id="callapsible-nav" onClick={this.Collapsible} ><i className="fa fa-bars"></i></a>
                                 </div>
                                 <div className="navbar-header float-lg-right">
