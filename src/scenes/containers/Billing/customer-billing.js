@@ -115,7 +115,7 @@ class CustomerBilling extends Component {
                 if(result['status'] === true){
                     store.addNotification({
                         title: 'Issue MasterCard',
-                        message: result['message'],
+                        message: 'You have successfully executed the command (Issue MasterCard)',
                         type: 'success',                         // 'default', 'success', 'info', 'warning'
                         container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
