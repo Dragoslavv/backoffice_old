@@ -32,7 +32,7 @@ class DailyActivationStatistic extends Component {
                 colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                 grid: {
                     show: true,
-                    borderColor: '#fff',
+                    borderColor: '#90A4AE',
                     padding: {
                         top: 10,
                         right: 10,
@@ -120,7 +120,7 @@ class DailyActivationStatistic extends Component {
                     colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                     grid: {
                         show: true,
-                        borderColor: '#fff',
+                        borderColor: '#90A4AE',
                         padding: {
                             top: 10,
                             right: 10,
@@ -179,7 +179,7 @@ class DailyActivationStatistic extends Component {
                     colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                     grid: {
                         show: true,
-                        borderColor: '#fff',
+                        borderColor: '#90A4AE',
                         padding: {
                             top: 10,
                             right: 10,
@@ -233,7 +233,7 @@ class DailyActivationStatistic extends Component {
                     colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
                     grid: {
                         show: true,
-                        borderColor: '#fff',
+                        borderColor: '#90A4AE',
                         padding: {
                             top: 10,
                             right: 10,
