@@ -1136,7 +1136,7 @@ class CustomerBilling extends Component {
 
             billingCustomerSearch(param).then(filter => {
 
-                if(filter.data[0] !== undefined){
+                if(filter.data[0] !== undefined && filter.status == true){
 
                     sessionStorage.setItem('billing_active',filter.data[0].active);
                     sessionStorage.setItem('billing_balances',filter.data[0].balances);
@@ -1186,6 +1186,37 @@ class CustomerBilling extends Component {
                     localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
 
                 } else {
+
+                    this.setState({
+                        searchData:[{
+                            active: '',
+                            balances: '',
+                            billing_id: '',
+                            brand: '',
+                            created: '',
+                            email: '',
+                            force_app: '',
+                            name: '',
+                            reservations: '',
+                            user_id: '',
+                            user_type: '',
+                            wallet_id: '',
+                        }],
+                    });
+
+                    sessionStorage.removeItem('billing_active');
+                    sessionStorage.removeItem('billing_balances');
+                    sessionStorage.removeItem('billing_id');
+                    sessionStorage.removeItem('billing_brand');
+                    sessionStorage.removeItem('billing_created');
+                    sessionStorage.removeItem('billing_email');
+                    sessionStorage.removeItem('billing_force_app');
+                    sessionStorage.removeItem('billing_name');
+                    sessionStorage.removeItem('billing_reservations');
+                    sessionStorage.removeItem('billing_user_id');
+                    sessionStorage.removeItem('billing_user_type');
+                    sessionStorage.removeItem('billing_wallet_id');
+
                     store.addNotification({
                         title: 'Customer Search',
                         message: 'Data from input field does not exits!',
