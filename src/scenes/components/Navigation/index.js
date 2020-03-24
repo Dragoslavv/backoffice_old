@@ -23,7 +23,7 @@ class Navigation extends Component {
             mastercard:false,
             mostcommoncases:false,
             messagebulk:false,
-            role:''
+            role:'',
         };
 
         this.logOut = this.logOut.bind(this);
@@ -53,6 +53,8 @@ class Navigation extends Component {
                 role: value
             });
         });
+
+
     }
 
     componentWillUnmount() {
@@ -378,83 +380,141 @@ class Navigation extends Component {
                                     <li className='shadow'><Link to="/pin-verification" >Pin Verification</Link></li>
                                 </ul>
                             </li>
-                            <li className={ this.state.payment  ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Payment" onClick={this.Payment}><i className="fa fa-angle-right" ></i>Payment</Link>
-                                <ul className={ this.state.payment  ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/transaction" >Transaction</Link></li>
-                                    <li className='shadow'><Link to="/statistic" >Statistic</Link></li>
-                                    <li className='shadow'><Link to="/payment-transaction" >Payment Transaction</Link></li>
-                                    <li className='shadow'><Link to="/topup-transaction" >Topup Transaction</Link></li>
-                                    <li className='shadow'><Link to="/card-transaction" >Card Transaction</Link></li>
-                                    <li className='shadow'><Link to="/ipay-transaction" >iPay Transaction</Link></li>
-                                </ul>
-                            </li>
-                            <li className='shadow'>
-                                <Link to="/cdr-log" title="Cdr Log" ><i className="fa fa-angle-right" ></i>Cdr Log</Link>
-                            </li>
-                            <li className='shadow'>
-                                <Link to="/message-log" title="Message Log"><i className="fa fa-angle-right" ></i>Message Log</Link>
-                            </li>
-                            <li className={ this.state.cdr ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Cdr" onClick={this.Cdr} ><i className="fa fa-angle-right" ></i>Cdr</Link>
-                                <ul className={ this.state.cdr ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/daily-statistic" >Daily Statistic</Link></li>
-                                    <li className='shadow'><Link to="/hourly-statistic" >Hourly Statistic</Link></li>
-                                </ul>
-                            </li>
-                            <li className={ this.state.messaging ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Messaging" onClick={this.Messaging} ><i className="fa fa-angle-right"></i>Messaging</Link>
-                                <ul className={ this.state.messaging  ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/hourly" >Hourly </Link></li>
-                                    <li className='shadow'><Link to="/daily" >Daily </Link></li>
-                                </ul>
-                            </li>
-                            <li className={ this.state.numbers  ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Numbers" onClick={this.Numbers}><i className="fa fa-angle-right" ></i>Numbers</Link>
-                                <ul className={ this.state.numbers ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/numbers" >Numbers </Link></li>
-                                    <li className='shadow'><Link to="/statistic-numbers" >Statistic </Link></li>
-                                    <li className='shadow'><Link to="/special-offer-numbers" >Special Offer Numbers</Link></li>
-                                </ul>
-                            </li>
-                            <li className='shadow'>
-                                <Link to="/routes" title="Routes"><i className="fa fa-angle-right"></i>Routes</Link>
-                            </li>
-                            <li className='shadow'>
-                                <Link to="/rates" title="Rates"><i className="fa fa-angle-right"></i>Rates</Link>
-                            </li>
-                            <li className={ this.state.parking? "active shadow" :"shadow" }>
-                                <Link to="#" title="Parking" onClick={this.Parking}><i className="fa fa-angle-right" ></i>Parking</Link>
-                                <ul className={ this.state.parking ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/parking-service" >Parking Service </Link></li>
-                                    <li className='shadow'><Link to="/parking-stat" >Parking Stat </Link></li>
-                                </ul>
-                            </li>
-                            <li className={ this.state.package  ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Package" onClick={this.Package} ><i className="fa fa-angle-right" ></i>Package</Link>
-                                <ul className={ this.state.package? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/package-default" >Package</Link></li>
-                                    <li className='shadow'><Link to="/package-group" >Package Group</Link></li>
-                                    <li className='shadow'><Link to="/package-stat" >Package Stat</Link></li>
-                                </ul>
-                            </li>
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                <li className={this.state.payment ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Payment" onClick={this.Payment}><i
+                                        className="fa fa-angle-right"></i>Payment</Link>
+
+                                    <ul className={this.state.payment ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/transaction">Transaction</Link></li>
+                                        <li className='shadow'><Link to="/statistic">Statistic</Link></li>
+                                        <li className='shadow'><Link to="/payment-transaction">Payment
+                                            Transaction</Link></li>
+                                        <li className='shadow'><Link to="/topup-transaction">Topup Transaction</Link>
+                                        </li>
+                                        <li className='shadow'><Link to="/card-transaction">Card Transaction</Link></li>
+                                        <li className='shadow'><Link to="/ipay-transaction">iPay Transaction</Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className='shadow'>
+                                    <Link to="/cdr-log" title="Cdr Log"><i className="fa fa-angle-right"></i>Cdr
+                                        Log</Link>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className='shadow'>
+                                    <Link to="/message-log" title="Message Log"><i className="fa fa-angle-right"></i>Message
+                                        Log</Link>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.cdr ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Cdr" onClick={this.Cdr}><i className="fa fa-angle-right"></i>Cdr</Link>
+                                    <ul className={this.state.cdr ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/daily-statistic">Daily Statistic</Link></li>
+                                        <li className='shadow'><Link to="/hourly-statistic">Hourly Statistic</Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.messaging ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Messaging" onClick={this.Messaging}><i
+                                        className="fa fa-angle-right"></i>Messaging</Link>
+                                    <ul className={this.state.messaging ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/hourly">Hourly </Link></li>
+                                        <li className='shadow'><Link to="/daily">Daily </Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.numbers ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Numbers" onClick={this.Numbers}><i
+                                        className="fa fa-angle-right"></i>Numbers</Link>
+                                    <ul className={this.state.numbers ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/numbers">Numbers </Link></li>
+                                        <li className='shadow'><Link to="/statistic-numbers">Statistic </Link></li>
+                                        <li className='shadow'><Link to="/special-offer-numbers">Special Offer
+                                            Numbers</Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className='shadow'>
+                                    <Link to="/routes" title="Routes"><i className="fa fa-angle-right"></i>Routes</Link>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className='shadow'>
+                                    <Link to="/rates" title="Rates"><i className="fa fa-angle-right"></i>Rates</Link>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.parking ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Parking" onClick={this.Parking}><i
+                                        className="fa fa-angle-right"></i>Parking</Link>
+                                    <ul className={this.state.parking ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/parking-service">Parking Service </Link></li>
+                                        <li className='shadow'><Link to="/parking-stat">Parking Stat </Link></li>
+                                    </ul>
+                                </li>
+                            }
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.package ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Package" onClick={this.Package}><i
+                                        className="fa fa-angle-right"></i>Package</Link>
+                                    <ul className={this.state.package ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/package-default">Package</Link></li>
+                                        <li className='shadow'><Link to="/package-group">Package Group</Link></li>
+                                        <li className='shadow'><Link to="/package-stat">Package Stat</Link></li>
+                                    </ul>
+                                </li>
+                            }
                             <li className={ this.state.simDataActive ? "active shadow" :"shadow" }>
                                 <Link to="#" title="Sim,Data & Active Users" onClick={this.SimDataActive}><i className="fa fa-angle-right" ></i>Sim,Data & Active</Link>
                                 <ul className={ this.state.simDataActive  ? "sidebar-nav-second" :"hidden-ul" }>
                                     <li className='shadow'><Link to="/sim-report" >Sim Report</Link></li>
-                                    <li className='shadow'><Link to="/sim-daily" >Sim Daily</Link></li>
-                                    <li className='shadow'><Link to="/sim-hourly" >Sim Hourly</Link></li>
-                                    <li className='shadow'><Link to="/active-users" >Active users</Link></li>
-                                    <li className='shadow'><Link to="/data-consumption" >Data</Link></li>
+                                    {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                        <li className='shadow'><Link to="/sim-daily">Sim Daily</Link></li>
+                                    }
+                                    {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                        <li className='shadow'><Link to="/sim-hourly">Sim Hourly</Link></li>
+                                    }
+                                    {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                        <li className='shadow'><Link to="/active-users">Active users</Link></li>
+                                    }
+                                    {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                        <li className='shadow'><Link to="/data-consumption">Data</Link></li>
+                                    }
                                 </ul>
                             </li>
-                            <li className={ this.state.mastercard  ? "active shadow" :"shadow" }>
-                                <Link to="#" title="Mastercard" onClick={this.Mastercard} ><i className="fa fa-angle-right" ></i>Mastercard</Link>
-                                <ul className={ this.state.mastercard  ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow'><Link to="/daily-activation-statistic" >Daily Activation Statistic</Link></li>
-                                    <li className='shadow'><Link to="/hourly-activation-statistic" >Hourly Activation Statistic</Link></li>
-                                </ul>
-                            </li>
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className={this.state.mastercard ? "active shadow" : "shadow"}>
+                                    <Link to="#" title="Mastercard" onClick={this.Mastercard}><i
+                                        className="fa fa-angle-right"></i>Mastercard</Link>
+                                    <ul className={this.state.mastercard ? "sidebar-nav-second" : "hidden-ul"}>
+                                        <li className='shadow'><Link to="/daily-activation-statistic">Daily Activation
+                                            Statistic</Link></li>
+                                        <li className='shadow'><Link to="/hourly-activation-statistic">Hourly Activation
+                                            Statistic</Link></li>
+                                    </ul>
+                                </li>
+                            }
                             <li className={ this.state.mostcommoncases  ? "active shadow" :"shadow" }>
                                 <Link to="#" title="Most common cases" onClick={this.Mostcommoncases} ><i className="fa fa-angle-right" ></i>Most common cases</Link>
                                 <ul className={ this.state.mostcommoncases  ? "sidebar-nav-second" :"hidden-ul" }>
@@ -467,9 +527,13 @@ class Navigation extends Component {
                                     <li className='shadow'><Link to="/message-bulk" >Message Bulk</Link></li>
                                 </ul>
                             </li>
-                            <li className='shadow'>
-                                <Link to="/system-message" title="System Message"><i className="fa fa-angle-right" ></i>System Message</Link>
-                            </li>
+                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                                <li className='shadow'>
+                                    <Link to="/system-message" title="System Message"><i
+                                        className="fa fa-angle-right"></i>System Message</Link>
+                                </li>
+                            }
                         </ul>
                     </aside>
 

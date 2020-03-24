@@ -150,6 +150,7 @@ class Login extends Component {
                 this.setState({
                     verify_login: false
                 });
+                sessionStorage.setItem('phone_number_call_centar', data['phone_number']);
 
                 this.setState({
                     login_data:{
