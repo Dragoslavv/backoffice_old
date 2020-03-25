@@ -33,9 +33,6 @@
 .notWallet{
     color: #fff;
 }
-.btn-info{
-    background-color: rgba(255,255,255,0.2) !important;
-}
 .btn-danger {
     background-color: rgba(163, 0, 19,0.7) !important;
 }
@@ -160,7 +157,7 @@ tr>td{
     opacity: 0.9;
 }
 hr{
-    border-top: 1px solid rgba(0,0,0,.1) !important;
+    border-top: 2px solid rgba(0,0,0,.1) !important;
 }
 
 .content-title{

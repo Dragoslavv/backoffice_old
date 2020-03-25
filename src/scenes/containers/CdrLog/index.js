@@ -179,7 +179,7 @@ class CdrLog extends Component {
                                                 </select>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='totalMinutes' value={this.state.totalMinutes} onChange={this.handleChanges} autoComplete='off' placeholder='Total Minutes:'/>
+                                                <input className='input' type='text' name='totalMinutes' value={'Total Minutes:' + this.state.totalMinutes} onChange={this.handleChanges} autoComplete='off' placeholder='Total Minutes:'/>
                                             </div>
                                         </form>
                                     </div>
