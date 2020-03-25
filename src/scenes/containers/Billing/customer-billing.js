@@ -1372,7 +1372,7 @@ class CustomerBilling extends Component {
                                         <textarea className='input' autoComplete='off' rows="6" cols="70" onChange={this.handleChangeData} readOnly={true} name='balances' value={this.state.searchData[0].balances} placeholder='Balances:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <textarea className='input' autoComplete='off' onChange={this.handleChangeData} readOnly={true} name='reservations' value={this.state.searchData[0].reservations} placeholder='Reservations:'/>
+                                        <textarea className='input' autoComplete='off' rows="4" cols="40" onChange={this.handleChangeData} readOnly={true} name='reservations' value={this.state.searchData[0].reservations} placeholder='Reservations:'/>
                                     </div>
                                 </form>
                             </div>
@@ -1692,7 +1692,7 @@ class CustomerBilling extends Component {
                                 <div className="modal-body">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <p className="content-title" >Are you sure?</p>
+                                            <p className="notWallet" >Are you sure?</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1717,7 +1717,7 @@ class CustomerBilling extends Component {
                                 <div className="modal-body">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <p className="content-title" >Are you sure?</p>
+                                            <p className="notWallet" >Are you sure?</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1742,7 +1742,7 @@ class CustomerBilling extends Component {
                                 <div className="modal-body">
                                     <div className="row">
                                         <div className="col-lg-12">
-                                            <p className="content-title" >Are you sure?</p>
+                                            <p className="notWallet" >Are you sure?</p>
                                         </div>
                                     </div>
                                 </div>
