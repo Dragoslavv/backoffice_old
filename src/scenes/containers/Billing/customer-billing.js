@@ -945,7 +945,7 @@ class CustomerBilling extends Component {
 
                this.setState({
                    modalForWallet : false,
-                   modalForMessage : 'You must be logged in as admin',
+                   modalForMessage : [wallet.message],
                });
            }
 
