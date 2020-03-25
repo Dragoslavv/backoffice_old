@@ -317,7 +317,7 @@ class Transaction extends Component {
                         </ol>
                     </nav>
                     <div className="row mb-4">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 mb-3">
                             <div className='wrap-border billing-wrap'>
                                 <h6 className="content-title">Transaction Type Search</h6>
                                 <hr/>

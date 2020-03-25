@@ -562,7 +562,7 @@ class PackageDefault extends Component {
                     </nav>
                     <div className="row mb-3">
                         <div className="col-lg-3">
-                            <div className='wrap-border table-col-gui mb-5'>
+                            <div className='wrap-border table-col-gui  mb-3'>
                                 <h6 className='content-title'>Package Search</h6>
                                 <hr/>
                                 <form method="post">
@@ -592,7 +592,7 @@ class PackageDefault extends Component {
                                     </div>
                                 </form>
                             </div>
-                            <div className='wrap-border'>
+                            <div className='wrap-border  mb-3'>
                                 <div className="form-group">
                                     <div className="row">
                                         <div className="col-lg-12">

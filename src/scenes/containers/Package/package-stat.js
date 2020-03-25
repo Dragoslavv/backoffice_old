@@ -401,7 +401,7 @@ class PackageStat extends Component {
                                     </div>
                                 </form>
                             </div>
-                            <div className='wrap-border table-col-gui'>
+                            <div className='wrap-border table-col-gui  mb-3'>
                                 <div className="form-group">
                                     <div className="row">
                                         <div className="col-lg-12">

@@ -168,7 +168,7 @@ class ParkingService extends Component {
                         </ol>
                     </nav>
                     <div className="row mb-3">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3  mb-3">
                             <div className='wrap-border table-col-gui' >
                                 <h6 className='content-title'>Parking Search</h6>
                                 <hr/>

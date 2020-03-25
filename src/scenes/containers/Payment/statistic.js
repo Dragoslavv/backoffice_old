@@ -631,7 +631,7 @@ class Statistic extends Component {
                         </ol>
                     </nav>
                     <div className="row mb-4">
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 mb-3">
                             <div className={this.state.daily?'wrap-border table-col-gui mb-5':'hidden-ul'}>
                                 <h6 className="content-title">Transaction Type Search</h6>
                                 <hr/>

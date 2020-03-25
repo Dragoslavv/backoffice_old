@@ -267,7 +267,7 @@ class StatisticNumbers extends Component {
                         </ol>
                     </nav>
                     <div className="row mb-4">
-                        <div className="col-lg-2">
+                        <div className="col-lg-2  mb-3">
                             <div className='wrap-border table-col-gui mb-5'>
                                 <h6 className="content-title">Hourly</h6>
                                 <hr/>

@@ -306,7 +306,7 @@ class Routes extends Component {
                         </ol>
                     </nav>
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3  mb-3">
                             <div className="row mb-4">
                                 <div className="col-lg-6">
                                     <button className="btn btn-block btn-outline-success" onClick={this.create} type="submit"><i className="fa fa-plus" ></i></button>

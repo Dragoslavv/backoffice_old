@@ -154,7 +154,7 @@ class SpecialOfferNumbers extends Component {
                                 <h6 className="content-title">Numbers Filter</h6>
                                 <hr/>
                                 <div className='row mb-4'>
-                                    <div className='col-lg-6'>
+                                    <div className='col-lg-6  mb-3'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='number' value={this.state.number} onChange={this.handleChange} autoComplete='off' placeholder='Number:'/>
@@ -185,7 +185,7 @@ class SpecialOfferNumbers extends Component {
                                             </div>
                                         </form>
                                     </div>
-                                    <div className='col-lg-6'>
+                                    <div className='col-lg-6  mb-3'>
                                         <div className='wrap-border table-col-gui mb-2'>
                                             <h6 className="content-title">Quarantine</h6>
                                             <hr/>
@@ -216,7 +216,7 @@ class SpecialOfferNumbers extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className='col-lg-6'>
+                        <div className='col-lg-6  mb-3'>
                             <div className='wrap-border table-col-gui billing-wrap'>
                                 <h6 className="content-title">Numbers Upload</h6>
                                 <hr/>

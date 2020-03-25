@@ -161,7 +161,7 @@ class ChargeDataLog extends Component {
                         </ol>
                     </nav>
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 mb-3">
                             <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search</h6>
                                 <hr/>
