@@ -108,7 +108,7 @@ a{
     -webkit-box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
     -moz-box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
     box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
-    background: #2f323a;
+    background: linear-gradient(90deg,#66686d,rgba(3,3,3,.76234243697479) 72%);
 }
 
 .login-box-none{
