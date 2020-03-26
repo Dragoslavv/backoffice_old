@@ -1760,3 +1760,45 @@ export const issue_masterCard = (user, user_id, msisdn) => {
         return err;
     });
 };
+
+export const data_limits = (number) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=data_limit",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
+export const currently_active_users = (day) => {
+
+    return fetch("https://api.globaltel.rs/new-gui/?url=currently_active_users",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "day=" + day,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

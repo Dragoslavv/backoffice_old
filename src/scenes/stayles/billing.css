@@ -196,3 +196,31 @@ h6{
         margin-right: 5px;
     }
 }
+
+
+.box {
+    background: #f6f9fc;
+    overflow: hidden;
+}
+
+.box > i {
+    float: left;
+    color: #FFF;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.box .info {
+    float: left;
+    width: auto;
+    margin-left: 10px;
+}
+
+.box .info h3 {
+    display: inline-block;
+}
+
+.box .info p {color:#BBB}
+

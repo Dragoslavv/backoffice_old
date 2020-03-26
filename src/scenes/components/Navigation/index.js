@@ -378,6 +378,7 @@ class Navigation extends Component {
                                     <li className='shadow'><Link to="/package" >Package</Link></li>
                                     <li className='shadow'><Link to="/sim-details" >SIM details</Link></li>
                                     <li className='shadow'><Link to="/pin-verification" >Pin Verification</Link></li>
+                                    <li className='shadow'><Link to="/data-limit" >Data Limit</Link></li>
                                 </ul>
                             </li>
                             {sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :

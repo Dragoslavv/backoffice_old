@@ -5,8 +5,15 @@ import {
     activate_package,
     activate_subscription,
     activationAndDeactivation,
-    addCredit, addReplaceTransfer,
-    billingCustomerSearch, distDuration, distPack, issue_masterCard, mastercard_registration, read_vs_active,
+    addCredit,
+    addReplaceTransfer,
+    billingCustomerSearch,
+    currently_active_users,
+    distDuration,
+    distPack,
+    issue_masterCard,
+    mastercard_registration,
+    read_vs_active,
     transactionWallet
 } from "../../components/UserFunctions";
 import  "../Login/index";
@@ -20,6 +27,13 @@ import {Redirect} from "react-router-dom";
 class CustomerBilling extends Component {
     constructor(props){
         super(props);
+
+        let currently = new Date();
+        let dd = String(currently.getDate()).padStart(2, '0') -1;
+        let mm = String(currently.getMonth() + 1).padStart(2, '0');
+        let yyyy = currently.getFullYear();
+
+        currently = yyyy + '-' + mm + '-' + dd;
 
         this.state = {
             redirect:false,
@@ -71,7 +85,9 @@ class CustomerBilling extends Component {
             duration_select:'',
             active_sim_pack:false,
             action_add: '',
-            new_number: ''
+            new_number: '',
+            day_active:currently,
+            active_users_currently:[]
         };
 
 
@@ -93,6 +109,7 @@ class CustomerBilling extends Component {
         this.handleVerifyMasterCard = this.handleVerifyMasterCard.bind(this);
         this.handleIssue = this.handleIssue.bind(this);
         this.handleIssueMasterCard = this.handleIssueMasterCard.bind(this);
+
     };
 
     handleNortifyUser = (e) => {
@@ -205,6 +222,12 @@ class CustomerBilling extends Component {
     };
 
     componentDidMount() {
+
+        currently_active_users(this.state.day_active).then(result => {
+            this.setState({
+                active_users_currently: result.data
+            })
+        });
 
         const username = localForages.getItem('username', function (err, value) {
             return value;
@@ -1298,6 +1321,55 @@ class CustomerBilling extends Component {
                             <li className="breadcrumb-item active" aria-current="page">Customer Billing</li>
                         </ol>
                     </nav>
+                    {sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+
+                        this.state.active_users_currently.map(function (item) {
+
+                            return (<div key={0} className='row '>
+                                <div className='col-lg-3 mb-3'>
+                                    <div className='wrap-border table-col-gui '>
+                                        <div className="box wrap-border">
+                                            <i className="fa fa-envelope fa-fw bg-primary"></i>
+                                            <div className="info">
+                                                <h3>{item.messaging}</h3> <span>Messaging</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-lg-3 mb-3'>
+                                    <div className='wrap-border table-col-gui '>
+                                        <div className="box wrap-border">
+                                            <i className="fa fa-file fa-fw bg-info"></i>
+                                            <div className="info">
+                                                <h3>{item.data}</h3> <span>Data</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-lg-3 mb-3'>
+                                    <div className='wrap-border table-col-gui '>
+                                        <div className="box wrap-border">
+                                            <i className="fa fa-users fa-fw bg-success"></i>
+                                            <div className="info">
+                                                <h3>{item.total}</h3> <span>Active Users</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='col-lg-3 mb-3'>
+                                    <div className='wrap-border table-col-gui '>
+                                        <div className="box wrap-border">
+                                            <i className="fa fa-microphone fa-fw bg-danger"></i>
+                                            <div className="info">
+                                                <h3>{item.voice}</h3> <span>Voice</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>)
+
+                        })
+                    }
 
                     <div className="row">
                         <div className="col-lg-3 mb-3">

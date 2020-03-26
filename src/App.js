@@ -49,9 +49,12 @@ import Profile from "./scenes/containers/Profile";
 import ReactNotifications from 'react-notifications-component';
 import MessageBulk from "./scenes/containers/MessageBulk";
 import PinVerification from "./scenes/containers/Billing/pin-verification";
+import DataLimit from "./scenes/containers/Billing/data-limit";
+import {currently_active_users} from "./scenes/components/UserFunctions";
 
 class App extends Component {
-  render() {
+
+    render() {
     return (
       <div className="App app-container">
 
@@ -94,6 +97,9 @@ class App extends Component {
                       </Route>
                       <Route exact path="/pin-verification">
                           <PinVerification />
+                      </Route>
+                      <Route exact path="/data-limit">
+                          <DataLimit />
                       </Route>
                       //payment
                       <Route exact path="/card-transaction">

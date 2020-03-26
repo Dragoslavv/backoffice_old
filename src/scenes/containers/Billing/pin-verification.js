@@ -131,31 +131,31 @@ class PinVerification extends Component {
                             <li className="breadcrumb-item active" aria-current="page">Pin Verification</li>
                         </ol>
                     </nav>
-                    <div className="row mb-3">
-                        <div className="col-lg-12">
-                            <div className='wrap-border table-col-gui'>
-                                <h6 className="content-title">Number Search</h6>
-                                <hr/>
-                                <form method="post">
-                                    <div className='form-group billing-input'>
-                                        <input className='input' type='number' autoComplete='off' value={this.state.pin_number} name='pin_number' onChange={this.handleChange}  placeholder='Number:'/>
-                                    </div>
-                                    <div className='form-group billing-input'>
-                                        <div className="form-group billing-input">
-                                            <div className="row">
-                                                <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" onClick={this.handleSearchPin} type="submit">Search</button>
+
+                    <div className='row'>
+                        <div className="col-lg-4 mb-3">
+                            <div className='wrap-border table-col-gui '>
+                                <div className='wrap-border table-col-gui'>
+                                    <h6 className="content-title">Number Search</h6>
+                                    <hr/>
+                                    <form method="post">
+                                        <div className='form-group billing-input'>
+                                            <input className='input' type='number' autoComplete='off' value={this.state.pin_number} name='pin_number' onChange={this.handleChange}  placeholder='Number:'/>
+                                        </div>
+                                        <div className='form-group billing-input'>
+                                            <div className="form-group billing-input">
+                                                <div className="row">
+                                                    <div className="col-lg-12">
+                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleSearchPin} type="submit">Search</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className='row'>
-                        <div className='col-lg-12'>
+                        <div className='col-lg-8'>
                             <div className='wrap-border table-col-gui'>
                                 <TablePin/>
                             </div>
