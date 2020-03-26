@@ -310,7 +310,7 @@ class HourlyStatistic extends Component {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
-                            <li className="breadcrumb-item active" aria-current="page">Daily Statistic</li>
+                            <li className="breadcrumb-item active" aria-current="page">Hourly Statistic</li>
                         </ol>
                     </nav>
                     <div className="row mb-4">
