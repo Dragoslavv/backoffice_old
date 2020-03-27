@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="1327" column="66" selection-start-line="1327" selection-start-column="66" selection-end-line="1327" selection-end-column="66" />
+            <state relative-caret-position="14654">
+              <caret line="1317" column="50" lean-forward="true" selection-start-line="1317" selection-start-column="50" selection-end-line="1317" selection-end-column="50" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -42,8 +42,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="153" column="49" lean-forward="true" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
+            <state relative-caret-position="960">
+              <caret line="153" column="49" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Profile/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1170">
+              <caret line="330" column="53" selection-start-line="330" selection-start-column="53" selection-end-line="330" selection-end-column="53" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -78,11 +90,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
-              <caret line="312" column="93" selection-start-line="312" selection-start-column="93" selection-end-line="312" selection-end-column="93" />
+              <caret line="312" column="32" lean-forward="true" selection-start-line="312" selection-start-column="32" selection-end-line="312" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="419" column="182" selection-start-line="419" selection-start-column="182" selection-end-line="419" selection-end-column="182" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -107,18 +131,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
               <caret line="399" selection-start-line="399" selection-end-line="400" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/devices.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="5" selection-end-line="107" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -171,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/devices.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/package.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js" />
@@ -201,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" />
@@ -222,6 +232,8 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" />
       </list>
     </option>
   </component>
@@ -284,14 +296,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Billing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
-              <item name="senzations" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Cdr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,6 +337,14 @@
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Payment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="senzations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
@@ -429,12 +441,12 @@
       <workItem from="1584883553617" duration="15138000" />
       <workItem from="1584957389157" duration="25491000" />
       <workItem from="1585063623453" duration="13220000" />
-      <workItem from="1585219097692" duration="11465000" />
+      <workItem from="1585219097692" duration="12428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="436688000" />
+    <option name="totallyTimeSpent" value="437651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -486,16 +498,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/topup-transactions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="221" column="108" selection-start-line="221" selection-start-column="108" selection-end-line="221" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -744,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="319" column="49" lean-forward="true" selection-start-line="319" selection-start-column="49" selection-end-line="319" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-510">
@@ -932,26 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="1327" column="66" selection-start-line="1327" selection-start-column="66" selection-end-line="1327" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="153" column="49" lean-forward="true" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
@@ -962,7 +934,47 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="312" column="93" selection-start-line="312" selection-start-column="93" selection-end-line="312" selection-end-column="93" />
+          <caret line="312" column="32" lean-forward="true" selection-start-line="312" selection-start-column="32" selection-end-line="312" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="419" column="182" selection-start-line="419" selection-start-column="182" selection-end-line="419" selection-end-column="182" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14654">
+          <caret line="1317" column="50" lean-forward="true" selection-start-line="1317" selection-start-column="50" selection-end-line="1317" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="153" column="49" selection-start-line="153" selection-start-column="49" selection-end-line="153" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Profile/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1170">
+          <caret line="330" column="53" selection-start-line="330" selection-start-column="53" selection-end-line="330" selection-end-column="53" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

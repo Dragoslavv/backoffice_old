@@ -328,7 +328,7 @@ class Profile extends Component {
                         </ol>
                     </nav>
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col-lg-3 mb-3">
                             <div id='usersUpdate' className='wrap-border-update wrap-border hidden-ul mb-5' >
                                 {this.state.updateSuccess ?
                                     <div className="form-group row alert mod-margin alert-success text-center" role="alert">

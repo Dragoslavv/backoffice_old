@@ -376,51 +376,51 @@ class Transaction extends Component {
                                     <div className="col-lg-4">
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='googlePlayTotal' value={this.state.totalTransactions[0].googlePlay} onChange={this.handleChange} autoComplete='off' placeholder='GooglePlay Total::'/>
+                                                <input className='input' type='text' name='googlePlayTotal' value={'GooglePlay Total: ' +this.state.totalTransactions[0].googlePlay} onChange={this.handleChange} autoComplete='off' placeholder='GooglePlay Total::'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='iTunesTotal' value={this.state.totalTransactions[0].iTunes} onChange={this.handleChange} autoComplete='off' placeholder='iTunes Total:'/>
+                                                <input className='input' type='text' name='iTunesTotal' value={'iTunes Total: ' +this.state.totalTransactions[0].iTunes} onChange={this.handleChange} autoComplete='off' placeholder='iTunes Total:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='WSPay' value={this.state.totalTransactions[0].WSPay} onChange={this.handleChange} autoComplete='off' placeholder='WSPay Total'/>
+                                                <input className='input' type='text' name='WSPay' value={'WSPay Total: ' +this.state.totalTransactions[0].WSPay} onChange={this.handleChange} autoComplete='off' placeholder='WSPay Total'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='TopUpTotal' value={this.state.totalTransactions[0].TopUp} onChange={this.handleChange} autoComplete='off' placeholder='TopUp Total'/>
+                                                <input className='input' type='text' name='TopUpTotal' value={'TopUp Total: ' +this.state.totalTransactions[0].TopUp} onChange={this.handleChange} autoComplete='off' placeholder='TopUp Total'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='totalPayment' value={this.state.totalTransactions[0].totalPayment} onChange={this.handleChange} autoComplete='off' placeholder='TOTAL PAYMENT'/>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div className="col-lg-4">
-                                        <form method="post">
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='guiTotal' value={this.state.totalTransactions[0].guiTotal} onChange={this.handleChange} autoComplete='off' placeholder='GUI Total:'/>
-                                            </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='callCentar' value={this.state.totalTransactions[0].callCenter} onChange={this.handleChange} autoComplete='off' placeholder='Call Center:'/>
-                                            </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='promoBox' autoComplete='off' value={this.state.totalTransactions[0].promoBox} onChange={this.handleChange} placeholder='Promo Box'/>
-                                            </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='walletTransfer' autoComplete='off' value={this.state.totalTransactions[0].walletTransfer} onChange={this.handleChange} placeholder='Wallet Transfer'/>
-                                            </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='telekom' autoComplete='off' value={this.state.totalTransactions[0].telekom} onChange={this.handleChange} placeholder='Telekom'/>
+                                                <input className='input' type='text' name='totalPayment' value={'TOTAL PAYMENT: ' +this.state.totalTransactions[0].totalPayment} onChange={this.handleChange} autoComplete='off' placeholder='TOTAL PAYMENT'/>
                                             </div>
                                         </form>
                                     </div>
                                     <div className="col-lg-4">
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='messaging' autoComplete='off' value={this.state.totalTransactions[0].messaging} onChange={this.handleChange} placeholder='Messaging Total:'/>
+                                                <input className='input' type='text' name='guiTotal' value={'GUI Total: ' +this.state.totalTransactions[0].guiTotal} onChange={this.handleChange} autoComplete='off' placeholder='GUI Total:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='vice' autoComplete='off' value={this.state.totalTransactions[0].voice} onChange={this.handleChange} placeholder='Call Total:'/>
+                                                <input className='input' type='text' name='callCentar' value={'Call Center: ' +this.state.totalTransactions[0].callCenter} onChange={this.handleChange} autoComplete='off' placeholder='Call Center:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='DIDWW' autoComplete='off' value={this.state.totalTransactions[0].didWw} onChange={this.handleChange} placeholder='DIDWW Total'/>
+                                                <input className='input' type='text' name='promoBox' autoComplete='off' value={'Promo Box: ' +this.state.totalTransactions[0].promoBox} onChange={this.handleChange} placeholder='Promo Box'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='walletTransfer' autoComplete='off' value={'Wallet Transfer: ' +this.state.totalTransactions[0].walletTransfer} onChange={this.handleChange} placeholder='Wallet Transfer'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='telekom' autoComplete='off' value={'Telekom: ' +this.state.totalTransactions[0].telekom} onChange={this.handleChange} placeholder='Telekom'/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div className="col-lg-4">
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='messaging' autoComplete='off' value={'Messaging Total: '+this.state.totalTransactions[0].messaging} onChange={this.handleChange} placeholder='Messaging Total:'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='vice' autoComplete='off' value={'Call Total: '+this.state.totalTransactions[0].voice} onChange={this.handleChange} placeholder='Call Total:'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='DIDWW' autoComplete='off' value={'DIDWW Total: '+this.state.totalTransactions[0].didWw} onChange={this.handleChange} placeholder='DIDWW Total'/>
                                             </div>
                                             <div className='form-group billing-input'>
                                                 <div className="row">
