@@ -368,10 +368,22 @@ class CustomerBilling extends Component {
     };
 
     componentWillMount() {
+        if(sessionStorage.getItem('billing_user_id') !== ''){
 
-        this.setState({
-            activeAndDeactivation:sessionStorage.getItem('vs_active')
-        });
+            read_vs_active(sessionStorage.getItem('billing_user_id')).then(result => {
+                sessionStorage.setItem("vs_active",result['data']);
+
+                this.setState({
+                    activeAndDeactivation: sessionStorage.getItem("vs_active")
+                });
+
+            });
+
+        } else {
+            this.setState({
+                activeAndDeactivation: false
+            });
+        }
 
         this.setState({
             number: (sessionStorage.getItem('number'))?sessionStorage.getItem('number'):'',
@@ -758,14 +770,6 @@ class CustomerBilling extends Component {
            [e.target.name] : e.target.value
         });
 
-        if( e.target.name === "activeAndDeactivation" ){
-
-            this.setState({
-                activeAndDeactivation : !this.state.activeAndDeactivation,
-            });
-
-        }
-
         if( e.target.name === "duration_active" ){
 
             this.setState({
@@ -1046,15 +1050,19 @@ class CustomerBilling extends Component {
                 sessionStorage.setItem("vs_active",result['data']);
 
                 this.setState({
-                    activeAndDeactivation: result['data']
+                    activeAndDeactivation: sessionStorage.getItem("vs_active")
                 });
+
+                $(this.modal2).hide();
 
             });
 
         }else {
             this.setState({
                 activeAndDeactivation: false
-            })
+            });
+            sessionStorage.setItem("vs_active",false);
+
         }
 
         if(this.state.password_active !== '' && this.state.searchData[0].user_id !== ''){
@@ -1065,10 +1073,14 @@ class CustomerBilling extends Component {
 
                     if(result.success === true){
 
+                        this.setState({
+                            password_active:''
+                        });
+
                         store.addNotification({
                             title: 'Deactivation / Activation',
                             message: 'true',
-                            type: 'warning',                         // 'default', 'success', 'info', 'warning'
+                            type: 'success',                         // 'default', 'success', 'info', 'warning'
                             container: 'top-right',                // where to position the notifications
                             animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                             animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
@@ -1178,13 +1190,8 @@ class CustomerBilling extends Component {
                         sessionStorage.setItem("vs_active",result['data']);
 
                         this.setState({
-                            activeAndDeactivation: result['data']
+                            activeAndDeactivation: sessionStorage.getItem("vs_active")
                         });
-
-                        this.setState({
-                            activeAndDeactivation: sessionStorage.getItem('vs_active')
-                        });
-
 
                     });
 
@@ -1305,7 +1312,6 @@ class CustomerBilling extends Component {
         if(this.state.redirect){
             return <Redirect to={'/'} />
         }
-
 
         const wallet_transaction = (this.state.searchData[0].user_id)? false : true ;
 
@@ -1503,14 +1509,27 @@ class CustomerBilling extends Component {
                                 <h6 className="content-title">Deactivation / Activation</h6>
                                 <hr/>
                                 <form method="post">
-                                    <div className="form-group billing-input">
-                                        <ul className="unstyled">
-                                            <li>
-                                                <input className="styled-checkbox input" defaultChecked={this.state.activeAndDeactivation === 'true'?'checked':''}  value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"
-                                                       type="checkbox" />
-                                                    <label htmlFor="activeAndDeactivation"> Active</label>
-                                            </li>
-                                        </ul>
+                                    {/*<div className="form-group billing-input">*/}
+                                        {/*<ul className="unstyled">*/}
+                                            {/*<li>*/}
+                                                {/*<input className="styled-checkbox input" defaultChecked={this.state.activeAndDeactivation === 'true'?'checked':''}  value={this.state.activeAndDeactivation} onChange={this.handleChange} name='activeAndDeactivation' id="activeAndDeactivation"*/}
+                                                       {/*type="checkbox" />*/}
+                                                    {/*<label htmlFor="activeAndDeactivation"> Active</label>*/}
+                                            {/*</li>*/}
+                                        {/*</ul>*/}
+                                    {/*</div>*/}
+                                    <div className='row'>
+                                        <div className='col-lg-7'>
+                                            <div className='form-group billing-input'>
+                                                <select className={"input input-update form-control true"}  onChange={this.handleChange} value={this.state.activeAndDeactivation} name='activeAndDeactivation'>
+                                                    <option value="true">true</option>
+                                                    <option value="false">false</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-5'>
+                                            <p className="content-title">Active</p>
+                                        </div>
                                     </div>
                                     <div className='form-group billing-input'>
                                         <input className='input' type='password' autoComplete='off' value={this.state.password_active} onChange={this.handleChange} name='password_active'  placeholder='Password:'/>

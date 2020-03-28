@@ -224,3 +224,13 @@ h6{
 
 .box .info p {color:#BBB}
 
+.true {
+    color: green !important;
+}
+
+.false {
+    color: red !important;
+
+}
+
+
