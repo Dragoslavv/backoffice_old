@@ -405,13 +405,10 @@ class Navigation extends Component {
                                         Log</Link>
                                 </li>
                             }
-                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
-
-                                <li className='shadow'>
-                                    <Link to="/message-log" title="Message Log"><i className="fa fa-angle-right"></i>Message
-                                        Log</Link>
-                                </li>
-                            }
+                            <li className='shadow'>
+                                <Link to="/message-log" title="Message Log"><i className="fa fa-angle-right"></i>Message
+                                    Log</Link>
+                            </li>
                             {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.cdr ? "active shadow" : "shadow"}>
