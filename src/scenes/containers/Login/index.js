@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom';
 import './../../stayles/Login.css';
 import {login, verify_number} from "../../components/UserFunctions";
 import localForages from "localforage";
-import logo from "../../images/logo-white.png";
+import logo from "../../images/logo-blue.png";
 import {Redirect} from "react-router-dom";
 
 class Login extends Component {
@@ -253,7 +253,7 @@ class Login extends Component {
                             <img src={logo} alt='globaltel-logo' width='180' />
                         </div>
                         { this.state.verify_login?
-                            <div className='login-box wrap-border'>
+                            <div className='login-box '>
                                 <form noValidate style={this.state.from} className='m-3'>
                                     {this.state.messageShow ?
                                     <div className="form-group row alert alert-warning" role="alert">
@@ -284,7 +284,7 @@ class Login extends Component {
                                         {this.state.verify_pinError ? <div className="error-message">Phone Number is a required field.</div> : ''}
                                     </div>
                                     <div className='form-group row'>
-                                        <button className='btn btn-block btn-outline-light' disabled={!this.validatePin()} onClick={this.handleClickVerify} type='submit' >Verify</button>
+                                        <button className='btn btn-block btn-outline-success' disabled={!this.validatePin()} onClick={this.handleClickVerify} type='submit' >Verify</button>
                                     </div>
                                 </form>
                             </div>

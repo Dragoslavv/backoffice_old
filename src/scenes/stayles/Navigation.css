@@ -30,8 +30,8 @@ div.dataTables_wrapper div.dataTables_filter input{
 .wrap-border{
     border-radius: 6px;
     padding: 10px;
-    -moz-box-shadow: 0 0 20px #000000;
-    -webkit-box-shadow: 0 0 20px #000000;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
 }
 
 table {

@@ -2,7 +2,7 @@ body {
     padding: 50px;
     /*background-image: url(../../scenes/images/mastercard__header_bg.png) !important;*/
     text-align: center;
-    background-color: #f6f9fc !important;
+    background-color: #fff !important;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -38,39 +38,89 @@ body {
     border: 1px solid rgba(36, 41, 44, 0.9) !important;
 }
 
-.input {
-    width: 100%;
-    border-radius: 4px;
-    color: #2f323a;
-    background-color: transparent;
-    border: 1px solid #8e8e8e;
-    padding: 5px !important;
-    font-size: 14px;
-}
+/*.input {*/
+    /*width: 100%;*/
+    /*border-radius: 4px;*/
+    /*color: #2f323a;*/
+    /*background-color: transparent;*/
+    /*border: 1px solid #8e8e8e;*/
+    /*padding: 5px !important;*/
+    /*font-size: 14px;*/
+/*}*/
 
 .input:focus {
     box-shadow: none;
 }
+.input {
+    background: transparent;
+    width: 100%;
+    /*border: 1px solid #dfe1e5;*/
+    color: rgba(0,0,0,.87);
+    border-radius: 8px;
+    padding: 5px !important;
+    font-size: 14px !important;
+    outline: none;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+.input:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.input:focus {
+    background-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
 
 .form-control {
     background: transparent !important;
-    border: 1px solid #8e8e8e !important;
+    border: 1px solid #dfe1e5 !important;
+    border-radius: 8px !important;
     height: calc(1.5em + .20rem + 2px) !important;
 }
+select:focus{
+    background-color: rgba(223,225,229,0) !important;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) !important;
+    border-color: rgba(223,225,229,0) !important;
+    outline: none !important;
 
+}
 .input-login {
-    background: #fff;
+    background: transparent;
     width: 100%;
     padding: 7px;
-    border: 1px solid #8e8e8e;
-    color: #3E3E3E;
+    border: 1px solid #dfe1e5;
+    color: rgba(0,0,0,.87);
     border-radius: 8px;
+}
+.input-login:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.input-login:focus {
+    background-color: rgba(223,225,229,0);
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
 }
 /** validate input fields **/
 
 .error input[type=text] {
     background-color: #fce4e4;
     border: 1px solid #cc0033;
+    outline: none;
+}
+
+input[type=text] {
+    outline: none;
+}
+
+input[type=password] {
+    outline: none;
+}
+input[type=number] {
     outline: none;
 }
 
@@ -101,14 +151,19 @@ a{
     box-shadow: 0 0 10px rgba(0, 0, 0, .15);}
 
 .login-box{
-    border: 1px solid #ddd;
+    border: 1px solid #dfe1e5;
     border-radius: 8px;
     padding: 15px;
     display: block;
-    -webkit-box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
-    -moz-box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
-    box-shadow: 15px 10px 41px -13px rgba(0,0,0,0.81);
-    background: linear-gradient(90deg,#66686d,rgba(3,3,3,.76234243697479) 72%);
+}
+
+.login-box:hover {
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+    border-color: rgba(223,225,229,0);
+}
+
+.form-group{
+    margin-bottom: 0.4rem !important;
 }
 
 .login-box-none{
