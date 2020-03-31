@@ -263,13 +263,13 @@ class StatisticNumbers extends Component {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
-                            <li className="breadcrumb-item active" aria-current="page">Hourly Messaging</li>
+                            <li className="breadcrumb-item active" aria-current="page">Statistic</li>
                         </ol>
                     </nav>
                     <div className="row mb-4">
                         <div className="col-lg-2  mb-3">
                             <div className='wrap-border table-col-gui mb-5'>
-                                <h6 className="content-title">Hourly</h6>
+                                <h6 className="content-title">Search</h6>
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>

@@ -240,7 +240,7 @@ a:focus {
     margin-left: 25px;
     margin-right: 25px;
     margin-bottom: 3px;
-    background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgba(3,3,3,3) 72%);
+    background: linear-gradient(90deg, rgba(47,50,58,1) 0%, rgb(118, 119, 118) 72%);
     /*background-color: rgba(47,50,58,1) !important;*/
 } 
 .sidebar-nav-second > li > a:hover,

@@ -233,4 +233,7 @@ h6{
 
 }
 
-
+.list-group-item{
+    background-color: transparent !important;
+    padding:2px !important;
+}

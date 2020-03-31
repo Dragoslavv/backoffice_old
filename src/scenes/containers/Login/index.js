@@ -272,7 +272,7 @@ class Login extends Component {
                                         {this.state.numberError ? <div className="error-message">Phone Number is a required field.</div> : ''}
                                     </div>
                                     <div className='form-group row'>
-                                        <button className='btn btn-block btn-outline-success' disabled={!this.validate()} type='submit' onClick={this.submitForm} >Log In</button>
+                                        <button className='btn btn-block btn-outline-success btn-login-from' disabled={!this.validate()} type='submit' onClick={this.submitForm} >Log In</button>
                                     </div>
                                 </form>
                             </div>
@@ -284,7 +284,7 @@ class Login extends Component {
                                         {this.state.verify_pinError ? <div className="error-message">Phone Number is a required field.</div> : ''}
                                     </div>
                                     <div className='form-group row'>
-                                        <button className='btn btn-block btn-outline-success' disabled={!this.validatePin()} onClick={this.handleClickVerify} type='submit' >Verify</button>
+                                        <button className='btn btn-block btn-outline-success btn-login-from' disabled={!this.validatePin()} onClick={this.handleClickVerify} type='submit' >Verify</button>
                                     </div>
                                 </form>
                             </div>

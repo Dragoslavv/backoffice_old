@@ -606,7 +606,7 @@ class PackageDefault extends Component {
                         </div>
                         <div className="col-lg-9">
                             <div className='wrap-border table-col-gui'>
-                                <button className="btn btn-block btn-outline-light" id='copy_package_button' disabled={this.state.checkCopy} onClick={this.handleCopyPackageButton} type="submit">Copy Package</button>
+                                <button className="btn btn-block btn-outline-info" id='copy_package_button' disabled={this.state.checkCopy} onClick={this.handleCopyPackageButton} type="submit">Copy Package</button>
 
                                 <PackageFirstTable search={this.state.search} onOpen={this.handleOpen} data={
                                     {

@@ -38,16 +38,11 @@ body {
     border: 1px solid rgba(36, 41, 44, 0.9) !important;
 }
 
-/*.input {*/
-    /*width: 100%;*/
-    /*border-radius: 4px;*/
-    /*color: #2f323a;*/
-    /*background-color: transparent;*/
-    /*border: 1px solid #8e8e8e;*/
-    /*padding: 5px !important;*/
-    /*font-size: 14px;*/
-/*}*/
-
+.btn-login-from{
+    border-radius: 8px !important;
+    box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28) !important;
+    border-color: rgba(223,225,229,0) !important;
+}
 .input:focus {
     box-shadow: none;
 }
