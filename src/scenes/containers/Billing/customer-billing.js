@@ -1334,7 +1334,7 @@ class CustomerBilling extends Component {
                             return (<div key={0} className='row '>
                                 <div className='col-lg-3 mb-3'>
                                     <div className='wrap-border table-col-gui '>
-                                        <div className="box wrap-border">
+                                        <div className="box ">
                                             <i className="fa fa-envelope fa-fw bg-primary"></i>
                                             <div className="info">
                                                 <h3>{item.messaging}</h3> <span>Messaging</span>
@@ -1344,7 +1344,7 @@ class CustomerBilling extends Component {
                                 </div>
                                 <div className='col-lg-3 mb-3'>
                                     <div className='wrap-border table-col-gui '>
-                                        <div className="box wrap-border">
+                                        <div className="box ">
                                             <i className="fa fa-file fa-fw bg-info"></i>
                                             <div className="info">
                                                 <h3>{item.data}</h3> <span>Data</span>
@@ -1354,7 +1354,7 @@ class CustomerBilling extends Component {
                                 </div>
                                 <div className='col-lg-3 mb-3'>
                                     <div className='wrap-border table-col-gui '>
-                                        <div className="box wrap-border">
+                                        <div className="box ">
                                             <i className="fa fa-users fa-fw bg-success"></i>
                                             <div className="info">
                                                 <h3>{item.total}</h3> <span>Active Users</span>
@@ -1364,7 +1364,7 @@ class CustomerBilling extends Component {
                                 </div>
                                 <div className='col-lg-3 mb-3'>
                                     <div className='wrap-border table-col-gui '>
-                                        <div className="box wrap-border">
+                                        <div className="box ">
                                             <i className="fa fa-microphone fa-fw bg-danger"></i>
                                             <div className="info">
                                                 <h3>{item.voice}</h3> <span>Voice</span>
