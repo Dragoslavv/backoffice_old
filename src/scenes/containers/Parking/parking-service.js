@@ -598,10 +598,10 @@ class ParkingService extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" id='parking_click' onClick={this.handleClick} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

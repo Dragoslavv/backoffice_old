@@ -218,7 +218,7 @@ class CardTransaction extends Component {
                                     <div className='col-lg-6'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="cardStatus" value={this.state.cardStatus} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="cardStatus" value={this.state.cardStatus} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="WAIT BANT RESPONSE">WAIT BANT RESPONSE</option>
                                                     <option value="SUCCESS">SUCCESS</option>
@@ -233,10 +233,10 @@ class CardTransaction extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>

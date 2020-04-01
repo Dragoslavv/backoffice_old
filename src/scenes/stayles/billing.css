@@ -40,7 +40,7 @@
 
 .wallet td, .wallet th {
     /*padding-left:2%;*/
-    font-size: 10px !important;
+    font-size: 13px !important;
     text-transform: uppercase;
     padding: .35rem !important;
     background: hsla(210, 50%, 98%, 0.86)!important;
@@ -51,26 +51,26 @@
 /* Background-color of the odd rows */
 .wallet tr:nth-child(odd) {
     background: linear-gradient(90deg,#2f323a00,rgba(3,3,3,.76234243697479) 72%)!important;
-    font-size: 10px !important;
+    font-size: 13px !important;
 
 }
 
 /* Background-color of the even rows */
 .wallet tr:nth-child(even) {
     background-color: rgba(122, 122, 122,0.5) !important;
-    font-size: 10px !important;
+    font-size: 13px !important;
 
 }
 
 .wallet th {
     background-color: #22242a;
     color: #fba1a1;
-    font-size: 10px !important;
+    font-size: 13px !important;
     text-transform: uppercase;
     padding: 13px;
 }
 
-.wallet td:first-child { color: hsla(0, 18%, 59%, 0.9); font-weight: 900;     font-size: 10px !important;
+.wallet td:first-child { color: hsla(0, 18%, 59%, 0.9); font-weight: 900;     font-size: 13px !important;
 }
 
 .wallet tr:hover {

@@ -314,10 +314,10 @@ class MessageBulk extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" id='search_bulk' onClick={this.handleSearchBulk} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" id='search_bulk' onClick={this.handleSearchBulk} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -347,10 +347,10 @@ class MessageBulk extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClear}  type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleClear}  type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleAddBulk}  type="submit">Add</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleAddBulk}  type="submit">Add</button>
                                             </div>
                                         </div>
                                     </div>
@@ -387,10 +387,10 @@ class MessageBulk extends Component {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-outline-light"
+                                    <button type="button" className="btn btn-outline-info btn-login-from"
                                             data-dismiss="modal" onClick={this.handleCancel} >Cancel
                                     </button>
-                                    <button type="button" className="btn btn-outline-light"
+                                    <button type="button" className="btn btn-outline-success btn-login-from"
                                             data-dismiss="modal" onClick={this.handleSave} >Save
                                     </button>
                                 </div>

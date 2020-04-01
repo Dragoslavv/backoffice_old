@@ -168,7 +168,7 @@ class CdrLog extends Component {
                                                 <input className='input' type='datetime-local' name='endLog' value={this.state.endLog} onChange={this.handleChanges} autoComplete='off' placeholder='End:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="brand" value={this.state.brand} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="brand" value={this.state.brand} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="Big River">Big River</option>
                                                     <option value="EASY SIM">EASY SIM</option>
@@ -186,7 +186,7 @@ class CdrLog extends Component {
                                     <div className='col-lg-4'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="disposition" value={this.state.disposition} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="disposition" value={this.state.disposition} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="ABANDOM">ABANDOM</option>
                                                     <option value="ABORT">ABORT</option>
@@ -210,7 +210,7 @@ class CdrLog extends Component {
                                                 </select>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="route" value={this.state.route} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="route" value={this.state.route} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="aws_asterisk">aws_asterisk</option>
                                                     <option value="bahrein">bahrein</option>
@@ -237,7 +237,7 @@ class CdrLog extends Component {
                                                 </select>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="call_type" value={this.state.call_type} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="call_type" value={this.state.call_type} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="app2app">app2app</option>
                                                     <option value="app2tel">app2tel</option>
@@ -278,10 +278,10 @@ class CdrLog extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success" id="cdrLogSearch" onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" id="cdrLogSearch" onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>

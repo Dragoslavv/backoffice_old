@@ -255,7 +255,7 @@ class Hourly extends Component {
                                         <input className='input' type='date' name='day' value={this.state.day} onChange={this.handleChange} autoComplete='off' placeholder='Date:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="direction" value={this.state.direction} onChange={this.handleChange}>
+                                        <select className="input form-control" name="direction" value={this.state.direction} onChange={this.handleChange}>
                                             <option value="">ALL</option>
                                             <option value="APP">APP</option>
                                             <option value="SMS">SMS</option>
@@ -263,7 +263,7 @@ class Hourly extends Component {
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="brand" value={this.state.brand} onChange={this.handleChange}>
+                                        <select className="input form-control" name="brand" value={this.state.brand} onChange={this.handleChange}>
                                             <option value="">ALL</option>
                                             <option value="1">Virtual SIM</option>
                                             <option value="2">Pink MOBILE</option>
@@ -274,7 +274,7 @@ class Hourly extends Component {
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="message_type" value={this.state.message_type} onChange={this.handleChange}>
+                                        <select className="input form-control" name="message_type" value={this.state.message_type} onChange={this.handleChange}>
                                             <option value="">ALL</option>
                                             <option value="1">user messages</option>
                                             <option value="0">system messages</option>
@@ -283,7 +283,7 @@ class Hourly extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>

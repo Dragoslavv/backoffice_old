@@ -368,10 +368,10 @@ class Profile extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleUpdate} type="submit">Update</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleUpdate} type="submit">Update</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleCancel} type="submit">Cancel</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleCancel} type="submit">Cancel</button>
                                             </div>
                                         </div>
                                     </div>
@@ -416,10 +416,10 @@ class Profile extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClear} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleClear} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleCreateUsers}  type="submit">Create</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" disabled={!this.validate()} onClick={this.handleCreateUsers}  type="submit">Create</button>
                                             </div>
                                         </div>
                                     </div>

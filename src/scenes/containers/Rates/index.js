@@ -231,7 +231,7 @@ class Rates extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleRest} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleRest} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>

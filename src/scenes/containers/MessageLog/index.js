@@ -141,10 +141,10 @@ class MessageLog extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleClick} id='message-log' type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id='message-log' type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -159,7 +159,7 @@ class MessageLog extends Component {
                                                 <input className='input' type='text' name='toNo' value={this.state.toNo} onChange={this.handleChanges} autoComplete='off' placeholder='To No:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="type" value={this.state.type} onChange={this.handleChanges}>
+                                                <select className="input form-control" name="type" value={this.state.type} onChange={this.handleChanges}>
                                                     <option value="">ALL</option>
                                                     <option value="2">Incoming sms</option>
                                                     <option value="1">Outgoing sms</option>

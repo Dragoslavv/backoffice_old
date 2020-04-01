@@ -151,7 +151,7 @@ class Numbers extends Component {
                                     <div className='col-lg-6'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="brand" value={this.state.brand} onChange={this.handleChange}>
+                                                <select className="input form-control" name="brand" value={this.state.brand} onChange={this.handleChange}>
                                                     <option value="">ALL</option>
                                                     <option value="Big River">Big River</option>
                                                     <option value="EASY SIM">EASY SIM</option>
@@ -170,10 +170,10 @@ class Numbers extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                        <button className="btn btn-block btn-login-from btn-outline-info" type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success" id='numbers-search' onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-login-from btn-outline-success" id='numbers-search' onClick={this.handleClick} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>

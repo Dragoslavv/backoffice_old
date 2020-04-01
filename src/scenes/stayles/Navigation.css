@@ -196,7 +196,7 @@ a:focus {
     color: #aeb2b7;
     text-decoration: none;
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     outline: none;
 }
 .sidebar-nav > li a {
@@ -232,7 +232,7 @@ a:focus {
     line-height: 42px;
 }
 .sidebar-nav-second > li a {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 35px;
     height: 35px;
     transition: all 0.3s ease;

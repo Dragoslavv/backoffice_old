@@ -645,10 +645,10 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleSearchTotal} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleSearchTotal} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -667,10 +667,10 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success"  onClick={this.handleSearchTotalHourly} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from"  onClick={this.handleSearchTotalHourly} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -692,10 +692,10 @@ class Statistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success"  onClick={this.handleTotalChart} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from"  onClick={this.handleTotalChart} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

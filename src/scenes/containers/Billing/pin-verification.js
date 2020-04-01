@@ -146,7 +146,7 @@ class PinVerification extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <button className="btn btn-block btn-outline-success" onClick={this.handleSearchPin} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleSearchPin} type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>

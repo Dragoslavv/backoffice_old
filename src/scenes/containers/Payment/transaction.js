@@ -329,7 +329,7 @@ class Transaction extends Component {
                                         <input className='input' type='datetime-local' min="1000-01-01" value={this.state.end_log} onChange={this.handleChange} autoComplete='off' name='end_log' id='end_log'  placeholder='End:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="paymentType" id='paymentType' placeholder='Payment Type' value={this.state.paymentType} onChange={this.handleChange}>
+                                        <select className="input form-control" name="paymentType" id='paymentType' placeholder='Payment Type' value={this.state.paymentType} onChange={this.handleChange}>
                                             <option value="">ALL</option>
                                             <option value="6">Google Play</option>
                                             <option value="7">iTunes</option>
@@ -341,7 +341,7 @@ class Transaction extends Component {
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="billingType" id='billingType' placeholder='Billing Type' value={this.state.billingType} onChange={this.handleChange}>
+                                        <select className="input form-control" name="billingType" id='billingType' placeholder='Billing Type' value={this.state.billingType} onChange={this.handleChange}>
                                             <option value="">Billing Type</option>
                                             <option value="12">Messaging</option>
                                             <option value="4">Gui</option>
@@ -358,10 +358,10 @@ class Transaction extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset}  type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset}  type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.onClickTransaction} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.onClickTransaction} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>
@@ -425,7 +425,7 @@ class Transaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <CsvDownload data={this.state.totalTransactions} target="_parent" filename={"export-payment.csv"}  className="btn btn-block btn-outline-success" > Export Payment </CsvDownload>
+                                                        <CsvDownload data={this.state.totalTransactions} target="_parent" filename={"export-payment.csv"}  className="btn btn-block btn-outline-success btn-login-from" > Export Payment </CsvDownload>
                                                     </div>
                                                 </div>
                                             </div>

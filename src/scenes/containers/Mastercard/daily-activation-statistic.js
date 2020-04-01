@@ -350,10 +350,10 @@ class DailyActivationStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleResetFilter} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleResetFilter} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleDailyFilter} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleDailyFilter} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>

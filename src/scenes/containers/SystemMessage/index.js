@@ -404,10 +404,10 @@ class SystemMessage extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleClear} type="submit">Clear</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleClear} type="submit">Clear</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" disabled={!this.validate()} onClick={this.handleCreateMessage} type="submit">Create</button>
                                             </div>
                                         </div>
                                     </div>
@@ -445,10 +445,10 @@ class SystemMessage extends Component {
                                     <div className="form-group">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handlleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handlleReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} id="search_sys" type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id="search_sys" type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

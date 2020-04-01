@@ -29,7 +29,7 @@ class CustomerBilling extends Component {
         super(props);
 
         let currently = new Date();
-        let dd = String(currently.getDate()).padStart(2, '0') ;
+        let dd = String(currently.getDate()).padStart(2, '0') -1;
         let mm = String(currently.getMonth() + 1).padStart(2, '0');
         let yyyy = currently.getFullYear();
 
@@ -86,7 +86,7 @@ class CustomerBilling extends Component {
             active_sim_pack:false,
             action_add: '',
             new_number: '',
-            day_active:'2020-03-31',
+            day_active:currently,
             active_users_currently:[]
         };
 
@@ -1398,10 +1398,10 @@ console.log(this.state.active_users_currently);
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6 mb-3">
-                                                    <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={!this.validate()} onClick={this.handleSearch} type="submit">Search</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.handleReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset} type="submit">Reset</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1464,7 +1464,7 @@ console.log(this.state.active_users_currently);
                                         <input className='input' onChange={this.handleChange} type='number' name='amount' value={this.state.amount} autoComplete='off' placeholder='Amount:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" onChange={this.handleChange} value={this.state.account}  name="account">
+                                        <select className="input " onChange={this.handleChange} value={this.state.account}  name="account">
                                             <option value="">choose...</option>
                                             <option value="0">cash</option>
                                             <option value="1">data</option>
@@ -1493,7 +1493,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleAddRemoveCredit} type="submit">Proceed</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleAddRemoveCredit} type="submit">Proceed</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1521,7 +1521,7 @@ console.log(this.state.active_users_currently);
                                     <div className='row'>
                                         <div className='col-lg-7'>
                                             <div className='form-group billing-input'>
-                                                <select className={"input input-update form-control true"}  onChange={this.handleChange} value={this.state.activeAndDeactivation} name='activeAndDeactivation'>
+                                                <select className={"input  true"}  onChange={this.handleChange} value={this.state.activeAndDeactivation} name='activeAndDeactivation'>
                                                     <option value="true">true</option>
                                                     <option value="false">false</option>
                                                 </select>
@@ -1538,7 +1538,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal2" disabled={wallet_transaction} onClick={this.handleShowModalActive} type="submit">Proceed</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" data-toggle="modal" data-target="#modal2" disabled={wallet_transaction} onClick={this.handleShowModalActive} type="submit">Proceed</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1553,14 +1553,14 @@ console.log(this.state.active_users_currently);
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" name="subscription" value={this.state.subscription} onChange={this.handleChange}>
+                                        <select className="input " name="subscription" value={this.state.subscription} onChange={this.handleChange}>
                                             <option value="">Subscription</option>
                                             <option value="200">postpaid</option>
                                             <option value="300">prepaid</option>
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" name="plan" value={this.state.plan} onChange={this.handleChange}>
+                                        <select className="input " name="plan" value={this.state.plan} onChange={this.handleChange}>
                                             <option value="">Plan</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -1576,7 +1576,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleSubscription} type="submit">Activate</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleSubscription} type="submit">Activate</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1591,7 +1591,7 @@ console.log(this.state.active_users_currently);
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" name="package_du_active" value={this.state.package_du_active} onChange={this.handleChange}>
+                                        <select className="input " name="package_du_active" value={this.state.package_du_active} onChange={this.handleChange}>
                                             <option value="">Package</option>
                                             {this.state.dist_pack.map(function (item) {
 
@@ -1613,7 +1613,7 @@ console.log(this.state.active_users_currently);
                                                 </ul>
                                             </div>
                                             <div className="col-lg-5">
-                                                <select className="input input-update form-control" name="duration_select" disabled={this.state.duration_active?false:true} value={this.state.duration_select} onChange={this.handleChange}>
+                                                <select className="input" name="duration_select" disabled={this.state.duration_active?false:true} value={this.state.duration_select} onChange={this.handleChange}>
                                                     <option value=""></option>
                                                     {this.state.dist_duration.map(function (item) {
 
@@ -1629,7 +1629,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleActivatePackage} type="submit">Activate</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleActivatePackage} type="submit">Activate</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1644,7 +1644,7 @@ console.log(this.state.active_users_currently);
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update form-control" value={this.state.action_add} name="action_add" onChange={this.handleChange}>
+                                        <select className="input" value={this.state.action_add} name="action_add" onChange={this.handleChange}>
                                             <option value="">Select Actions</option>
                                             <option value="add">Add number</option>
                                             <option value="replace">Replace number</option>
@@ -1658,7 +1658,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" disabled={wallet_transaction} onClick={this.handleAddReplaceTransfer} type="submit">Add/Replace...</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleAddReplaceTransfer} type="submit">Add/Replace...</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1673,7 +1673,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#issuemaster" disabled={wallet_transaction} onClick={this.handleIssue} type="submit">Issue MasterCard</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" data-toggle="modal" data-target="#issuemaster" disabled={wallet_transaction} onClick={this.handleIssue} type="submit">Issue MasterCard</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1690,7 +1690,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#sessionTimeOut" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Transaction</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" data-toggle="modal" data-target="#sessionTimeOut" disabled={wallet_transaction} onClick={this.handleWalletTransaction} type="submit">Transaction</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1705,7 +1705,7 @@ console.log(this.state.active_users_currently);
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" data-toggle="modal" data-target="#verifymaster" disabled={wallet_transaction} onClick={this.handleNortifyUser} type="submit">Nortify user</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -1765,7 +1765,7 @@ console.log(this.state.active_users_currently);
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-outline-secondary"
+                                    <button type="button" className="btn btn-outline-secondary btn-login-from"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>Close
                                     </button>
                                 </div>
@@ -1788,10 +1788,10 @@ console.log(this.state.active_users_currently);
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-outline-secondary"
+                                    <button type="button" className="btn btn-outline-secondary btn-login-from"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-outline-success"
+                                    <button type="button" className="btn btn-outline-success btn-login-from"
                                             data-dismiss="modal" onClick={this.handleActiveAndDeactivation}>Yes
                                     </button>
                                 </div>
@@ -1813,10 +1813,10 @@ console.log(this.state.active_users_currently);
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-outline-secondary"
+                                    <button type="button" className="btn btn-outline-secondary btn-login-from"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-outline-success"
+                                    <button type="button" className="btn btn-outline-success btn-login-from"
                                             data-dismiss="modal" onClick={this.handleVerifyMasterCard}>Yes
                                     </button>
                                 </div>
@@ -1838,10 +1838,10 @@ console.log(this.state.active_users_currently);
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="button" className="btn btn-outline-secondary"
+                                    <button type="button" className="btn btn-outline-secondary btn-login-from"
                                             data-dismiss="modal" onClick={this.handleCloseModal}>No
                                     </button>
-                                    <button type="button" className="btn btn-outline-success"
+                                    <button type="button" className="btn btn-outline-success btn-login-from"
                                             data-dismiss="modal" onClick={this.handleIssueMasterCard}>Yes
                                     </button>
                                 </div>

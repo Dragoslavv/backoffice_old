@@ -271,7 +271,7 @@ class ActiveUsers extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-12">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClick} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>

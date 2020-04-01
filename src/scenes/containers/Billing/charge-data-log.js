@@ -173,7 +173,7 @@ class ChargeDataLog extends Component {
                                         <input className='input' type='datetime-local' min="1000-01-01" value={this.state.end_log} onChange={this.handleChange} autoComplete='off' name='end_log' id='end_log'  placeholder='End:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="type_log" id='type_log' value={this.state.type_log} onChange={this.handleChange}>
+                                        <select className="input form-control" name="type_log" id='type_log' value={this.state.type_log} onChange={this.handleChange}>
                                             <option value="ALL">ALL</option>
                                             <option value="api">api</option>
                                             <option value="auction">auction</option>
@@ -204,10 +204,10 @@ class ChargeDataLog extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" disabled={!this.validate()} onClick={this.onClickChargeLog} type="submit">Search</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" disabled={!this.validate()} onClick={this.onClickChargeLog} type="submit">Search</button>
                                             </div>
                                         </div>
                                     </div>

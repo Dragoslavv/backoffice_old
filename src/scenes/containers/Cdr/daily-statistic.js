@@ -345,7 +345,7 @@ class DailyStatistic extends Component {
                                         <input className='input' type='date' name='end' value={this.state.end} onChange={this.handleChnage} autoComplete='off' placeholder='End:'/>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="account_code_name" value={this.state.account_code_name} onChange={this.handleChnage}>
+                                        <select className="input form-control" name="account_code_name" value={this.state.account_code_name} onChange={this.handleChnage}>
                                             <option value="">ALL</option>
                                             <option value="1">app2app</option>
                                             <option value="2">app2sim</option>
@@ -386,7 +386,7 @@ class DailyStatistic extends Component {
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="type" value={this.state.type} onChange={this.handleChnage}>
+                                        <select className="input form-control" name="type" value={this.state.type} onChange={this.handleChnage}>
                                             <option value="">ALL</option>
                                             <option value="app2telr">app2tel</option>
                                             <option value="tel2app">tel2app</option>
@@ -397,7 +397,7 @@ class DailyStatistic extends Component {
                                         </select>
                                     </div>
                                     <div className='form-group billing-input'>
-                                        <select className="input input-update" name="inType" value={this.state.inType} onChange={this.handleChnage}>
+                                        <select className="input form-control" name="inType" value={this.state.inType} onChange={this.handleChnage}>
                                             <option value="">ALL</option>
                                             <option value="inbound">inbound</option>
                                             <option value="outbound">outbound</option>
@@ -408,10 +408,10 @@ class DailyStatistic extends Component {
                                     <div className="form-group billing-input">
                                         <div className="row">
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-info" onClick={this.onClickReset} type="submit">Reset</button>
+                                                <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.onClickReset} type="submit">Reset</button>
                                             </div>
                                             <div className="col-lg-6">
-                                                <button className="btn btn-block btn-outline-success" onClick={this.handleClickHourly} type="submit">Apply</button>
+                                                <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClickHourly} type="submit">Apply</button>
                                             </div>
                                         </div>
                                     </div>

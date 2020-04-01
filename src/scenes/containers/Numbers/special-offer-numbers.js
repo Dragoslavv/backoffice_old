@@ -163,14 +163,14 @@ class SpecialOfferNumbers extends Component {
                                                 <input className='input' type='text' name='provider' value={this.state.provider} onChange={this.handleChange} autoComplete='off' placeholder='Provider:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="type" value={this.state.type} onChange={this.handleChange}>
+                                                <select className="input form-control" name="type" value={this.state.type} onChange={this.handleChange}>
                                                     <option value="">ALL</option>
                                                     <option value="regular">regular</option>
                                                     <option value="trial">trial</option>
                                                 </select>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <select className="input input-update" name="brand" value={this.state.brand} onChange={this.handleChange}>
+                                                <select className="input form-control" name="brand" value={this.state.brand} onChange={this.handleChange}>
                                                     <option value="">ALL</option>
                                                     <option value="Big River">Big River</option>
                                                     <option value="EASY SIM">EASY SIM</option>
@@ -194,7 +194,7 @@ class SpecialOfferNumbers extends Component {
                                                     <input className='input' type='datetime-local'  name='quarantine' value={this.state.quarantine} onChange={this.handleChange} autoComplete='off' placeholder='Time:'/>
                                                 </div>
                                                 <div className='form-group billing-input'>
-                                                    <select className="input input-update" name="condition" value={this.state.condition} onChange={this.handleChange}>
+                                                    <select className="input form-control" name="condition" value={this.state.condition} onChange={this.handleChange}>
                                                         <option value="">ALL</option>
                                                         <option value=">">YES</option>
                                                         <option value="<">NO</option>
@@ -205,10 +205,10 @@ class SpecialOfferNumbers extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-info" type="submit">Reset</button>
+                                                    <button className="btn btn-block btn-outline-info btn-login-from" type="submit">Reset</button>
                                                 </div>
                                                 <div className="col-lg-6">
-                                                    <button className="btn btn-block btn-outline-success" onClick={this.handleClick} id='offer-number' type="submit">Search</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id='offer-number' type="submit">Search</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -254,7 +254,7 @@ class SpecialOfferNumbers extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-12">
-                                                        <button className="btn btn-block btn-outline-success" type="submit">Send</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" type="submit">Send</button>
                                                     </div>
                                                 </div>
                                             </div>
