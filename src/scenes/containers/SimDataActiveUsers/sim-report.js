@@ -283,7 +283,7 @@ class SimReport extends Component {
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-danger" onClick={this.handleCancelSimReservation} type="submit">Cancel Reservation</button>
+                                                        <button className="btn btn-block btn-danger btn-login-from" onClick={this.handleCancelSimReservation} type="submit">Cancel Reservation</button>
                                                     </div>
                                                 </div>
                                             </div>
