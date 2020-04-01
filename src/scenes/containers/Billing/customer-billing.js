@@ -29,7 +29,7 @@ class CustomerBilling extends Component {
         super(props);
 
         let currently = new Date();
-        let dd = String(currently.getDate()).padStart(2, '0') -1;
+        let dd = String(currently.getDate()).padStart(2, '0') ;
         let mm = String(currently.getMonth() + 1).padStart(2, '0');
         let yyyy = currently.getFullYear();
 
@@ -86,7 +86,7 @@ class CustomerBilling extends Component {
             active_sim_pack:false,
             action_add: '',
             new_number: '',
-            day_active:currently,
+            day_active:'2020-03-31',
             active_users_currently:[]
         };
 
@@ -1314,7 +1314,7 @@ class CustomerBilling extends Component {
         }
 
         const wallet_transaction = (this.state.searchData[0].user_id)? false : true ;
-
+console.log(this.state.active_users_currently);
         return (
 
             <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }  >
