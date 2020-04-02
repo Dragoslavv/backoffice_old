@@ -5,14 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.31f8ffc7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.31f8ffc7.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.aa3dec16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.aa3dec16.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.de5e6108.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.de5e6108.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.6366b10d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.6366b10d.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            <state relative-caret-position="303">
+              <caret line="154" column="29" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -66,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="299" column="44" lean-forward="true" selection-start-line="299" selection-start-column="44" selection-end-line="299" selection-end-column="44" />
+            <state relative-caret-position="300">
+              <caret line="289" column="40" selection-start-line="289" selection-start-column="40" selection-end-line="289" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -75,11 +72,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="461" column="77" selection-start-line="460" selection-start-column="116" selection-end-line="461" selection-end-column="77" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,18 +110,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="328" column="115" selection-start-line="328" selection-start-column="115" selection-end-line="328" selection-end-column="115" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="392" column="92" selection-start-line="392" selection-start-column="92" selection-end-line="392" selection-end-column="92" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -125,18 +134,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="373" column="112" selection-start-line="373" selection-start-column="112" selection-end-line="373" selection-end-column="112" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="397" column="64" selection-start-line="397" selection-start-column="64" selection-end-line="397" selection-end-column="64" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -176,8 +173,8 @@
       <find>.sidebar-nav&gt;li</find>
       <find>.form-control</find>
       <find>active_users_currently</find>
-      <find>.input</find>
       <find>.sidebar-nav &gt; li</find>
+      <find>.input</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -236,10 +233,10 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
       </list>
     </option>
   </component>
@@ -428,6 +425,13 @@
               <item name="senzations" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="senzations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="stayles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -440,7 +444,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esimGui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../callCentarActions" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -516,18 +520,18 @@
       <workItem from="1585331145423" duration="6423000" />
       <workItem from="1585570510683" duration="7026000" />
       <workItem from="1585642118566" duration="6593000" />
-      <workItem from="1585740199688" duration="7506000" />
+      <workItem from="1585740199688" duration="11237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="466169000" />
+    <option name="totallyTimeSpent" value="469900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27505043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27505043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -540,7 +544,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2533512" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2533512" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -587,16 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23910">
           <caret line="1594" column="2" selection-start-line="1594" selection-start-column="2" selection-end-line="1594" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="436" column="69" selection-start-line="436" selection-start-column="69" selection-end-line="436" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,16 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="125" column="100" lean-forward="true" selection-start-line="125" selection-start-column="100" selection-end-line="125" selection-end-column="100" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="109" column="38" lean-forward="true" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -990,13 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -1021,20 +998,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="299" column="44" lean-forward="true" selection-start-line="299" selection-start-column="44" selection-end-line="299" selection-end-column="44" />
+        <state relative-caret-position="175">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        <state relative-caret-position="405">
+          <caret line="461" column="77" selection-start-line="460" selection-start-column="116" selection-end-line="461" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="289" column="40" selection-start-line="289" selection-start-column="40" selection-end-line="289" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/stayles/Login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="154" column="29" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="29" />
         </state>
       </provider>
     </entry>
