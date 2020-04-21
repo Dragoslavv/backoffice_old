@@ -398,13 +398,11 @@ class Navigation extends Component {
                                     </ul>
                                 </li>
                             }
-                            {sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
 
-                                <li className='shadow list-group'>
-                                    <Link to="/cdr-log" className='list-group-item' title="Cdr Log"><i className="fa fa-pencil fa-fw"></i>Cdr
-                                        Log</Link>
-                                </li>
-                            }
+                            <li className='shadow list-group'>
+                                <Link to="/cdr-log" className='list-group-item' title="Cdr Log"><i className="fa fa-pencil fa-fw"></i>Cdr
+                                    Log</Link>
+                            </li>
                             <li className='shadow list-group'>
                                 <Link to="/message-log" className='list-group-item' title="Message Log"><i className="fa fa-envelope-o fa-fw"></i>Message
                                     Log</Link>
