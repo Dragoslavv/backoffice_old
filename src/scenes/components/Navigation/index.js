@@ -395,6 +395,7 @@ class Navigation extends Component {
                                         </li>
                                         <li className='shadow list-group'><Link className='list-group-item' to="/card-transaction">Card Transaction</Link></li>
                                         <li className='shadow list-group'><Link className='list-group-item' to="/ipay-transaction">iPay Transaction</Link></li>
+                                        <li className='shadow list-group'><Link className='list-group-item' to="/ipay-cof-transaction">iPayCof Transaction</Link></li>
                                     </ul>
                                 </li>
                             }

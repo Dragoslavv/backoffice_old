@@ -51,6 +51,7 @@ import MessageBulk from "./scenes/containers/MessageBulk";
 import PinVerification from "./scenes/containers/Billing/pin-verification";
 import DataLimit from "./scenes/containers/Billing/data-limit";
 import {currently_active_users} from "./scenes/components/UserFunctions";
+import IpayCofTransaction from "./scenes/containers/Payment/ipay-cof-transaction";
 
 class App extends Component {
 
@@ -107,6 +108,9 @@ class App extends Component {
                       </Route>
                       <Route exact path="/ipay-transaction">
                           <IpayTransaction />
+                      </Route>
+                      <Route exact path="/ipay-cof-transaction">
+                          <IpayCofTransaction />
                       </Route>
                       <Route exact path="/payment-transaction">
                           <PaymentTransaction />
