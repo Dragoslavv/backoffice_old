@@ -70,7 +70,7 @@ export class IpayConfTransactionsTable extends Component{
                     pagingType: "simple",
 
                     ajax: {
-                        url: 'https://api.globaltel.rs/new-gui/?url=read_Message',
+                        url: 'https://api.globaltel.rs/new-gui/?url=ipay-cof-read',
                         type: 'POST',
                         data:{
                             start_log: this.props.data.start_log,
