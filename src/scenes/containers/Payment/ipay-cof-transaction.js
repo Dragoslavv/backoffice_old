@@ -190,13 +190,13 @@ class IpayCofTransaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='datetime-local' name='endLog' value={this.state.endLog} onChange={this.handleChanges} autoComplete='off' placeholder='End:'/>
                                             </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='userId' value={this.state.userId} onChange={this.handleChanges} autoComplete='off' placeholder='User ID:'/>
-                                            </div>
                                         </form>
                                     </div>
                                     <div className='col-lg-6'>
                                         <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='userId' value={this.state.userId} onChange={this.handleChanges} autoComplete='off' placeholder='User ID:'/>
+                                            </div>
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
@@ -218,9 +218,9 @@ class IpayCofTransaction extends Component {
                             <div className='wrap-border table-col-gui'>
                                 <IpayConfTransactionsTable   search={this.state.cof_sys}  onOpen={this.handleOpen} data={
                                     {
-                                        start_log: this.state.start_log,
-                                        end_log: this.state.end_log,
-                                        user_id: this.state.user_id,
+                                        start_log: this.state.startLog,
+                                        end_log: this.state.endLog,
+                                        user_id: this.state.userId,
                                     }
                                 } />
                             </div>
