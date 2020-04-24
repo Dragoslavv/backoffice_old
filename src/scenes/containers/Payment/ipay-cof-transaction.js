@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {IPayTransactionTable} from "../../components/Table/ipay-transaction-table";
 import {iPayTransaction} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
+import {IpayConfTransactionsTable} from "../../components/Table/ipay-cof-transactions-table";
+import {SystemMessageTable} from "../../components/Table/system-message-table";
 
 class IpayCofTransaction extends Component {
     constructor(props){
@@ -21,19 +22,22 @@ class IpayCofTransaction extends Component {
             redirect: false,
             startLog: today+'T00:00',
             endLog: today+'T23:59',
-            iPayStatus:'',
             userId:'',
-            transferType:'',
-            iPayTrans:[],
-            iPay_transactions:''
+            cof_sys:false
         };
 
         this.handleChanges = this.handleChanges.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
         this.handleReset = this.handleReset.bind(this);
-        this.handleReset = this.handleReset.bind(this);
-        this.mySubscriberTransactions = this.mySubscriberTransactions.bind(this);
+        this.handleOpen = this.handleOpen.bind(this);
+
+    }
+
+    handleOpen (){
+        this.setState({
+            cof_sys: false
+        });
     }
 
     handleChanges = (e) => {
@@ -42,13 +46,6 @@ class IpayCofTransaction extends Component {
         this.setState({
             [e.target.name] : e.target.value
         });
-    };
-
-    mySubscriberTransactions(msg,dataSet) {
-
-        this.setState({
-            iPay_transactions: dataSet
-        })
     };
 
     handleReset = (e) => {
@@ -65,28 +62,22 @@ class IpayCofTransaction extends Component {
             redirect: false,
             startLog: today+'T00:00',
             endLog: today+'T23:59',
-            iPayStatus:'',
             userId:'',
-            transferType:'',
-            iPayTrans:[]
-        });
+            cof_sys:true
 
-        iPayTransaction(this.state.startLog, this.state.endLog, '', '', '').then(result => {
-            this.setState({
-                iPayTrans: result.data
-            });
         });
     };
 
     handleClick = (e) => {
         e.preventDefault();
 
-        iPayTransaction(this.state.startLog, this.state.endLog, this.state.iPayStatus, this.state.userId, this.state.transferType).then(result => {
-            this.setState({
-                iPayTrans: result.data
-            });
-        });
+        if(e.target.id === 'cof_sys'){
 
+            this.setState({
+                cof_sys:true
+            });
+
+        }
     };
 
     componentDidMount() {
@@ -176,20 +167,6 @@ class IpayCofTransaction extends Component {
             return <Redirect to={'/'} />
         }
 
-        const dataTable = this.state.iPayTrans.map(function (item) {
-
-            return item;
-
-        });
-
-        function TableiPay() {
-            if(dataTable.length > 0){
-                return <IPayTransactionTable data={dataTable} />;
-            } else {
-                return <IPayTransactionTable data='' />
-            }
-        }
-
         return (
             <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
@@ -220,32 +197,13 @@ class IpayCofTransaction extends Component {
                                     </div>
                                     <div className='col-lg-6'>
                                         <form method="post">
-                                            <div className='form-group billing-input'>
-                                                <select className="input form-control" name="transferType" value={this.state.transferType} onChange={this.handleChanges}>
-                                                    <option value="">ALL</option>
-                                                    <option value="1">wallet_to_wallet</option>
-                                                    <option value="2">wallet_to_card</option>
-                                                    <option value="3">voucher</option>
-                                                    <option value="4">card_to_wallet</option>
-                                                    <option value="5">creating_eMony</option>
-                                                </select>
-                                            </div>
-                                            <div className='form-group billing-input'>
-                                                <select className="input form-control" name="iPayStatus" value={this.state.iPayStatus} onChange={this.handleChanges}>
-                                                    <option value="">ALL</option>
-                                                    <option value="BEGIN">BEGIN</option>
-                                                    <option value="CREATED">CREATED</option>
-                                                    <option value="STORNATE">STORNATE</option>
-                                                    <option value="ERROR">ERROR</option>
-                                                </select>
-                                            </div>
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
                                                         <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id="cof_sys" type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -258,7 +216,13 @@ class IpayCofTransaction extends Component {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div className='wrap-border table-col-gui'>
-                                <TableiPay/>
+                                <IpayConfTransactionsTable   search={this.state.cof_sys}  onOpen={this.handleOpen} data={
+                                    {
+                                        start_log: this.state.start_log,
+                                        end_log: this.state.end_log,
+                                        user_id: this.state.user_id,
+                                    }
+                                } />
                             </div>
                         </div>
                     </div>
