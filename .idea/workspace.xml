@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,11 +28,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="459" column="51" lean-forward="true" selection-start-line="459" selection-start-column="51" selection-end-line="466" selection-end-column="33" />
+            <state relative-caret-position="199">
+              <caret line="454" column="39" lean-forward="true" selection-start-line="454" selection-start-column="39" selection-end-line="454" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="205" column="165" selection-start-line="205" selection-start-column="165" selection-end-line="205" selection-end-column="165" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -84,8 +108,8 @@
       <find>.sidebar-nav &gt; li</find>
       <find>.input</find>
       <find>login-bo</find>
-      <find>search_sys</find>
       <find>cof_sys</find>
+      <find>search_sys</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -331,12 +355,12 @@
       <workItem from="1587311863103" duration="599000" />
       <workItem from="1587329133943" duration="599000" />
       <workItem from="1587395462582" duration="599000" />
-      <workItem from="1587407093554" duration="6303000" />
+      <workItem from="1587407093554" duration="7294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="512369000" />
+    <option name="totallyTimeSpent" value="513360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -355,7 +379,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3297587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.16085792" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -834,10 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="217" column="29" selection-start-line="217" selection-start-column="29" selection-end-line="217" selection-end-column="29" />
+        <state relative-caret-position="199">
+          <caret line="454" column="39" lean-forward="true" selection-start-line="454" selection-start-column="39" selection-end-line="454" selection-end-column="39" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -846,18 +870,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="63" column="26" lean-forward="true" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="328">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="459" column="51" lean-forward="true" selection-start-line="459" selection-start-column="51" selection-end-line="466" selection-end-column="33" />
+        <state relative-caret-position="488">
+          <caret line="205" column="165" selection-start-line="205" selection-start-column="165" selection-end-line="205" selection-end-column="165" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

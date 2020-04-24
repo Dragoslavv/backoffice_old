@@ -71,7 +71,7 @@ class IpayCofTransaction extends Component {
     handleClick = (e) => {
         e.preventDefault();
 
-        if(e.target.id === 'cof_sys'){
+        if(e.target.id === 'cof_trans'){
 
             this.setState({
                 cof_sys:true
@@ -203,7 +203,7 @@ class IpayCofTransaction extends Component {
                                                         <button className="btn btn-block btn-outline-info btn-login-from" onClick={this.handleReset} type="submit">Reset</button>
                                                     </div>
                                                     <div className="col-lg-6">
-                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id="cof_sys" type="submit">Search</button>
+                                                        <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id="cof_trans" type="submit">Search</button>
                                                     </div>
                                                 </div>
                                             </div>
