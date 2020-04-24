@@ -38,6 +38,7 @@ class Transaction extends Component {
                 messaging:'',
                 voice:'',
                 didWw:'',
+                iPayCof:'',
             }],
             tableTransactions:[]
         };
@@ -73,6 +74,8 @@ class Transaction extends Component {
                         messaging:(result.data.messaging)?result.data.messaging:'',
                         voice:(result.data.voice)?result.data.voice:'',
                         didWw:(result.data.DIDWW)?result.data.DIDWW:'',
+                        iPayCof:(result.data.iPayCOF)?result.data.iPayCOF:'',
+
                     }],
                 });
 
@@ -134,6 +137,8 @@ class Transaction extends Component {
                         messaging:(result.data.messaging)?result.data.messaging:'',
                         voice:(result.data.voice)?result.data.voice:'',
                         didWw:(result.data.DIDWW)?result.data.DIDWW:'',
+                        iPayCof:(result.data.iPayCOF)?result.data.iPayCOF:'',
+
                     }],
                 });
 
@@ -205,6 +210,8 @@ class Transaction extends Component {
                         messaging:(result.data.messaging)?result.data.messaging:'',
                         voice:(result.data.voice)?result.data.voice:'',
                         didWw:(result.data.DIDWW)?result.data.DIDWW:'',
+                        iPayCof:(result.data.iPayCOF)?result.data.iPayCOF:'',
+
                     }],
                 });
 
@@ -352,6 +359,7 @@ class Transaction extends Component {
                                             <option value="333">PromoBox Cash</option>
                                             <option value="26">Data</option>
                                             <option value="27">CallCentar</option>
+                                            <option value="71">iPayCOF</option>
 
                                         </select>
                                     </div>
@@ -421,6 +429,9 @@ class Transaction extends Component {
                                             </div>
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='DIDWW' autoComplete='off' value={'DIDWW Total: '+this.state.totalTransactions[0].didWw} onChange={this.handleChange} placeholder='DIDWW Total'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='iPayCof' autoComplete='off' value={'iPayCof Total: '+this.state.totalTransactions[0].iPayCof} onChange={this.handleChange} placeholder='iPayCOF Total'/>
                                             </div>
                                             <div className='form-group billing-input'>
                                                 <div className="row">
