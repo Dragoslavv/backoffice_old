@@ -28,8 +28,6 @@ export class IpayConfTransactionsTable extends Component{
                 bLengthChange: false,
                 bPaginate:true,
                 pagingType: "simple",
-
-                sScrollY: "650px",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=ipay-cof-read',
                     type: 'POST',
@@ -78,7 +76,6 @@ export class IpayConfTransactionsTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
-                    sScrollY: "650px",
                     pagingType: "simple",
 
                     ajax: {
