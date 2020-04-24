@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="488">
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="78" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="316">
+              <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -170,8 +170,8 @@
         <option value="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" />
       </list>
     </option>
   </component>
@@ -355,12 +355,12 @@
       <workItem from="1587311863103" duration="599000" />
       <workItem from="1587329133943" duration="599000" />
       <workItem from="1587395462582" duration="599000" />
-      <workItem from="1587407093554" duration="7294000" />
+      <workItem from="1587407093554" duration="8020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="513360000" />
+    <option name="totallyTimeSpent" value="514086000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -868,20 +868,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="488">
+          <caret line="205" column="165" selection-start-line="205" selection-start-column="165" selection-end-line="205" selection-end-column="165" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="205" column="165" selection-start-line="205" selection-start-column="165" selection-end-line="205" selection-end-column="165" />
+        <state relative-caret-position="316">
+          <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

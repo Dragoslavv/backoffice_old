@@ -43,16 +43,7 @@ export class IpayConfTransactionsTable extends Component{
                     { title: "Start datetime"},
                     { title: "End datetime"},
                     { title: "Amount"},
-                    { title: "Status"},
-                    { title: "Txndate processed"},
-                    { title: "Country"},
-                    { title: "Name"},
-                    { title: "Brand"},
-                    { title: "Card Number"},
-                    { title: "Ref number"},
-                    { title: "Bank status"},
-                    { title: "Fail Reason"},
-                    { title: "Exp year"}
+                    { title: "Status"}
                 ]
             }
         );
@@ -89,16 +80,11 @@ export class IpayConfTransactionsTable extends Component{
                     },
                     columns: [
                         { title: "Id"},
-                        { title: "Key"},
-                        { title: "Message"},
-                        { title: "Language"},
-                        { title: "Brand"},
-                        { title: "Script"},
-                        { title: "Action",
-                            targets: -1,
-                            data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="edit_system_message" ><i class="fa fa-edit"></i></button><br/><br/> <button type="button" class="btn btn-danger" id="remove_system_message"><i class="fa fa-times-circle-o" ></i></button></p>`
-                        },
+                        { title: "User id"},
+                        { title: "Start datetime"},
+                        { title: "End datetime"},
+                        { title: "Amount"},
+                        { title: "Status"}
                     ]
                 }
             );
