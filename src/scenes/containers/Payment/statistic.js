@@ -213,7 +213,7 @@ class Statistic extends Component {
             if(result.status === true) {
 
                 const sat = [];
-                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]}];
+                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]},{name: 'iPayCOF',data:[]}];
 
                 result.data.map(function (data) {
                     sat.push(data.sat);
@@ -225,6 +225,8 @@ class Statistic extends Component {
                     series[4]['data'].push(data.TopUp);
                     series[5]['data'].push(data.gui);
                     series[6]['data'].push(data.iTunes);
+                    series[7]['data'].push(data.iPayCOF);
+
                 });
 
                 this.setState({
@@ -270,7 +272,7 @@ class Statistic extends Component {
             if(result.status === true){
 
                 const categories = [];
-                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]}];
+                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]},{name: 'iPayCOF',data:[]}];
 
                 result.data.map(function (data) {
                     categories.push(data.dani);
@@ -282,6 +284,8 @@ class Statistic extends Component {
                     series[4]['data'].push(data.TopUp);
                     series[5]['data'].push(data.gui);
                     series[6]['data'].push(data.iTunes);
+                    series[7]['data'].push(data.iPayCOF);
+
                 });
 
                 this.setState({
@@ -388,7 +392,7 @@ class Statistic extends Component {
             if(result.status === true) {
 
                 const sat = [];
-                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]}];
+                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]},{name: 'iPayCOF',data:[]}];
 
                 result.data.map(function (data) {
                     sat.push(data.sat);
@@ -400,6 +404,8 @@ class Statistic extends Component {
                     series[4]['data'].push(data.TopUp);
                     series[5]['data'].push(data.gui);
                     series[6]['data'].push(data.iTunes);
+                    series[7]['data'].push(data.iPayCOF);
+
                 });
 
                 this.setState({
@@ -434,7 +440,7 @@ class Statistic extends Component {
             if(result.status === true){
 
                 const categories = [];
-                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]}];
+                const series = [{name: 'GooglePlay',data:[]},{name: 'PayPal',data:[]},{name: 'PayPalWeb',data:[]},{name: 'PayPinkAik',data:[]},{name: 'TopUp',data:[]},{name: 'gui',data:[]},{name: 'iTunes',data:[]},{name: 'iPayCOF',data:[]}];
 
                 result.data.map(function (data) {
                     categories.push(data.dani);
@@ -446,6 +452,8 @@ class Statistic extends Component {
                     series[4]['data'].push(data.TopUp);
                     series[5]['data'].push(data.gui);
                     series[6]['data'].push(data.iTunes);
+                    series[7]['data'].push(data.iPayCOF);
+
                 });
 
                 this.setState({
