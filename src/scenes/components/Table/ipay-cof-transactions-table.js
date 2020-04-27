@@ -35,6 +35,8 @@ export class IpayConfTransactionsTable extends Component{
                         start_log: this.props.data.start_log,
                         end_log: this.props.data.end_log,
                         user_id: this.props.data.user_id,
+                        status: this.props.data.status,
+
                     }
                 },
                 columns: [
@@ -76,6 +78,8 @@ export class IpayConfTransactionsTable extends Component{
                             start_log: this.props.data.start_log,
                             end_log: this.props.data.end_log,
                             user_id: this.props.data.user_id,
+                            status: this.props.data.status,
+
                         }
                     },
                     columns: [

@@ -23,7 +23,8 @@ class IpayCofTransaction extends Component {
             startLog: today+'T00:00',
             endLog: today+'T23:59',
             userId:'',
-            cof_sys:false
+            cof_sys:false,
+            status:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -63,8 +64,8 @@ class IpayCofTransaction extends Component {
             startLog: today+'T00:00',
             endLog: today+'T23:59',
             userId:'',
-            cof_sys:true
-
+            cof_sys:true,
+            status:''
         });
     };
 
@@ -197,6 +198,13 @@ class IpayCofTransaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='userId' value={this.state.userId} onChange={this.handleChanges} autoComplete='off' placeholder='User ID:'/>
                                             </div>
+                                            <div className='form-group billing-input'>
+                                                <select className="input " onChange={this.handleChanges} value={this.state.status}  name="status">
+                                                    <option value="">Status</option>
+                                                    <option value="SUCCESS">SUCCESS</option>
+                                                    <option value="ERROR">ERROR</option>
+                                                </select>
+                                            </div>
                                             <div className="form-group billing-input">
                                                 <div className="row">
                                                     <div className="col-lg-6">
@@ -221,6 +229,7 @@ class IpayCofTransaction extends Component {
                                         start_log: this.state.startLog,
                                         end_log: this.state.endLog,
                                         user_id: this.state.userId,
+                                        status: this.state.status,
                                     }
                                 } />
                             </div>
