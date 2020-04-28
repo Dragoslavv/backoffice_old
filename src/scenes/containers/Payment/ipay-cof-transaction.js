@@ -24,7 +24,9 @@ class IpayCofTransaction extends Component {
             endLog: today+'T23:59',
             userId:'',
             cof_sys:false,
-            status:''
+            status:'',
+            total_amount_per_page:'',
+            total_amount:'',
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -214,6 +216,22 @@ class IpayCofTransaction extends Component {
                                                         <button className="btn btn-block btn-outline-success btn-login-from" onClick={this.handleClick} id="cof_trans" type="submit">Search</button>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className='row mb-4'>
+                                    <div className='col-lg-6'>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='total_amount' value={this.state.total_amount} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount:'/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div className='col-lg-6'>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='text' name='total_amount_per_page' value={this.state.total_amount_per_page} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount Per Page:'/>
                                             </div>
                                         </form>
                                     </div>
