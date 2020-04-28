@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
+import PubSub from "pubsub-js";
 
 // require Table
 const $  = require( 'jquery' );
@@ -37,7 +38,10 @@ export class IpayConfTransactionsTable extends Component{
                         user_id: this.props.data.user_id,
                         status: this.props.data.status,
 
-                    }
+                    },
+                },
+                drawCallback:function( settings){
+                    PubSub.publish('totalAmount', settings.json);
                 },
                 columns: [
                     { title: "Id"},
@@ -49,6 +53,7 @@ export class IpayConfTransactionsTable extends Component{
                 ]
             }
         );
+
 
     }
 
@@ -82,6 +87,9 @@ export class IpayConfTransactionsTable extends Component{
 
                         }
                     },
+                    drawCallback:function( settings){
+                        PubSub.publish('totalAmount', settings.json);
+                    },
                     columns: [
                         { title: "Id"},
                         { title: "User id"},
@@ -92,6 +100,8 @@ export class IpayConfTransactionsTable extends Component{
                     ]
                 }
             );
+
+
             this.handleChange();
 
         }

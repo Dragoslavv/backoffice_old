@@ -34,7 +34,7 @@ class IpayCofTransaction extends Component {
         this.sessionGet = this.sessionGet.bind(this);
         this.handleReset = this.handleReset.bind(this);
         this.handleOpen = this.handleOpen.bind(this);
-
+        this.mySubscriberTransactions = this.mySubscriberTransactions.bind(this);
     }
 
     handleOpen (){
@@ -83,8 +83,15 @@ class IpayCofTransaction extends Component {
         }
     };
 
+    mySubscriberTransactions(msg,dataSet) {
+        this.setState({
+            total_amount_per_page: dataSet['limitTenCount'],
+            total_amount: dataSet['totalForPeriod'],
+        });
+    }
+
     componentDidMount() {
-        PubSub.subscribe('iPayTransactions', this.mySubscriberTransactions);
+        PubSub.subscribe('totalAmount', this.mySubscriberTransactions);
 
 
         iPayTransaction(this.state.startLog, this.state.endLog, this.state.iPayStatus, this.state.userId, this.state.transferType).then(result => {
@@ -224,14 +231,14 @@ class IpayCofTransaction extends Component {
                                     <div className='col-lg-6'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='total_amount' value={this.state.total_amount} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount:'/>
+                                                <input className='input' type='text' name='total_amount' value={'Total Amount: '+this.state.total_amount} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount:'/>
                                             </div>
                                         </form>
                                     </div>
                                     <div className='col-lg-6'>
                                         <form method="post">
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='total_amount_per_page' value={this.state.total_amount_per_page} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount Per Page:'/>
+                                                <input className='input' type='text' name='total_amount_per_page' value={'Total Amount Per Page: '+this.state.total_amount_per_page} onChange={this.handleChanges} autoComplete='off' placeholder='Total Amount Per Page:'/>
                                             </div>
                                         </form>
                                     </div>
