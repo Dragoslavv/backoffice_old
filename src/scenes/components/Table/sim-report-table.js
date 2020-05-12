@@ -53,6 +53,10 @@ export class SimReportTable extends Component{
                         data: null,
                         defaultContent:`<p><button type="button" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
                     },
+                    { title: "Voip",
+                        data: null,
+                        defaultContent:`<p><button type="button" class="btn btn-info" id="voip" >Voip</button></p>`
+                    },
                     { title: "Billing ID"},
                     { title: "Activation Time"},
                     { title: "Cash"},
@@ -122,6 +126,10 @@ export class SimReportTable extends Component{
                         { title: "User",
                             data: null,
                             defaultContent:`<p><button type="button" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
+                        },
+                        { title: "Voip",
+                            data: null,
+                            defaultContent:`<p><button type="button" class="btn btn-info" id="voip" >Voip</button></p>`
                         },
                         { title: "Billing ID"},
                         { title: "Activation Time"},
