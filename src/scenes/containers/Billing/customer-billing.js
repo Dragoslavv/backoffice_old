@@ -7,7 +7,7 @@ import {
     activationAndDeactivation,
     addCredit,
     addReplaceTransfer,
-    billingCustomerSearch,
+    billingCustomerSearch, checking_voip,
     currently_active_users,
     distDuration,
     distPack,
@@ -74,6 +74,7 @@ class CustomerBilling extends Component {
             password_credit:'',
             infoCredit:'',
             activeAndDeactivation: false,
+            checking_voip:false,
             password_active:'',
             loading:false,
             subscription: '',
@@ -379,9 +380,19 @@ class CustomerBilling extends Component {
 
             });
 
+            checking_voip(sessionStorage.getItem('billing_user_id')).then(result => {
+                sessionStorage.setItem("vs_active_voip",result['status']);
+
+                this.setState({
+                    checking_voip: sessionStorage.getItem("vs_active_voip")
+                });
+
+            });
+
         } else {
             this.setState({
-                activeAndDeactivation: false
+                activeAndDeactivation: false,
+                checking_voip:false
             });
         }
 
@@ -954,7 +965,8 @@ class CustomerBilling extends Component {
         e.preventDefault();
 
         this.setState({
-            activeAndDeactivation:false
+            activeAndDeactivation:false,
+            checking_voip:false
         });
 
         sessionStorage.setItem("vs_active",false);
@@ -1602,6 +1614,19 @@ console.log(this.state.active_users_currently);
                                             {/*</li>*/}
                                         {/*</ul>*/}
                                     {/*</div>*/}
+                                    <div className='row'>
+                                        <div className='col-lg-7'>
+                                            <div className='form-group billing-input'>
+                                                <select className={"input  true"}  onChange={this.handleChange} value={this.state.checking_voip} name='checking_voip'>
+                                                    <option value="true">true</option>
+                                                    <option value="false">false</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-5'>
+                                            <p className="content-title">Voip</p>
+                                        </div>
+                                    </div>
                                     <div className='row'>
                                         <div className='col-lg-7'>
                                             <div className='form-group billing-input'>

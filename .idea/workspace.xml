@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="661" column="14" selection-start-line="661" selection-start-column="14" selection-end-line="661" selection-end-column="14" />
+            <state relative-caret-position="214">
+              <caret line="379" lean-forward="true" selection-start-line="379" selection-end-line="379" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -54,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="235" column="40" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -75,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="1805" column="21" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="21" />
+            <state relative-caret-position="165">
+              <caret line="1826" column="26" selection-start-line="1826" selection-start-column="13" selection-end-line="1826" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -85,10 +83,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.login</find>
       <find>active</find>
       <find>vs_active</find>
-      <find>activeAndDeactivation</find>
       <find>.wrap</find>
       <find>wrap</find>
       <find>wa</find>
@@ -115,6 +111,8 @@
       <find>width</find>
       <find>id_from_sim_report</find>
       <find>sim_report</find>
+      <find>activeAndDeactivation</find>
+      <find>read_vs_active</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -173,9 +171,9 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
@@ -369,12 +367,12 @@
       <workItem from="1588882012826" duration="598000" />
       <workItem from="1588948790056" duration="668000" />
       <workItem from="1588966885284" duration="917000" />
-      <workItem from="1589273142276" duration="3100000" />
+      <workItem from="1589273142276" duration="4565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="548163000" />
+    <option name="totallyTimeSpent" value="549628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
@@ -867,23 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="1805" column="21" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="235" column="40" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -891,10 +872,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="1826" column="26" selection-start-line="1826" selection-start-column="13" selection-end-line="1826" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="661" column="14" selection-start-line="661" selection-start-column="14" selection-end-line="661" selection-end-column="14" />
+        <state relative-caret-position="214">
+          <caret line="379" lean-forward="true" selection-start-line="379" selection-end-line="379" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

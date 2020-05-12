@@ -1823,3 +1823,24 @@ export const voip_api = (voip_id) => {
         return err;
     });
 };
+
+export const checking_voip = (user_id) => {
+
+    return fetch("http://api.globaltel.rs/new-gui/?url=checking_voip",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "user_id=" + user_id,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
