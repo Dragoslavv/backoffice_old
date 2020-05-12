@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.486460ee.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.486460ee.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.ed75537a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.ed75537a.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="439" selection-start-line="439" selection-end-line="439" />
+            <state relative-caret-position="269">
+              <caret line="661" column="14" selection-start-line="661" selection-start-column="14" selection-end-line="661" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -57,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="299" column="43" lean-forward="true" selection-start-line="299" selection-start-column="43" selection-end-line="299" selection-end-column="43" />
+            <state relative-caret-position="195">
+              <caret line="235" column="40" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="40" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -66,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="434">
+              <caret line="91" column="53" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -78,8 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="157" column="44" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="44" />
+            <state relative-caret-position="269">
+              <caret line="1805" column="21" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -88,8 +85,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.btn-info</find>
-      <find>platform_data</find>
       <find>.login</find>
       <find>active</find>
       <find>vs_active</find>
@@ -118,6 +113,8 @@
       <find>transfer</find>
       <find>action_add</find>
       <find>width</find>
+      <find>id_from_sim_report</find>
+      <find>sim_report</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -165,13 +162,10 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Navigation.css" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/Login.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Login/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -179,15 +173,17 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/ipay-cof-transactions-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="27" />
-    <option name="width" value="1533" />
-    <option name="height" value="873" />
+    <option name="y" value="-2" />
+    <option name="width" value="1920" />
+    <option name="height" value="1082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -373,15 +369,16 @@
       <workItem from="1588882012826" duration="598000" />
       <workItem from="1588948790056" duration="668000" />
       <workItem from="1588966885284" duration="917000" />
-      <workItem from="1589273142276" duration="478000" />
+      <workItem from="1589273142276" duration="3100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545541000" />
+    <option name="totallyTimeSpent" value="548163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2678762" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -872,25 +869,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="44" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="439" selection-start-line="439" selection-end-line="439" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="269">
+          <caret line="1805" column="21" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="299" column="43" lean-forward="true" selection-start-line="299" selection-start-column="43" selection-end-line="299" selection-end-column="43" />
+        <state relative-caret-position="195">
+          <caret line="235" column="40" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="40" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -899,8 +886,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="434">
+          <caret line="91" column="53" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="661" column="14" selection-start-line="661" selection-start-column="14" selection-end-line="661" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

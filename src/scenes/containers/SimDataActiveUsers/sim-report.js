@@ -3,9 +3,8 @@ import {Link, withRouter} from 'react-router-dom';
 import {SimReportTable} from "../../components/Table/sim-report-table";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
-import {RoutesTable} from "../../components/Table/routes-table";
 import {store} from "react-notifications-component";
-import {cancel_reservation} from "../../components/UserFunctions";
+import {cancel_reservation, voip_api} from "../../components/UserFunctions";
 
 class SimReport extends Component {
     constructor(props){
@@ -28,7 +27,8 @@ class SimReport extends Component {
             search:'',
             id_from_sim_report:'',
             search_report:false,
-            reservations_number:''
+            reservations_number:'',
+            voip_id:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -38,6 +38,7 @@ class SimReport extends Component {
         this.mySubscriberReport = this.mySubscriberReport.bind(this);
         this.handleOpen = this.handleOpen.bind(this);
         this.handleCancelSimReservation = this.handleCancelSimReservation.bind(this);
+        this.VoipIdReport = this.VoipIdReport.bind(this);
 
     }
 
@@ -189,8 +190,28 @@ class SimReport extends Component {
         })
     };
 
+    VoipIdReport(msg,dataSet) {
+
+        voip_api(dataSet).then(result => {
+
+            if(result.status === true){
+                this.setState({
+                    voip_id: dataSet
+                })
+            } else {
+                this.setState({
+                    voip_id: ''
+                })
+            }
+
+        });
+    };
+
+
     componentDidMount() {
         PubSub.subscribe('id_from_sim_report', this.mySubscriberReport);
+        PubSub.subscribe('get_voip_id', this.VoipIdReport);
+
     }
 
     componentWillMount() {
@@ -205,6 +226,12 @@ class SimReport extends Component {
     }
 
     render() {
+
+        if(this.state.voip_id){
+            return <Redirect to={'/customer-billing'} />
+
+        }
+
 
         if(this.state.id_from_sim_report){
             return <Redirect to={'/customer-billing'} />

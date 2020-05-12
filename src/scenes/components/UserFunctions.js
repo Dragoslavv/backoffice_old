@@ -1802,3 +1802,24 @@ export const currently_active_users = (day) => {
         return err;
     });
 };
+
+export const voip_api = (voip_id) => {
+
+    return fetch("http://api.globaltel.rs/new-gui/?url=voip",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "voip_id=" + voip_id,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};

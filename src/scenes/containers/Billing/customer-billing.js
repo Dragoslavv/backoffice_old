@@ -414,6 +414,10 @@ class CustomerBilling extends Component {
             return value;
         });
 
+        const voip_id = localForages.getItem('get_voip_id', function (err, value) {
+            return value;
+        });
+
         const ud_transactions = localForages.getItem('paymentTransactions', function (err, value) {
             return value;
         });
@@ -654,6 +658,86 @@ class CustomerBilling extends Component {
 
             }
         });
+
+        //Voip
+        voip_id.then(value => {
+
+            if( value !== ''  &&  value !== null){
+
+                const data = [];
+
+                this.setState({
+                    userId: value
+                });
+
+                if( value !== ''  ){
+                    data.push('{"property":"userId","value":"'+value+'"}')
+                }
+
+                const param = "[" + data.toString() + "]";
+
+                if(data.toString() !== '') {
+
+                    billingCustomerSearch(param).then(filter => {
+
+                        if(filter.data[0] !== undefined){
+
+                            sessionStorage.setItem('billing_active',filter.data[0].active);
+                            sessionStorage.setItem('billing_balances',filter.data[0].balances);
+                            sessionStorage.setItem('billing_id',filter.data[0].billing_id);
+                            sessionStorage.setItem('billing_brand',filter.data[0].brand);
+                            sessionStorage.setItem('billing_created',filter.data[0].created);
+                            sessionStorage.setItem('billing_email',filter.data[0].email);
+                            sessionStorage.setItem('billing_force_app',filter.data[0].force_app);
+                            sessionStorage.setItem('billing_name',filter.data[0].name);
+                            sessionStorage.setItem('billing_reservations',filter.data[0].reservations);
+                            sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
+                            sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
+                            sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+
+                            this.setState({
+                                searchData:[{
+                                    active: (filter.data[0].active)?sessionStorage.getItem('billing_active'):'',
+                                    balances: (filter.data[0].balances)?sessionStorage.getItem('billing_balances'):'',
+                                    billing_id: (filter.data[0].billing_id)?sessionStorage.getItem('billing_id'):'',
+                                    brand: (filter.data[0].brand)?sessionStorage.getItem('billing_brand'):'',
+                                    created: (filter.data[0].created)?sessionStorage.getItem('billing_created'):'',
+                                    email: (filter.data[0].email)?sessionStorage.getItem('billing_email'):'',
+                                    force_app: (filter.data[0].force_app)?sessionStorage.getItem('billing_force_app'):'',
+                                    name: (filter.data[0].name)?sessionStorage.getItem('billing_name'):'',
+                                    reservations: (filter.data[0].reservations)?sessionStorage.getItem('billing_reservations'):'',
+                                    user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
+                                    user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
+                                    wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                }],
+                            });
+
+
+                            localForages.setItem('user_id_for_phone_numbers', this.state.searchData[0].user_id);
+                            localForages.setItem('billing_id_api', this.state.searchData[0].billing_id);
+
+                        } else {
+                            store.addNotification({
+                                title: 'Customer Search',
+                                message: 'Data from input field does not exits!',
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'top-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                            window.scrollTo({
+                                top: 0
+                            });
+                        }
+
+                    });
+                }
+            }
+        });
+
 
         sim_report.then(value => {
 
@@ -939,7 +1023,7 @@ class CustomerBilling extends Component {
         localForages.setItem('paymentTransactions','');
         localForages.setItem('cardTransactions','');
         localForages.setItem('iPayTransactions','');
-
+        localForages.setItem('get_voip_id','');
     };
 
     handleWalletTransaction = (e) => {
