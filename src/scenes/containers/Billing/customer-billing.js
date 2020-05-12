@@ -1153,11 +1153,23 @@ class CustomerBilling extends Component {
 
             });
 
+
+            checking_voip(this.state.searchData[0].user_id).then(result => {
+                sessionStorage.setItem("vs_active_voip",result['status']);
+
+                this.setState({
+                    checking_voip: sessionStorage.getItem("vs_active_voip")
+                });
+
+            });
+
         }else {
             this.setState({
-                activeAndDeactivation: false
+                activeAndDeactivation: false,
+                checking_voip:false
             });
             sessionStorage.setItem("vs_active",false);
+            sessionStorage.setItem("vs_active_voip",false);
 
         }
 
