@@ -141,7 +141,7 @@ export class SimReportTable extends Component{
                         },
                         { title: "Voip",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="voip" >Voip</button></p>`
+                            defaultContent:`<p><button type="button" class="btn btn-info" id="voip_id" >Voip</button></p>`
                         },
                         { title: "Billing ID"},
                         { title: "Activation Time"},
@@ -151,37 +151,6 @@ export class SimReportTable extends Component{
                     ]
                 }
             );
-
-
-
-
-            $(document).ready(() => {
-
-                const table = $('#sim_report');
-
-                table.on('click', '#user_id_get', function () {
-
-                    const id = $(this).parent().parent().parent();
-
-                    id.find('.get_user_ID').each(function( index,item ) {
-
-                        PubSub.publish('id_from_sim_report', item.innerHTML);
-                        localForages.setItem('id_from_sim_report', item.innerHTML);
-                    });
-                });
-
-                table.on('click', '#voip_id', function () {
-
-                    const id = $(this).parent().parent().parent();
-
-                    id.find('.get_user_ID').each(function( index,item ) {
-
-                        PubSub.publish('get_voip_id', item.innerHTML);
-                        localForages.setItem('get_voip_id', item.innerHTML);
-
-                    });
-                });
-            });
 
             this.handleChange();
 
