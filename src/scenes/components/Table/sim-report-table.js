@@ -151,6 +151,38 @@ export class SimReportTable extends Component{
                     ]
                 }
             );
+
+
+
+
+            $(document).ready(() => {
+
+                const table = $('#sim_report');
+
+                table.on('click', '#user_id_get', function () {
+
+                    const id = $(this).parent().parent().parent();
+
+                    id.find('.get_user_ID').each(function( index,item ) {
+
+                        PubSub.publish('id_from_sim_report', item.innerHTML);
+                        localForages.setItem('id_from_sim_report', item.innerHTML);
+                    });
+                });
+
+                table.on('click', '#voip_id', function () {
+
+                    const id = $(this).parent().parent().parent();
+
+                    id.find('.get_user_ID').each(function( index,item ) {
+
+                        PubSub.publish('get_voip_id', item.innerHTML);
+                        localForages.setItem('get_voip_id', item.innerHTML);
+
+                    });
+                });
+            });
+
             this.handleChange();
 
         }
