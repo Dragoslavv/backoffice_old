@@ -32,7 +32,7 @@ export class SimReportTable extends Component{
                 bLengthChange: false,
                 bPaginate:true,
                 sScrollY: "300px",
-
+                pageLength: 25,
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
                     type: 'POST',
@@ -118,7 +118,7 @@ export class SimReportTable extends Component{
                     bLengthChange: false,
                     bPaginate:true,
                     sScrollY: "300px",
-
+                    pageLength: 25,
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
                         type: 'POST',
