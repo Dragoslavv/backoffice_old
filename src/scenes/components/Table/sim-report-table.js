@@ -51,11 +51,11 @@ export class SimReportTable extends Component{
                     },
                     { title: "User",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
+                        defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
                     },
                     { title: "Voip",
                         data: null,
-                        defaultContent:`<p><button type="button" class="btn btn-info" id="voip_id" >Voip</button></p>`
+                        defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="voip_id" >Voip</button></p>`
                     },
                     { title: "Billing ID"},
                     { title: "Activation Time"},
@@ -137,11 +137,11 @@ export class SimReportTable extends Component{
                         },
                         { title: "User",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
+                            defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
                         },
                         { title: "Voip",
                             data: null,
-                            defaultContent:`<p><button type="button" class="btn btn-info" id="voip_id" >Voip</button></p>`
+                            defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="voip_id" >Voip</button></p>`
                         },
                         { title: "Billing ID"},
                         { title: "Activation Time"},
