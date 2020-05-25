@@ -10,11 +10,11 @@ $.DataTable = require( 'datatables.net-bs4' );
 export class CdrOutboundTable extends Component{
     componentDidMount() {
 
-        const userId = localForages.getItem('user_id_for_phone_numbers', function (err, value) {
-            return value;
-        });
-
-        userId.then(value => {
+        // const userId = localForages.getItem('user_id_for_phone_numbers', function (err, value) {
+        //     return value;
+        // });
+        //
+        // userId.then(value => {
 
             this.$el = $(this.el);
             this.$el.DataTable(
@@ -31,7 +31,7 @@ export class CdrOutboundTable extends Component{
                         url: 'https://api.globaltel.rs/new-gui/?url=cdr_outhbound',
                         type: 'POST',
                         data:{
-                            user_id: parseInt(value),
+                            number: parseInt(sessionStorage.getItem('number')),
                         }
                     },
                     order: [[ 0, "desc" ]],
@@ -46,12 +46,11 @@ export class CdrOutboundTable extends Component{
                         { title: "Caller ID"},
                         { title: "Roaming"},
                         { title: "Disposition"},
-                        { title: "Call Type"},
-                        { title: "Route Name"}
+                        { title: "Call Type"}
                     ]
                 }
             );
-        });
+        // });
     }
 
     componentWillUnmount() {

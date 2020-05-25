@@ -425,7 +425,7 @@ export const cdrInbound = (user_id) => {
     });
 };
 
-export const cdrOutbound = (user_id) => {
+export const cdrOutbound = (number) => {
 
     return fetch("https://api.globaltel.rs/new-gui/?url=cdr_outhbound",{
         method: 'POST',
@@ -433,7 +433,7 @@ export const cdrOutbound = (user_id) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "user_id=" + user_id ,
+        body: "number=" + number ,
 
     }).then((response) =>
         response.json()

@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.486460ee.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/main.486460ee.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7ad4b4fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.7ad4b4fb.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,8 +46,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="501" column="40" selection-start-line="501" selection-start-column="40" selection-end-line="501" selection-end-column="40" />
+            <state relative-caret-position="120">
+              <caret line="389" column="15" lean-forward="true" selection-start-line="389" selection-start-column="15" selection-end-line="389" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Profile/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="142" column="11" lean-forward="true" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -50,29 +70,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="330" column="52" selection-start-line="330" selection-start-column="52" selection-end-line="330" selection-end-column="52" />
+            <state relative-caret-position="231">
+              <caret line="327" column="37" selection-start-line="327" selection-start-column="37" selection-end-line="327" selection-end-column="37" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="143" column="133" selection-start-line="143" selection-start-column="133" selection-end-line="143" selection-end-column="133" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,8 +82,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27060">
-              <caret line="1804" selection-start-line="1804" selection-end-line="1804" />
+            <state relative-caret-position="188">
+              <caret line="431" column="18" lean-forward="true" selection-start-line="431" selection-start-column="18" selection-end-line="431" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="96" column="44" lean-forward="true" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>wrap</find>
       <find>wa</find>
       <find>.box</find>
       <find>.sidebar-nav-second &gt; li a</find>
@@ -121,6 +161,7 @@
       <find>read_vs_active</find>
       <find>?url=user</find>
       <find>billingCustomerSearch</find>
+      <find>?url=cdr_outhbound</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -132,7 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scenes/components/Table/package-other-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/data-limit-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/stayles/billing.css" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" />
@@ -181,8 +221,9 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" />
       </list>
     </option>
   </component>
@@ -253,6 +294,14 @@
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="Login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
+              <item name="senzations" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="Profile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="senzations" type="b2602c69:ProjectViewProjectNode" />
@@ -397,12 +446,12 @@
       <workItem from="1589413012957" duration="599000" />
       <workItem from="1589445105086" duration="4135000" />
       <workItem from="1589534806348" duration="1558000" />
-      <workItem from="1590232697753" duration="3015000" />
+      <workItem from="1590232697753" duration="4754000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="562446000" />
+    <option name="totallyTimeSpent" value="564185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="387" y="1105" width="1533" height="875" extended-state="6" />
@@ -454,26 +503,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Numbers/numbers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="208" column="35" lean-forward="true" selection-start-line="208" selection-start-column="35" selection-end-line="208" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="296" column="42" lean-forward="true" selection-start-line="296" selection-start-column="42" selection-end-line="296" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Numbers/special-offer-numbers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -608,16 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="392" column="92" selection-start-line="392" selection-start-column="92" selection-end-line="392" selection-end-column="92" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="373" column="112" selection-start-line="373" selection-start-column="112" selection-end-line="373" selection-end-column="112" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -895,27 +914,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27060">
-          <caret line="1804" selection-start-line="1804" selection-end-line="1804" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="501" column="40" selection-start-line="501" selection-start-column="40" selection-end-line="501" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="330" column="52" selection-start-line="330" selection-start-column="52" selection-end-line="330" selection-end-column="52" />
+        <state relative-caret-position="231">
+          <caret line="327" column="37" selection-start-line="327" selection-start-column="37" selection-end-line="327" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -924,8 +926,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="143" column="133" selection-start-line="143" selection-start-column="133" selection-end-line="143" selection-end-column="133" />
+        <state relative-caret-position="345">
+          <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
@@ -936,6 +938,50 @@
             <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Profile/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="142" column="11" lean-forward="true" selection-start-line="142" selection-start-column="11" selection-end-line="142" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="389" column="15" lean-forward="true" selection-start-line="389" selection-start-column="15" selection-end-line="389" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="431" column="18" lean-forward="true" selection-start-line="431" selection-start-column="18" selection-end-line="431" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="96" column="44" lean-forward="true" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>
