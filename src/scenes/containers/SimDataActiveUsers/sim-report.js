@@ -202,6 +202,18 @@ class SimReport extends Component {
                 this.setState({
                     voip_id: ''
                 })
+
+                store.addNotification({
+                    title: 'Voip',
+                    message: result.message,
+                    type: 'success',                         // 'default', 'success', 'info', 'warning'
+                    container: 'top-right',                // where to position the notifications
+                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                    dismiss: {
+                        duration: 3000
+                    }
+                })
             }
 
         });
