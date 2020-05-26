@@ -40,7 +40,8 @@ export class PhoneNumbersTable extends Component{
                         { title: "Status"},
                         { title: "Autorenew"},
                         { title: "Created"},
-                        { title: "Expiration Date"}
+                        { title: "Expiration Date"},
+                        { title: "Iccid"},
                     ]
                 }
             );
