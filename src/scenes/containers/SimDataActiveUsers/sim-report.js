@@ -204,9 +204,9 @@ class SimReport extends Component {
                 })
 
                 store.addNotification({
-                    title: 'Voip',
+                    title: 'Setting up user on voip',
                     message: result.message,
-                    type: 'success',                         // 'default', 'success', 'info', 'warning'
+                    type: 'info',                         // 'default', 'success', 'info', 'warning'
                     container: 'top-right',                // where to position the notifications
                     animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
                     animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
