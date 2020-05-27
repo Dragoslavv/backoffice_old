@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {PhoneNumbersTable} from "../../components/Table/phone-numbers-table";
 import {Redirect} from "react-router-dom";
+import PubSub from "pubsub-js";
 
 class PhoneNumbers extends Component {
     constructor(props){
@@ -12,7 +13,14 @@ class PhoneNumbers extends Component {
         };
 
         this.sessionGet = this.sessionGet.bind(this);
+        this.SwitchToSim = this.SwitchToSim.bind(this);
+
     }
+
+    SwitchToSim(msg,dataSet) {
+
+        console.log(dataSet);
+    };
 
     sessionGet = (key) => {
         let stringValue = window.sessionStorage.getItem(key);
@@ -62,6 +70,11 @@ class PhoneNumbers extends Component {
         }
         return null
     };
+
+    componentDidMount() {
+        PubSub.subscribe('switch_to_sim', this.SwitchToSim);
+
+    }
 
     componentWillMount() {
         if(this.sessionGet('token')){
