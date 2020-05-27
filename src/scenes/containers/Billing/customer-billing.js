@@ -1431,7 +1431,7 @@ class CustomerBilling extends Component {
         }
 
         const wallet_transaction = (this.state.searchData[0].user_id)? false : true ;
-console.log(this.state.active_users_currently);
+
         return (
 
             <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }  >

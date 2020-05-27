@@ -42,6 +42,7 @@ export class PhoneNumbersTable extends Component{
                         { title: "Created"},
                         { title: "Expiration Date"},
                         { title: "Iccid"},
+                        { title: "Switch To Sim"}
                     ]
                 }
             );
