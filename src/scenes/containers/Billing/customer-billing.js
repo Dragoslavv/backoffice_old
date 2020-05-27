@@ -1648,6 +1648,16 @@ class CustomerBilling extends Component {
                                             <p className="content-title">Voip</p>
                                         </div>
                                     </div>
+                                    <div className='form-group billing-input'>
+                                        <div className="form-group billing-input">
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} type="submit">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
                                     <div className='row'>
                                         <div className='col-lg-7'>
                                             <div className='form-group billing-input'>

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.4fc4d721.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.4fc4d721.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,39 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="728" lean-forward="true" selection-start-line="728" selection-end-line="728" />
+            <state relative-caret-position="192">
+              <caret line="1660" column="57" lean-forward="true" selection-start-line="1660" selection-start-column="57" selection-end-line="1660" selection-end-column="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,20 +54,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="222" selection-start-line="222" selection-end-line="226" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="208" column="94" selection-start-line="208" selection-start-column="94" selection-end-line="208" selection-end-column="94" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="1849" column="60" selection-start-line="1849" selection-start-column="60" selection-end-line="1849" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -205,10 +174,10 @@
         <option value="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
   </component>
@@ -432,18 +401,18 @@
       <workItem from="1589445105086" duration="4135000" />
       <workItem from="1589534806348" duration="1558000" />
       <workItem from="1590232697753" duration="12815000" />
-      <workItem from="1590562563087" duration="3722000" />
+      <workItem from="1590562563087" duration="4620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="575968000" />
+    <option name="totallyTimeSpent" value="576866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="387" y="1105" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29119033" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21385339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -923,8 +892,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="1849" column="60" selection-start-line="1849" selection-start-column="60" selection-end-line="1849" selection-end-column="60" />
+        <state relative-caret-position="319">
+          <caret line="1847" column="55" lean-forward="true" selection-start-line="1847" selection-start-column="55" selection-end-line="1847" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="208" column="94" selection-start-line="208" selection-start-column="94" selection-end-line="208" selection-end-column="94" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -940,10 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="222" selection-start-line="222" selection-end-line="226" selection-end-column="5" />
+        <state relative-caret-position="232">
+          <caret line="50" column="47" lean-forward="true" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -952,18 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="728" lean-forward="true" selection-start-line="728" selection-end-line="728" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="49" column="43" lean-forward="true" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+        <state relative-caret-position="192">
+          <caret line="1660" column="57" lean-forward="true" selection-start-line="1660" selection-start-column="57" selection-end-line="1660" selection-end-column="57" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
