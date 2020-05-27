@@ -3,6 +3,9 @@ import {Link, withRouter} from 'react-router-dom';
 import {PhoneNumbersTable} from "../../components/Table/phone-numbers-table";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
+import localForages from "localforage";
+import {SwitchToSimNumber} from "../../components/UserFunctions";
+import {store} from "react-notifications-component";
 
 class PhoneNumbers extends Component {
     constructor(props){
@@ -19,7 +22,49 @@ class PhoneNumbers extends Component {
 
     SwitchToSim(msg,dataSet) {
 
-        console.log(dataSet);
+
+        const userId = localForages.getItem('user_id_for_phone_numbers', function (err, value) {
+            return value;
+        });
+
+        userId.then(value => {
+
+            SwitchToSimNumber(value, dataSet).then( result => {
+
+                if(result.msg === "OK") {
+
+                    store.addNotification({
+                        title: 'Switch To Sim',
+                        message: 'Successfully!',
+                        type: 'success',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+
+                } else {
+
+                    store.addNotification({
+                        title: 'Switch To Sim',
+                        message: 'Error!',
+                        type: 'warning',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+
+                }
+
+            });
+
+        });
+
     };
 
     sessionGet = (key) => {

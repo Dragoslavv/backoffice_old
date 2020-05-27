@@ -47,7 +47,7 @@ export class PhoneNumbersTable extends Component{
                         { title: "Iccid"},
                         { title: "Switch To Sim",
                             data: null,
-                            defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="switch_to_sim" >Get user ID</button></p>`
+                            defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="switch_to_sim" >To Sim</button></p>`
                         }
                     ]
                 }

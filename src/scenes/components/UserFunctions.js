@@ -1844,3 +1844,24 @@ export const checking_voip = (user_id) => {
         return err;
     });
 };
+
+export const SwitchToSimNumber = (user_id, number) => {
+
+    return fetch("https://api.globaltel.rs/api6/switchToSimGUI.php",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "id=" + user_id +'&number='+number,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
