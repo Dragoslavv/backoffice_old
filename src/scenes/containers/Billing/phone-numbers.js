@@ -49,7 +49,7 @@ class PhoneNumbers extends Component {
 
                     store.addNotification({
                         title: 'Switch To Sim',
-                        message: 'Error!',
+                        message: 'Call does not work!!',
                         type: 'warning',                         // 'default', 'success', 'info', 'warning'
                         container: 'top-right',                // where to position the notifications
                         animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
