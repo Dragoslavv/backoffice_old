@@ -14,7 +14,7 @@ import {
     issue_masterCard,
     mastercard_registration,
     read_vs_active,
-    transactionWallet
+    transactionWallet, update_voip, voip_api
 } from "../../components/UserFunctions";
 import  "../Login/index";
 import localForages from "localforage";
@@ -110,6 +110,96 @@ class CustomerBilling extends Component {
         this.handleVerifyMasterCard = this.handleVerifyMasterCard.bind(this);
         this.handleIssue = this.handleIssue.bind(this);
         this.handleIssueMasterCard = this.handleIssueMasterCard.bind(this);
+        this.handleVoip = this.handleVoip.bind(this);
+    };
+
+    handleVoip = (e) => {
+        e.preventDefault();
+
+        if(sessionStorage.getItem('role') === 'ADMIN') {
+
+            if( this.state.checking_voip === true ){
+
+                voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username')).then(result => {
+
+                    if(result.status === true){
+
+                        store.addNotification({
+                            title: 'Setting up user on voip',
+                            message: 'You have added a user to the table voip',
+                            type: 'success',                         // 'default', 'success', 'info', 'warning'
+                            container: 'top-right',                // where to position the notifications
+                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                            dismiss: {
+                                duration: 3000
+                            }
+                        })
+
+                    } else {
+
+                        store.addNotification({
+                            title: 'Setting up user on voip',
+                            message: result.message,
+                            type: 'info',                         // 'default', 'success', 'info', 'warning'
+                            container: 'top-right',                // where to position the notifications
+                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                            dismiss: {
+                                duration: 3000
+                            }
+                        })
+                    }
+
+                });
+
+            } else {
+
+                update_voip(this.state.searchData[0].user_id,sessionStorage.getItem('username'),this.state.searchData[0].billing_id).then(result => {
+
+                    if(result.status === true) {
+                        store.addNotification({
+                            title: 'Setting up user on voip',
+                            message: 'Founds were successfully returned',
+                            type: 'info',                         // 'default', 'success', 'info', 'warning'
+                            container: 'top-right',                // where to position the notifications
+                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                            dismiss: {
+                                duration: 3000
+                            }
+                        });
+                    } else {
+                        store.addNotification({
+                            title: 'Setting up user on voip',
+                            message: result.message,
+                            type: 'info',                         // 'default', 'success', 'info', 'warning'
+                            container: 'top-right',                // where to position the notifications
+                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                            dismiss: {
+                                duration: 3000
+                            }
+                        });
+                    }
+
+                });
+
+            }
+
+        } else {
+            store.addNotification({
+                title: 'Setting up user on voip',
+                message: 'Not login as ADMIN ',
+                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                container: 'top-right',                // where to position the notifications
+                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                dismiss: {
+                    duration: 3000
+                }
+            })
+        }
 
     };
 
@@ -1652,7 +1742,7 @@ class CustomerBilling extends Component {
                                         <div className="form-group billing-input">
                                             <div className="row">
                                                 <div className="col-lg-12">
-                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} type="submit">Save</button>
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleVoip} type="submit">Save</button>
                                                 </div>
                                             </div>
                                         </div>

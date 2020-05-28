@@ -1845,6 +1845,27 @@ export const checking_voip = (user_id) => {
     });
 };
 
+export const update_voip = (voip_id, user, billing_id) => {
+
+    return fetch("http://api.globaltel.rs/new-gui/?url=update_voip",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+};
+
 export const SwitchToSimNumber = (user_id, number) => {
 
     return fetch("https://api.globaltel.rs/api6/switchToSimGUI.php",{
