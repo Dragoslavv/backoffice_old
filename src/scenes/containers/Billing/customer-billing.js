@@ -118,11 +118,11 @@ class CustomerBilling extends Component {
 
         if(sessionStorage.getItem('role') === 'ADMIN') {
 
-            if( this.state.checking_voip === true ){
+            if( this.state.checking_voip === 'true' ){
 
                 voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username')).then(result => {
 
-                    if(result.status === 'true'){
+                    if(result.status === true){
 
                         store.addNotification({
                             title: 'Setting up user on voip',
