@@ -28,7 +28,8 @@ class SimReport extends Component {
             id_from_sim_report:'',
             search_report:false,
             reservations_number:'',
-            voip_id:''
+            voip_id:'',
+            check_voip:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -163,6 +164,7 @@ class SimReport extends Component {
             cash_type: '',
             msisdn: '',
             search:'',
+            check_voip:'',
             search_report: true,
         });
     };
@@ -310,6 +312,13 @@ class SimReport extends Component {
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='msisdn' value={this.state.msisdn} onChange={this.handleChanges} autoComplete='off' placeholder='MSISDN:'/>
                                             </div>
+                                            <div className='form-group billing-input'>
+                                                <select className="input" name="check_voip" value={this.state.check_voip} onChange={this.handleChanges}>
+                                                    <option value="">Voip</option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                </select>
+                                            </div>
                                         </form>
                                     </div>
 
@@ -343,6 +352,7 @@ class SimReport extends Component {
                                         cash_type: this.state.cash_type,
                                         data_type: this.state.data_type,
                                         msisdn: this.state.msisdn,
+                                        voip: this.state.check_voip,
                                         search: this.state.search
                                     }
                                 }>

@@ -34,14 +34,16 @@ export class SimReportTable extends Component{
                 sScrollY: "600px",
                 pageLength: 25,
                 ajax: {
-                    url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
+                    url: 'http://new-gui.com/?url=sim_report',
                     type: 'POST',
                     data: {
                         start_log: this.props.data.start_log,
                         end_log: this.props.data.end_log,
                         cash_type: this.props.data.cash_type,
                         data_type: this.props.data.data_type,
-                        msisdn: this.props.data.msisdn
+                        msisdn: this.props.data.msisdn,
+                        voip: this.props.data.voip
+
                     }
                 },
                 columns: [
@@ -61,7 +63,8 @@ export class SimReportTable extends Component{
                     { title: "Activation Time"},
                     { title: "Cash"},
                     { title: "Data"},
-                    { title: "Status"}
+                    { title: "Status"},
+                    { title: "Check voip"}
                 ]
             }
         );
@@ -106,7 +109,6 @@ export class SimReportTable extends Component{
             let table = $('#sim_report').DataTable();
             table.destroy();
 
-
             this.$ele = $(this.el);
 
             this.$ele.DataTable(
@@ -120,14 +122,15 @@ export class SimReportTable extends Component{
                     sScrollY: "600px",
                     pageLength: 25,
                     ajax: {
-                        url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
+                        url: 'http://new-gui.com/?url=sim_report',
                         type: 'POST',
                         data: {
                             start_log: this.props.data.start_log,
                             end_log: this.props.data.end_log,
                             cash_type: this.props.data.cash_type,
                             data_type: this.props.data.data_type,
-                            msisdn: this.props.data.msisdn
+                            msisdn: this.props.data.msisdn,
+                            voip: this.props.data.voip
                         }
                     },
                     columns: [
@@ -147,7 +150,9 @@ export class SimReportTable extends Component{
                         { title: "Activation Time"},
                         { title: "Cash"},
                         { title: "Data"},
-                        { title: "Status"}
+                        { title: "Status"},
+                        { title: "Check voip"}
+
                     ]
                 }
             );
