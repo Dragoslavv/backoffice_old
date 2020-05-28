@@ -41,7 +41,8 @@ export class SimReportTable extends Component{
                         end_log: this.props.data.end_log,
                         cash_type: this.props.data.cash_type,
                         data_type: this.props.data.data_type,
-                        msisdn: this.props.data.msisdn
+                        msisdn: this.props.data.msisdn,
+                        voip: this.props.data.check_voip
                     }
                 },
                 columns: [
@@ -61,7 +62,8 @@ export class SimReportTable extends Component{
                     { title: "Activation Time"},
                     { title: "Cash"},
                     { title: "Data"},
-                    { title: "Status"}
+                    { title: "Status"},
+                    { title: "Check voip"}
                 ]
             }
         );
@@ -127,7 +129,9 @@ export class SimReportTable extends Component{
                             end_log: this.props.data.end_log,
                             cash_type: this.props.data.cash_type,
                             data_type: this.props.data.data_type,
-                            msisdn: this.props.data.msisdn
+                            msisdn: this.props.data.msisdn,
+                            voip: this.props.data.check_voip
+
                         }
                     },
                     columns: [
@@ -147,7 +151,8 @@ export class SimReportTable extends Component{
                         { title: "Activation Time"},
                         { title: "Cash"},
                         { title: "Data"},
-                        { title: "Status"}
+                        { title: "Status"},
+                        { title: "Check voip"}
                     ]
                 }
             );
