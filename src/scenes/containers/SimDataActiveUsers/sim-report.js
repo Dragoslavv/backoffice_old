@@ -171,7 +171,7 @@ class SimReport extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-
+        console.log(this.state.check_voip);
         this.setState({
             search_report: true,
         });
