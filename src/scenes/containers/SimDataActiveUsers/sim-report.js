@@ -28,8 +28,7 @@ class SimReport extends Component {
             id_from_sim_report:'',
             search_report:false,
             reservations_number:'',
-            voip_id:'',
-            check_voip:''
+            voip_id:''
         };
 
         this.handleChanges = this.handleChanges.bind(this);
@@ -163,7 +162,6 @@ class SimReport extends Component {
             data_type: '',
             cash_type: '',
             msisdn: '',
-            check_voip:'',
             search:'',
             search_report: true,
         });
@@ -171,7 +169,7 @@ class SimReport extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
-        console.log(this.state.check_voip);
+
         this.setState({
             search_report: true,
         });
@@ -312,13 +310,6 @@ class SimReport extends Component {
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='msisdn' value={this.state.msisdn} onChange={this.handleChanges} autoComplete='off' placeholder='MSISDN:'/>
                                             </div>
-                                            <div className='form-group billing-input'>
-                                                <select className="input" name="check_voip" value={this.state.check_voip} onChange={this.handleChanges}>
-                                                    <option value="">Voip</option>
-                                                    <option value="true">TRUE</option>
-                                                    <option value="false">FALSE</option>
-                                                </select>
-                                            </div>
                                         </form>
                                     </div>
 
@@ -352,7 +343,6 @@ class SimReport extends Component {
                                         cash_type: this.state.cash_type,
                                         data_type: this.state.data_type,
                                         msisdn: this.state.msisdn,
-                                        voip: this.state.check_voip,
                                         search: this.state.search
                                     }
                                 }>
