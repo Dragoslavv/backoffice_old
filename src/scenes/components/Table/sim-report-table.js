@@ -34,7 +34,7 @@ export class SimReportTable extends Component{
                 sScrollY: "600px",
                 pageLength: 25,
                 ajax: {
-                    url: 'http://new-gui.com/?url=sim_report',
+                    url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
                     type: 'POST',
                     data: {
                         start_log: this.props.data.start_log,
@@ -122,7 +122,7 @@ export class SimReportTable extends Component{
                     sScrollY: "600px",
                     pageLength: 25,
                     ajax: {
-                        url: 'http://new-gui.com/?url=sim_report',
+                        url: 'https://api.globaltel.rs/new-gui/?url=sim_report',
                         type: 'POST',
                         data: {
                             start_log: this.props.data.start_log,
