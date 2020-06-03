@@ -193,7 +193,7 @@ class SimReport extends Component {
     };
 
     VoipIdReport(msg,dataSet) {
-
+console.log(dataSet);
         voip_api(dataSet,sessionStorage.getItem('username')).then(result => {
 
             if(result.status === true){
