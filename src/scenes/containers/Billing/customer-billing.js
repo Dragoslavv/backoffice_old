@@ -43,7 +43,7 @@ class CustomerBilling extends Component {
             billingId:'',
             iccid:'',
             check:{
-                iccid: /^[0-9]+$/,
+                iccid: /^[0-9A-Za-z]+$/,
                 billingId: /^[0-9]+$/,
                 userId: /^[0-9]+$/,
                 number: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,10}$/,
