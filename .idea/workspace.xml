@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-    </list>
+    <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
-              <caret line="1608" column="78" lean-forward="true" selection-start-line="1608" selection-start-column="78" selection-end-line="1608" selection-end-column="78" />
+              <caret line="1608" column="78" selection-start-line="1608" selection-start-column="78" selection-end-line="1608" selection-end-column="78" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -345,18 +342,18 @@
       <workItem from="1591086449634" duration="5589000" />
       <workItem from="1591611411780" duration="1763000" />
       <workItem from="1591786017634" duration="599000" />
-      <workItem from="1591890042366" duration="1077000" />
+      <workItem from="1591890042366" duration="1797000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="600762000" />
+    <option name="totallyTimeSpent" value="601482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="387" y="1105" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23604573" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23604573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -369,7 +366,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.43297586" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.43297586" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -856,7 +853,7 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
-          <caret line="1608" column="78" lean-forward="true" selection-start-line="1608" selection-start-column="78" selection-end-line="1608" selection-end-column="78" />
+          <caret line="1608" column="78" selection-start-line="1608" selection-start-column="78" selection-end-line="1608" selection-end-column="78" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
