@@ -41,7 +41,9 @@ class CustomerBilling extends Component {
             email: '',
             userId:'',
             billingId:'',
+            iccid:'',
             check:{
+                iccid: /^[0-9]+$/,
                 billingId: /^[0-9]+$/,
                 userId: /^[0-9]+$/,
                 number: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,10}$/,
@@ -946,7 +948,9 @@ class CustomerBilling extends Component {
         if(this.state.billingId !== ''  && this.state.billingId.length > 0  && this.state.check.billingId.test( this.state.billingId )){
             return this.state.billingId;
         }
-
+        if(this.state.iccid !== ''  && this.state.iccid.length > 0  && this.state.check.iccid.test( this.state.iccid )){
+            return this.state.iccid;
+        }
 
     }
 
@@ -1601,6 +1605,9 @@ class CustomerBilling extends Component {
                                     </div>
                                     <div className='form-group billing-input'>
                                         <input className='input' type='text' autoComplete='off' value={this.state.billingId} onChange={this.handleChange} name='billingId'  placeholder='Billing ID'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='text' autoComplete='off' value={this.state.iccid} onChange={this.handleChange} name='iccid'  placeholder='Iccid'/>
                                     </div>
                                     <div className="form-group billing-input">
                                         <div className="row">
