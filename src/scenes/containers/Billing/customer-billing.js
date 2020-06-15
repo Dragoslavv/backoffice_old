@@ -62,7 +62,6 @@ class CustomerBilling extends Component {
                 user_id:'',
                 user_type:'',
                 wallet_id:'',
-                iccid:'',
             }],
             roleUser:'',
             UsersLogin:'',
@@ -513,7 +512,6 @@ class CustomerBilling extends Component {
                 user_id: (sessionStorage.getItem('billing_user_id'))?sessionStorage.getItem('billing_user_id'):'',
                 user_type: (sessionStorage.getItem('billing_user_type'))?sessionStorage.getItem('billing_user_type'):'',
                 wallet_id: (sessionStorage.getItem('billing_wallet_id'))?sessionStorage.getItem('billing_wallet_id'):'',
-                iccid: (sessionStorage.getItem('iccid'))?sessionStorage.getItem('iccid'):'',
             }],
         });
 
@@ -569,7 +567,6 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                            sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                             this.setState({
                                 searchData:[{
@@ -585,7 +582,6 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                                    iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
                                 }],
                             });
 
@@ -647,7 +643,6 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                            sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                             this.setState({
                                 searchData:[{
@@ -663,7 +658,6 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                                    iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
 
                                 }],
                             });
@@ -726,7 +720,6 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                            sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                             this.setState({
                                 searchData:[{
@@ -742,7 +735,6 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                                    iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
 
                                 }],
                             });
@@ -809,7 +801,6 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                            sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                             this.setState({
                                 searchData:[{
@@ -825,7 +816,6 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                                    iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
 
                                 }],
                             });
@@ -891,7 +881,6 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                            sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                             this.setState({
                                 searchData:[{
@@ -907,7 +896,6 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                                    iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
 
                                 }],
                             });
@@ -1133,7 +1121,6 @@ class CustomerBilling extends Component {
                 user_id: '',
                 user_type: '',
                 wallet_id: '',
-                iccid: '',
             }],
             number: '',
             email: '',
@@ -1412,7 +1399,6 @@ class CustomerBilling extends Component {
                     sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                     sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                     sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
-                    sessionStorage.setItem('iccid',filter.data[0].iccid);
 
                     read_vs_active(filter.data[0].user_id).then(result => {
                         sessionStorage.setItem("vs_active",result['data']);
@@ -1446,7 +1432,6 @@ class CustomerBilling extends Component {
                             user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                             user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                             wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
-                            iccid: (filter.data[0].iccid)?sessionStorage.getItem('iccid'):'',
 
                         }],
                     });
@@ -1470,7 +1455,6 @@ class CustomerBilling extends Component {
                             user_id: '',
                             user_type: '',
                             wallet_id: '',
-                            iccid: '',
                         }],
                     });
 
