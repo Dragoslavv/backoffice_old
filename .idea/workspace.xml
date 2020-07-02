@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="394" column="45" lean-forward="true" selection-start-line="394" selection-start-column="45" selection-end-line="394" selection-end-column="45" />
+            <state relative-caret-position="5835">
+              <caret line="394" column="45" selection-start-line="394" selection-start-column="45" selection-end-line="394" selection-end-column="45" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="1554" column="171" selection-start-line="1554" selection-start-column="171" selection-end-line="1554" selection-end-column="171" />
+            <state relative-caret-position="473">
+              <caret line="1613" selection-start-line="1613" selection-end-line="1613" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -468,18 +468,19 @@
       <workItem from="1592816122917" duration="599000" />
       <workItem from="1592902239954" duration="599000" />
       <workItem from="1593165134178" duration="1262000" />
-      <workItem from="1593600399627" duration="1577000" />
+      <workItem from="1593600399627" duration="2441000" />
+      <workItem from="1593690830122" duration="65000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="615929000" />
+    <option name="totallyTimeSpent" value="616858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11297915" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.114324145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -887,6 +888,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5835">
+          <caret line="394" column="45" selection-start-line="394" selection-start-column="45" selection-end-line="394" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
@@ -945,20 +956,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="394" column="45" lean-forward="true" selection-start-line="394" selection-start-column="45" selection-end-line="394" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="1554" column="171" selection-start-line="1554" selection-start-column="171" selection-end-line="1554" selection-end-column="171" />
+        <state relative-caret-position="473">
+          <caret line="1613" selection-start-line="1613" selection-end-line="1613" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

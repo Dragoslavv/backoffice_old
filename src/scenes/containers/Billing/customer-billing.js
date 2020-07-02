@@ -1552,55 +1552,55 @@ class CustomerBilling extends Component {
                             <li className="breadcrumb-item active" aria-current="page">Customer Billing</li>
                         </ol>
                     </nav>
-                    {/*{sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :*/}
+                    {sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
 
-                         {/*this.state.active_users_currently.map(function (item) {*/}
+                         this.state.active_users_currently.map(function (item) {
 
-                             {/*return (<div key={0} className='row '>*/}
-                                 {/*<div className='col-lg-3 mb-3'>*/}
-                                     {/*<div className='wrap-border table-col-gui '>*/}
-                                         {/*<div className="box ">*/}
-                                             {/*<i className="fa fa-envelope fa-fw bg-primary"></i>*/}
-                                             {/*<div className="info">*/}
-                                                 {/*<h3>{item.messaging}</h3> <span>Messaging</span>*/}
-                                             {/*</div>*/}
-                                         {/*</div>*/}
-                                     {/*</div>*/}
-                                 {/*</div>*/}
-                                 {/*<div className='col-lg-3 mb-3'>*/}
-                                     {/*<div className='wrap-border table-col-gui '>*/}
-                                         {/*<div className="box ">*/}
-                                             {/*<i className="fa fa-file fa-fw bg-info"></i>*/}
-                                             {/*<div className="info">*/}
-                                                 {/*<h3>{item.data}</h3> <span>Data</span>*/}
-                                             {/*</div>*/}
-                                         {/*</div>*/}
-                                     {/*</div>*/}
-                                 {/*</div>*/}
-                                 {/*<div className='col-lg-3 mb-3'>*/}
-                                     {/*<div className='wrap-border table-col-gui '>*/}
-                                         {/*<div className="box ">*/}
-                                             {/*<i className="fa fa-users fa-fw bg-success"></i>*/}
-                                             {/*<div className="info">*/}
-                                                 {/*<h3>{item.total}</h3> <span>Active Users</span>*/}
-                                             {/*</div>*/}
-                                         {/*</div>*/}
-                                     {/*</div>*/}
-                                 {/*</div>*/}
-                                 {/*<div className='col-lg-3 mb-3'>*/}
-                                     {/*<div className='wrap-border table-col-gui '>*/}
-                                         {/*<div className="box ">*/}
-                                             {/*<i className="fa fa-microphone fa-fw bg-danger"></i>*/}
-                                             {/*<div className="info">*/}
-                                                 {/*<h3>{item.voice}</h3> <span>Voice</span>*/}
-                                             {/*</div>*/}
-                                         {/*</div>*/}
-                                     {/*</div>*/}
-                                 {/*</div>*/}
-                             {/*</div>)*/}
+                             return (<div key={0} className='row '>
+                                 <div className='col-lg-3 mb-3'>
+                                     <div className='wrap-border table-col-gui '>
+                                         <div className="box ">
+                                             <i className="fa fa-envelope fa-fw bg-primary"></i>
+                                             <div className="info">
+                                                 <h3>{item.messaging}</h3> <span>Messaging</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div className='col-lg-3 mb-3'>
+                                     <div className='wrap-border table-col-gui '>
+                                         <div className="box ">
+                                             <i className="fa fa-file fa-fw bg-info"></i>
+                                             <div className="info">
+                                                 <h3>{item.data}</h3> <span>Data</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div className='col-lg-3 mb-3'>
+                                     <div className='wrap-border table-col-gui '>
+                                         <div className="box ">
+                                             <i className="fa fa-users fa-fw bg-success"></i>
+                                             <div className="info">
+                                                 <h3>{item.total}</h3> <span>Active Users</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div className='col-lg-3 mb-3'>
+                                     <div className='wrap-border table-col-gui '>
+                                         <div className="box ">
+                                             <i className="fa fa-microphone fa-fw bg-danger"></i>
+                                             <div className="info">
+                                                 <h3>{item.voice}</h3> <span>Voice</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>)
 
-                         {/*})*/}
-                     {/*}*/}
+                         })
+                     }
 
                     <div className="row">
                         <div className="col-lg-3 mb-3">
