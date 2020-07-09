@@ -52,6 +52,7 @@ import PinVerification from "./scenes/containers/Billing/pin-verification";
 import DataLimit from "./scenes/containers/Billing/data-limit";
 import {currently_active_users} from "./scenes/components/UserFunctions";
 import IpayCofTransaction from "./scenes/containers/Payment/ipay-cof-transaction";
+import DailyActivePackages from "./scenes/containers/Package/daily-active-packages";
 
 class App extends Component {
 
@@ -180,6 +181,9 @@ class App extends Component {
                       </Route>
                       <Route exact path="/package-stat">
                           <PackageStat />
+                      </Route>
+                      <Route exact path="/daily-active-packages">
+                          <DailyActivePackages />
                       </Route>
                       //Sim data & active users
                       <Route exact path="/sim-report">

@@ -474,6 +474,7 @@ class Navigation extends Component {
                                         <li className='shadow list-group'><Link className='list-group-item' to="/package-default">Package</Link></li>
                                         <li className='shadow list-group'><Link className='list-group-item' to="/package-group">Package Group</Link></li>
                                         <li className='shadow list-group'><Link className='list-group-item' to="/package-stat">Package Stat</Link></li>
+                                        <li className='shadow list-group'><Link className='list-group-item' to="/daily-active-packages">Daily Active Packages</Link></li>
                                     </ul>
                                 </li>
                             }
