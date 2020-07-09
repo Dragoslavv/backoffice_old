@@ -254,13 +254,12 @@ class DailyActivePackages extends Component {
 
             if(result.status === true){
                 const day = [];
-                const series = [{name: 'Packages',data:[]},{name: 'Counter',data:[]}];
+                const series = [{name: 'Counter',data:[]}];
 
                 result.data.map(function (data) {
                     day.push(data.name);
-console.log(data.name);
-                    series[0]['data'].push(data.name);
-                    series[1]['data'].push(data.counter);
+
+                    series[0]['data'].push(data.counter,data.name);
 
                 });
 
