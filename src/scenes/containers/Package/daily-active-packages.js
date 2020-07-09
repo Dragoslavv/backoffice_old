@@ -259,7 +259,7 @@ class DailyActivePackages extends Component {
                 result.data.map(function (data) {
                     day.push(data.name);
 
-                    series[0]['data'].push(data.counter,data.name);
+                    series[0]['data'].push(data.counter);
 
                 });
 
