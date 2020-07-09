@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {PackageStatTotalTable} from "../../components/Table/package-stat-total-table";
 import Chart from "react-apexcharts";
-import {
-    currentlyActivePackages,
-    distinctdield,
-    distinctfield_display,
-    PackagesStatistic
-} from "../../components/UserFunctions";
+import {currentlyActivePackages} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
 
 class DailyActivePackages extends Component {
@@ -52,7 +46,7 @@ class DailyActivePackages extends Component {
                 dataLabels: {
                     enabled: false,
                 },
-                xaxis: {
+                yaxis: {
                     categories: [],
                 }
             },
@@ -282,7 +276,7 @@ class DailyActivePackages extends Component {
                         dataLabels: {
                             enabled: false,
                         },
-                        xaxis: {
+                        yaxis: {
                             categories: day
                         }
                     },
