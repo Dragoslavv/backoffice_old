@@ -257,8 +257,8 @@ class DailyActivePackages extends Component {
                 const series = [{name: 'Packages',data:[]},{name: 'Counter',data:[]}];
 
                 result.data.map(function (data) {
-                    day.push(data.stat_date);
-
+                    day.push(data.name);
+console.log(data.name);
                     series[0]['data'].push(data.name);
                     series[1]['data'].push(data.counter);
 

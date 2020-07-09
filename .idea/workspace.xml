@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="289" column="22" lean-forward="true" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
+              <caret line="289" column="22" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -45,11 +41,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+            <state relative-caret-position="116">
+              <caret line="261" column="50" selection-start-line="261" selection-start-column="50" selection-end-line="261" selection-end-column="50" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1594337473594" expanded="true" signature="13730:14321" ph="..." />
+                <marker date="1594337868490" expanded="true" signature="13753:14344" ph="..." />
               </folding>
             </state>
           </provider>
@@ -59,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="1887" column="2" lean-forward="true" selection-start-line="1887" selection-start-column="2" selection-end-line="1887" selection-end-column="2" />
+              <caret line="1887" column="2" selection-start-line="1887" selection-start-column="2" selection-end-line="1887" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -80,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
-              <caret line="476" column="133" lean-forward="true" selection-start-line="476" selection-start-column="133" selection-end-line="476" selection-end-column="134" />
+              <caret line="476" column="133" selection-start-line="476" selection-start-column="133" selection-end-line="476" selection-end-column="134" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -425,18 +421,18 @@
       <workItem from="1593945870574" duration="3133000" />
       <workItem from="1594024464650" duration="6344000" />
       <workItem from="1594249105207" duration="2872000" />
-      <workItem from="1594331316752" duration="2656000" />
+      <workItem from="1594331316752" duration="3106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="634761000" />
+    <option name="totallyTimeSpent" value="635211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20376597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20376597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -449,7 +445,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.13672923" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4530831" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -889,7 +885,7 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="289" column="22" lean-forward="true" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
+          <caret line="289" column="22" selection-start-line="289" selection-start-column="22" selection-end-line="289" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -919,7 +915,7 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/components/Navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
-          <caret line="476" column="133" lean-forward="true" selection-start-line="476" selection-start-column="133" selection-end-line="476" selection-end-column="134" />
+          <caret line="476" column="133" selection-start-line="476" selection-start-column="133" selection-end-line="476" selection-end-column="134" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -929,17 +925,17 @@
     <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="1887" column="2" lean-forward="true" selection-start-line="1887" selection-start-column="2" selection-end-line="1887" selection-end-column="2" />
+          <caret line="1887" column="2" selection-start-line="1887" selection-start-column="2" selection-end-line="1887" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+        <state relative-caret-position="116">
+          <caret line="261" column="50" selection-start-line="261" selection-start-column="50" selection-end-line="261" selection-end-column="50" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1594337473594" expanded="true" signature="13730:14321" ph="..." />
+            <marker date="1594337868490" expanded="true" signature="13753:14344" ph="..." />
           </folding>
         </state>
       </provider>
