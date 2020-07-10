@@ -46,7 +46,7 @@ class DailyActivePackages extends Component {
                 dataLabels: {
                     enabled: false,
                 },
-                yaxis: {
+                xaxis: {
                     categories: [],
                 }
             },
@@ -276,7 +276,7 @@ class DailyActivePackages extends Component {
                         dataLabels: {
                             enabled: false,
                         },
-                        yaxis: {
+                        xaxis: {
                             categories: day
                         }
                     },
