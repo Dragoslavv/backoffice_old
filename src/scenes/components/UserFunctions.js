@@ -1811,7 +1811,7 @@ export const voip_api = (voip_id,user,check_voip) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user="+ user + "&check_voip" + check_voip,
+        body: "voip_id=" + voip_id + "&user="+ user + "&check_voip=" + check_voip,
 
     }).then((response) =>
         response.json()
@@ -1853,7 +1853,7 @@ export const update_voip = (voip_id, user, billing_id, check_voip) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id + "&check_voip" + check_voip,
+        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id + "&check_voip=" + check_voip,
 
     }).then((response) =>
         response.json()
