@@ -122,7 +122,7 @@ class CustomerBilling extends Component {
 
             if( this.state.checking_voip === 'true' ){
 
-                voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username')).then(result => {
+                voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username'), this.state.checking_voip).then(result => {
 
                     if(result.status === true){
 
@@ -157,7 +157,7 @@ class CustomerBilling extends Component {
 
             } else {
 
-                update_voip(this.state.searchData[0].user_id,sessionStorage.getItem('username'),this.state.searchData[0].billing_id).then(result => {
+                update_voip(this.state.searchData[0].user_id,sessionStorage.getItem('username'),this.state.searchData[0].billing_id, this.state.checking_voip).then(result => {
 
                     if(result.status === true) {
                         store.addNotification({
@@ -1527,12 +1527,6 @@ class CustomerBilling extends Component {
     };
 
     render() {
-        // function checkFirstVisit() {
-        //
-        //     // localForages.setItem('user_id_for_phone_numbers', '');
-        //     // localForages.setItem('billing_id_api', '');
-        //     localForages.setItem('id_from_sim_report', '');
-        // }
 
         if(this.state.redirect){
             return <Redirect to={'/'} />

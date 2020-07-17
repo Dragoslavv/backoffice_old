@@ -1803,7 +1803,7 @@ export const currently_active_users = (day) => {
     });
 };
 
-export const voip_api = (voip_id,user) => {
+export const voip_api = (voip_id,user,check_voip) => {
 
     return fetch("http://api.globaltel.rs/new-gui/?url=voip",{
         method: 'POST',
@@ -1811,7 +1811,7 @@ export const voip_api = (voip_id,user) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user="+ user,
+        body: "voip_id=" + voip_id + "&user="+ user + "&check_voip" + check_voip,
 
     }).then((response) =>
         response.json()
@@ -1845,7 +1845,7 @@ export const checking_voip = (user_id) => {
     });
 };
 
-export const update_voip = (voip_id, user, billing_id) => {
+export const update_voip = (voip_id, user, billing_id, check_voip) => {
 
     return fetch("http://api.globaltel.rs/new-gui/?url=update_voip",{
         method: 'POST',
@@ -1853,7 +1853,7 @@ export const update_voip = (voip_id, user, billing_id) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id,
+        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id + "&check_voip" + check_voip,
 
     }).then((response) =>
         response.json()
@@ -1889,7 +1889,7 @@ export const SwitchToSimNumber = (user_id, number) => {
 
 export const currentlyActivePackages = (start, end, package_id) => {
 
-    return fetch("https://api.globaltel.rs/new-gui/?url=currently_active_packages",{
+    return fetch("http://new-gui.com/?url=currently_active_packages",{
         method: 'POST',
         headers: {
             'Accept': 'application/json',
