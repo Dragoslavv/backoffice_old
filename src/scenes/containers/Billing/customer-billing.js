@@ -121,9 +121,9 @@ class CustomerBilling extends Component {
 
         if(sessionStorage.getItem('role') === 'ADMIN') {
 
-            if( this.state.checking_voip === 'true' ){
+            if( this.state.checking_voip === 'true' && this.state.select_voip !== '' ){
 
-                voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username'), this.state.checking_voip).then(result => {
+                voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username'), this.state.checking_voip, this.state.select_voip).then(result => {
 
                     if(result.status === true){
 
@@ -158,35 +158,51 @@ class CustomerBilling extends Component {
 
             } else {
 
-                update_voip(this.state.searchData[0].user_id,sessionStorage.getItem('username'),this.state.searchData[0].billing_id, this.state.checking_voip).then(result => {
+                if(this.state.select_voip !== ''){
 
-                    if(result.status === true) {
-                        store.addNotification({
-                            title: 'Setting up user on voip',
-                            message: 'Founds were successfully returned',
-                            type: 'info',                         // 'default', 'success', 'info', 'warning'
-                            container: 'top-right',                // where to position the notifications
-                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
-                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
-                            dismiss: {
-                                duration: 3000
-                            }
-                        });
-                    } else {
-                        store.addNotification({
-                            title: 'Setting up user on voip',
-                            message: result.message,
-                            type: 'info',                         // 'default', 'success', 'info', 'warning'
-                            container: 'top-right',                // where to position the notifications
-                            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
-                            animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
-                            dismiss: {
-                                duration: 3000
-                            }
-                        });
-                    }
+                    update_voip(this.state.searchData[0].user_id,sessionStorage.getItem('username'),this.state.searchData[0].billing_id, this.state.checking_voip , this.state.select_voip).then(result => {
 
-                });
+                        if(result.status === true) {
+                            store.addNotification({
+                                title: 'Setting up user on voip',
+                                message: 'Founds were successfully returned',
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'top-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                        } else {
+                            store.addNotification({
+                                title: 'Setting up user on voip',
+                                message: result.message,
+                                type: 'info',                         // 'default', 'success', 'info', 'warning'
+                                container: 'top-right',                // where to position the notifications
+                                animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                                animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                                dismiss: {
+                                    duration: 3000
+                                }
+                            });
+                        }
+
+                    });
+
+                } else {
+                    store.addNotification({
+                        title: 'Setting up user on voip',
+                        message: 'Please, select your actions',
+                        type: 'info',                         // 'default', 'success', 'info', 'warning'
+                        container: 'top-right',                // where to position the notifications
+                        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                        dismiss: {
+                            duration: 3000
+                        }
+                    });
+                }
 
             }
 

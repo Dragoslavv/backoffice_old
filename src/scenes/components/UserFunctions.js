@@ -1803,7 +1803,7 @@ export const currently_active_users = (day) => {
     });
 };
 
-export const voip_api = (voip_id,user,check_voip) => {
+export const voip_api = (voip_id,user,check_voip, select_voip) => {
 
     return fetch("http://api.globaltel.rs/new-gui/?url=voip",{
         method: 'POST',
@@ -1811,7 +1811,7 @@ export const voip_api = (voip_id,user,check_voip) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user="+ user + "&check_voip=" + check_voip,
+        body: "voip_id=" + voip_id + "&user="+ user + "&check_voip=" + check_voip + "&select_voip=" + select_voip,
 
     }).then((response) =>
         response.json()
@@ -1845,7 +1845,7 @@ export const checking_voip = (user_id) => {
     });
 };
 
-export const update_voip = (voip_id, user, billing_id, check_voip) => {
+export const update_voip = (voip_id, user, billing_id, check_voip, select_voip) => {
 
     return fetch("http://api.globaltel.rs/new-gui/?url=update_voip",{
         method: 'POST',
@@ -1853,7 +1853,7 @@ export const update_voip = (voip_id, user, billing_id, check_voip) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id + "&check_voip=" + check_voip,
+        body: "voip_id=" + voip_id + "&user=" + user + "&billing_id=" + billing_id + "&check_voip=" + check_voip + "&select_voip=" + select_voip,
 
     }).then((response) =>
         response.json()
