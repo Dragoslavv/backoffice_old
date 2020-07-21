@@ -223,12 +223,12 @@ class SimReport extends Component {
 
 
     componentDidMount() {
-        PubSub.subscribe('id_from_sim_report', this.mySubscriberReport);
-        PubSub.subscribe('get_voip_id', this.VoipIdReport);
 
     }
 
     componentWillMount() {
+        PubSub.subscribe('id_from_sim_report', this.mySubscriberReport);
+        PubSub.subscribe('get_voip_id', this.VoipIdReport);
 
         if(this.sessionGet('token')){
             console.log('Call User Feed');
