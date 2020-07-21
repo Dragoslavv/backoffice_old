@@ -1781,7 +1781,7 @@ class CustomerBilling extends Component {
                                             </div>
                                         </div>
                                         <div className='col-lg-5'>
-                                            <p className="content-title">Voip</p>
+                                            <p className="content-title">Type</p>
                                         </div>
                                     </div>
                                     <div className='form-group billing-input'>
