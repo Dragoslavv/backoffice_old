@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.7bf0e442.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.7bf0e442.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="164" column="20" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
+            <state relative-caret-position="375">
+              <caret line="148" column="77" lean-forward="true" selection-start-line="148" selection-start-column="77" selection-end-line="148" selection-end-column="77" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -49,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Login/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3540">
-              <caret line="242" selection-start-line="242" selection-end-line="246" selection-end-column="9" />
+            <state relative-caret-position="126">
+              <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -61,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="6180">
               <caret line="416" column="21" selection-start-line="416" selection-start-column="21" selection-end-line="416" selection-end-column="21" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -70,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="196" column="65" selection-start-line="196" selection-start-column="65" selection-end-line="196" selection-end-column="65" />
+            <state relative-caret-position="2880">
+              <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -83,18 +76,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="1805" column="13" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="45">
               <caret line="57" selection-start-line="57" selection-end-line="57" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -123,7 +107,6 @@
       <find>.then</find>
       <find>PubSub</find>
       <find>add</find>
-      <find>transfer</find>
       <find>action_add</find>
       <find>width</find>
       <find>id_from_sim_report</find>
@@ -149,6 +132,7 @@
       <find>redirect</find>
       <find>import 'react-notifications-component/dist/theme.css'</find>
       <find>voip</find>
+      <find>transfer</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -207,10 +191,10 @@
         <option value="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
-        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" />
         <option value="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" />
+        <option value="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" />
+        <option value="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" />
       </list>
     </option>
   </component>
@@ -468,17 +452,20 @@
       <workItem from="1594814471841" duration="3087000" />
       <workItem from="1594849182064" duration="4174000" />
       <workItem from="1594916885896" duration="599000" />
-      <workItem from="1594990751239" duration="1925000" />
+      <workItem from="1594990751239" duration="3583000" />
+      <workItem from="1595233677873" duration="599000" />
+      <workItem from="1595320300729" duration="1269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="659707000" />
+    <option name="totallyTimeSpent" value="663233000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2259583" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23105656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -491,7 +478,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2627346" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2623295" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -911,10 +898,27 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react-notifications-component/dist/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Login/index.js">
+    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3540">
-          <caret line="242" selection-start-line="242" selection-end-line="246" selection-end-column="9" />
+        <state relative-caret-position="181">
+          <caret line="283" lean-forward="true" selection-start-line="283" selection-end-line="283" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6180">
+          <caret line="416" column="21" selection-start-line="416" selection-start-column="21" selection-end-line="416" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="198" column="39" selection-start-line="198" selection-start-column="39" selection-end-line="198" selection-end-column="39" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -933,8 +937,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="45">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Login/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="209" column="70" selection-start-line="209" selection-start-column="70" selection-end-line="209" selection-end-column="70" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -943,35 +957,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="164" column="20" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="416" column="21" selection-start-line="416" selection-start-column="21" selection-end-line="416" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/components/UserFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="1805" column="13" selection-start-line="1805" selection-start-column="13" selection-end-line="1805" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="196" column="65" selection-start-line="196" selection-start-column="65" selection-end-line="196" selection-end-column="65" />
+          <caret line="148" column="77" lean-forward="true" selection-start-line="148" selection-start-column="77" selection-end-line="148" selection-end-column="77" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

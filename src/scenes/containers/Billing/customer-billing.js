@@ -90,7 +90,8 @@ class CustomerBilling extends Component {
             action_add: '',
             new_number: '',
             day_active:currently,
-            active_users_currently:[]
+            active_users_currently:[],
+            select_voip:''
         };
 
 
@@ -1746,6 +1747,20 @@ class CustomerBilling extends Component {
                                                 <select className={"input  true"}  onChange={this.handleChange} value={this.state.checking_voip} name='checking_voip'>
                                                     <option value="true">true</option>
                                                     <option value="false">false</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className='col-lg-5'>
+                                            <p className="content-title">Voip</p>
+                                        </div>
+                                    </div>
+                                    <div className='row'>
+                                        <div className='col-lg-7'>
+                                            <div className='form-group billing-input'>
+                                                <select className={"input  true"}  onChange={this.handleChange} value={this.state.select_voip} name='select_voip'>
+                                                    <option value="">Select Actions</option>
+                                                    <option value="call">call</option>
+                                                    <option value="sms">sms</option>
                                                 </select>
                                             </div>
                                         </div>
