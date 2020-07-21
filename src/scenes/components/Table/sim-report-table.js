@@ -52,10 +52,12 @@ export class SimReportTable extends Component{
                       className: "get_user_ID"
                     },
                     { title: "User",
+                        targets: -1,
                         data: null,
                         defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
                     },
                     { title: "Voip",
+                        targets: -1,
                         data: null,
                         defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="voip_id" >Voip</button></p>`
                     },
@@ -78,23 +80,28 @@ export class SimReportTable extends Component{
 
                 const id = $(this).parent().parent().parent();
 
-                id.find('.get_user_ID').each(function( index,item ) {
+                var get_id = {'user_id' : []};
 
-                    PubSub.publish('id_from_sim_report', item.innerHTML);
-                    localForages.setItem('id_from_sim_report', item.innerHTML);
+                id.find('.get_user_ID').each(function( index,item ) {
+                    get_id['user_id'].push(item.innerHTML);
                 });
+
+                PubSub.publish('id_from_sim_report', get_id.user_id);
+                localForages.setItem('id_from_sim_report', get_id.user_id);
             });
 
             table.on('click', '#voip_id', function () {
 
                 const id = $(this).parent().parent().parent();
 
+                var get_voip = {'voip_id' : []};
+
                 id.find('.get_user_ID').each(function( index,item ) {
-
-                    PubSub.publish('get_voip_id', item.innerHTML);
-                    localForages.setItem('get_voip_id', item.innerHTML);
-
+                    get_voip['voip_id'].push(item.innerHTML);
                 });
+
+                PubSub.publish('get_voip_id', get_voip.voip_id);
+                localForages.setItem('get_voip_id', get_voip.voip_id);
             });
         });
 
@@ -139,10 +146,12 @@ export class SimReportTable extends Component{
                             className: "get_user_ID"
                         },
                         { title: "User",
+                            targets: -1,
                             data: null,
                             defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="user_id_get" >Get user ID</button></p>`
                         },
                         { title: "Voip",
+                            targets: -1,
                             data: null,
                             defaultContent:`<p style="margin:0px !important;" ><button type="button" style="padding: 3px !important;" class="btn btn-info" id="voip_id" >Voip</button></p>`
                         },
