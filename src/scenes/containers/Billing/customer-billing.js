@@ -122,7 +122,7 @@ class CustomerBilling extends Component {
         if(sessionStorage.getItem('role') === 'ADMIN') {
 
             if( this.state.checking_voip === 'true' && this.state.select_voip !== '' ){
-
+console.log(this.state.select_voip);
                 voip_api(this.state.searchData[0].user_id,sessionStorage.getItem('username'), this.state.checking_voip, this.state.select_voip).then(result => {
 
                     if(result.status === true){
