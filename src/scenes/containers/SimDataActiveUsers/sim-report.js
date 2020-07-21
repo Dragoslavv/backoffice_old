@@ -197,13 +197,24 @@ class SimReport extends Component {
         voip_api(dataSet,sessionStorage.getItem('username'),'true','voice').then(result => {
 
             if(result.status === true){
-                this.setState({
-                    voip_id: dataSet
+                // this.setState({
+                //     voip_id: dataSet
+                // });
+                store.addNotification({
+                    title: 'Setting up user on voip',
+                    message: result.message,
+                    type: 'info',                         // 'default', 'success', 'info', 'warning'
+                    container: 'top-right',                // where to position the notifications
+                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                    dismiss: {
+                        duration: 3000
+                    }
                 })
             } else {
-                this.setState({
-                    voip_id: ''
-                })
+                // this.setState({
+                //     voip_id: ''
+                // })
 
                 store.addNotification({
                     title: 'Setting up user on voip',
