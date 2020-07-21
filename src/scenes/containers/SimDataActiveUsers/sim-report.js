@@ -240,10 +240,10 @@ class SimReport extends Component {
 
     render() {
 
-        if(this.state.voip_id){
-            return <Redirect to={'/customer-billing'} />
-
-        }
+        // if(this.state.voip_id){
+        //     return <Redirect to={'/customer-billing'} />
+        //
+        // }
 
 
         if(this.state.id_from_sim_report){
