@@ -1775,8 +1775,8 @@ class CustomerBilling extends Component {
                                             <div className='form-group billing-input'>
                                                 <select className={"input  true"}  onChange={this.handleChange} value={this.state.select_voip} name='select_voip'>
                                                     <option value="">Select Actions</option>
-                                                    <option value="call">call</option>
                                                     <option value="voice">voice</option>
+                                                    <option value="sms">sms</option>
                                                 </select>
                                             </div>
                                         </div>
