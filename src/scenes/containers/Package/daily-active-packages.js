@@ -306,7 +306,7 @@ class DailyActivePackages extends Component {
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">
                             <li className="breadcrumb-item"><Link to="/customer-billing">GLOBALTELGUI</Link></li>
-                            <li className="breadcrumb-item active" aria-current="page">Package Stat</li>
+                            <li className="breadcrumb-item active" aria-current="page">Active packages</li>
                         </ol>
                     </nav>
                     <div className="row mb-3">
