@@ -1887,7 +1887,7 @@ export const SwitchToSimNumber = (user_id, number) => {
     });
 };
 
-export const currentlyActivePackages = (day, package_id) => {
+export const currentlyActivePackages = (start, end) => {
 
     return fetch("http://api.globaltel.rs/new-gui/?url=currently_active_packages",{
         method: 'POST',
@@ -1895,7 +1895,7 @@ export const currentlyActivePackages = (day, package_id) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "day=" + day +'&package_id='+package_id,
+        body: "start_day=" + start +'&end_day='+end,
 
     }).then((response) =>
         response.json()

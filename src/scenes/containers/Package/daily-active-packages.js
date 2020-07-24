@@ -17,33 +17,52 @@ class DailyActivePackages extends Component {
 
         this.state = {
             redirect: false,
-            day: today,
-            package: '',
+            start_day: today,
+            end_day: today,
+            series: [],
             options: {
-                colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                grid: {
-                    show: true,
-                    borderColor: '#90A4AE',
-                    padding: {
-                        top: 10,
-                        right: 10,
-                        bottom: 10,
-                        left: 10
+                chart: {
+                    type: 'bar',
+                    // height: 350,
+                    stacked: true,
+                    toolbar: {
+                        show: true
+                    },
+                    zoom: {
+                        enabled: false
+                    }
+                },
+                responsive: [{
+                    breakpoint: 480,
+                    options: {
+                        legend: {
+                            position: 'bottom',
+                            offsetX: -10,
+                            offsetY: 0
+                        }
+                    }
+                }],
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
                     },
                 },
-                chart: {
-                    id: "basic-bar-packages-stat",
-                },
-                dataLabels: {
-                    enabled: false,
-                },
                 xaxis: {
+                    type: 'datetime',
                     categories: [],
                 },
+                legend: {
+                    position: 'right',
+                    offsetY: 40
+                },
+                fill: {
+                    opacity: 1
+                }
             },
-            series: [],
             dist_pack:[],
         };
+
+
         this.handleChanges = this.handleChanges.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleReset = this.handleReset.bind(this);
@@ -103,9 +122,11 @@ class DailyActivePackages extends Component {
     handleReset = (e) => {
         e.preventDefault();
 
-        currentlyActivePackages(this.state.day, this.state.package).then(result => {
+        currentlyActivePackages(this.state.start_day, this.state.end_day).then(result => {
 
             if(result.status === true){
+
+                const day = [];
 
                 let today = new Date();
                 let dd = String(today.getDate()).padStart(2, '0');
@@ -115,45 +136,56 @@ class DailyActivePackages extends Component {
                 today = yyyy + '-' + mm + '-' + dd;
 
                 this.setState({
-                    day: today,
-                    package: '',
+                    start_day:today,
+                    end_day:today
                 });
 
-                const day = [];
-                const series = [];
+                result.date.map(function (data) {
 
-                result.data.map(function (data) {
-
-                    day.push(data.stat_date);
-
-                    series.push({name:  data.name, data: [data.counter] });
-
+                    day.push(data.date);
                 });
 
                 this.setState({
+                    series: result.data,
                     options: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
+                        chart: {
+                            type: 'bar',
+                            // height: 350,
+                            stacked: true,
+                            toolbar: {
+                                show: true
+                            },
+                            zoom: {
+                                enabled: false
+                            }
+                        },
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                legend: {
+                                    position: 'bottom',
+                                    offsetX: -10,
+                                    offsetY: 0
+                                }
+                            }
+                        }],
+                        plotOptions: {
+                            bar: {
+                                horizontal: false,
                             },
                         },
-                        chart: {
-                            id: "basic-bar-packages-stat",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
                         xaxis: {
-                            categories: day,
+                            type: 'datetime',
+                            categories: result.date,
+                        },
+                        legend: {
+                            position: 'right',
+                            offsetY: 40
+                        },
+                        fill: {
+                            opacity: 1
                         }
-                    },
-                    series: series
+                    }
                 });
 
             }
@@ -167,46 +199,63 @@ class DailyActivePackages extends Component {
             search: 'click'
         });
 
-        currentlyActivePackages(this.state.day, this.state.package).then(result => {
+        currentlyActivePackages(this.state.start_day, this.state.end_day).then(result => {
 
             if(result.status === true){
 
                 const day = [];
                 const series = [];
 
-                result.data.map(function (data) {
+                console.log(result.data);
 
-                    day.push(data.stat_date);
+                result.date.map(function (data) {
 
-
-                    series.push({name:  data.name, data: [data.counter] });
-
+                    day.push(data.date);
                 });
 
+                console.log(day);
+
                 this.setState({
+                    series: result.data,
                     options: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
+                        chart: {
+                            type: 'bar',
+                            // height: 350,
+                            stacked: true,
+                            toolbar: {
+                                show: true
+                            },
+                            zoom: {
+                                enabled: false
+                            }
+                        },
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                legend: {
+                                    position: 'bottom',
+                                    offsetX: -10,
+                                    offsetY: 0
+                                }
+                            }
+                        }],
+                        plotOptions: {
+                            bar: {
+                                horizontal: false,
                             },
                         },
-                        chart: {
-                            id: "basic-bar-packages-stat",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
                         xaxis: {
-                            categories: day,
+                            type: 'datetime',
+                            categories: result.date,
+                        },
+                        legend: {
+                            position: 'right',
+                            offsetY: 40
+                        },
+                        fill: {
+                            opacity: 1
                         }
-                    },
-                    series: series
+                    }
                 });
 
             }
@@ -233,7 +282,7 @@ class DailyActivePackages extends Component {
             });
         });
 
-        currentlyActivePackages(this.state.day, this.state.package).then(result => {
+        currentlyActivePackages(this.state.start_day, this.state.end_day).then(result => {
 
             if(result.status === true){
 
@@ -242,37 +291,59 @@ class DailyActivePackages extends Component {
 
                 result.data.map(function (data) {
 
-                    day.push(data.stat_date);
-
-
                     series.push({name:  data.name, data: [data.counter] });
 
                 });
 
+                result.date.map(function (data) {
+
+                    day.push(data.date);
+                });
+
+                console.log(day);
+                console.log(series);
+
                 this.setState({
+                    series: result.data,
                     options: {
-                        colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#686f73'],
-                        grid: {
-                            show: true,
-                            borderColor: '#90A4AE',
-                            padding: {
-                                top: 10,
-                                right: 10,
-                                bottom: 10,
-                                left: 10
+                        chart: {
+                            type: 'bar',
+                            // height: 350,
+                            stacked: true,
+                            toolbar: {
+                                show: true
+                            },
+                            zoom: {
+                                enabled: false
+                            }
+                        },
+                        responsive: [{
+                            breakpoint: 480,
+                            options: {
+                                legend: {
+                                    position: 'bottom',
+                                    offsetX: -10,
+                                    offsetY: 0
+                                }
+                            }
+                        }],
+                        plotOptions: {
+                            bar: {
+                                horizontal: false,
                             },
                         },
-                        chart: {
-                            id: "basic-bar-packages-stat",
-                        },
-                        dataLabels: {
-                            enabled: false,
-                        },
                         xaxis: {
-                            categories: day,
+                            type: 'datetime',
+                            categories: result.date,
+                        },
+                        legend: {
+                            position: 'right',
+                            offsetY: 40
+                        },
+                        fill: {
+                            opacity: 1
                         }
-                    },
-                    series: series
+                    }
                 });
 
             }
@@ -316,18 +387,10 @@ class DailyActivePackages extends Component {
                                 <hr/>
                                 <form method="post">
                                     <div className='form-group'>
-                                        <input className='input' type='date' name='day' value={this.state.day} onChange={this.handleChanges} autoComplete='off' placeholder='Start:'/>
+                                        <input className='input' type='date' name='start_day' value={this.state.start_day} onChange={this.handleChanges} autoComplete='off' placeholder='Start:'/>
                                     </div>
                                     <div className='form-group'>
-                                        <select className="input " name="package" value={this.state.package} onChange={this.handleChanges}>
-                                            <option value="">Package</option>
-                                                {this.state.dist_pack.map(function (item) {
-
-                                                    return <option key={item.value} value={item.value}>({item.value}) - {item.name}</option>
-
-                                                })
-                                                }
-                                        </select>
+                                        <input className='input' type='date' name='end_day' value={this.state.end_day} onChange={this.handleChanges} autoComplete='off' placeholder='End:'/>
                                     </div>
                                     <div className="form-group">
                                         <div className="row">
@@ -344,13 +407,15 @@ class DailyActivePackages extends Component {
                         </div>
                         <div className="col-lg-9">
                             <div className='wrap-border table-col-gui'>
-                                <Chart
-                                    options={this.state.options}
-                                    series={this.state.series}
-                                    type="bar"
-                                    width="100%"
-                                    height='600'
-                                />
+                                <div id="chart">
+                                    <Chart
+                                        options={this.state.options}
+                                        series={this.state.series}
+                                        type="bar"
+                                        width="100%"
+                                        height='600'
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
