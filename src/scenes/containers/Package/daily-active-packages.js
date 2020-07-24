@@ -29,7 +29,7 @@ class DailyActivePackages extends Component {
                         show: true
                     },
                     zoom: {
-                        enabled: false
+                        enabled: true
                     }
                 },
                 responsive: [{
@@ -156,7 +156,7 @@ class DailyActivePackages extends Component {
                                 show: true
                             },
                             zoom: {
-                                enabled: false
+                                enabled: true
                             }
                         },
                         responsive: [{
@@ -206,14 +206,10 @@ class DailyActivePackages extends Component {
                 const day = [];
                 const series = [];
 
-                console.log(result.data);
-
                 result.date.map(function (data) {
 
                     day.push(data.date);
                 });
-
-                console.log(day);
 
                 this.setState({
                     series: result.data,
@@ -226,7 +222,7 @@ class DailyActivePackages extends Component {
                                 show: true
                             },
                             zoom: {
-                                enabled: false
+                                enabled: true
                             }
                         },
                         responsive: [{
@@ -299,10 +295,7 @@ class DailyActivePackages extends Component {
 
                     day.push(data.date);
                 });
-
-                console.log(day);
-                console.log(series);
-
+console.log(result.data);
                 this.setState({
                     series: result.data,
                     options: {
@@ -314,7 +307,7 @@ class DailyActivePackages extends Component {
                                 show: true
                             },
                             zoom: {
-                                enabled: false
+                                enabled: true
                             }
                         },
                         responsive: [{
