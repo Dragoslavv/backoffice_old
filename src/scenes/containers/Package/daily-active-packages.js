@@ -23,7 +23,7 @@ class DailyActivePackages extends Component {
             options: {
                 chart: {
                     type: 'bar',
-                    // height: 350,
+                    height: 5,
                     stacked: true,
                     toolbar: {
                         show: true
@@ -150,7 +150,8 @@ class DailyActivePackages extends Component {
                     options: {
                         chart: {
                             type: 'bar',
-                            // height: 350,
+                            height: 5,
+
                             stacked: true,
                             toolbar: {
                                 show: true
@@ -216,7 +217,8 @@ class DailyActivePackages extends Component {
                     options: {
                         chart: {
                             type: 'bar',
-                            // height: 350,
+                            height: 5,
+
                             stacked: true,
                             toolbar: {
                                 show: true
@@ -295,13 +297,14 @@ class DailyActivePackages extends Component {
 
                     day.push(data.date);
                 });
-console.log(result.data);
+
                 this.setState({
                     series: result.data,
                     options: {
                         chart: {
                             type: 'bar',
-                            // height: 350,
+                            height: 5,
+
                             stacked: true,
                             toolbar: {
                                 show: true
