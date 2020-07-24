@@ -23,7 +23,7 @@ class DailyActivePackages extends Component {
             options: {
                 chart: {
                     type: 'bar',
-                    height: 5,
+                    height: '10px',
                     stacked: true,
                     toolbar: {
                         show: true
@@ -45,6 +45,8 @@ class DailyActivePackages extends Component {
                 plotOptions: {
                     bar: {
                         horizontal: false,
+                        columnWidth: '8%',
+                        barHeight: '8%',
                     },
                 },
                 xaxis: {
@@ -150,8 +152,7 @@ class DailyActivePackages extends Component {
                     options: {
                         chart: {
                             type: 'bar',
-                            height: 5,
-
+                            height: '10px',
                             stacked: true,
                             toolbar: {
                                 show: true
@@ -173,6 +174,8 @@ class DailyActivePackages extends Component {
                         plotOptions: {
                             bar: {
                                 horizontal: false,
+                                columnWidth: '8%',
+                                barHeight: '8%',
                             },
                         },
                         xaxis: {
@@ -217,7 +220,7 @@ class DailyActivePackages extends Component {
                     options: {
                         chart: {
                             type: 'bar',
-                            height: 5,
+                            height: '10px',
 
                             stacked: true,
                             toolbar: {
@@ -240,6 +243,8 @@ class DailyActivePackages extends Component {
                         plotOptions: {
                             bar: {
                                 horizontal: false,
+                                columnWidth: '8%',
+                                barHeight: '8%',
                             },
                         },
                         xaxis: {
@@ -303,7 +308,7 @@ class DailyActivePackages extends Component {
                     options: {
                         chart: {
                             type: 'bar',
-                            height: 5,
+                            height: '10px',
 
                             stacked: true,
                             toolbar: {
@@ -326,6 +331,8 @@ class DailyActivePackages extends Component {
                         plotOptions: {
                             bar: {
                                 horizontal: false,
+                                columnWidth: '8%',
+                                barHeight: '8%',
                             },
                         },
                         xaxis: {
