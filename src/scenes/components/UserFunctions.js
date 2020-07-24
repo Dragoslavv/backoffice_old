@@ -259,7 +259,7 @@ export const addCredit = (billing_id, amount, account, password, info, username)
     });
 };
 
-export const activate_package = (user_id, role, checked_duration, duration, package_id , email) => {
+export const activate_package = (user_id, role, checked_duration, duration, package_id , email, auto_renew) => {
 
     return fetch("https://api.globaltel.rs/new-gui/?url=activation_package",{
         method: 'POST',
@@ -267,7 +267,7 @@ export const activate_package = (user_id, role, checked_duration, duration, pack
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "user_id="+ user_id + "&role="+ role + "&checked_duration="+ checked_duration + "&duration="+ duration +"&package_id="+ package_id+"&email="+ email,
+        body: "user_id="+ user_id + "&role="+ role + "&checked_duration="+ checked_duration + "&duration="+ duration +"&package_id="+ package_id+"&email="+ email +"&auto_renew="+ auto_renew,
 
     }).then((response) =>
         response.json()

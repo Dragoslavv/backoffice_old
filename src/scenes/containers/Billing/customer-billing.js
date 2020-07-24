@@ -36,6 +36,7 @@ class CustomerBilling extends Component {
         currently = yyyy + '-' + mm + '-' + dd;
 
         this.state = {
+            auto_renew:false,
             redirect:false,
             number: '',
             email: '',
@@ -990,6 +991,13 @@ class CustomerBilling extends Component {
 
         }
 
+        if( e.target.name === 'auto_renew') {
+
+            this.setState({
+                auto_renew : !this.state.auto_renew,
+            });
+        }
+
     };
 
     handleChangeData = (e) => {
@@ -1028,7 +1036,7 @@ class CustomerBilling extends Component {
             && this.state.duration_active !== '' && this.state.package_du_active !== '' && sessionStorage.getItem('billing_email') !== '' && sessionStorage.getItem('billing_email') !== null ) {
 
 
-            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email')).then(result => {
+            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email'), this.state.auto_renew).then(result => {
 
                 if(result['success'] === true) {
 
@@ -1898,6 +1906,17 @@ class CustomerBilling extends Component {
                                                     })
                                                     }
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                            <div className="col-lg-7">
+                                                <ul className="unstyled ">
+                                                    <li>
+                                                        <input className="styled-checkbox input" name='auto_renew' value={this.state.auto_renew} onChange={this.handleChange} id="auto_renew"
+                                                               type="checkbox" />
+                                                        <label htmlFor="auto_renew"> Auto Renew</label>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
