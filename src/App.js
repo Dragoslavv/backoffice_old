@@ -53,6 +53,7 @@ import DataLimit from "./scenes/containers/Billing/data-limit";
 import {currently_active_users} from "./scenes/components/UserFunctions";
 import IpayCofTransaction from "./scenes/containers/Payment/ipay-cof-transaction";
 import DailyActivePackages from "./scenes/containers/Package/daily-active-packages";
+import ProcessPurchasel from "./scenes/containers/ProcessPurchaseI";
 
 class App extends Component {
 
@@ -171,6 +172,10 @@ class App extends Component {
                       </Route>
                       <Route exact path="/parking-stat">
                           <ParkingStat />
+                      </Route>
+                      //ProcessPurchasel
+                      <Route exact path="/process-purchasel">
+                          <ProcessPurchasel />
                       </Route>
                       //package
                       <Route exact path="/package-default">
