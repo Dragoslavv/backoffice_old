@@ -54,6 +54,7 @@ import {currently_active_users} from "./scenes/components/UserFunctions";
 import IpayCofTransaction from "./scenes/containers/Payment/ipay-cof-transaction";
 import DailyActivePackages from "./scenes/containers/Package/daily-active-packages";
 import ProcessPurchasel from "./scenes/containers/ProcessPurchaseI";
+import ReadVoip from "./scenes/containers/SimDataActiveUsers/read_voip";
 
 class App extends Component {
 
@@ -191,6 +192,9 @@ class App extends Component {
                           <DailyActivePackages />
                       </Route>
                       //Sim data & active users
+                      <Route exact path="/voip">
+                          <ReadVoip />
+                      </Route>
                       <Route exact path="/sim-report">
                           <SimReport />
                       </Route>

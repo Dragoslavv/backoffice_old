@@ -1907,3 +1907,24 @@ export const currentlyActivePackages = (start, end) => {
         return err;
     });
 };
+
+
+export const exportVoip = (start_date, end_date, user_id, active, voip) => {
+    return fetch("https://api.globaltel.rs/new-gui/?url=read_table_voip",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "start_date=" + start_date +'&end_date='+end_date +'&user_id='+user_id +'&active='+active +'&voip='+voip,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+}
