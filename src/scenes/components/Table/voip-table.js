@@ -30,10 +30,6 @@ export class VoipTable extends Component{
                         voip: this.props.data.voip
                     }
                 },
-                dom: 'Bfrtip',
-                buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
-                ],
                 order: [[ 4, "desc" ]],
                 columns: [
                     { title: "id"},
@@ -66,6 +62,9 @@ export class VoipTable extends Component{
                     sProcessing: true,
                     bLengthChange: false,
                     bPaginate:true,
+                    bScrollInfinite: true,
+                    bScrollCollapse: true,
+                    sScrollY: "700px",
                     pagingType: "simple",
                     ajax: {
                         url: 'https://api.globaltel.rs/new-gui/?url=read_table_voip',
@@ -78,10 +77,6 @@ export class VoipTable extends Component{
                             voip: this.props.data.voip
                         }
                     },
-                    dom: 'Bfrtip',
-                    buttons: [
-                        'copy', 'csv', 'excel', 'pdf', 'print'
-                    ],
                     order: [[ 4, "desc" ]],
                     columns: [
                         { title: "id"},

@@ -213,8 +213,8 @@ class ReadVoip extends Component {
                                     end: this.state.end,
                                     user_id: this.state.user_id,
                                     active: this.state.active,
-                                    voip: this.state.voip,
-                                }} />
+                                    voip: this.state.voip
+                                }}> </VoipTable>
                             </div>
                         </div>
                     </div>
