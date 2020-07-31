@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPaymentTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPaymentTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/voip-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/voip-table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +218,7 @@
       <workItem from="1596118220505" duration="1294000" />
       <workItem from="1596120484243" duration="4734000" />
       <workItem from="1596125810517" duration="599000" />
-      <workItem from="1596143263282" duration="957000" />
+      <workItem from="1596143263282" duration="2675000" />
     </task>
     <servers />
   </component>

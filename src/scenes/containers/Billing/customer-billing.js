@@ -63,6 +63,7 @@ class CustomerBilling extends Component {
                 user_id:'',
                 user_type:'',
                 wallet_id:'',
+                sim_type:''
             }],
             roleUser:'',
             UsersLogin:'',
@@ -515,7 +516,6 @@ class CustomerBilling extends Component {
 
         });
 
-
         this.setState({
             searchData:[{
                 active: (sessionStorage.getItem('billing_active'))?sessionStorage.getItem('billing_active'):'',
@@ -530,6 +530,8 @@ class CustomerBilling extends Component {
                 user_id: (sessionStorage.getItem('billing_user_id'))?sessionStorage.getItem('billing_user_id'):'',
                 user_type: (sessionStorage.getItem('billing_user_type'))?sessionStorage.getItem('billing_user_type'):'',
                 wallet_id: (sessionStorage.getItem('billing_wallet_id'))?sessionStorage.getItem('billing_wallet_id'):'',
+                sim_type: (sessionStorage.getItem('billing_sim_type'))?sessionStorage.getItem('billing_sim_type'):'',
+
             }],
         });
 
@@ -585,6 +587,7 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                            sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
 
                             this.setState({
                                 searchData:[{
@@ -600,6 +603,7 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                    sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
                                 }],
                             });
 
@@ -661,6 +665,7 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                            sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
 
                             this.setState({
                                 searchData:[{
@@ -676,6 +681,7 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                    sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
 
                                 }],
                             });
@@ -738,6 +744,7 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                            sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
 
                             this.setState({
                                 searchData:[{
@@ -753,6 +760,7 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                    sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
 
                                 }],
                             });
@@ -819,6 +827,7 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                            sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
 
                             this.setState({
                                 searchData:[{
@@ -834,6 +843,7 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                    sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
 
                                 }],
                             });
@@ -899,6 +909,7 @@ class CustomerBilling extends Component {
                             sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                             sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                             sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                            sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
 
                             this.setState({
                                 searchData:[{
@@ -914,6 +925,7 @@ class CustomerBilling extends Component {
                                     user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                                     user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                                     wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                                    sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
 
                                 }],
                             });
@@ -1130,6 +1142,7 @@ class CustomerBilling extends Component {
         sessionStorage.removeItem('billing_user_id');
         sessionStorage.removeItem('billing_user_type');
         sessionStorage.removeItem('billing_wallet_id');
+        sessionStorage.removeItem('billing_sim_type');
 
 
         this.setState({
@@ -1146,6 +1159,7 @@ class CustomerBilling extends Component {
                 user_id: '',
                 user_type: '',
                 wallet_id: '',
+                sim_type:''
             }],
             number: '',
             email: '',
@@ -1457,6 +1471,7 @@ class CustomerBilling extends Component {
                             user_id: (filter.data[0].user_id)?sessionStorage.getItem('billing_user_id'):'',
                             user_type: (filter.data[0].user_type)?sessionStorage.getItem('billing_user_type'):'',
                             wallet_id: (filter.data[0].wallet_id)?sessionStorage.getItem('billing_wallet_id'):'',
+                            sim_type: (filter.data[0].sim_type)?sessionStorage.getItem('billing_sim_type'):'',
 
                         }],
                     });
@@ -1480,6 +1495,7 @@ class CustomerBilling extends Component {
                             user_id: '',
                             user_type: '',
                             wallet_id: '',
+                            sim_type: '',
                         }],
                     });
 
@@ -1698,6 +1714,9 @@ class CustomerBilling extends Component {
                                     </div>
                                     <div className='form-group billing-input'>
                                         <textarea className='input' autoComplete='off' rows="4" cols="40" onChange={this.handleChangeData} readOnly={true} name='reservations' value={this.state.searchData[0].reservations} placeholder='Reservations:'/>
+                                    </div>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' onChange={this.handleChangeData} type='text' name='sim_type' readOnly={true}  value={this.state.searchData[0].sim_type} autoComplete='off' placeholder='sim_type:'/>
                                     </div>
                                 </form>
                             </div>
