@@ -1438,6 +1438,8 @@ class CustomerBilling extends Component {
                     sessionStorage.setItem('billing_user_id',filter.data[0].user_id);
                     sessionStorage.setItem('billing_user_type',filter.data[0].user_type);
                     sessionStorage.setItem('billing_wallet_id',filter.data[0].wallet_id);
+                    sessionStorage.setItem('billing_sim_type',filter.data[0].sim_type);
+
 
                     read_vs_active(filter.data[0].user_id).then(result => {
                         sessionStorage.setItem("vs_active",result['data']);
@@ -1511,6 +1513,8 @@ class CustomerBilling extends Component {
                     sessionStorage.removeItem('billing_user_id');
                     sessionStorage.removeItem('billing_user_type');
                     sessionStorage.removeItem('billing_wallet_id');
+                    sessionStorage.removeItem('billing_sim_type');
+
                     sessionStorage.removeItem('iccid');
 
                     store.addNotification({
