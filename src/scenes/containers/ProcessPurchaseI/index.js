@@ -3,31 +3,63 @@ import {Link, withRouter} from 'react-router-dom';
 import {Redirect} from "react-router-dom";
 import {ProcessPaymentTable} from "../../components/Table/ProcessPaymentTable";
 import {ProcessPurchaselTable} from "../../components/Table/ProcessPurchaselTable";
+import {VoipTable} from "../../components/Table/voip-table";
+import CsvDownload from "react-json-to-csv";
 
 class ProcessPurchasel extends Component {
     constructor(props){
         super(props);
 
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+
+        let dt = new Date();
+        let dd1 = String(dt.getDate()).padStart(2, '0');
+        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
+
+        let yyyy1 = dt.getFullYear();
+
+        dt = yyyy1 + '-' + mm1 + '-' + dd1;
 
         this.state = {
+            start:dt,
+            end:today,
             redirect: false,
             payment : false,
-            purchase: true
+            purchase: true,
+            type: '2',
+            search:''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.sessionGet = this.sessionGet.bind(this);
         this.purchase = this.purchase.bind(this);
         this.payment = this.payment.bind(this);
-
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick = (e) => {
+        e.preventDefault();
+
+        if(e.target.id === 'voip_click') {
+
+            this.setState({
+                search: 'click'
+            });
+        }
+    };
 
     payment = (e) => {
         e.preventDefault();
 
         this.setState({
             payment: true,
-            purchase:false
+            purchase:false,
+            type:'1'
         });
     };
 
@@ -36,7 +68,8 @@ class ProcessPurchasel extends Component {
 
         this.setState({
             purchase: true,
-            payment:false
+            payment:false,
+            type:'2'
         });
     };
 
@@ -148,21 +181,79 @@ class ProcessPurchasel extends Component {
                         </div>
                     </div>
 
+                    <div className="row mb-3">
+                        <div className="col-lg-8 mb-3 mx-auto">
+
+                            <div className="row mb-4">
+                                <div className="col-lg-6">
+                                    <div className='wrap-border table-col-gui'>
+                                        <h6 className="content-title">SEARCH</h6>
+                                        <hr/>
+                                        <form method="post">
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='date' name='start' value={this.state.start} onChange={this.handleChange} autoComplete='off' placeholder='Start:'/>
+                                            </div>
+                                            <div className='form-group billing-input'>
+                                                <input className='input' type='date' name='end' value={this.state.end} onChange={this.handleChange} autoComplete='off' placeholder='End:'/>
+                                            </div>
+                                            <div className="form-group billing-input">
+                                                <div className="row">
+                                                    <div className="col-lg-12">
+                                                        <button className="btn btn-block btn-outline-success btn-login-from"  id='payment_purchase'  onClick={this.handleClick} type="submit">next</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className='wrap-border table-col-gui'>
+                                        <h6 className="content-title">EXPORT</h6>
+                                        <hr/>
+                                        <div className="form-group billing-input">
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <CsvDownload data={this.state.export} target="_parent" filename={"export-voip.csv"}  className="btn btn-block btn-success btn-login-from" >{(this.state.payment)?'EXPORT PAYMENT':'EXPORT PURCHASE'} </CsvDownload>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
                     <div className="row">
                         <div className="col-lg-12 mx-auto">
 
                             <div className={this.state.payment?'wrap-border table-col-gui': 'hidden-ul'} >
-                                <h6 className="content-title">payment</h6>
+                                <h6 className="content-title">PAYMENT</h6>
 
-                                <ProcessPaymentTable/>
+                                {(this.state.payment && this.state.type === '1')?
+                                <ProcessPaymentTable search={this.state.search} data={{
+                                    start: this.state.start,
+                                    end: this.state.end,
+                                    type: this.state.type
+                                }}/>
+                                :''
+                                }
 
                             </div>
 
                             <div className={this.state.purchase?'wrap-border table-col-gui': 'hidden-ul'} >
-                                <h6 className="content-title">purchase</h6>
+                                <h6 className="content-title">PURCHASE</h6>
 
-                                <ProcessPurchaselTable/>
+                                {(this.state.purchase && this.state.type === '2')?
 
+                                    <ProcessPurchaselTable search={this.state.search} data={{
+                                        start: this.state.start,
+                                        end: this.state.end,
+                                        type: this.state.type
+                                    }}/>
+                                    :''
+                                }
                             </div>
 
                         </div>

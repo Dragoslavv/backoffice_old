@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPaymentTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPaymentTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/voip-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/voip-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +79,7 @@
       <recent name="$PROJECT_DIR$/php" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -214,11 +218,15 @@
       <workItem from="1595926668924" duration="5390000" />
       <workItem from="1596027988280" duration="1982000" />
       <workItem from="1596030313300" duration="3250000" />
+      <workItem from="1596118220505" duration="1294000" />
+      <workItem from="1596120484243" duration="4734000" />
+      <workItem from="1596125810517" duration="599000" />
+      <workItem from="1596143263282" duration="957000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -230,6 +238,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="840" y="1234" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596109005591">
@@ -240,5 +249,13 @@
       <screen x="408" y="0" width="1512" height="1848" />
     </state>
     <state x="408" y="1065" width="618" height="783" key="find.popup/408.0.1512.1848@408.0.1512.1848" timestamp="1596113501663" />
+    <state x="624" y="246" key="run.anything.popup" timestamp="1596120755255">
+      <screen x="408" y="0" width="1512" height="1080" />
+    </state>
+    <state x="624" y="246" key="run.anything.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1596120755255" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596118519005">
+      <screen x="408" y="0" width="1512" height="1080" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1596118519005" />
   </component>
 </project>

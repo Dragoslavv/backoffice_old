@@ -17,8 +17,8 @@ class ReadVoip extends Component {
         today = yyyy + '-' + mm + '-' + dd;
 
         let dt = new Date();
-        let dd1 = String(dt.getDate()).padStart(2, '0');
-        let mm1 = String(dt.getMonth() + 1 - 1).padStart(2, '0');
+        let dd1 = String(dt.getDate()  - 1).padStart(2, '0');
+        let mm1 = String(dt.getMonth() + 1).padStart(2, '0');
 
         let yyyy1 = dt.getFullYear();
 

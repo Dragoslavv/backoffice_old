@@ -18,6 +18,9 @@ export class VoipTable extends Component{
                 sProcessing: true,
                 bLengthChange: false,
                 bPaginate:true,
+                bScrollInfinite: true,
+                bScrollCollapse: true,
+                sScrollY: "700px",
                 pagingType: "simple",
                 ajax: {
                     url: 'https://api.globaltel.rs/new-gui/?url=read_table_voip',
