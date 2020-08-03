@@ -215,6 +215,9 @@ class DailyActivePackages extends Component {
                     day.push(data.date);
                 });
 
+                console.log(result.data);
+                console.log(result.date);
+
                 this.setState({
                     series: result.data,
                     options: {

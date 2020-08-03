@@ -134,11 +134,11 @@ class DataLimit extends Component {
             return <Redirect to={'/'} />
         }
 
-        const dataTable = this.state.data_limit.map(function (item) {
+        const dataTable = (this.state.data_limit)?this.state.data_limit.map(function (item) {
 
             return item;
 
-        });
+        }):'';
 
         function TableData() {
             if(dataTable.length > 0){

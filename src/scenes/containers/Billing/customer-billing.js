@@ -1593,6 +1593,7 @@ class CustomerBilling extends Component {
                     </nav>
                     {sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
 
+                        (this.state.active_users_currently !== [] )?
                          this.state.active_users_currently.map(function (item) {
 
                              return (<div key={0} className='row '>
@@ -1639,6 +1640,7 @@ class CustomerBilling extends Component {
                              </div>)
 
                          })
+                        :''
                      }
 
                     <div className="row">

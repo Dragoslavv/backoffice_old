@@ -137,11 +137,11 @@ class ChargeDataLog extends Component {
             return <Redirect to={'/'} />
         }
 
-        const dataTable = this.state.chargeLog.map(function (item) {
+        const dataTable = (this.state.chargeLog !== null)?this.state.chargeLog.map(function (item) {
 
             return item;
 
-        });
+        }):'';
 
         function Table() {
             if(dataTable.length > 0){
@@ -160,8 +160,9 @@ class ChargeDataLog extends Component {
                             <li className="breadcrumb-item active" aria-current="page">Charge Data Log</li>
                         </ol>
                     </nav>
-                    <div className="row">
-                        <div className="col-lg-3 mb-3">
+
+                    <div className='row'>
+                        <div className="col-lg-6 mb-3 mx-auto">
                             <div className='wrap-border table-col-gui'>
                                 <h6 className="content-title">Search</h6>
                                 <hr/>
@@ -214,7 +215,9 @@ class ChargeDataLog extends Component {
                                 </form>
                             </div>
                         </div>
-                        <div className="col-lg-9">
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-12">
                             <div className='wrap-border table-col-gui'>
                                 <Table/>
                             </div>
