@@ -1315,7 +1315,7 @@ class CustomerBilling extends Component {
 
         if(this.state.password_active !== '' && this.state.searchData[0].user_id !== ''){
 
-            activationAndDeactivation(this.state.activeAndDeactivation, this.state.searchData[0].user_id, this.state.password_active).then(result => {
+            activationAndDeactivation(this.state.activeAndDeactivation, this.state.searchData[0].user_id, this.state.password_active, sessionStorage.getItem('username')).then(result => {
 
                 if(result.message !== 'Password is not a valid!'){
 

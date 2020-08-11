@@ -21,15 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ProcessPurchaselTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/stayles/billing.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/stayles/billing.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +64,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -230,7 +225,11 @@
       <workItem from="1596396597651" duration="6860000" />
       <workItem from="1596406457793" duration="3854000" />
       <workItem from="1596410483318" duration="5357000" />
-      <workItem from="1596444150867" duration="4744000" />
+      <workItem from="1596444150867" duration="6193000" />
+      <workItem from="1596540533362" duration="599000" />
+      <workItem from="1596618230552" duration="599000" />
+      <workItem from="1596704276120" duration="605000" />
+      <workItem from="1596798042513" duration="10706000" />
     </task>
     <servers />
   </component>
@@ -254,9 +253,10 @@
       <screen x="408" y="0" width="1512" height="1848" />
     </state>
     <state x="840" y="1234" width="424" height="484" key="FileChooserDialogImpl/408.0.1512.1848@408.0.1512.1848" timestamp="1596109005591" />
-    <state x="408" y="1065" width="618" height="783" key="find.popup" timestamp="1596113501663">
-      <screen x="408" y="0" width="1512" height="1848" />
+    <state x="408" y="558" width="618" height="522" key="find.popup" timestamp="1597066384450">
+      <screen x="408" y="0" width="1512" height="1080" />
     </state>
+    <state x="408" y="558" width="618" height="522" key="find.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1597066384450" />
     <state x="408" y="1065" width="618" height="783" key="find.popup/408.0.1512.1848@408.0.1512.1848" timestamp="1596113501663" />
     <state x="624" y="246" key="run.anything.popup" timestamp="1596120755255">
       <screen x="408" y="0" width="1512" height="1080" />

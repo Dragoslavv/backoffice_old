@@ -55,7 +55,10 @@ class DailyActivePackages extends Component {
                 },
                 legend: {
                     position: 'right',
-                    offsetY: 40
+                    offsetY: 40,
+                    // formatter: function(seriesName, opts) {
+                    //     return [seriesName, " - ", opts.w.globals.series[opts.seriesIndex]]
+                    // }
                 },
                 fill: {
                     opacity: 1
@@ -184,7 +187,12 @@ class DailyActivePackages extends Component {
                         },
                         legend: {
                             position: 'right',
-                            offsetY: 40
+                            offsetY: 40,
+                            // formatter: function(seriesName, opts) {
+                            //     console.log(seriesName)
+                            //     console.log(opts.w.globals.series[opts.seriesIndex])
+                            //
+                            // }
                         },
                         fill: {
                             opacity: 1
@@ -256,7 +264,12 @@ class DailyActivePackages extends Component {
                         },
                         legend: {
                             position: 'right',
-                            offsetY: 40
+                            offsetY: 40,
+                            // formatter: function(seriesName, opts) {
+                            //     console.log(seriesName)
+                            //     console.log(opts.w.globals.series[opts.seriesIndex])
+                            //
+                            // }
                         },
                         fill: {
                             opacity: 1
@@ -344,7 +357,10 @@ class DailyActivePackages extends Component {
                         },
                         legend: {
                             position: 'right',
-                            offsetY: 40
+                            offsetY: 40,
+                            // formatter: function(seriesName, opts) {
+                            //     return [seriesName, " - ", opts.w.globals.series[opts.seriesIndex]]
+                            // }
                         },
                         fill: {
                             opacity: 1

@@ -301,7 +301,7 @@ export const addReplaceTransfer = (user_id, number, action, role) => {
     });
 };
 
-export const activationAndDeactivation = (active, user_id, password) => {
+export const activationAndDeactivation = (active, user_id, password, username) => {
 
     return fetch("https://api.globaltel.rs/new-gui/?url=deactivation",{
         method: 'POST',
@@ -309,7 +309,7 @@ export const activationAndDeactivation = (active, user_id, password) => {
             'Accept': 'application/json',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: "active="+ active + "&user_id="+ user_id + "&password="+ password ,
+        body: "active="+ active + "&user_id="+ user_id + "&password="+ password + "&username="+ username ,
 
     }).then((response) =>
         response.json()
