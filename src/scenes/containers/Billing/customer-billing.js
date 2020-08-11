@@ -1048,7 +1048,7 @@ class CustomerBilling extends Component {
             && this.state.duration_active !== '' && this.state.package_du_active !== '' && sessionStorage.getItem('billing_email') !== '' && sessionStorage.getItem('billing_email') !== null ) {
 
 
-            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email'), this.state.auto_renew).then(result => {
+            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email'), this.state.auto_renew, this.state.UsersLogin).then(result => {
 
                 if(result['success'] === true) {
 

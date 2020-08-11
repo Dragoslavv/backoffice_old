@@ -23,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/UserFunctions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,7 @@
       <workItem from="1596540533362" duration="599000" />
       <workItem from="1596618230552" duration="599000" />
       <workItem from="1596704276120" duration="605000" />
-      <workItem from="1596798042513" duration="10706000" />
+      <workItem from="1596798042513" duration="12644000" />
     </task>
     <servers />
   </component>
