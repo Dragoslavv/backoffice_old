@@ -54,11 +54,9 @@ class DailyActivePackages extends Component {
                     categories: [],
                 },
                 legend: {
-                    position: 'right',
-                    offsetY: 40,
-                    // formatter: function(seriesName, opts) {
-                    //     return [seriesName, " - ", opts.w.globals.series[opts.seriesIndex]]
-                    // }
+                    position: 'bottom',
+                    offsetY: 0,
+
                 },
                 fill: {
                     opacity: 1
@@ -186,13 +184,9 @@ class DailyActivePackages extends Component {
                             categories: result.date,
                         },
                         legend: {
-                            position: 'right',
-                            offsetY: 40,
-                            // formatter: function(seriesName, opts) {
-                            //     console.log(seriesName)
-                            //     console.log(opts.w.globals.series[opts.seriesIndex])
-                            //
-                            // }
+                            position: 'bottom',
+                            offsetY: 0,
+
                         },
                         fill: {
                             opacity: 1
@@ -206,6 +200,9 @@ class DailyActivePackages extends Component {
 
     handleClick = (e) => {
         e.preventDefault();
+
+        const legendItem = document.querySelector(".apexcharts-legend-series")
+        console.log(legendItem);
 
         this.setState({
             search: 'click'
@@ -263,13 +260,9 @@ class DailyActivePackages extends Component {
                             categories: result.date,
                         },
                         legend: {
-                            position: 'right',
-                            offsetY: 40,
-                            // formatter: function(seriesName, opts) {
-                            //     console.log(seriesName)
-                            //     console.log(opts.w.globals.series[opts.seriesIndex])
-                            //
-                            // }
+                            position: 'bottom',
+                            offsetY: 0,
+
                         },
                         fill: {
                             opacity: 1
@@ -294,6 +287,9 @@ class DailyActivePackages extends Component {
 
 
     componentDidMount() {
+
+        const legendItem = document.querySelector(".apexcharts-legend-series")
+        console.log(legendItem);
 
         distPack().then(result => {
             this.setState({
@@ -356,11 +352,9 @@ class DailyActivePackages extends Component {
                             categories: result.date,
                         },
                         legend: {
-                            position: 'right',
-                            offsetY: 40,
-                            // formatter: function(seriesName, opts) {
-                            //     return [seriesName, " - ", opts.w.globals.series[opts.seriesIndex]]
-                            // }
+                            position: 'bottom',
+                            offsetY: 0,
+
                         },
                         fill: {
                             opacity: 1

@@ -1048,7 +1048,7 @@ class CustomerBilling extends Component {
             && this.state.duration_active !== '' && this.state.package_du_active !== '' && sessionStorage.getItem('billing_email') !== '' && sessionStorage.getItem('billing_email') !== null ) {
 
 
-            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email'), this.state.auto_renew, this.state.UsersLogin).then(result => {
+            activate_package(this.state.searchData[0].user_id, sessionStorage.getItem('role'), this.state.duration_active, this.state.duration_select, this.state.package_du_active, sessionStorage.getItem('billing_email'), this.state.auto_renew, sessionStorage.getItem('username')).then(result => {
 
                 if(result['success'] === true) {
 
@@ -1231,7 +1231,7 @@ class CustomerBilling extends Component {
         if(this.state.amount !== '' && this.state.account !== '' && this.state.password_credit !== ''&& this.state.infoCredit !== '' &&
             this.state.searchData[0].billing_id !== '' && this.state.UsersLogin !== '' ){
 
-            addCredit(this.state.searchData[0].billing_id, this.state.amount, this.state.account, this.state.password_credit, this.state.infoCredit, this.state.UsersLogin).then(data => {
+            addCredit(this.state.searchData[0].billing_id, this.state.amount, this.state.account, this.state.password_credit, this.state.infoCredit, sessionStorage.getItem('username')).then(data => {
 
                if(data.success == true){
 
