@@ -99,8 +99,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
+
 
         });
     };
@@ -118,8 +118,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -138,8 +137,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -158,8 +156,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -178,8 +175,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -198,8 +194,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -218,8 +213,7 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -238,8 +232,7 @@ class Navigation extends Component {
             mastercard: false,
             parking: false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
 
         });
@@ -258,8 +251,7 @@ class Navigation extends Component {
             simDataActive: false,
             parking:false,
             mostcommoncases: false,
-            messagebulk:false,
-            isActive:false
+            messagebulk:false
 
         });
     };
@@ -277,9 +269,7 @@ class Navigation extends Component {
           simDataActive: false,
           parking:false,
           mastercard:false,
-          messagebulk:false,
-          isActive:false
-
+          messagebulk:false
       });
     };
 
@@ -296,9 +286,7 @@ class Navigation extends Component {
             package:false,
             simDataActive: false,
             parking:false,
-            mastercard:false,
-            isActive:false
-
+            mastercard:false
         });
     };
 
@@ -379,18 +367,18 @@ class Navigation extends Component {
                             <li className={ this.state.billing  ? "active list-group shadow" :"list-group shadow" }>
                                 <Link className='list-group-item' to="#" title="Billing" onClick={this.Billing} ><i className="fa fa-home fa-fw " ></i>Billing</Link>
                                 <ul className={ this.state.billing ? "sidebar-nav-second" :"hidden-ul" }>
-                                    <li className='shadow list-group'><Link className='list-group-item' to='/customer-billing' >Customer Billing</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to='/customer-payment' >Customer Payment</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/charge-log" >Charge Log</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/charge-data-log" >Charge Data Log</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/phone-numbers" >Phone Numbers</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/devices" >Devices</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/cdr-outbound" >Cdr Outbound</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/cdr-inbound" >Cdr InBound</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/package" >Package</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/sim-details" >SIM details</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/pin-verification" >Pin Verification</Link></li>
-                                    <li className='shadow list-group'><Link className='list-group-item' to="/data-limit" >Data Limit</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to='/customer-billing' >Customer Billing</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to='/customer-payment' >Customer Payment</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/charge-log" >Charge Log</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/charge-data-log" >Charge Data Log</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/phone-numbers" >Phone Numbers</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/devices" >Devices</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/cdr-outbound" >Cdr Outbound</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/cdr-inbound" >Cdr InBound</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/package" >Package</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/sim-details" >SIM details</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/pin-verification" >Pin Verification</Link></li>
+                                    <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/data-limit" >Data Limit</Link></li>
                                 </ul>
                             </li>
                             {sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
