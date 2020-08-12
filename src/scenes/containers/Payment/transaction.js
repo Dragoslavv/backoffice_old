@@ -390,7 +390,7 @@ class Transaction extends Component {
                                                 <input className='input' type='text' name='iTunesTotal' value={'iTunes Total: ' +this.state.totalTransactions[0].iTunes} onChange={this.handleChange} autoComplete='off' placeholder='iTunes Total:'/>
                                             </div>
                                             <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='WSPay' value={'WSPay Total: ' +this.state.totalTransactions[0].WSPay} onChange={this.handleChange} autoComplete='off' placeholder='WSPay Total'/>
+                                                <input className='input' type='text' name='iPayCOF' value={'iPayCOF Total: ' +this.state.totalTransactions[0].iPayCof} onChange={this.handleChange} autoComplete='off' placeholder='iPayCOF Total'/>
                                             </div>
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='TopUpTotal' value={'TopUp Total: ' +this.state.totalTransactions[0].TopUp} onChange={this.handleChange} autoComplete='off' placeholder='TopUp Total'/>
@@ -430,9 +430,9 @@ class Transaction extends Component {
                                             <div className='form-group billing-input'>
                                                 <input className='input' type='text' name='DIDWW' autoComplete='off' value={'DIDWW Total: '+this.state.totalTransactions[0].didWw} onChange={this.handleChange} placeholder='DIDWW Total'/>
                                             </div>
-                                            <div className='form-group billing-input'>
-                                                <input className='input' type='text' name='iPayCof' autoComplete='off' value={'iPayCof Total: '+this.state.totalTransactions[0].iPayCof} onChange={this.handleChange} placeholder='iPayCOF Total'/>
-                                            </div>
+                                            {/*<div className='form-group billing-input'>*/}
+                                            {/*    <input className='input' type='text' name='iPayCof' autoComplete='off' value={'iPayCof Total: '+this.state.totalTransactions[0].iPayCof} onChange={this.handleChange} placeholder='iPayCOF Total'/>*/}
+                                            {/*</div>*/}
                                             <div className='form-group billing-input'>
                                                 <div className="row">
                                                     <div className="col-lg-12">

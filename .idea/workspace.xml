@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,7 @@
       <workItem from="1596704276120" duration="605000" />
       <workItem from="1596798042513" duration="13718000" />
       <workItem from="1597144449156" duration="10686000" />
-      <workItem from="1597242290650" duration="650000" />
+      <workItem from="1597242290650" duration="1410000" />
     </task>
     <servers />
   </component>
