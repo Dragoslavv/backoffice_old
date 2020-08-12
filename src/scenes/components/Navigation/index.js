@@ -99,8 +99,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
-
+            messagebulk:false,
+            isActive:false
 
         });
     };
@@ -118,7 +118,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -137,7 +138,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -156,7 +158,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -175,7 +178,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -194,7 +198,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -213,7 +218,8 @@ class Navigation extends Component {
             simDataActive: false,
             mastercard: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -232,7 +238,8 @@ class Navigation extends Component {
             mastercard: false,
             parking: false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
 
         });
@@ -251,7 +258,8 @@ class Navigation extends Component {
             simDataActive: false,
             parking:false,
             mostcommoncases: false,
-            messagebulk:false
+            messagebulk:false,
+            isActive:false
 
         });
     };
@@ -269,7 +277,9 @@ class Navigation extends Component {
           simDataActive: false,
           parking:false,
           mastercard:false,
-          messagebulk:false
+          messagebulk:false,
+          isActive:false
+
       });
     };
 
@@ -286,7 +296,9 @@ class Navigation extends Component {
             package:false,
             simDataActive: false,
             parking:false,
-            mastercard:false
+            mastercard:false,
+            isActive:false
+
         });
     };
 
