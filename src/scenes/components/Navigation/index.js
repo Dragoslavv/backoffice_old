@@ -53,9 +53,11 @@ class Navigation extends Component {
                 role: value
             });
         });
-
+        localStorage.setItem("active", this.state.isActive);
 
     }
+
+
 
     componentWillUnmount() {
         //ToDo
@@ -81,8 +83,6 @@ class Navigation extends Component {
 
         });
 
-
-        localStorage.setItem("active", this.state.isActive);
     };
 
     Billing = (e) =>{
