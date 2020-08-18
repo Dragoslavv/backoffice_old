@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {logout} from "../UserFunctions";
+import {logout, readUsers} from "../UserFunctions";
 import './../../stayles/Navigation.css';
 import localForages from "localforage";
 import logo from "../../images/logo-white.png";
@@ -24,6 +24,7 @@ class Navigation extends Component {
             mostcommoncases:false,
             messagebulk:false,
             role:'',
+            tableData: [],
         };
 
         this.logOut = this.logOut.bind(this);
@@ -39,10 +40,41 @@ class Navigation extends Component {
         this.Mastercard = this.Mastercard.bind(this);
         this.Mostcommoncases = this.Mostcommoncases.bind(this);
         this.messageBulk = this.messageBulk.bind(this);
+        this.reset = this.reset.bind(this);
+        this.hide = this.hide.bind(this);
+        this.show = this.show.bind(this);
+    }
+
+    show () {
+        setTimeout(
+            function() {
+                document.getElementById('discord-shoutout').classList.add('online');
+            },
+            200
+        );
+    }
+
+    hide () {
+
+        document.getElementById('discord-shoutout').classList.remove('online');
 
     }
 
+    reset () {
+
+        this.hide();
+        setTimeout(this.show(), 1500);
+    }
+
     componentDidMount() {
+
+        readUsers().then(tableData =>
+
+            this.setState({
+                tableData: tableData.data
+            })
+
+        );
 
         const role = localForages.getItem('role', function (err, value) {
             return value;
@@ -350,6 +382,7 @@ class Navigation extends Component {
 
             <div>
                 <div id="wrapper" className={ this.state.isActive ? "toggled" :"" }>
+
                     <aside id="sidebar-wrapper" ref="_panel">
                         <div className="sidebar-brand ">
                             <img src={logo} alt='globaltel-logo'/>
@@ -555,7 +588,46 @@ class Navigation extends Component {
                     </div>
 
                     {/*Todo*/}
+
+
+                    <button className="reset-button" onClick={this.reset}><i className="fa fa-cog fa-fw"></i></button>
+                    <div id="discord-shoutout" className="discord-shoutout">
+                        <div className="shoutout-inner">
+                            <img src={logo} alt='globaltel-logo'/>
+
+                            <span className="title">Hey there!</span>
+
+                            <div className="container">
+
+                                <div className="list-group scrol-list">
+
+                                    {
+                                        this.state.tableData.map(function (item, i) {
+
+                                            return (
+                                                <div>
+                                                    <input type="checkbox" name="CheckBoxInputName" value={'value'+i} id={"CheckBox"+i}/>
+                                                    <label className="list-group-item" htmlFor={"CheckBox"+i}>{item[2] + ' ' + item[3]}</label>
+                                                </div>
+                                            );
+
+                                        })
+
+                                    }
+
+                                </div>
+
+                            </div>
+
+                            <div className="discord-buttons">
+                                <button className="discord-button discord-secondary" onClick={this.hide}>Close</button>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
             </div>
 
         );
