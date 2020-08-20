@@ -14,7 +14,7 @@ import {
     issue_masterCard,
     mastercard_registration,
     read_vs_active,
-    transactionWallet, update_voip, voip_api
+    transactionWallet, update_voip, voip_api, vs_student
 } from "../../components/UserFunctions";
 import  "../Login/index";
 import localForages from "localforage";
@@ -93,7 +93,10 @@ class CustomerBilling extends Component {
             new_number: '',
             day_active:currently,
             active_users_currently:[],
-            select_voip:''
+            select_voip:'',
+            student_number:'',
+            active_student:true,
+
         };
 
 
@@ -116,6 +119,45 @@ class CustomerBilling extends Component {
         this.handleIssue = this.handleIssue.bind(this);
         this.handleIssueMasterCard = this.handleIssueMasterCard.bind(this);
         this.handleVoip = this.handleVoip.bind(this);
+        this.handleStudent = this.handleStudent.bind(this);
+
+    };
+
+    handleStudent = (e) => {
+        e.preventDefault();
+
+        vs_student(this.state.student_number, this.state.active_student, sessionStorage.getItem('username')).then(result => {
+
+            if(result.status === true) {
+
+                store.addNotification({
+                    title: 'Add Student',
+                    message: result.message,
+                    type: 'success',                         // 'default', 'success', 'info', 'warning'
+                    container: 'top-right',                // where to position the notifications
+                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                    dismiss: {
+                        duration: 3000
+                    }
+                })
+
+            } else {
+
+                store.addNotification({
+                    title: 'Add Student',
+                    message: result.message,
+                    type: 'info',                         // 'default', 'success', 'info', 'warning'
+                    container: 'top-right',                // where to position the notifications
+                    animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+                    animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+                    dismiss: {
+                        duration: 3000
+                    }
+                })
+
+            }
+        });
     };
 
     handleVoip = (e) => {
@@ -1860,7 +1902,7 @@ class CustomerBilling extends Component {
                             <div className='wrap-border billing-two-row-wrap'>
                                 <h6 className="content-title">Subscription</h6>
                                 <hr/>
-                                <form method="post">
+                                <form method="post " className='mb-3'>
                                     <div className='form-group billing-input'>
                                         <select className="input " name="subscription" value={this.state.subscription} onChange={this.handleChange}>
                                             <option value="">Subscription</option>
@@ -1892,6 +1934,30 @@ class CustomerBilling extends Component {
                                     </div>
 
                                 </form>
+
+                                <h6 className="content-title">Student</h6>
+                                <hr/>
+
+                                <form method='post'>
+                                    <div className='form-group billing-input'>
+                                        <input className='input' type='number' autoComplete='off' value={this.state.student_number} onChange={this.handleChange} name='student_number'  placeholder='Number:'/>
+                                    </div>
+                                    <select className={"input  true"}  onChange={this.handleChange} value={this.state.active_student} name='active_student'>
+                                        <option value="true">true</option>
+                                        <option value="false">false</option>
+                                    </select>
+                                    <div className='form-group billing-input'>
+                                        <div className="form-group billing-input">
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <button className="btn btn-block btn-outline-success btn-login-from" disabled={wallet_transaction} onClick={this.handleStudent} type="submit">Add student</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
                             </div>
                         </div>
                         <div className="col-lg-2 mb-3">

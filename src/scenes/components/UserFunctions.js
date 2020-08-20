@@ -1928,3 +1928,23 @@ export const exportVoip = (start_date, end_date, user_id, active, voip) => {
         return err;
     });
 }
+
+export const vs_student = (number, active, username) => {
+    return fetch("https://api.globaltel.rs/new-gui/?url=add_student",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number +'&active='+active +'&username='+username,
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+}
