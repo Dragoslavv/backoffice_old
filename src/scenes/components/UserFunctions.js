@@ -1948,3 +1948,23 @@ export const vs_student = (number, active, username) => {
         return err;
     });
 }
+
+export const read_student = (number) => {
+    return fetch("https://api.globaltel.rs/new-gui/?url=read_student",{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: "number=" + number
+
+    }).then((response) =>
+        response.json()
+    ).then((data) => {
+
+        return data;
+
+    }).catch(function (err) {
+        return err;
+    });
+}

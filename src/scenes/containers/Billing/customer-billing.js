@@ -12,7 +12,7 @@ import {
     distDuration,
     distPack,
     issue_masterCard,
-    mastercard_registration,
+    mastercard_registration, read_student,
     read_vs_active,
     transactionWallet, update_voip, voip_api, vs_student
 } from "../../components/UserFunctions";
@@ -95,7 +95,7 @@ class CustomerBilling extends Component {
             active_users_currently:[],
             select_voip:'',
             student_number:'',
-            active_student:true,
+            active_student:false,
 
         };
 
@@ -126,7 +126,7 @@ class CustomerBilling extends Component {
     handleStudent = (e) => {
         e.preventDefault();
 
-        vs_student(this.state.student_number, this.state.active_student, sessionStorage.getItem('username')).then(result => {
+        vs_student(this.state.number, this.state.active_student, sessionStorage.getItem('username')).then(result => {
 
             if(result.status === true) {
 
@@ -1145,8 +1145,10 @@ class CustomerBilling extends Component {
 
         this.setState({
             activeAndDeactivation:false,
-            checking_voip:false
+            checking_voip:false,
+            active_student:false
         });
+
 
         sessionStorage.setItem("vs_active",false);
         sessionStorage.setItem('billing_active','');
@@ -1433,6 +1435,15 @@ class CustomerBilling extends Component {
         sessionStorage.setItem('userId',this.state.userId);
         sessionStorage.setItem('billingId',this.state.billingId);
         sessionStorage.setItem('iccid',this.state.iccid);
+
+
+        read_student(this.state.number).then( result => {
+           if(result.success === true){
+               this.setState({active_student:true})
+           } else {
+               this.setState({active_student:false})
+           }
+        });
 
 
         this.setState({
@@ -1939,9 +1950,9 @@ class CustomerBilling extends Component {
                                 <hr/>
 
                                 <form method='post'>
-                                    <div className='form-group billing-input'>
-                                        <input className='input' type='number' autoComplete='off' value={this.state.student_number} onChange={this.handleChange} name='student_number'  placeholder='Number:'/>
-                                    </div>
+                                    {/*<div className='form-group billing-input'>*/}
+                                    {/*    <input className='input' type='number' autoComplete='off' value={this.state.student_number} onChange={this.handleChange} name='student_number'  placeholder='Number:'/>*/}
+                                    {/*</div>*/}
                                     <select className={"input  true"}  onChange={this.handleChange} value={this.state.active_student} name='active_student'>
                                         <option value="true">true</option>
                                         <option value="false">false</option>
