@@ -1953,11 +1953,18 @@ class CustomerBilling extends Component {
                                     {/*<div className='form-group billing-input'>*/}
                                     {/*    <input className='input' type='number' autoComplete='off' value={this.state.student_number} onChange={this.handleChange} name='student_number'  placeholder='Number:'/>*/}
                                     {/*</div>*/}
-                                    <select className={"input  true"}  onChange={this.handleChange} value={this.state.active_student} name='active_student'>
-                                        <option value="true">Active</option>
-                                        <option value="true">true</option>
-                                        <option value="false">false</option>
-                                    </select>
+
+                                    <div className='row'>
+                                        <div className='col-lg-7'>
+                                            <select className={"input  true"}  onChange={this.handleChange} value={this.state.active_student} name='active_student'>
+                                                <option value="true">true</option>
+                                                <option value="false">false</option>
+                                            </select>
+                                        </div>
+                                        <div className='col-lg-5'>
+                                            <p className="content-title">Active</p>
+                                        </div>
+                                    </div>
                                     <div className='form-group billing-input'>
                                         <div className="form-group billing-input">
                                             <div className="row">
