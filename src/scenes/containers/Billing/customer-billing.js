@@ -1954,6 +1954,7 @@ class CustomerBilling extends Component {
                                     {/*    <input className='input' type='number' autoComplete='off' value={this.state.student_number} onChange={this.handleChange} name='student_number'  placeholder='Number:'/>*/}
                                     {/*</div>*/}
                                     <select className={"input  true"}  onChange={this.handleChange} value={this.state.active_student} name='active_student'>
+                                        <option value="true">Active</option>
                                         <option value="true">true</option>
                                         <option value="false">false</option>
                                     </select>
