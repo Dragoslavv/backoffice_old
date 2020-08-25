@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +231,7 @@
       <workItem from="1597144449156" duration="10686000" />
       <workItem from="1597242290650" duration="32839000" />
       <workItem from="1597839148178" duration="10955000" />
-      <workItem from="1598000972605" duration="2910000" />
+      <workItem from="1598000972605" duration="4896000" />
     </task>
     <servers />
   </component>
@@ -261,9 +262,10 @@
     <state x="408" y="297" width="609" height="783" key="find.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1597398547014" />
     <state x="408" y="558" width="618" height="522" key="find.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1597066384450" />
     <state x="408" y="1065" width="618" height="783" key="find.popup/408.0.1512.1848@408.0.1512.1848" timestamp="1596113501663" />
-    <state x="624" y="246" key="run.anything.popup" timestamp="1596120755255">
-      <screen x="408" y="0" width="1512" height="1080" />
+    <state x="536" y="1255" key="run.anything.popup" timestamp="1598362096553">
+      <screen x="341" y="1080" width="1366" height="768" />
     </state>
+    <state x="536" y="1255" key="run.anything.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598362096553" />
     <state x="624" y="246" key="run.anything.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1596120755255" />
     <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596118519005">
       <screen x="408" y="0" width="1512" height="1080" />
