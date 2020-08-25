@@ -21,7 +21,55 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-log.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-billing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-payment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/customer-payment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/data-limit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/devices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/devices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/package.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/phone-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/pin-verification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/sim-details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageLog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageLog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/daily.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Messaging/hourly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MostCommonCases/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/special-offer-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/special-offer-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Numbers/statistic-numbers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/daily-active-packages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package-group.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package-group.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package-stat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Package/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Package/package.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Parking/parking-stat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/card-transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-cof-transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/ipay-transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/payment-transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/payment-transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/statistic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/topup-transactions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/topup-transactions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Payment/transaction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/ProcessPurchaseI/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Profile/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Rates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Rates/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/active-users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/data-consumption.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/read_voip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-daily.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-hourly.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SimDataActiveUsers/sim-report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/SystemMessage/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +105,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../html/test-ivr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esim_web" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -231,7 +279,7 @@
       <workItem from="1597144449156" duration="10686000" />
       <workItem from="1597242290650" duration="32839000" />
       <workItem from="1597839148178" duration="10955000" />
-      <workItem from="1598000972605" duration="4896000" />
+      <workItem from="1598000972605" duration="6113000" />
     </task>
     <servers />
   </component>
@@ -251,15 +299,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl" timestamp="1598003539422">
+    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl" timestamp="1598363227520">
       <screen x="341" y="1080" width="1366" height="768" />
     </state>
-    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598003539422" />
+    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598363227520" />
     <state x="840" y="1234" width="424" height="484" key="FileChooserDialogImpl/408.0.1512.1848@408.0.1512.1848" timestamp="1596109005591" />
-    <state x="408" y="297" width="609" height="783" key="find.popup" timestamp="1597398547014">
+    <state x="962" y="297" width="609" height="783" key="find.popup" timestamp="1598362803744">
       <screen x="408" y="0" width="1512" height="1080" />
     </state>
-    <state x="408" y="297" width="609" height="783" key="find.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1597398547014" />
+    <state x="962" y="297" width="609" height="783" key="find.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598362803744" />
     <state x="408" y="558" width="618" height="522" key="find.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1597066384450" />
     <state x="408" y="1065" width="618" height="783" key="find.popup/408.0.1512.1848@408.0.1512.1848" timestamp="1596113501663" />
     <state x="536" y="1255" key="run.anything.popup" timestamp="1598362096553">

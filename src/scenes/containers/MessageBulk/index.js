@@ -193,7 +193,7 @@ class MessageBulk extends Component {
         if (stringValue !== null) {
             let value = JSON.parse(stringValue);
             let expirationDate = new Date(value.expirationDate);
-            if (expirationDate > new Date()) {
+            if (value.value) {
                 return value.value
             } else {
                 window.sessionStorage.removeItem(key);
