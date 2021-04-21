@@ -4,6 +4,7 @@ import {Redirect} from "react-router-dom";
 import {DataLimitTable} from "../../components/Table/data-limit-table";
 import {data_limits} from "../../components/UserFunctions";
 import {store} from "react-notifications-component";
+import Cookies from "universal-cookie";
 
 class DataLimit extends Component {
     constructor(props){
@@ -130,7 +131,9 @@ class DataLimit extends Component {
     }
 
     render() {
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
@@ -149,7 +152,7 @@ class DataLimit extends Component {
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.getItem('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

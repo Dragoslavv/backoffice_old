@@ -5,15 +5,17 @@ import {login, verify_number} from "../../components/UserFunctions";
 import localForages from "localforage";
 import logo from "../../images/logo-blue.png";
 import {Redirect} from "react-router-dom";
+import Cookies from 'universal-cookie';
 
 class Login extends Component {
 
     constructor(props) {
         super(props);
+        const cookies = new Cookies();
 
-        let session = localStorage.getItem("token");
+        let session = cookies.get('tokens');
 
-        if(session === null){
+        if(session === undefined){
             this.props.history.push("/");
         } else {
             this.props.history.push("/customer-billing");
@@ -150,7 +152,13 @@ class Login extends Component {
                 this.setState({
                     verify_login: false
                 });
-                sessionStorage.setItem('phone_number_call_centar', data['phone_number']);
+                const cookies = new Cookies();
+
+                //old
+                // sessionStorage.setItem('phone_number_call_centar', data['phone_number']);
+
+                //new
+                cookies.set('phone_number_call_centar', data['phone_number']);
 
                 this.setState({
                     login_data:{
@@ -188,7 +196,10 @@ class Login extends Component {
             value: value,
             expirationDate: expirationDate.toISOString()
         };
-        window.sessionStorage.setItem(key, JSON.stringify(newValue))
+        // window.sessionStorage.setItem(key, JSON.stringify(newValue))
+
+        const cookies = new Cookies();
+        cookies.set('tokens', JSON.stringify(newValue), { path: '/' });
     };
 
     handleClickVerify = (e) => {
@@ -199,13 +210,21 @@ class Login extends Component {
             verify_number(this.state.login_data.verify_tokens, this.state.login_data.phone_number, this.state.verify_pin).then(result => {
 
                 if(result.status === true){
+                    //old
+                    // localForages.setItem('role', this.state.login_data.role);
+                    // sessionStorage.setItem('role', this.state.login_data.role);
+                    // sessionStorage.setItem('firstName', this.state.login_data.firstName);
+                    // sessionStorage.setItem('lastName', this.state.login_data.lastName);
+                    // sessionStorage.setItem('username', this.state.login_data.username);
+                    // localForages.setItem('username', this.state.login_data.username);
 
-                    localForages.setItem('role', this.state.login_data.role);
-                    sessionStorage.setItem('role', this.state.login_data.role);
-                    sessionStorage.setItem('firstName', this.state.login_data.firstName);
-                    sessionStorage.setItem('lastName', this.state.login_data.lastName);
-                    sessionStorage.setItem('username', this.state.login_data.username);
-                    localForages.setItem('username', this.state.login_data.username);
+                    const cookies = new Cookies();
+
+                    //new
+                    cookies.set('role', this.state.login_data.role);
+                    cookies.set('firstName', this.state.login_data.firstName);
+                    cookies.set('lastName', this.state.login_data.lastName);
+                    cookies.set('username', this.state.login_data.username);
 
                     this.sessionSet('token', this.state.login_data.token);
 
@@ -233,6 +252,40 @@ class Login extends Component {
     };
 
     render() {
+        const cookies = new Cookies();
+
+        var sessionStorage_transfer = function(event) {
+            if(!event) { event = window.event; } // ie suq
+            if(!event.newValue) return;          // do nothing if no value to work with
+            if (event.key == 'getSessionStorage') {
+                // another tab asked for the sessionStorage -> send it
+                localStorage.setItem('sessionStorage', JSON.stringify(sessionStorage));
+                // the other tab should now have it, so we're done with it.
+                localStorage.removeItem('sessionStorage'); // <- could do short timeout as well.
+            } else if (event.key == 'sessionStorage' && !sessionStorage.length) {
+                // another tab sent data <- get it
+                var data = JSON.parse(event.newValue);
+                for (var key in data) {
+                    sessionStorage.setItem(key, data[key]);
+                }
+            }
+        };
+
+        // listen for changes to localStorage
+        if(window.addEventListener) {
+            window.addEventListener("storage", sessionStorage_transfer, false);
+        } else {
+            window.attachEvent("onstorage", sessionStorage_transfer);
+            cookies.get('tokens')
+        };
+
+        // Ask other tabs for session storage (this is ONLY to trigger event)
+        if (!sessionStorage.length) {
+            localStorage.setItem('getSessionStorage', 'foobar');
+            localStorage.removeItem('getSessionStorage', 'foobar');
+
+        };
+
 
         if(this.state.redirect){
 
@@ -240,7 +293,7 @@ class Login extends Component {
 
         }
 
-        if(sessionStorage.getItem('token')){
+        if(cookies.get('tokens')){
 
             return <Redirect  to={'/customer-billing'}/>
 

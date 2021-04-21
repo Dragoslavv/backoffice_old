@@ -3,6 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import Chart from "react-apexcharts";
 import {data_usage} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class DataConsumption extends Component {
     constructor(props){
@@ -219,13 +220,14 @@ class DataConsumption extends Component {
     }
 
     render() {
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

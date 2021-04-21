@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {MessageLogTable} from "../../components/Table/message-log-table";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class MessageLog extends Component {
     constructor(props){
@@ -110,13 +111,13 @@ class MessageLog extends Component {
     };
 
     render() {
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
-
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" } >
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" } >
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

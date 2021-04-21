@@ -6,6 +6,7 @@ import PubSub from "pubsub-js";
 import localForages from "localforage";
 import {SwitchToSimNumber} from "../../components/UserFunctions";
 import {store} from "react-notifications-component";
+import Cookies from "universal-cookie";
 
 class PhoneNumbers extends Component {
     constructor(props){
@@ -22,14 +23,13 @@ class PhoneNumbers extends Component {
 
     SwitchToSim(msg,dataSet) {
 
+        const cookies = new Cookies();
 
-        const userId = localForages.getItem('user_id_for_phone_numbers', function (err, value) {
-            return value;
-        });
+        const userId = cookies.get('user_id_for_phone_numbers');
 
-        userId.then(value => {
+        // userId.then(value => {
 
-            SwitchToSimNumber(value, dataSet).then( result => {
+            SwitchToSimNumber(userId, dataSet).then( result => {
 
                 if(result.msg === "OK") {
 
@@ -63,7 +63,7 @@ class PhoneNumbers extends Component {
 
             });
 
-        });
+        // });
 
     };
 
@@ -138,12 +138,15 @@ class PhoneNumbers extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
+
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

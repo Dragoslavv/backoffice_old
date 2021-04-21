@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 import localForages from "localforage";
 import PubSub from "pubsub-js";
+import Cookies from "universal-cookie";
 
 // require Table
 const $  = require( 'jquery' );
@@ -50,7 +51,9 @@ export class CardTransactionTable extends Component{
                 var get_id = { 'td' : [] };
 
                 id.find('.car_user_id').each(function( index,item ) {
-                    localForages.setItem('cardTransactions', item.innerHTML);
+                    const cookies = new Cookies();
+
+                    cookies.set('cardTransactions', item.innerHTML);
 
                     get_id['td'].push(item.innerHTML);
                 });

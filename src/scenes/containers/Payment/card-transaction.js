@@ -4,6 +4,7 @@ import {CardTransactionTable} from "../../components/Table/card-transaction-tabl
 import {CardTransactionsCall} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
+import Cookies from "universal-cookie";
 
 class CardTransaction extends Component {
     constructor(props){
@@ -172,9 +173,12 @@ class CardTransaction extends Component {
 
         }
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
+
 
         const dataTable = this.state.cardTrans.map(function (item) {
 
@@ -191,7 +195,7 @@ class CardTransaction extends Component {
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

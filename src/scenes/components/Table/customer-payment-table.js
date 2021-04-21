@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 import localForages from "localforage";
+import Cookies from "universal-cookie";
 
 // require Table
 const $  = require( 'jquery' );
@@ -11,12 +12,11 @@ export class CustomerPaymentTable extends Component{
 
 
     componentDidMount() {
+        const cookies = new Cookies();
 
-        const billing_id = localForages.getItem('billing_id_api', function (err, value) {
-            return value;
-        });
+        const billing_id = cookies.get('billing_id_api');
 
-        billing_id.then(value => {
+        // billing_id.then(value => {
 
             this.$el = $(this.el);
             this.$el.DataTable(
@@ -34,7 +34,7 @@ export class CustomerPaymentTable extends Component{
                         url: 'https://api.globaltel.rs/new-gui/?url=chargelog',
                         type: 'POST',
                         data:{
-                            billing_id: parseInt(value),
+                            billing_id: parseInt(billing_id),
                         }
                     },
                     order: [[ 0, "desc" ]],
@@ -49,7 +49,7 @@ export class CustomerPaymentTable extends Component{
                     ]
                 }
             );
-        });
+        // });
     }
 
     componentWillUnmount() {

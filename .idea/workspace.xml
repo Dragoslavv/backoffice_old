@@ -21,6 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1a8cc2-2b55-4cb8-8b58-66e24bbe612d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/card-transaction-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/card-transaction-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-inbound-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-inbound-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/cdr-outbound-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/customer-payment-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/devices-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/devices-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/ipay-transaction-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/ipay-transaction-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/package-billing-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/package-billing-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/payment-transaction-two.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/payment-transaction-two.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/phone-numbers-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-details-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-details-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/components/Table/sim-report-table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-inbound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/cdr-outbound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Billing/charge-data-log.js" afterDir="false" />
@@ -36,6 +50,7 @@
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/daily-statistic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Cdr/hourly-statistic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/CdrLog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/containers/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Login/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/daily-activation-statistic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/Mastercard/hourly-activation-statistic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/containers/MessageBulk/index.js" afterDir="false" />
@@ -103,9 +118,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../esim_web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../backoffice" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -279,7 +295,9 @@
       <workItem from="1597144449156" duration="10686000" />
       <workItem from="1597242290650" duration="32839000" />
       <workItem from="1597839148178" duration="10955000" />
-      <workItem from="1598000972605" duration="6113000" />
+      <workItem from="1598000972605" duration="24744000" />
+      <workItem from="1598444203119" duration="2968000" />
+      <workItem from="1598450041111" duration="2240000" />
     </task>
     <servers />
   </component>
@@ -299,15 +317,16 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl" timestamp="1598363227520">
-      <screen x="341" y="1080" width="1366" height="768" />
-    </state>
-    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598363227520" />
-    <state x="840" y="1234" width="424" height="484" key="FileChooserDialogImpl/408.0.1512.1848@408.0.1512.1848" timestamp="1596109005591" />
-    <state x="962" y="297" width="609" height="783" key="find.popup" timestamp="1598362803744">
+    <state x="946" y="186" width="384" height="451" key="FileChooserDialogImpl" timestamp="1598450124224">
       <screen x="408" y="0" width="1512" height="1080" />
     </state>
-    <state x="962" y="297" width="609" height="783" key="find.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598362803744" />
+    <state x="827" y="1212" width="384" height="451" key="FileChooserDialogImpl/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598363227520" />
+    <state x="946" y="186" key="FileChooserDialogImpl/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1598450124224" />
+    <state x="840" y="1234" width="424" height="484" key="FileChooserDialogImpl/408.0.1512.1848@408.0.1512.1848" timestamp="1596109005591" />
+    <state x="981" y="297" width="609" height="783" key="find.popup" timestamp="1598369348630">
+      <screen x="408" y="0" width="1512" height="1080" />
+    </state>
+    <state x="981" y="297" width="609" height="783" key="find.popup/341.1080.1366.768/408.0.1512.1080@341.1080.1366.768" timestamp="1598369348630" />
     <state x="408" y="558" width="618" height="522" key="find.popup/341.1080.1366.768/408.0.1512.1080@408.0.1512.1080" timestamp="1597066384450" />
     <state x="408" y="1065" width="618" height="783" key="find.popup/408.0.1512.1848@408.0.1512.1848" timestamp="1596113501663" />
     <state x="536" y="1255" key="run.anything.popup" timestamp="1598362096553">

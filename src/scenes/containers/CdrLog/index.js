@@ -3,6 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import {CdrLogTable} from "../../components/Table/cdr-log-table";
 import PubSub from "pubsub-js";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class CdrLog extends Component {
     constructor(props){
@@ -140,12 +141,15 @@ class CdrLog extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
+
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

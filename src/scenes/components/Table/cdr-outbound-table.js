@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css';
 import localForages from "localforage";
+import Cookies from "universal-cookie";
 
 // require Table
 const $  = require( 'jquery' );
@@ -9,6 +10,7 @@ $.DataTable = require( 'datatables.net-bs4' );
 
 export class CdrOutboundTable extends Component{
     componentDidMount() {
+        const cookies = new Cookies();
 
         // const userId = localForages.getItem('user_id_for_phone_numbers', function (err, value) {
         //     return value;
@@ -31,7 +33,7 @@ export class CdrOutboundTable extends Component{
                         url: 'https://api.globaltel.rs/new-gui/?url=cdr_outhbound',
                         type: 'POST',
                         data:{
-                            number: parseInt(sessionStorage.getItem('number')),
+                            number: parseInt(cookies.get('number')),
                         }
                     },
                     order: [[ 0, "desc" ]],

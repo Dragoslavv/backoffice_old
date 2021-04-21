@@ -13,6 +13,7 @@ import $ from "jquery";
 import PubSub from "pubsub-js";
 import {store} from "react-notifications-component";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class PackageDefault extends Component {
     constructor(props){
@@ -547,12 +548,14 @@ class PackageDefault extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

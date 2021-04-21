@@ -8,6 +8,7 @@ import {
     transfer_number
 } from "../../components/UserFunctions";
 import {store} from "react-notifications-component";
+import Cookies from "universal-cookie";
 
 class MostCommonCases extends Component {
     constructor(props){
@@ -469,13 +470,15 @@ class MostCommonCases extends Component {
 
     render() {
 
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
+
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

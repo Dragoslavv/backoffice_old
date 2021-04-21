@@ -4,6 +4,7 @@ import {Redirect} from "react-router-dom";
 import {VoipTable} from "../../components/Table/voip-table";
 import CsvDownload from 'react-json-to-csv';
 import {exportVoip} from "../../components/UserFunctions";
+import Cookies from "universal-cookie";
 
 class ReadVoip extends Component {
     constructor(props){
@@ -148,13 +149,14 @@ class ReadVoip extends Component {
 
 
     render() {
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

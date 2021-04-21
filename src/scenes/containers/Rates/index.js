@@ -7,6 +7,7 @@ import $ from "jquery";
 import localForages from "localforage";
 import {store} from "react-notifications-component";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class Rates extends Component {
     constructor(props){
@@ -154,6 +155,7 @@ class Rates extends Component {
     };
 
     componentDidMount() {
+        const cookies = new Cookies();
 
         country().then(result => {
            this.setState({
@@ -161,15 +163,13 @@ class Rates extends Component {
            });
         });
 
-        const role = localForages.getItem('role', function (err, value) {
-            return value;
-        });
+        const role = cookies.get('role');
 
-        role.then(value => {
+        // role.then(value => {
             this.setState({
-                role: value
+                role: role
             })
-        });
+        // });
 
         $(this.modal).hide();
         $(this.modal).on('hidden.bs.modal', this.handleUpdatePerCosts);
@@ -194,13 +194,15 @@ class Rates extends Component {
     render() {
 
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

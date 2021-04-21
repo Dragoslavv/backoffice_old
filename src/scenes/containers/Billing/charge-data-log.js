@@ -4,6 +4,7 @@ import {ChargeDataLogTable} from "../../components/Table/charge-data-log-table";
 import localForages from "localforage";
 import {ChargeDataLogDb} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class ChargeDataLog extends Component {
     constructor(props){
@@ -100,25 +101,20 @@ class ChargeDataLog extends Component {
 
     onClickChargeLog = (e) => {
         e.preventDefault();
+        const cookies = new Cookies();
 
+        const billing_id = cookies.get('billing_id_api');
 
-        const billing_id = localForages.getItem('billing_id_api', function (err, value) {
-            return value;
-        });
+        if(billing_id !== ''){
+            console.log(billing_id, this.state.start_log, this.state.end_log, this.state.type_log);
 
-        billing_id.then(value => {
+            ChargeDataLogDb(billing_id, this.state.start_log, this.state.end_log, this.state.type_log).then(result => {
+                this.setState({
+                    chargeLog: result.data,
+                })
+            });
 
-            if(value !== ''){
-                console.log(value, this.state.start_log, this.state.end_log, this.state.type_log);
-
-                ChargeDataLogDb(value, this.state.start_log, this.state.end_log, this.state.type_log).then(result => {
-                    this.setState({
-                        chargeLog: result.data,
-                    })
-                });
-
-            }
-        });
+        }
     };
 
     componentWillMount() {
@@ -132,8 +128,9 @@ class ChargeDataLog extends Component {
     }
 
     render() {
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
@@ -152,7 +149,7 @@ class ChargeDataLog extends Component {
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

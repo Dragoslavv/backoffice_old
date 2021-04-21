@@ -6,6 +6,7 @@ import {MessageBulkTable} from "../../components/Table/message-bulk-table";
 import PubSub from "pubsub-js";
 import $ from "jquery";
 import {create_bulk, destroy_bulk_message_api, select_bulk} from "../../components/UserFunctions";
+import Cookies from "universal-cookie";
 
 class MessageBulk extends Component {
     constructor(props){
@@ -42,10 +43,11 @@ class MessageBulk extends Component {
 
     handleAddBulk = (e) => {
         e.preventDefault();
+        const cookies = new Cookies();
 
-        if(this.state.bulk_name_create !== '' && this.state.provide_name_create !== '' && sessionStorage.getItem('username') !== '' && sessionStorage.getItem('role') !== ''&& sessionStorage.getItem('role') !== 'USER' ){
+        if(this.state.bulk_name_create !== '' && this.state.provide_name_create !== '' && cookies.get('username') !== '' && cookies.get('role') !== ''&& cookies.get('role') !== 'USER' ){
 
-            create_bulk(this.state.bulk_name_create, this.state.provide_name_create, sessionStorage.getItem('username'), sessionStorage.getItem('role')).then(result => {
+            create_bulk(this.state.bulk_name_create, this.state.provide_name_create, cookies.get('username'), cookies.get('role')).then(result => {
 
                 if(result['status'] === true){
                     store.addNotification({
@@ -239,10 +241,11 @@ class MessageBulk extends Component {
 
     handleMessageBulkRemove (msg,dataSet){
         $(this.modal).show();
+        const cookies = new Cookies();
 
         this.setState({
             data:{
-                user: sessionStorage.getItem('username'),
+                user: cookies.get('username'),
                 id: dataSet['id_bulk'],
                 bulk_name: dataSet['name_bulk'],
                 provider_id: dataSet['provider_id_bulk'],
@@ -285,13 +288,15 @@ class MessageBulk extends Component {
 
     render() {
 
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
+
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

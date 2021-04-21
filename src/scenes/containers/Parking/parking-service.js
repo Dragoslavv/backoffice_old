@@ -5,6 +5,7 @@ import {ParkingRequestTable} from "../../components/Table/parking-request-table"
 import {ParkingResponseTable} from "../../components/Table/parking-response-table";
 import {ParkingTotal} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class ParkingService extends Component {
     constructor(props){
@@ -154,12 +155,14 @@ class ParkingService extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

@@ -3,6 +3,7 @@ import {Link, withRouter} from 'react-router-dom';
 import Chart from "react-apexcharts";
 import {MessagingDaily} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class Daily extends Component {
     constructor(props){
@@ -237,12 +238,14 @@ class Daily extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

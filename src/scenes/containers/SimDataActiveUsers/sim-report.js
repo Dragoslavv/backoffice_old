@@ -5,6 +5,7 @@ import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
 import {store} from "react-notifications-component";
 import {cancel_reservation, voip_api} from "../../components/UserFunctions";
+import Cookies from "universal-cookie";
 
 class SimReport extends Component {
     constructor(props){
@@ -45,10 +46,11 @@ class SimReport extends Component {
 
     handleCancelSimReservation = (e) => {
       e.preventDefault();
+        const cookies = new Cookies();
 
-      if(this.state.reservations_number !== '' && sessionStorage.getItem('role') !== '' && sessionStorage.getItem('role') !== 'USER'){
+      if(this.state.reservations_number !== '' && cookies.get('role') !== '' && cookies.get('role') !== 'USER'){
 
-          cancel_reservation(this.state.reservations_number, sessionStorage.getItem('role')).then(result => {
+          cancel_reservation(this.state.reservations_number, cookies.get('role')).then(result => {
 
               if(result['status'] === true){
                   store.addNotification({
@@ -193,8 +195,9 @@ class SimReport extends Component {
     };
 
     VoipIdReport(msg,dataSet) {
+        const cookies = new Cookies();
 
-        voip_api(dataSet,sessionStorage.getItem('username'),'true','voice').then(result => {
+        voip_api(dataSet,cookies.get('username'),'true','voice').then(result => {
 
             if(result.status === true){
                 // this.setState({
@@ -262,12 +265,14 @@ class SimReport extends Component {
 
         }
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

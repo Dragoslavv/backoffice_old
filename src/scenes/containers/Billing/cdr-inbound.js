@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {CdrInboundTable} from "../../components/Table/cdr-inbound-table";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class CdrInbound extends Component {
     constructor(props){
@@ -63,13 +64,13 @@ class CdrInbound extends Component {
     };
 
     componentWillMount() {
-        if(this.sessionGet('token')){
-            console.log('Call User Feed');
-        } else {
-            this.setState({
-                redirect:true
-            });
-        }
+        // if(this.sessionGet('token')){
+        //     console.log('Call User Feed');
+        // } else {
+        //     this.setState({
+        //         redirect:true
+        //     });
+        // }
     }
 
     componentWillUnmount() {
@@ -78,12 +79,14 @@ class CdrInbound extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

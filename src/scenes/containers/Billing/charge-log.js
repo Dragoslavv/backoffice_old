@@ -4,6 +4,7 @@ import {ChargeLogTable} from "../../components/Table/charge-log-table";
 import localForages from "localforage";
 import {ChargeLogTrans} from "../../components/UserFunctions";
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class ChargeLog extends Component {
     constructor(props){
@@ -101,23 +102,21 @@ class ChargeLog extends Component {
 
     onClickChargeLog = (e) => {
         e.preventDefault();
+        const cookies = new Cookies();
 
+        const billing_id = cookies.get('billing_id_api');
 
-        const billing_id = localForages.getItem('billing_id_api', function (err, value) {
-            return value;
-        });
+        // billing_id.then(value => {
 
-        billing_id.then(value => {
+        if(billing_id !== ''){
+            ChargeLogTrans(billing_id, this.state.start_log, this.state.end_log, this.state.type_log).then(result => {
+                this.setState({
+                    chargeLog: result.data,
+                })
+            });
 
-            if(value !== ''){
-                ChargeLogTrans(value, this.state.start_log, this.state.end_log, this.state.type_log).then(result => {
-                    this.setState({
-                        chargeLog: result.data,
-                    })
-                });
-
-            }
-        });
+        }
+        // });
     };
 
     componentWillMount() {
@@ -132,8 +131,9 @@ class ChargeLog extends Component {
 
 
     render() {
+        const cookies = new Cookies();
 
-        if(this.state.redirect){
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
@@ -152,7 +152,7 @@ class ChargeLog extends Component {
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

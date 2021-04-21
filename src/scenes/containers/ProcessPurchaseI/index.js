@@ -5,6 +5,7 @@ import {ProcessPaymentTable} from "../../components/Table/ProcessPaymentTable";
 import {ProcessPurchaselTable} from "../../components/Table/ProcessPurchaselTable";
 import {VoipTable} from "../../components/Table/voip-table";
 import CsvDownload from "react-json-to-csv";
+import Cookies from "universal-cookie";
 
 class ProcessPurchasel extends Component {
     constructor(props){
@@ -153,13 +154,14 @@ class ProcessPurchasel extends Component {
     render() {
 
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
 
-
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

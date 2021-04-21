@@ -4,6 +4,7 @@ import {logout, readUsers} from "../UserFunctions";
 import './../../stayles/Navigation.css';
 import localForages from "localforage";
 import logo from "../../images/logo-white.png";
+import Cookies from 'universal-cookie';
 
 class Navigation extends Component {
 
@@ -67,6 +68,8 @@ class Navigation extends Component {
     }
 
     componentDidMount() {
+        const cookies = new Cookies();
+
 
         readUsers().then(tableData =>
 
@@ -76,16 +79,27 @@ class Navigation extends Component {
 
         );
 
-        const role = localForages.getItem('role', function (err, value) {
-            return value;
+        //old
+        // const role = localForages.getItem('role', function (err, value) {
+        //     return value;
+        // });
+        //
+        // role.then(value => {
+        //     this.setState({
+        //         role: value
+        //     });
+        // });
+
+        //new
+        this.setState({
+            role: cookies.get('role')
         });
 
-        role.then(value => {
-            this.setState({
-                role: value
-            });
-        });
-        localStorage.setItem("active", this.state.isActive);
+        //old
+        // localStorage.setItem("active", this.state.isActive);
+
+        //new
+        cookies.set('active', this.state.isActive);
 
     }
 
@@ -324,19 +338,25 @@ class Navigation extends Component {
 
     logOut = (e) => {
         e.preventDefault();
+        const cookies = new Cookies();
 
         logout().then(data => {
 
             if(data.status === true && data.tokens === null) {
-                sessionStorage.setItem('token','');
-                sessionStorage.removeItem('token');
+                // sessionStorage.setItem('token','');
+                // sessionStorage.removeItem('token');
+                cookies.remove('tokens')
+                cookies.remove('role')
+                cookies.remove('firstName')
+                cookies.remove('lastName')
 
-                localForages.setItem('role', '');
-                sessionStorage.setItem('firstName', '');
-                sessionStorage.setItem('lastName', '');
-                sessionStorage.removeItem('lastName');
-                sessionStorage.removeItem('firstName');
-                sessionStorage.removeItem('role');
+
+                // localForages.setItem('role', '');
+                // sessionStorage.setItem('firstName', '');
+                // sessionStorage.setItem('lastName', '');
+                // sessionStorage.removeItem('lastName');
+                // sessionStorage.removeItem('firstName');
+                // sessionStorage.removeItem('role');
 
 
                 sessionStorage.setItem('billing_active','');
@@ -377,6 +397,8 @@ class Navigation extends Component {
     };
 
     render() {
+        const cookies = new Cookies();
+
 
         const userLink = (
 
@@ -394,8 +416,8 @@ class Navigation extends Component {
                                         <i className="fa fa-user"></i>
                                     </Link>
                                 </p>
-                                <h5 className="centered">{sessionStorage.getItem('firstName') !=='' && sessionStorage.getItem('lastName') !==''? sessionStorage.getItem('firstName') + ' ' + sessionStorage.getItem('lastName'): ''}</h5>
-                                <h6 className="centered da">{sessionStorage.getItem('role') !==''? sessionStorage.getItem('role') : ''}</h6>
+                                <h5 className="centered">{cookies.get('firstName') !=='' && cookies.get('lastName') !==''? cookies.get('firstName') + ' ' + cookies.get('lastName'): ''}</h5>
+                                <h6 className="centered da">{cookies.get('role') !==''? cookies.get('role') : ''}</h6>
                             </div>
                             <li className={ this.state.billing  ? "active list-group shadow" :"list-group shadow" }>
                                 <Link className='list-group-item' to="#" title="Billing" onClick={this.Billing} ><i className="fa fa-home fa-fw " ></i>Billing</Link>
@@ -414,7 +436,7 @@ class Navigation extends Component {
                                     <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/data-limit" >Data Limit</Link></li>
                                 </ul>
                             </li>
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
                                 <li className={this.state.payment ? "active list-group shadow" : " list-group shadow"}>
                                     <Link to="#" className='list-group-item' title="Payment" onClick={this.Payment}><i
                                         className="fa fa-book fa-fw"></i>Payment</Link>
@@ -444,7 +466,7 @@ class Navigation extends Component {
                             <li className='shadow list-group'>
                                 <Link to="/process-purchasel" onClick={ ()=> this.setState({isActive:false})} className='list-group-item' title="Process Purchasel Log"><i className="fa fa-sort fa-fw"></i>Process Purchasel</Link>
                             </li>
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.cdr ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" className='list-group-item' title="Cdr" onClick={this.Cdr}><i className="fa fa-eye fa-fw"></i>Cdr</Link>
@@ -454,7 +476,7 @@ class Navigation extends Component {
                                     </ul>
                                 </li>
                             }
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.messaging ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" title="Messaging" className='list-group-item' onClick={this.Messaging}><i
@@ -465,7 +487,7 @@ class Navigation extends Component {
                                     </ul>
                                 </li>
                             }
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.numbers ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" title="Numbers" className='list-group-item' onClick={this.Numbers}><i
@@ -478,19 +500,19 @@ class Navigation extends Component {
                                     </ul>
                                 </li>
                             }
-                            { sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            { cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className='shadow list-group'>
                                     <Link to="/routes" onClick={ ()=> this.setState({isActive:false})} className='list-group-item' title="Routes"><i className="fa fa-folder-open-o fa-fw"></i>Routes</Link>
                                 </li>
                             }
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className='shadow list-group'>
                                     <Link to="/rates" onClick={ ()=> this.setState({isActive:false})} className='list-group-item' title="Rates"><i className="fa fa-code-fork  fa-fw"></i>Rates</Link>
                                 </li>
                             }
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.parking ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" title="Parking" className='list-group-item' onClick={this.Parking}><i
@@ -501,7 +523,7 @@ class Navigation extends Component {
                                     </ul>
                                 </li>
                             }
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498'  || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.package ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" title="Package" className='list-group-item' onClick={this.Package}><i
@@ -518,28 +540,28 @@ class Navigation extends Component {
                                 <Link className='list-group-item' to="#" title="Sim,Data & Active Users" onClick={this.SimDataActive}><i className="fa fa-user fa-fw" ></i>Sim,Data & Active</Link>
                                 <ul className={ this.state.simDataActive  ? "sidebar-nav-second" :"hidden-ul" }>
                                     <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/sim-report" >Sim Report</Link></li>
-                                    {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096' || sessionStorage.getItem('phone_number_call_centar') === '381677230498' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                    {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096' || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
                                         <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/voip">Voip</Link></li>
                                     }
-                                    {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498' || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                    {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                         <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/sim-daily">Sim Daily</Link></li>
                                     }
-                                    {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498' || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                    {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                         <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/sim-hourly">Sim Hourly</Link></li>
                                     }
-                                    {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498' || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                    {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                         <li className='shadow list-group' ><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/active-users">Active users</Link></li>
                                     }
-                                    {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498' || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                                    {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                         <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/data-consumption">Data</Link></li>
                                     }
                                 </ul>
                             </li>
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className={this.state.mastercard ? "active list-group shadow" : "list-group shadow"}>
                                     <Link to="#" title="Mastercard" className='list-group-item' onClick={this.Mastercard}><i
@@ -564,7 +586,7 @@ class Navigation extends Component {
                                     <li className='shadow list-group'><Link className='list-group-item' onClick={ ()=> this.setState({isActive:false})} to="/message-bulk" >Message Bulk</Link></li>
                                 </ul>
                             </li>
-                            {sessionStorage.getItem('username') === 'preda' || sessionStorage.getItem('phone_number_call_centar') === '381677191096'  || sessionStorage.getItem('phone_number_call_centar') === '381677230498'  || sessionStorage.getItem('phone_number_call_centar') === '381677000688' || sessionStorage.getItem('phone_number_call_centar') === '381677033075' || sessionStorage.getItem('phone_number_call_centar') === '381677001006' || sessionStorage.getItem('phone_number_call_centar') === '381677200400' || sessionStorage.getItem('phone_number_call_centar') === '381677200909' || sessionStorage.getItem('phone_number_call_centar') === '381677200900' || sessionStorage.getItem('phone_number_call_centar') === '381677103003' || sessionStorage.getItem('phone_number_call_centar') === '381677007100' ? '' :
+                            {cookies.get('username') === 'preda' || cookies.get('phone_number_call_centar') === '381677191096'  || cookies.get('phone_number_call_centar') === '381677230498' || cookies.get('phone_number_call_centar') === '381677000688' || cookies.get('phone_number_call_centar') === '381677033075' || cookies.get('phone_number_call_centar') === '381677001006' || cookies.get('phone_number_call_centar') === '381677200400' || cookies.get('phone_number_call_centar') === '381677200909' || cookies.get('phone_number_call_centar') === '381677200900' || cookies.get('phone_number_call_centar') === '381677103003' || cookies.get('phone_number_call_centar') === '381677007100' ? '' :
 
                                 <li className='shadow list-group'>
                                     <Link to="/system-message" onClick={ ()=> this.setState({isActive:false})} className='list-group-item' title="System Message"><i
@@ -633,7 +655,7 @@ class Navigation extends Component {
         );
         return (
             <div>
-                {sessionStorage.token ? userLink : ''}
+                {cookies.get('tokens') ? userLink : ''}
             </div>
         )
     }

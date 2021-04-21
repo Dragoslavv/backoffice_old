@@ -5,6 +5,7 @@ import { PaymentTransactionsTable, PaymentTransactionsTotal} from "../../compone
 import {store} from "react-notifications-component";
 import CsvDownload from 'react-json-to-csv';
 import {Redirect} from "react-router-dom";
+import Cookies from "universal-cookie";
 
 class Transaction extends Component {
     constructor(props){
@@ -295,10 +296,11 @@ class Transaction extends Component {
 
     render() {
 
-        if(this.state.redirect){
+        const cookies = new Cookies();
+
+        if(!cookies.get('tokens')){
             return <Redirect to={'/'} />
         }
-
 
         const dataTable = this.state.tableTransactions.map(function (item) {
 
@@ -315,7 +317,7 @@ class Transaction extends Component {
         }
 
         return (
-            <div id="wrapper" className={ localStorage.getItem('active') === true ? "toggled" :"" }>
+            <div id="wrapper" className={ cookies.get('active') === true ? "toggled" :"" }>
                 <section id="content-wrapper" >
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb head-pages wrap-border">

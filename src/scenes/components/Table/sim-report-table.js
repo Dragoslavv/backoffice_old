@@ -3,6 +3,7 @@ import './../../../../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.
 import localForages from "localforage";
 import {Redirect} from "react-router-dom";
 import PubSub from "pubsub-js";
+import Cookies from "universal-cookie";
 
 // require Table
 const $  = require( 'jquery' );
@@ -75,6 +76,7 @@ export class SimReportTable extends Component{
         $(document).ready(() => {
 
             const table = $('#sim_report');
+            const cookies = new Cookies();
 
             table.on('click', '#user_id_get', function () {
 
@@ -87,7 +89,7 @@ export class SimReportTable extends Component{
                 });
 
                 PubSub.publish('id_from_sim_report', get_id.user_id);
-                localForages.setItem('id_from_sim_report', get_id.user_id);
+                cookies.set('id_from_sim_report', get_id.user_id);
             });
 
             table.on('click', '#voip_id', function () {
@@ -101,7 +103,7 @@ export class SimReportTable extends Component{
                 });
 
                 PubSub.publish('get_voip_id', get_voip.voip_id);
-                localForages.setItem('get_voip_id', get_voip.voip_id);
+                cookies.set('get_voip_id', get_voip.voip_id);
             });
         });
 
